@@ -3,7 +3,7 @@ import styles from "./Footer.module.scss";
 export default function Footer() {
     return (
       <div>
-        Footer
+        please work font
       </div>
     );
 }
