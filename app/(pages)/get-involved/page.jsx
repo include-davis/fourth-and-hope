@@ -1,7 +1,9 @@
-export default function GetInvolved() {
+import GetInvolved from "../_components/GetInvolved/GetInvolved";
+
+export default function getInvolved() {
     return (
       <main>
-        <div>Get Involved</div>
+        <div><GetInvolved/></div>
       </main>
     );
   }

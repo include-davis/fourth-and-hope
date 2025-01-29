@@ -1,7 +1,9 @@
-export default function Donate() {
+import Donate from "../_components/Donate/Donate";
+
+export default function donate() {
     return (
       <main>
-        <div>Donate</div>
+        <div><Donate/></div>
       </main>
     );
   }

@@ -1,7 +1,9 @@
-export default function Programs() {
+import Programs from "../_components/Programs/Programs";
+
+export default function programs() {
     return (
       <main>
-        <div>Programs</div>
+        <div><Programs/></div>
       </main>
     );
   }
