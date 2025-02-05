@@ -1,8 +1,19 @@
 
-// .top_image{
-//     display: inline-block;
-//     width: 100%;
-//     height: auto;
-// }
+.imageSlides{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+}
 
+.slider{
+    width: 100%;
+    height: auto;
+}
 
+.sliderImage{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 2s ease-in-out;
+}

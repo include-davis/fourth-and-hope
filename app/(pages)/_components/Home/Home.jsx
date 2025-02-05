@@ -22,7 +22,7 @@ const ImageSlider = () => {
   };
 
   //automatically change image every 3 seconds
-  //FIXME: ask about how long each image should be up for and now images should change
+  //FIXME: ask about how long each image should be up for and what the transition should look like
   useEffect(() => {
     const interval = setInterval(nextImage, 3000);
     return () => clearInterval(interval);
@@ -46,19 +46,19 @@ const ImageSlider = () => {
 export default function Home() {
     return (
     <>
-      <div className={styles.image_slides}>
+      <div className={styles.imageSlides}>
         <ImageSlider/>
       </div>
-      <div className={styles.three_buttons}>
+      <div className={styles.threeButtons}>
         Buttons
       </div>
-      <div className={styles.our_mission}>
+      <div className={styles.ourMission}>
         Our Mission
       </div>
       <div className={styles.programs}>
         Programs
       </div>
-      <div className={styles.our_stories}>
+      <div className={styles.ourStories}>
         Our Stories
       </div>
     </>
