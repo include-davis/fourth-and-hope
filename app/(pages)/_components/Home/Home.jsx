@@ -21,10 +21,10 @@ const ImageSlider = () => {
     setCurrentImage((prev) => (prev + 1) % images.length);
   };
 
-  // automatically change image every 3 seconds
+  // automatically change image every 4 seconds
   // FIXME: ask about how long each image should be up for and what the transition should look like
   useEffect(() => {
-    const interval = setInterval(nextImage, 3000);
+    const interval = setInterval(nextImage, 4000);
     return () => clearInterval(interval);
   }, []);
 
@@ -61,7 +61,27 @@ export default function Home() {
           Our values are compassion, faith, integrity, service, and stewardship. As Jesus Christ has served us, we serve His people.
         </p>
         <div className={styles.ourMissionImages}>
-
+            <Image
+              className={styles.firstImage}
+              src="/images/Home/ourMission1.svg"
+              width={500}
+              height={500}
+              alt="Four ladies in an office."
+            />
+            <Image
+              className={styles.secondImage}
+              src="/images/Home/ourMission2.svg"
+              width={500}
+              height={500}
+              alt="Two men smiling at the camera while serving food."
+            />
+            <Image
+              className={styles.thirdImage}
+              src="/images/Home/ourMission3.svg"
+              width={500}
+              height={500}
+              alt="Group posed in from of the Community Service Center."
+            />
         </div>
       </div>
       <div className={styles.programs}>
