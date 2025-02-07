@@ -4,6 +4,8 @@
 import styles from "./Home.module.scss";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import Button from '../components/Button';
+import Link from 'next/link';
 
 
 /* function for header image slider */
@@ -50,16 +52,20 @@ export default function Home() {
       <div className={styles.imageSlides}>
         <ImageSlider/>
       </div>
+
       <div className={styles.threeButtons}>
         Buttons
       </div>
+
       <div className={styles.ourMission}>
-        <h1>Our Mission</h1>
-        <p>
-          Fourth & Hope is a community - a faith-based organization dedicated to providing care, shelter, and recovery to homeless populations in Yolo County. <br /><br />
-          We welcome all a provide a safe environment; we do not discriminate on the basis of religion.<br /><br />
-          Our values are compassion, faith, integrity, service, and stewardship. As Jesus Christ has served us, we serve His people.
-        </p>
+        <div className={styles.ourMissionText}>
+          <h1>OUR MISSION</h1>
+          <p>
+            Fourth & Hope is a community - a faith-based organization dedicated to providing care, shelter, and recovery to homeless populations in Yolo County. <br /><br />
+            We welcome all a provide a safe environment; we do not discriminate on the basis of religion.<br /><br />
+            Our values are compassion, faith, integrity, service, and stewardship. As Jesus Christ has served us, we serve His people.
+          </p>
+        </div>
         <div className={styles.ourMissionImages}>
             <Image
               className={styles.firstImage}
@@ -84,12 +90,15 @@ export default function Home() {
             />
         </div>
       </div>
+
       <div className={styles.programs}>
         Programs
       </div>
+
       <div className={styles.ourStories}>
         Our Stories
       </div>
+      
     </>
     );
 }
