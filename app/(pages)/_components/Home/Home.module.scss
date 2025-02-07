@@ -1,5 +1,5 @@
 
-//"Header" section
+// "Header" section
 .imageSlides{
     width: 100%;
     max-width: 100%;
@@ -20,6 +20,8 @@
 }
 
 
+// Buttons section
+
 
 // Our Mission Section
 .ourMission{
@@ -33,12 +35,15 @@
 
 .ourMissionText{
     width: 87%;
+    color: var(--black);
 }
 
 .ourMission h1{
     display: flex;
     justify-content: flex-start;
     margin-bottom: 2.2%;
+    color: var(--green);
+    font-size: 4rem;
 }
 
 .ourMissionImages{

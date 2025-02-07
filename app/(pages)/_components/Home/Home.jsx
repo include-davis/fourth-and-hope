@@ -4,7 +4,6 @@
 import styles from "./Home.module.scss";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import Button from '../components/Button';
 import Link from 'next/link';
 
 
@@ -98,7 +97,7 @@ export default function Home() {
       <div className={styles.ourStories}>
         Our Stories
       </div>
-      
+
     </>
     );
 }
