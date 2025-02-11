@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import PageButtons from "./PageButtons"
 
-/**idk if this can be in a separate file */
+
 /* function for header image slider */
 const ImageSlider = () => {
   const images = [
@@ -65,12 +65,15 @@ export default function Home() {
     }   ,
   ];
 
+
+
     return (
     <>
+      {/* top image with transitions */}
       <div className={styles.imageSlides}>
         <ImageSlider/>
       </div>
-
+      {/* donate, volunteer, resources buttons */}
       <div className={styles.threeButtons}>
         <div className={styles.buttonContent}>
           {buttonData.map((button, index) => (
@@ -78,7 +81,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-
+      {/* Our Mission section; text and images */}
       <div className={styles.ourMission}>
         <div className={styles.ourMissionText}>
           <h1>OUR MISSION</h1>
@@ -112,11 +115,11 @@ export default function Home() {
             />
         </div>
       </div>
-
+      {/* Programs section */}
       <div className={styles.programs}>
         Programs
       </div>
-
+      {/* Our stories section */}
       <div className={styles.ourStories}>
         Our Stories
       </div>

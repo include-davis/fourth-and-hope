@@ -1,6 +1,6 @@
+@import '../../_globals/mixins.scss';
 
-//test
-.buttonsContainer {
+.buttonsContainer { //holds the image and button
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -8,13 +8,13 @@
     height: 93.7%;
   }
 
-  .buttonImage{
+  .buttonImage{ //the image
     margin: auto;
     width: 23.8%;
     height: auto;
   }
   
-  .button {
+  .button { //actual button
     margin-top: 7.9%;
     padding-top: 6%;
     padding-bottom: 6%;
@@ -24,4 +24,5 @@
     text-align: center;
     width: 100%;
     font-size: 1.125rem; //how to use globals fonts
+    //change radius to make round
   }

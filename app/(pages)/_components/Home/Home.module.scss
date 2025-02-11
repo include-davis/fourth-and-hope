@@ -1,3 +1,4 @@
+@import '../../_globals/mixins.scss';
 
 // "Header" section
 .imageSlides{
@@ -21,11 +22,12 @@
 
 
 // Buttons section
-.threeButtons{
-    height: 50%;
+.threeButtons{ //used this to make the margins between header and out mission
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
-.buttonContent{
+.buttonContent{ //the components of buttons
     width: 86.1%;
     height: auto;
     display: flex;
@@ -36,7 +38,7 @@
 
 
 // Our Mission Section
-.ourMission{
+.ourMission{ //holds all content of our mission
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,7 +57,7 @@
     justify-content: flex-start;
     margin-bottom: 2.2%;
     color: var(--green);
-    font-size: 3rem; //make globals
+    font-size: 5rem; //make globals
 }
 
 .ourMissionText p{
@@ -63,7 +65,7 @@
 }
 
 .ourMissionImages{
-    //FIXME: make more responsive... when page gets bigger the gap between images and text disappears
+    //FIXME: make more responsive... when page gets bigger the gap between images and text disappears should the images become column?
     width: 87%;
     height: 25%;
 }
