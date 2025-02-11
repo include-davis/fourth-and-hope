@@ -1,0 +1,17 @@
+@import "../../_globals/mixins.scss";
+
+.headerContainer{
+    background-color: --(white);
+    width: 100vh;
+}
+
+.contentContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonContainer{
+    display: flex; 
+    justify-content: space-between;
+}
+
