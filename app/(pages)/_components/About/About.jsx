@@ -23,7 +23,7 @@ export default function About() {
 
       <div className={styles.heroImage}>
         <img 
-          src="images\first file.svg"
+          src="images\first photo.png"
           alt="Fourth and Hope Community" 
         />
       </div>
@@ -33,7 +33,7 @@ export default function About() {
         <div className={styles.storyContent}>
           <div className={styles.imageContainer}>
             <img 
-              src="images\second file.svg"
+              src="images\second photo.png"
               alt="Our Story" 
               className={styles.circleImage}
             />
