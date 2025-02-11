@@ -1,0 +1,199 @@
+@import "../../_globals/mixins.scss";
+
+.pageContainer {
+  width: 100%;
+}
+
+.headerSection {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 5%;
+  }
+}
+
+.mainHeading {
+  h1 {
+    color: var(--green);
+    font-size: 64px;
+    line-height: 1.5;
+    font-weight: bold;
+    margin: 0;
+
+    @include phone {
+      font-size: 40px;
+      line-height: 1.0;
+    }
+  }
+}
+
+.introContent {
+  h2 {
+    font-size: 40px;
+    margin-bottom: 3%;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 3%;
+    line-height: 1.5;
+  }
+
+  .buttonContainer {
+    display: flex;
+    gap: 2%;
+    flex-wrap: wrap;
+
+    button {
+      padding: 12px 32px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background-color: var(--green);
+      color: var(--white);
+      border: none;
+
+      &:hover, &:active {
+        background-color: var(--white);
+        color: var(--green);
+        border: 1px solid var(--green);
+      }
+    }
+
+    .subscribe {
+      background-color: var(--donateColor); // Matches Donate button color
+
+      &:hover, &:active {
+        background-color: var(--white);
+        color: var(--donateColor);
+        border: 1px solid var(--donateColor);
+      }
+    }
+  }
+}
+
+.heroImage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    @include phone {
+      max-width: 85%;
+      width: auto;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+}
+
+.storySection {
+  width: 100%;
+  max-width: 1440px;
+  margin: 5% auto;
+  padding: 0 8%;
+
+  h2 {
+    font-size: 40px;
+    margin-bottom: 2%;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .storyContent {
+    display: grid;
+    grid-template-columns: 35% 57%;
+    gap: 3%;
+    align-items: flex-start;
+    justify-content: left;
+
+    @include phone {
+      grid-template-columns: 1fr;
+      gap: 1%;
+    }
+
+    .imageContainer {
+      display: flex;
+      justify-content: left;
+
+      .circleImage {
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        object-fit: cover;
+
+        @include phone {
+          border-radius: 0;
+          width: auto;
+          max-width: 100%;
+        }
+      }
+    }
+
+    .textContent {
+      p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 24px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.missionSection {
+  width: 100%;
+  background-color: var(--light-grey);
+  padding: 5% 0;
+  margin: 8% 0;
+
+  h2 {
+    font-size: 40px;
+    margin-bottom: 4%;
+    font-weight: bold;
+    text-align: left;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 8%;
+  }
+
+  .missionContent {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 8%;
+    text-align: left;
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+      color: var(--black);
+      max-width: 100%;
+      text-align: left;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
