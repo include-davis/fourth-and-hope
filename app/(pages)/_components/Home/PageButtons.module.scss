@@ -1,0 +1,17 @@
+
+//test
+.buttonsContainer {
+    display: inline-block; /* Or block, depending on your layout */
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden; /* To prevent image from overflowing */
+  }
+
+  .buttonsContainer Image{
+    width: 20px;
+  }
+  
+  .buttonContent {
+    padding: 10px;
+  }

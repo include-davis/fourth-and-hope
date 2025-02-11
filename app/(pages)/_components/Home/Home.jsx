@@ -1,12 +1,10 @@
-
 'use client'
-
 import styles from "./Home.module.scss";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import Link from 'next/link';
+import PageButtons from "./PageButtons"
 
-
+/**idk if this can be in a separate file */
 /* function for header image slider */
 const ImageSlider = () => {
   const images = [
@@ -37,7 +35,6 @@ const ImageSlider = () => {
         width={500}
         height={500}
         alt="Slider"
-        // style={{ opacity: index === currentImage ? 1 : 0}}
         />
     </div>
   );
@@ -46,6 +43,25 @@ const ImageSlider = () => {
 
 
 export default function Home() {
+
+  const buttonData = [
+    {
+    imageSrc: '/images/Home/handshakeImage.svg',
+    altText: 'Green handshake.',
+    href: '/../GetInvolved',
+    },
+    {
+    imageSrc: '/images/Home/donateImage.svg',
+    altText: 'Green circle with dollar sign in the middle.',
+    href: '../Donate',
+    },
+    {
+    imageSrc: '/images/Home/resourcesImage.svg',
+    altText: 'Green cartoon house.',
+    href: '../Programs',
+    }   ,
+  ];
+
     return (
     <>
       <div className={styles.imageSlides}>
@@ -53,7 +69,9 @@ export default function Home() {
       </div>
 
       <div className={styles.threeButtons}>
-        Buttons
+        {buttonData.map((button, index) => (
+        <PageButtons key={index} {...button} />
+      ))}
       </div>
 
       <div className={styles.ourMission}>
