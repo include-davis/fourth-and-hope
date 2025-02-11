@@ -48,19 +48,19 @@ export default function Home() {
     {
     imageSrc: '/images/Home/handshakeImage.svg',
     altText: 'Green handshake.',
-    href: '/../GetInvolved',
+    href: '/get-involved',
     buttonText: 'Volunteer'
     },
     {
     imageSrc: '/images/Home/donateImage.svg',
     altText: 'Green circle with dollar sign in the middle.',
-    href: '../Donate',
+    href: '/donate',
     buttonText: 'Donate'
     },
     {
     imageSrc: '/images/Home/resourcesImage.svg',
     altText: 'Green cartoon house.',
-    href: '../Programs',
+    href: '/programs',
     buttonText: 'Resources'
     }   ,
   ];
