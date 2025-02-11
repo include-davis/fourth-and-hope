@@ -1,8 +1,7 @@
-// @use '../../_globals/mixins.scss';
-// @use '../../_globals/globals.scss';
-
 .events {
+
     padding: 0 12% 0 12%;
+
     .heading {
         display: flex;
         justify-content: space-between;
@@ -11,6 +10,7 @@
     
         h1{
             color: var(--green);
+            font-weight: 500;
         }
     
         button {
@@ -20,20 +20,30 @@
     
             padding: 0.75% 8% 0.75% 8%;
             cursor: pointer;
+            font-weight: 300;
         }
     }
 
     .summary {
-        h5 {
-            color: var(--green);
-            padding: 1% 0 1% 0;
-        }
 
+        .summaryhead {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 4%;
+
+            h2 {
+                font-weight: 500;
+            }
+
+            h3 {
+                color: var(--green);
+                font-weight: 400;
+            }
+        }
+        
         .summarycontent {
             display: flex;
-            align-items: top;
             gap: 5%;
-            padding: 3% 0 3% 0;
 
             .parent {
                 width: 50vw;
@@ -45,21 +55,73 @@
                 }
             }
 
-            .paragraphs{
+            p {
+                padding: 1% 0 1% 0;
                 flex: 3;
-                p {
-                    padding: 1% 0 1% 0;
-                }
+                font-weight: 300;
             }
         }
+
+        
     }
 
     .quote {
         color: var(--white);
         background-color: var(--green);
         text-align: center;
-        padding: 5% 15% 5% 15%;
-        margin: 5% -10% 5% -10%;
+        padding: 8% 18% 8% 18%;
+        margin: 5% -16% 5% -16%;
+
+        h3 {
+            font-weight: 300;
+        }
+    }
+
+    .recapgroup {
+
+        display: flex;
+        gap: 5%;
+        align-items:last baseline;
+
+        .recapcontent {
+            flex: 2;
+            h4 {
+                color: var(--green);
+                padding: 1% 0 1% 0;
+                font-weight: 300;
+            }
+    
+            h2 {
+                padding-bottom: 3%;
+                font-weight: 500;
+            }
+    
+            .recap {
+                display: flex;
+                align-items: top;
+                gap: 5%;
+                padding: 3% 0 3% 0;
+    
+                .paragraphs{
+                    p {
+                        padding: 1.5% 0 1.5% 0;
+                        font-weight: 300;
+                    }
+                }
+            }
+
+        }
+
+        .parent {
+
+            flex: 1;
+            img {
+                width: 100%;
+                height: auto;
+                padding: 2%;
+            }
+        }
+
     }
 
 }
