@@ -21,15 +21,16 @@
 
 
 // Buttons section
-// .threeButtons{
-//     height: 10%;
-// }
+.threeButtons{
+    height: 50%;
+}
 
 .buttonContent{
     width: 86.1%;
     height: auto;
     display: flex;
     justify-content: space-between;
+    margin-top: 35%; 
     margin: auto; //centers div
     background-color: aquamarine;
 }

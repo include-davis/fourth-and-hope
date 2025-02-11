@@ -15,7 +15,7 @@ export default function PageButtons({ imageSrc, altText, href, buttonText }){
                 height={500}
             />
                 <Link href={href} className={styles.button}>                   
-                        {buttonText}
+                    {buttonText}
                 </Link>
         </div>
     );
