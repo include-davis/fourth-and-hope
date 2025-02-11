@@ -49,16 +49,19 @@ export default function Home() {
     imageSrc: '/images/Home/handshakeImage.svg',
     altText: 'Green handshake.',
     href: '/../GetInvolved',
+    buttonText: 'Volunteer'
     },
     {
     imageSrc: '/images/Home/donateImage.svg',
     altText: 'Green circle with dollar sign in the middle.',
     href: '../Donate',
+    buttonText: 'Donate'
     },
     {
     imageSrc: '/images/Home/resourcesImage.svg',
     altText: 'Green cartoon house.',
     href: '../Programs',
+    buttonText: 'Resources'
     }   ,
   ];
 
@@ -69,9 +72,11 @@ export default function Home() {
       </div>
 
       <div className={styles.threeButtons}>
-        {buttonData.map((button, index) => (
-        <PageButtons key={index} {...button} />
-      ))}
+        <div className={styles.buttonContent}>
+          {buttonData.map((button, index) => (
+          <PageButtons key={index} {...button} />
+          ))}
+        </div>
       </div>
 
       <div className={styles.ourMission}>

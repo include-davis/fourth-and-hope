@@ -1,17 +1,25 @@
 
 //test
 .buttonsContainer {
-    display: inline-block; /* Or block, depending on your layout */
-    margin: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden; /* To prevent image from overflowing */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 27.5%;
+    height: 93.7%;
+    background-color: pink;
   }
 
-  .buttonsContainer Image{
-    width: 20px;
+  .buttonImage{
+    margin: auto;
+    width: 23.8%;
+    height: auto;
   }
   
-  .buttonContent {
-    padding: 10px;
+  .button {
+    padding-top: 7.9%;
+    margin: auto;
+    background-color: var(--green);
+    color: var(--white);
+    display: flex;
+    align-content: center;
   }
