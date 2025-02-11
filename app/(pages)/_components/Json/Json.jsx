@@ -6,7 +6,7 @@ const person = [
     title: 'Tech Lead',
   },
   {
-    name: 'Haylier',
+    name: 'Haylie',
     title: 'Tech Lead',
   },
 
