@@ -1,5 +1,5 @@
 //import styles.
-export function programCard({title, subtitle, text, image }){
+export default function ProgramCard({title, subtitle, text, image }){
     return(
         <div className="program">
         <div className="text">
