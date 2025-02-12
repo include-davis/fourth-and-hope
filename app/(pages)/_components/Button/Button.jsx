@@ -1,9 +1,9 @@
 import styles from "./Button.module.scss";
 
-export default function Donate() {
+export default function Button({ name = "Donate", link = "#" }) {
     return (
-      <div>
-        Button
-      </div>
+        <a href={link} className={styles.button}>
+            {name}
+        </a>
     );
 }
