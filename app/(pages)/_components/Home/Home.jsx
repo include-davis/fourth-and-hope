@@ -3,6 +3,7 @@ import styles from "./Home.module.scss";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import PageButtons from "./PageButtons"
+import ProgramsBox from "./ProgramsBox"
 
 
 /* function for header image slider */
@@ -65,6 +66,34 @@ export default function Home() {
     }   ,
   ];
 
+  // imageSrc, altText, Title, bodyText, href
+  const programData = [
+    {
+      imageSrc: '/images/Home/programsBeds.svg',
+      altText: 'Red bunk beds.',
+      Title: 'Emergency Shelter', 
+      bodyText: 'Providing overnight services, housing, outreach support, and thousands of meals to those in need.', 
+      href: '/programs' 
+      //should go to the emergency shelter section
+    }, 
+    {
+      imageSrc: '/images/Home/programsTreatment.svg',
+      altText: 'Woman holding towels in one arm and holding up a fist with the other arm.',
+      Title: 'Treatment Program', 
+      bodyText: 'Offering residential care at Walter’s House, outpatient support, referrals, and  program completions to aid recovery and connection to further services.' , 
+      href: '/programs' 
+      //should go to the treatment section 
+    }, 
+    {
+      imageSrc: '/images/Home/programsHousing.svg',
+      altText: 'Group of older people holding gardening tools and smiling at the camera.',
+      Title: 'Housing Program', 
+      bodyText: 'Providing permanent supportive housing and transitional sober living opportunities to individuals and households in need.', 
+      href: '/programs' 
+      //directs to the housing section
+    },
+  ];
+
 
 
     return (
@@ -117,7 +146,12 @@ export default function Home() {
       </div>
       {/* Programs section */}
       <div className={styles.programs}>
-        Programs
+        <h1>PROGRAMS</h1>
+        <div className={styles.programsComponents}>
+          {programData.map((box, index) => (
+          <ProgramsBox key={index} {...box} />
+          ))}
+        </div>
       </div>
       {/* Our stories section */}
       <div className={styles.ourStories}>
