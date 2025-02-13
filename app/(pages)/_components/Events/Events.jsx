@@ -1,5 +1,7 @@
 import styles from "./Events.module.scss";
-import FAQSection from "./_components/FAQSection"
+import FAQSection from "./_components/FAQSection";
+import EventsRecapSection from "./_components/EventsRecapSection";
+import ImpactSection from "./_components/ImpactSection";
 
 export default function Events() {
     return (
@@ -7,14 +9,13 @@ export default function Events() {
 
         <section className={styles.heading}>
           <h1>EVENTS</h1>
-          <button>Donate</button>
         </section>
 
         <section className = {styles.summary}>
 
           <div className={styles.summaryhead}>
-            <h2>Big Day of Giving 2025</h2>
-            <h3>MAY 1ST, 2025</h3>
+            <h3>Big Day of Giving 2025</h3>
+            <h4>MAY 1ST, 2025</h4>
           </div>
 
           <div className={styles.summarycontent}>
@@ -38,27 +39,23 @@ export default function Events() {
         </section>
 
         <section className={styles.recapgroup}>
+          <EventsRecapSection />
+        </section>
 
-          <div className={styles.recapcontent}>
-            <h4>OCT 23, 2024</h4>
-            <h2>Empty Bowls Recap</h2>
-
-            <div className={styles.recap}>
-              <div className={styles.paragraphs}>
-                <p>The 16th Annual Empty Bowls event took place on October 23, 2024, at Life Pointe Church in Woodland, uniting the community in a global effort to combat local hunger. This year’s gathering featured 12 delicious soups served by community leaders and local dignitaries, along with a vibrant raffle offering unique prizes. Together, we came close to reaching our ambitious $35,000 fundraising goal.</p>
-
-                <p>Every dollar raised directly supports Fourth & Hope’s emergency shelter program, which helps Yolo County residents move from the streets to stability. Beyond providing shelter, we offer a pathway to renewed life and hope.</p>
-
-                <p>More than just a fundraiser, Empty Bowls showcased the compassion and generosity of our community, demonstrating a collective commitment to helping those in need.</p>
-              </div>
-
-            </div>
+        <section className={styles.impact}>
+          <h3>OUR IMPACT</h3>
+          <div className={styles.impactnumbers}>
+            <ImpactSection />
           </div>
+        </section>
 
-          <div className = {styles.parent}>
-              <img src="/images/events-pic-2.svg" alt="catering-photo"></img>
-              <img src="/images/events-pic-3.svg" alt="catering2-photo"></img>
-            </div>
+        <section className={styles.fighthunger}>
+          <h3>FIGHT HUNGER FEED HOPE</h3>
+          <h3 className={styles.desc}>Together, we will bring help today for HOPE tomorrow!</h3>
+        </section>
+
+        <section className={styles.sponsors}>
+          <h2>THANK YOU TO OUR 2024 SPONSORS</h2>
         </section>
 
        </div>
