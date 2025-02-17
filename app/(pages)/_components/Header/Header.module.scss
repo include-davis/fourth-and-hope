@@ -1,13 +1,20 @@
 @import "../../_globals/mixins.scss";
 
 .headerContainer{
-    background-color: --(white);
+    background-color: --(rgb(102, 188, 62));
+    height: 20vh;
     width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contentContainer{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    align-self: stretch; 
+    flex-direction: row; 
 }
 
 .buttonContainer{
@@ -15,3 +22,6 @@
     justify-content: space-between;
 }
 
+.links {
+    font-size: 1.25rem; //20px
+}
