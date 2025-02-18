@@ -1,21 +1,23 @@
+"use client";
 import styles from "./Header.module.scss";
+import Link from "next/link";
 
 export default function Header() {
     return (
-      <div classnName={styles.headerContainer}>
+      <div className={styles.headerContainer}>
         <div className={styles.contentContainer}>
-          <div className={styles.logo}></div>
+          <div className={styles.logo}><img src="/images/fourthandhopelogo.png" alt="Fourth Hope Logo" className={styles.logo}/></div>
           <div className={styles.buttonsContainer}>
+            <button className={styles.button}>Donate</button>
             <div className={styles.otherbuttons}>
-              <p className={styles.links}>Home</p>
-              <p className={styles.links}>About</p>
-              <p className={styles.links}>Get Involved</p>
-              <p className={styles.links}>Events</p>
-              <p className={styles.links}>Programs</p>
-              <p className={styles.links}>Contact</p>
-              </div>
-            <div className={styles.donateButton}>Donate</div>
-          </div>
+              <Link href="/" className={[styles.links, styles.bold].join(' ')}>Home</Link>
+              <Link href="/about" className={styles.links}>About</Link>
+              <Link href="/get-involved" className={styles.links}>Get Involved</Link>
+              <Link href="/events" className={styles.links}>Events</Link>
+              <Link href="/programs" className={styles.links}>Programs</Link>
+              <Link href="/contact" className={styles.links}>Contact</Link>
+            </div>
+            </div>
         </div>
       </div>
     );

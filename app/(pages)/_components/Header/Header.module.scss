@@ -1,15 +1,18 @@
 @import "../../_globals/mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jua&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville&family=Patrick+Hand&display=swap');
 
 .headerContainer{
-    background-color: --(rgb(102, 188, 62));
     height: 20vh;
-    width: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+
 .contentContainer{
+    width: 100%;
+    padding: 30px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,11 +20,64 @@
     flex-direction: row; 
 }
 
-.buttonContainer{
+.buttonsContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 52px;
+    direction: rtl;
+}
+
+.otherbuttons{
     display: flex; 
     justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    direction: ltr;
+}
+
+.button{
+    display: flex;
+    font-size: 20px;
+    font-weight: 300;
+    width: 179px;
+    height: 65px;
+    padding: 20px 54px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 1.3% 3.5%;
+    border: 1px solid var(--white);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: var(--green);
+    color: var(--white);
+
+    &:hover, &:active {
+      background-color: var(--white);
+      color: var(--green);
+      border: 1px solid var(--green);
+    }
 }
 
 .links {
-    font-size: 1.25rem; //20px
+    font-size: 20px; //20px
+    color: var(--green, #2E6C4A);
+    /* a */
+    font-family: "Be Vietnam Pro";
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px; /* 150% */
+    white-space: nowrap; 
+
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.logo{
+    width: 166px;
+    height: 50px;
 }
