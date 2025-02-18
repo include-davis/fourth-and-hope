@@ -25,6 +25,7 @@
 .threeButtons{ //used this to make the margins between header and out mission
     margin-top: 5%;
     margin-bottom: 5%;
+    // height: 8.7%;
 }
 
 .buttonContent{ //the components of buttons
@@ -45,6 +46,7 @@
     flex-direction: column;
     padding-top: 4.4%;
     padding-bottom: 4.4%;
+    // height: 24.3%;
 }
 
 .ourMissionText{
@@ -87,3 +89,26 @@
 
 
 //Programs section
+.programs{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 4.4%;
+}
+
+.programs h1{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2.2%;
+    color: var(--green);
+    font-size: 5rem; //make globals
+    width: 87%;
+}
+
+.programsComponents{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 87%;
+    height: 38.9rem; //idk if i can have rem
+}
