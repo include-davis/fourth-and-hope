@@ -16,11 +16,24 @@
     flex-direction: column;
 }
 
+.boxContent h2{
+    font-weight: 548;
+}
+
+.boxContent p{
+    margin-top: 5.5%;
+    line-height: 1.8rem;
+    font-weight: 275;
+    font-size: 1.28rem; //might have to change units for responsiveness
+}
+
 
 .theImage{
     width: 100%;
     height: auto;
+    margin-bottom: 5.5%;
 }
+
 
 .learnLink{
     display: flex;
