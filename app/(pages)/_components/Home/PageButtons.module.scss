@@ -24,5 +24,16 @@
     text-align: center;
     width: 100%;
     font-size: 1.125rem; //how to use globals fonts
-    //change radius to make round
+
+    border: none;
+    border: 1px solid var(--white);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover, &:active {
+      background-color: var(--white);
+      color: var(--green);
+      border: 1px solid var(--green);
+    }
   }
