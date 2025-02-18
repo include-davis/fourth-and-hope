@@ -16,7 +16,8 @@ export default function ProgramsBox({imageSrc, altText, Title, bodyText, href}){
                 />
                 <h2>{Title}</h2>
                 <p>{bodyText}</p>
-            
+                </div>
+            <div className={styles.learnLink}>
             <Link href={href} className={styles.learnMore}>
                 learn more
                 {/* 

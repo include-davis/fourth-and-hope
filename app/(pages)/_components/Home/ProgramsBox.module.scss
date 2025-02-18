@@ -7,17 +7,26 @@
     border-radius: .4rem;
     padding: 2.5%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .boxContent{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    // width: 83.7%;
 }
 
 
 .theImage{
     width: 100%;
+    height: auto;
+}
+
+.learnLink{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.learnMore{
+    color: var(--green);
 }

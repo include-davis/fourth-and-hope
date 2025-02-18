@@ -71,7 +71,7 @@ export default function Home() {
     {
       imageSrc: '/images/Home/programsBeds.svg',
       altText: 'Red bunk beds.',
-      Title: 'Emergency Shelter', 
+      Title: ['Emergency',<br/>,'Shelter'], 
       bodyText: 'Providing overnight services, housing, outreach support, and thousands of meals to those in need.', 
       href: '/programs' 
       //should go to the emergency shelter section
@@ -79,7 +79,7 @@ export default function Home() {
     {
       imageSrc: '/images/Home/programsTreatment.svg',
       altText: 'Woman holding towels in one arm and holding up a fist with the other arm.',
-      Title: 'Treatment Program', 
+      Title: ['Treatment', <br/>, 'Program'], 
       bodyText: 'Offering residential care at Walter’s House, outpatient support, referrals, and  program completions to aid recovery and connection to further services.' , 
       href: '/programs' 
       //should go to the treatment section 
@@ -87,7 +87,7 @@ export default function Home() {
     {
       imageSrc: '/images/Home/programsHousing.svg',
       altText: 'Group of older people holding gardening tools and smiling at the camera.',
-      Title: 'Housing Program', 
+      Title: ['Housing', <br/>, 'Program'], 
       bodyText: 'Providing permanent supportive housing and transitional sober living opportunities to individuals and households in need.', 
       href: '/programs' 
       //directs to the housing section

@@ -107,8 +107,9 @@
 
 .programsComponents{
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: space-between;
+    
     width: 87%;
     height: 38.9rem; //idk if i can have rem
 }
