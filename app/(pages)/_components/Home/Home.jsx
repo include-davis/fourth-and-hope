@@ -1,7 +1,7 @@
 'use client'
 import styles from "./Home.module.scss";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import PageButtons from "./PageButtons"
 import ProgramsBox from "./ProgramsBox"
 
@@ -15,6 +15,7 @@ const ImageSlider = () => {
   ];
 
   const [currentImage, setCurrentImage] = useState(0);
+  const imageRef = useRef(null);
 
   //function to move to the next image
   const nextImage = () => {
@@ -24,18 +25,40 @@ const ImageSlider = () => {
   // automatically change image every 4 seconds
   // FIXME: ask about how long each image should be up for and what the transition should look like
   useEffect(() => {
-    const interval = setInterval(nextImage, 4000);
-    return () => clearInterval(interval);
+    // const interval = setInterval(nextImage, 4000);
+    // return () => clearInterval(interval);
+    let timeoutId;
+
+    const interval = setInterval(() => {
+      if (imageRef.current) {
+        imageRef.current.style.opacity = 0; // Fade out current image
+      }
+
+      timeoutId = setTimeout(() => {
+          setCurrentImage((prev) => (prev + 1) % images.length);
+          if (imageRef.current) {
+              imageRef.current.style.opacity = 1; // Fade in next image
+          }
+        }, 1000); // Transition time (adjust to match CSS)
+      }, 4000);
+
+      return () => {
+        clearInterval(interval);
+        clearTimeout(timeoutId);
+      };
   }, []);
 
   return (
     <div className={styles.slider}> 
         <Image 
+        ref={imageRef}
         className={styles.sliderImage}
         src={images[currentImage]}
         width={500}
         height={500}
         alt="Slider"
+        key={currentImage} // Key is still important!
+        style={{ opacity: 1 }} // Initial opacity
         />
     </div>
   );
@@ -110,6 +133,7 @@ export default function Home() {
           ))}
         </div>
       </div>
+      {/* About Us section will be added later (check for design) */}
       {/* Our Mission section; text and images */}
       <div className={styles.ourMission}>
         <div className={styles.ourMissionText}>

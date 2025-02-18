@@ -19,7 +19,7 @@ export default function ProgramsBox({imageSrc, altText, Title, bodyText, href}){
                 </div>
             <div className={styles.learnLink}>
             <Link href={href} className={styles.learnMore}>
-                learn more
+                learn more ➔
                 {/* 
                     how do you want the learn more button??
                     line and arrow when hover

@@ -42,4 +42,8 @@
 
 .learnMore{
     color: var(--green);
+    
+    &:hover, &:active {
+        text-decoration: underline;
+      }
 }
