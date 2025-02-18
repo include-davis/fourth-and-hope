@@ -1,56 +1,23 @@
 @import "../../_globals/mixins.scss";
-.programs {
+
+
+.Titles {
   width: 100%;
-  padding: 5% 10%; 
-  }
+  padding: 10%;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: left; 
+  text-align: left; 
+}
 
-  .program {
-    display: flex;
-    align-items: left;
-    justify-content: space-between;
-    background: var(--white);
-    padding: 5%;
-    margin: 5% 0;
-    border-radius: 3%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-
-    .text {
-      width: 50%;
-      padding: 3%;
-
-      h2 {
-        color: var(--black);
-        font-weight: bold;
-      }
-
-      p {
-        color: var(--dark-grey);
-        line-height: 150%;
-
-        strong {
-          color: var(--black);
-        }
-      }
-
-      .num {
-        font-weight: bold;
-        color: var(--green);
-      }
-    }
-
-    .image {
-      width: 45%;
-      display: flex;
-      justify-content: center;
-
-      // Toggle with
-        width: 100%;
-        max-width: 100%;
-        border-radius: 3%;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-      
-    }
-
-
-  }
+.Support{
+  width: 100%;
+  padding: 10%;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: Center; 
+  text-align: Center; 
+  background: var(--white);
+}

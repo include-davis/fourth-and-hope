@@ -1,0 +1,29 @@
+@import "../../_globals/mixins.scss";
+
+.byNumbers {
+  width: 100%;
+  padding: 20% 10%; 
+
+  }
+
+  .values{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    background: var(--white);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+
+        .text{
+            width: 33.3%;
+            text-align: left;
+            display: flex;
+        }
+
+  }
+
+
+
+
+  
