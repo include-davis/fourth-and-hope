@@ -8,14 +8,15 @@ export default function ProgramsBox({imageSrc, altText, Title, bodyText, href}){
         <div className={styles.mainBox}>
             <div className={styles.boxContent}>
                 <Image
+                className={styles.theImage}
                 src={imageSrc}
                 alt={altText}
-                width={335}
-                height={335}  
+                width={500}
+                height={500}  
                 />
                 <h2>{Title}</h2>
                 <p>{bodyText}</p>
-            </div>
+            
             <Link href={href} className={styles.learnMore}>
                 learn more
                 {/* 
@@ -27,6 +28,7 @@ export default function ProgramsBox({imageSrc, altText, Title, bodyText, href}){
                     color change on hover? bold?
                 */}
             </Link>
+            </div>
         </div>
 
     );

@@ -6,10 +6,18 @@
     height: 100%;
     border-radius: .4rem;
     padding: 2.5%;
+    display: flex;
+    justify-content: center;
 }
 
 .boxContent{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    // width: 83.7%;
+}
+
+
+.theImage{
+    width: 100%;
 }

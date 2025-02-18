@@ -47,23 +47,23 @@ export default function Home() {
 
   const buttonData = [
     {
-    imageSrc: '/images/Home/handshakeImage.svg',
-    altText: 'Green handshake.',
-    href: '/get-involved',
-    buttonText: 'Volunteer'
+      imageSrc: '/images/Home/handshakeImage.svg',
+      altText: 'Green handshake.',
+      href: '/get-involved',
+      buttonText: 'Volunteer'
     },
     {
-    imageSrc: '/images/Home/donateImage.svg',
-    altText: 'Green circle with dollar sign in the middle.',
-    href: '/donate',
-    buttonText: 'Donate'
+      imageSrc: '/images/Home/donateImage.svg',
+      altText: 'Green circle with dollar sign in the middle.',
+      href: '/donate',
+      buttonText: 'Donate'
     },
     {
-    imageSrc: '/images/Home/resourcesImage.svg',
-    altText: 'Green cartoon house.',
-    href: '/programs',
-    buttonText: 'Resources'
-    }   ,
+      imageSrc: '/images/Home/resourcesImage.svg',
+      altText: 'Green cartoon house.',
+      href: '/programs',
+      buttonText: 'Resources'
+    },
   ];
 
   // imageSrc, altText, Title, bodyText, href
