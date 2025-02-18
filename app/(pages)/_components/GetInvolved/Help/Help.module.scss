@@ -1,0 +1,23 @@
+.container{
+    margin-right: 6.9%;
+    margin-left: 6.9%;
+    height: 12.18%;
+    display: flex;
+    flex-direction: column;
+    gap: 7.9%;
+}
+
+.h3_override{
+    color: var(--green);
+}
+
+.p_override{
+    line-height: 150%;
+}
+
+.content{
+    height: 74.56%;
+    display: flex;
+    flex-direction: column;
+    gap: 7.94%;
+}

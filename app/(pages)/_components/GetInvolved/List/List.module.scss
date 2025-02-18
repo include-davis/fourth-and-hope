@@ -1,0 +1,54 @@
+.container{
+    margin-right: 6.9%;
+    margin-left: 6.9%;
+    height: 19.25%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    
+}
+
+.top{
+    height: 26.40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14.20%;
+}
+
+.p_overrride{
+    line-height: 150%;
+}
+
+.bottom{
+    height: 68.59%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.new{
+    width: 44.67;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5.46%;  
+}
+
+.used{
+    width: 44.67;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5.46%;  
+
+}
+
+.h4_override{
+    color: var(--green);
+}
+
+.ul_override{
+    line-height: 150%;
+}
