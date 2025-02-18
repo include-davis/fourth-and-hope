@@ -173,32 +173,29 @@
   height: 63px;
   color: var(--black, #323232);
   text-align: center;
-  font-family: "Be Vietnam Pro";
   font-size: 48px;
   font-weight: 600;
   line-height: normal;
 }
 
-/* ===== Overlay Backdrop ===== */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); /* dark semi-transparent backdrop */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  justify-content: center; /* center horizontally */
-  align-items: center;     /* center vertically */
+  justify-content: center; 
+  align-items: center;    
   z-index: 1000;
 }
 
-/* ===== Overlay Content (Modal) ===== */
 .overlayContent {
   position: relative;
   background: #ffffff;
-  width: 1240px; /* fixed width */
-  height: 605px; /* fixed height */
+  width: 1240px; 
+  height: 605px; 
   border-radius: 6px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   color: var(--green);
@@ -238,12 +235,12 @@
 
 .text_content {
   width: 100%;
-  max-width: 600px;    /* adjust as needed */
-  margin: 0 auto;      /* center this block horizontally */
+  max-width: 600px;    
+  margin: 0 auto;      
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;         /* space between instruction rows */
-  text-align: left;    /* paragraphs/labels are left-aligned inside */
+  gap: 1.5rem;         
+  text-align: left;    
 }
 
 .instructionsRow {
