@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useState, useRef } from "react";
 import PageButtons from "./PageButtons"
 import ProgramsBox from "./ProgramsBox"
+import StoriesSlide from "./StoriesSlide"
 
 
 /* function for header image slider */
@@ -94,29 +95,52 @@ export default function Home() {
     {
       imageSrc: '/images/Home/programsBeds.svg',
       altText: 'Red bunk beds.',
-      Title: ['Emergency',<br/>,'Shelter'], 
+      heading: 'Emergency Shelter', 
       bodyText: 'Providing overnight services, housing, outreach support, and thousands of meals to those in need.', 
-      href: '/programs' 
+      href: '/programs' ,
       //should go to the emergency shelter section
+
     }, 
     {
       imageSrc: '/images/Home/programsTreatment.svg',
       altText: 'Woman holding towels in one arm and holding up a fist with the other arm.',
-      Title: ['Treatment', <br/>, 'Program'], 
+      heading: 'Treatment Program', 
       bodyText: 'Offering residential care at Walter’s House, outpatient support, referrals, and  program completions to aid recovery and connection to further services.' , 
-      href: '/programs' 
+      href: '/programs' ,
       //should go to the treatment section 
+
     }, 
     {
       imageSrc: '/images/Home/programsHousing.svg',
       altText: 'Group of older people holding gardening tools and smiling at the camera.',
-      Title: ['Housing', <br/>, 'Program'], 
+      heading: 'Housing Program', 
       bodyText: 'Providing permanent supportive housing and transitional sober living opportunities to individuals and households in need.', 
-      href: '/programs' 
+      href: '/programs' ,
       //directs to the housing section
+     
     },
   ];
 
+  const storiesData = [
+    {
+      imageSrc: '/images/Home/ourStories.jpeg',
+      altText: 'Group of people working with boxes.',
+      heading: 'Community Triumph: From Streets to Stability',
+      bodyText: 'Join Fourth & Hope’s 16th Annual Empty Bowls Event on October 23, 2024, at Life Pointe Church in Woodland. Help raise $35,000 to support their food budget, which served over 92,000 meals last year. Enjoy soup, bread, and a raffle while fighting hunger and homelessness.'
+    },
+    {
+      imageSrc: '/images/Home/ourStories.jpeg',
+      altText: 'Group of people working with boxes.',
+      heading: 'Community Triumph: From Streets to Stability ##2',
+      bodyText: 'Join Fourth & Hope’s 16th Annual Empty Bowls Event on October 23, 2024, at Life Pointe Church in Woodland. Help raise $35,000 to support their food budget, which served over 92,000 meals last year. Enjoy soup, bread, and a raffle while fighting hunger and homelessness.'
+    },
+    {
+      imageSrc: '/images/Home/ourStories.jpeg',
+      altText: 'Group of people working with boxes.',
+      heading: 'Community Triumph: From Streets to Stability ##3',
+      bodyText: 'Join Fourth & Hope’s 16th Annual Empty Bowls Event on October 23, 2024, at Life Pointe Church in Woodland. Help raise $35,000 to support their food budget, which served over 92,000 meals last year. Enjoy soup, bread, and a raffle while fighting hunger and homelessness.'
+    },
+  ];
 
 
     return (
@@ -128,8 +152,8 @@ export default function Home() {
       {/* donate, volunteer, resources buttons */}
       <div className={styles.threeButtons}>
         <div className={styles.buttonContent}>
-          {buttonData.map((button, index) => (
-          <PageButtons key={index} {...button} />
+          {buttonData.map((button, button_index) => (
+          <PageButtons key={button_index} {...button} />
           ))}
         </div>
       </div>
@@ -172,14 +196,19 @@ export default function Home() {
       <div className={styles.programs}>
         <h1>PROGRAMS</h1>
         <div className={styles.programsComponents}>
-          {programData.map((box, index) => (
-          <ProgramsBox key={index} {...box} />
+          {programData.map((program, index) => (
+          <ProgramsBox key={index} {...program} /> //this had an error and gemini fix
           ))}
         </div>
       </div>
       {/* Our stories section */}
       <div className={styles.ourStories}>
-        Our Stories
+        <h1>OUR STORIES</h1>  
+        <div className={styles.storiesComponents}>
+          {storiesData.map((story, stories_index) => (
+            <StoriesSlide key={stories_index} {...story} />
+            ))}
+        </div>
       </div>
 
     </>

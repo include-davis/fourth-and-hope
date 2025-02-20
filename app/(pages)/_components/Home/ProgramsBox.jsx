@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ProgramsBox({imageSrc, altText, Title, bodyText, href}){
+export default function ProgramsBox({imageSrc, altText, heading, bodyText, href}){
     return(
         <div className={styles.mainBox}>
             <div className={styles.boxContent}>
@@ -14,7 +14,7 @@ export default function ProgramsBox({imageSrc, altText, Title, bodyText, href}){
                 width={500}
                 height={500}  
                 />
-                <h2>{Title}</h2>
+                <h2>{heading}</h2>
                 <p>{bodyText}</p>
                 </div>
             <div className={styles.learnLink}>

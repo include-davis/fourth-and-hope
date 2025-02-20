@@ -122,3 +122,22 @@
     width: 87%;
     height: 38.9rem; //idk if i can have rem
 }
+
+//our stories section
+.ourStories{
+    background-color: var(--light-grey);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ourStories h1{
+    color: var(--green);
+    width: 87%;
+}
+
+.storiesComponents{
+    width: 87%;
+    display: flex;
+    align-items: center;
+}
