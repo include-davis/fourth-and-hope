@@ -20,7 +20,7 @@ export default function About() {
           <h2>Who we are</h2>
           <p>A faith - based organization assisting with care and recovery for those in need.</p>
           <div className={styles.buttonContainer}>
-            <PrimaryButton name="Donate" link="https://app.etapestry.com/onlineforms/YoloWayfarerCenterChristianMi/fourth_hope_giving.html" />
+            <PrimaryButton name="Donate" link="/donate" />
             <PrimaryButton name="Subscribe" link="#" />
           </div>
         </div>
