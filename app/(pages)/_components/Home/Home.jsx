@@ -8,6 +8,7 @@ import StoriesSlide from "./StoriesSlide"
 
 
 /* function for header image slider */
+// should be able to edit later on... to add more pictures.
 const ImageSlider = () => {
   const images = [
     "/images/Home/houseHeader.svg",
@@ -147,8 +148,14 @@ export default function Home() {
     <>
       {/* top image with transitions */}
       <div className={styles.imageSlides}>
+        {/* the images should just jec images without text... need to add the text and style it to look like the figma header */}
         <ImageSlider/>
+        <div className={styles.slidesTitle}>
+            <h2>A Mission to Change Lives</h2>
+            <h1>FOURTH & HOPE</h1>
+        </div>
       </div>
+
       {/* donate, volunteer, resources buttons */}
       <div className={styles.threeButtons}>
         <div className={styles.buttonContent}>
@@ -157,6 +164,7 @@ export default function Home() {
           ))}
         </div>
       </div>
+
       {/* About Us section will be added later (check for design) */}
       {/* Our Mission section; text and images */}
       <div className={styles.ourMission}>
@@ -168,6 +176,7 @@ export default function Home() {
             Our values are compassion, faith, integrity, service, and stewardship. As Jesus Christ has served us, we serve His people.
           </p>
         </div>
+        {/* replace images with youtube video (just use some random one for now) */}
         <div className={styles.ourMissionImages}>
             <Image
               className={styles.firstImage}
@@ -192,6 +201,7 @@ export default function Home() {
             />
         </div>
       </div>
+
       {/* Programs section */}
       <div className={styles.programs}>
         <h1>PROGRAMS</h1>
@@ -201,6 +211,7 @@ export default function Home() {
           ))}
         </div>
       </div>
+
       {/* Our stories section */}
       <div className={styles.ourStories}>
         <h1>OUR STORIES</h1>  
