@@ -17,13 +17,11 @@
   p {
     align-self: stretch;
     color: #000;
-
-    /* p */
     font-family: "Be Vietnam Pro";
     font-size: 20px;
     font-style: normal;
     font-weight: 300;
-    line-height: 150%; /* 30px */
+    line-height: 150%;
   }
 }
 
@@ -38,6 +36,7 @@
   color: var(--white);
   background-color: var(--green);
   border: 2px solid transparent;
+  cursor: pointer;
 }
 
 .bor_button:hover {
@@ -56,15 +55,12 @@
   top: 1rem;
   right: 1rem;
   color: var(--black);
-  // display: inline-flex; /* Ensures "Close" and "X" are on the same line */
   align-items: center;
   gap: 0.25rem;
-  // border-bottom: 2px solid; /* Creates a continuous underline */
   text-decoration: underline;
-  padding-bottom: 2px; /* Adjust spacing between text and underline */
+  padding-bottom: 2px; 
 }
 
-/* ===== Overlay Backdrop ===== */
 .overlay {
   position: fixed;
   top: 0;
