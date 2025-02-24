@@ -1,0 +1,10 @@
+.sponsorlist {
+    display: flex;
+    gap: 4%;
+    padding: 4% 0 4% 0;
+    overflow-x: auto;
+    
+    img {
+        box-shadow: 0 0 30px var(--dark-grey);
+    }
+}

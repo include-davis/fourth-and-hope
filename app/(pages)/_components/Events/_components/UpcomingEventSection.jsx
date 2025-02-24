@@ -1,0 +1,18 @@
+import React from "react";
+import UpcomingEvent from "./UpcomingEvent"
+
+const UpcomingEventSection = () => {
+    return (
+        <>
+            <UpcomingEvent
+                title = "Big Day of Giving 2025"
+                date = "MAY 1ST, 2025"
+                paragraphs = "Big Day of Giving is a 24-hour giving celebration that inspires generous people like you throughout California’s capital area to support causes they love in El Dorado, Placer, Sacramento, and Yolo counties. Organized by the Sacramento Region Community Foundation since 2013, this generosity-fueled movement has inspired $91 million in gifts for area nonprofits. Now, we’re getting ready for Big Day of Giving 2025! Mark your calendar for Thursday, May 1, 2025."
+
+                images = "/images/events-pic-1.svg"
+            />
+        </>
+    );
+};
+
+export default UpcomingEventSection;

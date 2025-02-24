@@ -1,0 +1,39 @@
+.summary {
+    padding: 5% 0 5% 0;
+
+    .summaryhead {
+        padding-bottom: 4%;
+
+        h3 {
+            font-weight: 600;
+        }
+
+        h4 {
+            color: var(--green);
+            font-weight: 500;
+            padding-bottom: 2%;
+        }
+    }
+    
+    .summarycontent {
+        display: flex;
+        gap: 5%;
+
+        .parent {
+            width: 50vw;
+            flex: 2;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        p {
+            padding: 1% 0 1% 0;
+            flex: 3;
+            font-weight: 300;
+            line-height: 150%;
+        }
+    }
+}
