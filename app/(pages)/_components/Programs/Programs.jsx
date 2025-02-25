@@ -45,27 +45,27 @@ const byNumbers = [
   {
     value: '242',
     description: 'emergency shelters',
-    image: '<img src="/images/meals.jpg" alt="EmergencyShelters" />',
+    image: '<img src="/images/meals.jpg" alt="EmergencyShelters" width={50} height={50}/>',
   },
   {
     value: '58',
     description: 'in permanent supportive housing',
-    image: '<img src="/images/meals.jpg" alt="SupportiveHousing" />',
+    image: '<img src="/images/meals.jpg" alt="SupportiveHousing" width={50} height={50}/>',
   },
   {
     value: '92000',
     description: 'meals served',
-    image: '<img src="/images/meals.jpg" alt="MealsServed" />',
+    image: '<img src="/images/meals.jpg" alt="MealsServed" width={50} height={50}/>',
   },
   {
     value: '41',
     description: 'in stable housing',
-    image: '<img src="/images/meals.jpg" alt="StableHousing" />',
+    image: '<img src="/alcohol" alt="StableHousing" width={50} height={50} />',
   },
   {
     value: '88',
     description: 'in transitional sober living',
-    image: '<img src="/images/meals.jpg" alt="SoberLiving" />',
+    image: '<img src="/images/meals.jpg" alt="SoberLiving" width={50} height={50}/>',
   },
 ]
 
