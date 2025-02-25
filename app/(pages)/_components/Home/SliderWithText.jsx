@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './SliderWithText.module.scss';
 import Image from 'next/image';
-import next from 'next';
 
 const SliderWithText = ({ slides }) => {
     const [currentIndex, setCurrentIndex] = useState(0);

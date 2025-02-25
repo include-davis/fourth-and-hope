@@ -1,14 +1,12 @@
 'use client'
 import styles from "./Home.module.scss";
 import Image from "next/image";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import PageButtons from "./PageButtons"
 import ProgramsBox from "./ProgramsBox"
 import StoriesSlide from "./StoriesSlide"
 import SliderWithText from './SliderWithText';
-import YoutubeVideo from "./YoutubeVideo"; // Adjust the path as needed
-
-
+import YoutubeVideo from "./YoutubeVideo";
 
 
 export default function Home() {
@@ -130,8 +128,7 @@ export default function Home() {
             <Image
               src={image}
               alt={`Header Image ${index + 1}`}
-              layout="fill"
-              objectFit="cover"
+              fill
             />
           </div>
         ))}

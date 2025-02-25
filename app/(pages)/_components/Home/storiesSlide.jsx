@@ -18,7 +18,7 @@ export default function storiesSlide({heading, bodyText, imageSrc, altText}){
             alt= {altText}
             width={500}
             height={500}
-            objectFit='cover'
+            object-fit='cover'
         />
         </div>      
         </div> 
