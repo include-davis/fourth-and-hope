@@ -1,0 +1,19 @@
+.listSection {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.7vw;  
+    flex: 1;
+    justify-content: flex-start;
+    align-items: flex-start;  
+    margin-right: 5vh;
+  }
+  
+  .h4_override {
+    color: var(--green);
+  }
+  
+  .ul_override {
+    line-height: 150%;
+  }
+  

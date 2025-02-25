@@ -1,54 +1,44 @@
-.container{
+.container {
     margin-right: 6.9%;
     margin-left: 6.9%;
-    height: 19.25%;
+    height: auto;
     display: flex;
     flex-direction: column;
-    gap: 5%;
-    
+    gap: 2.2vw;
 }
 
-.top{
-    height: 26.40%;
+.top {
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 14.20%;
+    gap: 1.7vw;
 }
 
-.p_overrride{
+.p_override {
     line-height: 150%;
 }
 
-.bottom{
-    height: 68.59%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
+.bottom {
+    height: auto;
+    display: flex;          
+    gap: 2vw;              
 }
 
-.new{
-    width: 44.67;
+.new, .used {
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 5.46%;  
+    gap: 1.7vw;  
+    flex: 1;
+    justify-content: flex-start;
+    align-items: flex-start; 
 }
 
-.used{
-    width: 44.67;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 5.46%;  
-
-}
-
-.h4_override{
+.h4_override {
     color: var(--green);
 }
 
-.ul_override{
+.ul_override {
     line-height: 150%;
 }

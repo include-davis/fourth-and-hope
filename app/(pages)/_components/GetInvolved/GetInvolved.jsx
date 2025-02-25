@@ -12,7 +12,7 @@ import List from "./List/List.jsx";
 
 export default function GetInvolved() {
     return (
-      <div className={styles.container}>
+      <div >
         <Image
           src="images/GetInvolved_images/get-involved-image.png"
           alt="Description"
@@ -20,9 +20,8 @@ export default function GetInvolved() {
           height={300}
           
           unoptimized={true}
-          style={{width: "100%",height: "auto", marginBottom: "10.5%"}}
+          style={{width: "100%",height: "auto", marginBottom: "5.1vw"}}
         />
-        
         
         <div className={styles.content}>
           <Volunteer/>

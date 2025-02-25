@@ -1,5 +1,4 @@
 import styles from "./Help.module.scss";
-import Image from "next/image";
 import PrimaryButton from "../../Button/PrimaryButton.jsx";
 
 

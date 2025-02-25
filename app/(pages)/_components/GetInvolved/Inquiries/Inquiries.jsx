@@ -1,7 +1,7 @@
 import styles from "./Inquiries.module.scss";
 import Image from "next/image";
 
-import PrimaryButton from "../../Button/PrimaryButton.jsx";
+import SecondaryButton from "../../Button/SecondaryButton.jsx";
 
 
 export default function Inquiries() {
@@ -50,7 +50,7 @@ export default function Inquiries() {
                         </div>
 
                         <div className={styles.button}>
-                            <PrimaryButton name="Volunteer Guidelines" link="/volunteer-guidelines" />
+                            <SecondaryButton name="Volunteer Guidelines" link="/volunteer-guidelines" />
                         </div>
                     </div>
                 </div>
