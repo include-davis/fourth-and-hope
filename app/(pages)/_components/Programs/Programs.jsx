@@ -1,10 +1,16 @@
 'use client';
-import styles from "./Programs.module.scss";
-import Image from "next/image";
-import Link from "next/link"
-import ProgramCard from './programCard.jsx'
+
+//import Home from './_components/Home/Home';
 //import PrimaryButton from './_components/Button/PrimaryButton';
 //import SecondaryButton from './_components/Button/SecondaryButton';
+
+import styles from "./Programs.module.scss";
+import Image from "next/image";
+import Link from "next/link";
+import ProgramCard from './programCard.jsx';
+import Stat from './stats.jsx'
+
+
 
 import React from "react";
 
@@ -39,27 +45,27 @@ const byNumbers = [
   {
     value: '242',
     description: 'emergency shelters',
-    image: '',
+    image: '<img src="/images/meals.jpg" alt="EmergencyShelters" />',
   },
   {
     value: '58',
     description: 'in permanent supportive housing',
-    image: '',
+    image: '<img src="/images/meals.jpg" alt="SupportiveHousing" />',
   },
   {
-    value: '92,000',
+    value: '92000',
     description: 'meals served',
-    image: '',
+    image: '<img src="/images/meals.jpg" alt="MealsServed" />',
   },
   {
-    value: '41 ',
+    value: '41',
     description: 'in stable housing',
-    image: '',
+    image: '<img src="/images/meals.jpg" alt="StableHousing" />',
   },
   {
     value: '88',
     description: 'in transitional sober living',
-    image: '',
+    image: '<img src="/images/meals.jpg" alt="SoberLiving" />',
   },
 ]
 
@@ -80,10 +86,19 @@ export default function Programs() {
 
 
         {/*RISING NUMBERS HERE ~ Function call */}
+        <div className="stats-container">
+        {byNumbers.map((s, index) => (
+          <Stat 
+            key={index} // Use a unique identifier if available
+            value={s.value}
+            label={s.description}
+            image={s.image}
+          />
+        ))}
+      </div>
 
-      
         
-        {/* <ProgramCard title={programs.title} subtitle={programs.subtitle}/> */}
+
         <div>
         <div className={styles.Titles}>
         <h1>PROGRAMS</h1>
@@ -105,7 +120,7 @@ export default function Programs() {
               <p>Considering donating? Just $35 provides a night of shelter and food for one person.</p>
               <p>Can’t donate? Our dedicated volunteers help our team prepare, cook, and serve these meals. We are so grateful to the 
                 community members who support our program and help those in need. </p>
-            {/* donate buttons */}
+            
           </div>
 
       </div>
