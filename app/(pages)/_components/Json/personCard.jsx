@@ -5,7 +5,7 @@
     return(
         <div>
             <h1>{name}</h1>
-            <p>{title}</p>
+            <p>{title}</p>  
         </div>
     )
  };

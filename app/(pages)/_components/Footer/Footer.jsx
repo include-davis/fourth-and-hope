@@ -1,5 +1,6 @@
 "use client";
 import styles from "./Footer.module.scss";
+import Link from "next/link";
 
 
 import React, { useState } from 'react';
@@ -16,7 +17,6 @@ export default function Footer() {
     console.log('Email submitted:', email);
   };
     return (
-      <div className={styles.placeholder}>
         <div className={styles.footerContainer}>
           <div className={styles.contentContainer}>
             <div ><img src="/images/fourthandhopelogo.png" className={styles.logo} alt="Fourth Hope Logo"/></div>
@@ -33,19 +33,19 @@ export default function Footer() {
                 <div className={styles.subGroup}>
                 <p className={styles.subTitle}>Social</p>
                   <div className={styles.subContent}>
-                    <a>Facebook</a>
-                    <a>Instagram</a>
-                    <a>Youtube</a>
-                    <a>LinkedIn</a>
+                    <Link href="https://www.facebook.com/FourthandHope/">Facebook</Link>
+                    <Link href="https://www.instagram.com/fourth_hope/">Instagram</Link>
+                    <Link href="https://www.youtube.com/channel/UCkSg1q3aaGzVaiiNstGdxYg?view_as=subscriber">Youtube</Link>
+                    <Link href="https://www.linkedin.com/company/fourth-hope/">LinkedIn</Link>
                   </div>
                 </div>
                 <div className={styles.subGroup}>
                 <p className={styles.subTitle}>Links</p>
                   <div className={styles.subContent}>
-                    <a>About Us</a>
-                    <a>Events</a>
-                    <a>Programs</a>
-                    <a>Careers</a>
+                    <Link href="/about">About Us</Link>
+                    <Link href="/events">Events</Link>
+                    <Link href="/programs">Programs</Link>
+                    <Link href="/">Careers</Link>
                   </div>
                 </div>
               </div>
@@ -72,6 +72,5 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      </div>
     );
 }
