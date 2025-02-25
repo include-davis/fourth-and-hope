@@ -1,5 +1,6 @@
 "use client";
 import styles from "./Footer.module.scss";
+import "../../_globals/globals.scss";
 import Link from "next/link";
 
 
@@ -19,7 +20,7 @@ export default function Footer() {
     return (
         <div className={styles.footerContainer}>
           <div className={styles.contentContainer}>
-            <div ><img src="/images/fourthandhopelogo.png" className={styles.logo} alt="Fourth Hope Logo"/></div>
+            <div ><img src="/images/footerlogo.svg" className={styles.logo} alt="Fourth Hope Logo"/></div>
             <div className={styles.middleContainer}>
               <div className={styles.midSubContainer}>
                 <div className={styles.subGroup}>
@@ -33,25 +34,25 @@ export default function Footer() {
                 <div className={styles.subGroup}>
                 <p className={styles.subTitle}>Social</p>
                   <div className={styles.subContent}>
-                    <Link href="https://www.facebook.com/FourthandHope/">Facebook</Link>
-                    <Link href="https://www.instagram.com/fourth_hope/">Instagram</Link>
-                    <Link href="https://www.youtube.com/channel/UCkSg1q3aaGzVaiiNstGdxYg?view_as=subscriber">Youtube</Link>
-                    <Link href="https://www.linkedin.com/company/fourth-hope/">LinkedIn</Link>
+                    <p><Link href="https://www.facebook.com/FourthandHope/">Facebook</Link></p>
+                    <p><Link href="https://www.instagram.com/fourth_hope/">Instagram</Link></p>
+                    <p><Link href="https://www.youtube.com/channel/UCkSg1q3aaGzVaiiNstGdxYg?view_as=subscriber">Youtube</Link></p>
+                    <p><Link href="https://www.linkedin.com/company/fourth-hope/">LinkedIn</Link></p>
                   </div>
                 </div>
                 <div className={styles.subGroup}>
                 <p className={styles.subTitle}>Links</p>
                   <div className={styles.subContent}>
-                    <Link href="/about">About Us</Link>
-                    <Link href="/events">Events</Link>
-                    <Link href="/programs">Programs</Link>
-                    <Link href="/">Careers</Link>
+                    <p><Link href="/about">About Us</Link></p>
+                    <p><Link href="/events">Events</Link></p>
+                    <p><Link href="/programs">Programs</Link></p>
+                    <p><Link href="/get-involved">Careers</Link></p>
                   </div>
                 </div>
               </div>
               
-                <form onSubmit={handleFormSubmit} className={styles.newsLetterContainer}>
-                  <label htmlFor="footer-email-input">Subscribe to our newsletter:</label>
+              <form onSubmit={handleFormSubmit} className={styles.newsLetterContainer}>
+                  <label htmlFor="footer-email-input"><p>Subscribe to our newsletter:</p></label>
                   <div className={styles.functionality}><input
                     type="email"
                     id="footer-email-input"
@@ -61,9 +62,9 @@ export default function Footer() {
                     required
                     className={styles.emailInput}
                   />
-                  <button type="submit" className={styles.button}>Sign Up</button></div>
+                  <button type="submit" className={styles.button}><p>Sign Up</p></button></div>
                   
-                </form>
+              </form>
             </div>
               
             <div className={styles.bottomContainer}>

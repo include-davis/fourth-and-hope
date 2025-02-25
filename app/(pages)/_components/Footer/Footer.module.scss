@@ -7,28 +7,27 @@
     display: flex;
     justify-content: center;   
     align-items: center;
+    p{
+        font-size: 1.25vw; //20px
+    }
+    a{
+        color: white;
+    }
 }
 
 .contentContainer{
-    height: 46vh;
+    height: 77%;
     width: 86%;
     display: flex;
     flex-direction: column;
-    gap: 38px;
-    
-    font-size: 18px;
+    gap: 9%;
     color: var(--white);
-    /* a */
-    font-family: "Be Vietnam Pro";
-    font-style: normal;
-    font-weight: 200;
-    line-height: 20px; 
     white-space: nowrap; 
 }
 
 .logo{
     filter: brightness(0) invert(1);
-    height: 10vh;
+    width: 15.21vw;
 }
 
 .middleContainer{
@@ -40,19 +39,23 @@
 .midSubContainer{
     display:flex;
     flex-direction: row;
-    gap: 90px;
+    gap: 6vw;
 }
 
 .subGroup{
     display:flex; 
     flex-direction: column;
-    gap: 18px;
+    gap: 2vh;
 }
 
 .subContent{
     display:flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1.7vh;
+    p{
+        color: white;
+        font-weight: 300;
+    }
 }
 
 .subTitle{
@@ -63,33 +66,40 @@
     display:flex;
     flex-direction: column;   
     justify-content: space-between;
-    gap: 24px;
+    gap: 2.6vh;
 }
 
 .functionality{
     display:flex;
     flex-direction: column;   
     justify-content: space-between;
-    gap: 12px;
+    gap: 1.3vh;
+    p{
+        font-size: 1.25vw; //18px
+    }
 }
 
 .emailInput{
     display: flex;
-    width: 464px;
-    height: 68px;
-    padding: 8px 15px;
+    width: 32.2vw;
+    height: 7.5vh;
+    padding: 0.88vh 1vw;
     align-items: center;
-    gap: 10px;
 }
+
+.emailInput::placeholder {
+    font-size: 1.25vw;
+    /* other styles like color, font-weight, etc. */
+  }
 
 .bottomContainer{
     display: flex;
     flex-direction: column;
-    gap: 12px;
-}
-
-.bottomText{
-    font-size:14px;
+    gap: 1.3vh;
+    p{
+        font-size: 1.12vw;
+        font-weight: 200;
+    }
 }
 
 .button {
@@ -101,9 +111,9 @@
     color: var(--white);
 
     display: flex;
-    min-width: 160px;
+    min-width: 11.11vw;
     max-width: 39%;
-    padding: 20px 54px;
+    padding: 2.22vh 3.75vw;
     justify-content: center;
     align-items: center;
     gap: 10px;
