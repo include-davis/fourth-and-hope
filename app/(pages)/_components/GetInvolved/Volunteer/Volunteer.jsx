@@ -2,6 +2,11 @@ import styles from "./Volunteer.module.scss";
 import Image from "next/image";
 import PrimaryButton from "../../Button/PrimaryButton.jsx";
 
+const volunteerLinks = [
+  { name: "Serve a Meal", link: "/serve-meal" },
+  { name: "Prep & Cook", link: "/prep-cook" },
+  { name: "Lead Activities", link: "/lead-activities" }
+];
 
 export default function Volunteer() {
     return (
@@ -39,9 +44,9 @@ export default function Volunteer() {
           </div>
           
           <div className={styles.volunteer_bottom}>
-            <PrimaryButton name="Serve a Meal" link="/serve-meal" />
-            <PrimaryButton name="Prep & Cook" link="/prep-cook" />
-            <PrimaryButton name="Lead Activities" link="/lead-activities" />
+            {volunteerLinks.map((button, index) => (
+              <PrimaryButton key={index} name={button.name} link={button.link} />
+            ))}
           </div>
 
         </div>
