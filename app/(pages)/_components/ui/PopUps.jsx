@@ -26,17 +26,17 @@ function CertificationContent() {
         <div className={styles.program}>
           <h3 className={styles.programTitle}>Residential Program</h3>
           <p>Licensed and Certified by the California Department of Health Care Services (DHCS), ensuring the highest standards of care.</p>
-          <p><strong>License and Certification Number:</strong> 570008AN</p>
-          <p><strong>Effective Date:</strong> 09/01/2023</p>
-          <p><strong>Expiration Date:</strong> 08/31/2025</p>
+          <p><b>License and Certification Number:</b> 570008AN</p>
+          <p><b>Effective Date:</b> 09/01/2023</p>
+          <p><b>Expiration Date:</b> 08/31/2025</p>
         </div>
 
         <div className={styles.program}>
           <h3 className={styles.programTitle}>Outpatient Program</h3>
           <p>Certified by the California Department of Health Care Services (DHCS).</p>
-          <p><strong>Certification Number:</strong> 570008BN</p>
-          <p><strong>Effective Date:</strong> 02/01/2023</p>
-          <p><strong>Expiration Date:</strong> 01/31/2025</p>
+          <p><b>Certification Number:</b> 570008BN</p>
+          <p><b>Effective Date:</b> 02/01/2023</p>
+          <p><b>Expiration Date:</b> 01/31/2025</p>
         </div>
       </div>
 
