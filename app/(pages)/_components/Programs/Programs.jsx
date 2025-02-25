@@ -72,7 +72,15 @@ const byNumbers = [
 export default function Programs() {
     return (
       <div>
-        {/* IMAGE HERE*/}
+        <div className={styles.hero_container}>
+      <Image
+        src="/images//staff.svg"
+        alt="Staff"
+        width={0}
+        height={0}
+        style={{ width: "100%", height: "auto" }}
+      />
+      </div>
         <div className={styles.Titles}>
         <h1>OUTREACH</h1>
         <p>Fourth & Hope provides day services from 8:00 a.m. to 5:30 p.m. in a gated courtyard, offering protection from exrtreme weather.
