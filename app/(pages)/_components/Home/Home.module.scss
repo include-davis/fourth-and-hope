@@ -29,6 +29,10 @@
     transition: opacity 1s ease-in-out; /* Match the JS timeout */
 }
 
+.slidesTitle{
+    position: relative;
+}
+
 
 // Buttons section
 .threeButtons{ //used this to make the margins between header and out mission
@@ -48,52 +52,57 @@
 
 
 // Our Mission Section
-.ourMission{ //holds all content of our mission
+.whoWeAre{ //holds all content of our mission
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     padding-top: 4.4%;
     padding-bottom: 4.4%;
-    // height: 24.3%;
 }
 
-.ourMissionText{
+.WWATitle{
     width: 87%;
-    color: var(--black);
-}
-
-.ourMissionText h1{
-    display: flex;
-    justify-content: flex-start;
     margin-bottom: 2.2%;
     color: var(--green);
     font-size: 5rem; //make globals
+    font-weight: 500;
 }
 
-.ourMissionText p{
+.whoWeAreComponents{
+    width: 87%;
+    color: var(--black);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 6%;
+}
+
+.whoWeAreText{
+    display: flex;
+    flex-direction: column;
+    width: 36.3%;
+    color: var(--black);
+}
+
+.text1{
+    margin-bottom: 9%;
+}
+
+.whoWeAreText h2{
+    font-weight: 548;
+    margin-bottom: 3%;
+}
+
+.whoWeAreText p{
     font-size: 1.28rem; //make globals
     font-weight: 275;
+    line-height: 1.8rem;
 }
 
-.ourMissionImages{
-    //FIXME: make more responsive... when page gets bigger the gap between images and text disappears should the images become column?
-    width: 87%;
-    height: 25%;
-}
-
-.firstImage{
-    width: 32.2%;
-}
-
-.secondImage{
-    width: 32.2%;
-    margin-left: 1.7%;
-    margin-right: 1.7%;
-}
-
-.thirdImage{
-    width: 32.2%;
+.whoWeAreVideo{
+    background-color: var(--green);
+    width: 58.5%;
+    border-radius: 3%;
 }
 
 
@@ -111,6 +120,7 @@
     margin-bottom: 2.2%;
     color: var(--green);
     font-size: 5rem; //make globals
+    font-weight: 500;
     width: 87%;
 }
 
@@ -118,7 +128,6 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    
     width: 87%;
     height: 38.9rem; //idk if i can have rem
 }
@@ -128,16 +137,22 @@
     background-color: var(--light-grey);
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 
 .ourStories h1{
     color: var(--green);
     width: 87%;
+    font-size: 5rem; //make globals
+    font-weight: 500;
+    margin-bottom: 2.2%;
+    margin-top: 3%;
 }
 
 .storiesComponents{
-    width: 87%;
+    max-width: 87%;
     display: flex;
     align-items: center;
+    margin-bottom: 2%;
 }

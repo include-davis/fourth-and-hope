@@ -1,0 +1,50 @@
+@import '../../_globals/mixins.scss';
+
+.sliderContainer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: relative;
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .dots {
+    text-align: center;
+    margin-top: 1%;
+  }
+  
+  .dots span {
+    display: inline-block;
+    width: 1.25vw;
+    height: 1.25vw;
+    border-radius: 50%;
+    background-color: var(--grey);
+    margin: 0 0.5%;
+    cursor: pointer;
+  }
+  
+  .dots span.active {
+    background-color: var(--dark-grey);
+  }
+  
+  .arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 10px;
+    box-sizing: border-box;
+    z-index: 10;
+  }
+  
+  .arrows img {
+    cursor: pointer;
+    width: 3.75%;
+  }

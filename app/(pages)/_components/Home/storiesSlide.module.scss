@@ -1,45 +1,43 @@
-.storySection {
-    width: 100%; /* Or your desired width */
-    overflow: hidden; /* Hide content that overflows container */
-    position: relative; /* Needed for button positioning */
-}
+@import '../../_globals/mixins.scss';
 
-.storyContainer {
-    display: flex; /* Arrange stories horizontally */
-    transition: transform 0.5s ease-in-out; /* Smooth scrolling */
-    /* Calculate width dynamically in JS based on number of stories */
-}
 
 .story {
     flex: 0 0 100%; /* Each story takes 100% width */
-    display: flex; /* Image and text side-by-side */
-    align-items: center; /* Vertically center content */
-    padding: 20px;
-    width: 86%;
-    background-color: pink;
+    display: flex; 
+    align-content: center; /* Vertically center content */
+    justify-content: space-between;
 }
 
 .storyText {
     flex: 1; /* Text takes available space */
     padding-right: 6%;
-    // width: 32.2%;
-    height: 100%;
+    width: 32%;
+    padding-top: 1.4%;
     font-weight: 280;
+    color: var(--black);
+}
+
+.storyText h2{
+    font-size: 2.48rem;
+    padding-bottom: 5%;
+    font-weight: 580;
+}
+
+.storyText p{
+    font-size: 1.25rem;
+    line-height: 1.85rem;
+}
+
+.storyImageContainer{
+    width: 57.75%;
+    display: flex;
+    // border-style: solid;
+    border-radius: 2%;
 }
 
 .storyImage {
     flex: 1; /* Image takes available space */
     text-align: center; /* Center the image */
-    width: 56.3%;
-    height: auto;
-}
-
-.nextButton {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #ddd;
-    border: none;
-    cursor: pointer;
+    object-fit: cover;
+    border-radius: 2%;
 }

@@ -5,6 +5,8 @@ import React, { useEffect, useState, useRef } from "react";
 import PageButtons from "./PageButtons"
 import ProgramsBox from "./ProgramsBox"
 import StoriesSlide from "./StoriesSlide"
+import SliderWithText from './SliderWithText';
+
 
 
 /* function for header image slider */
@@ -143,6 +145,15 @@ export default function Home() {
     },
   ];
 
+  const slides = storiesData.map((story, index) => (
+    <StoriesSlide
+        key={index.toString()}
+        heading={story.heading}
+        bodyText={story.bodyText}
+        imageSrc={story.imageSrc}
+        altText={story.altText}
+    />
+  ));
 
     return (
     <>
@@ -166,40 +177,30 @@ export default function Home() {
       </div>
 
       {/* About Us section will be added later (check for design) */}
-      {/* Our Mission section; text and images */}
-      <div className={styles.ourMission}>
-        <div className={styles.ourMissionText}>
-          <h1>OUR MISSION</h1>
-          <p>
-            Fourth & Hope is a community - a faith-based organization dedicated to providing care, shelter, and recovery to homeless populations in Yolo County. <br /><br />
-            We welcome all a provide a safe environment; we do not discriminate on the basis of religion.<br /><br />
-            Our values are compassion, faith, integrity, service, and stewardship. As Jesus Christ has served us, we serve His people.
-          </p>
+      {/* Who We Are section; text and images */}
+      <div className={styles.whoWeAre}>
+        <div className={styles.WWATitle}>
+          WHO WE ARE
         </div>
+        <div className={styles.whoWeAreComponents}>
+          <div className={styles.whoWeAreText}>
+          <div className={styles.ourMissionWWA}>
+            <h2>Our Mission</h2>
+            <p className={styles.text1}>
+              Fourth & Hope is a community –  a faith-based organization dedicated to providing care, shelter, and recovery to homeless populations in Yolo County. 
+            </p>
+          </div>
+          <div className={styles.ourValuesWWA}>
+            <h2>Our Values</h2>
+            <p>We welcome all and provide a safe environment; we do not discriminate on the basis of religion. <br/> 
+            Our values are compassion, faith, integrity, service, and stewardship. As Jesus Christ has served us, we serve His people.</p>
+          </div>
+          </div>
         {/* replace images with youtube video (just use some random one for now) */}
-        <div className={styles.ourMissionImages}>
-            <Image
-              className={styles.firstImage}
-              src="/images/Home/ourMission1.svg"
-              width={500}
-              height={500}
-              alt="Four ladies in an office."
-            />
-            <Image
-              className={styles.secondImage}
-              src="/images/Home/ourMission2.svg"
-              width={500}
-              height={500}
-              alt="Two men smiling at the camera while serving food."
-            />
-            <Image
-              className={styles.thirdImage}
-              src="/images/Home/ourMission3.svg"
-              width={500}
-              height={500}
-              alt="Group posed in from of the Community Service Center."
-            />
+        <div className={styles.whoWeAreVideo}>
+          youtube vid here
         </div>
+      </div>
       </div>
 
       {/* Programs section */}
@@ -216,9 +217,7 @@ export default function Home() {
       <div className={styles.ourStories}>
         <h1>OUR STORIES</h1>  
         <div className={styles.storiesComponents}>
-          {storiesData.map((story, stories_index) => (
-            <StoriesSlide key={stories_index} {...story} />
-            ))}
+            <SliderWithText slides = {slides}/>
         </div>
       </div>
 
