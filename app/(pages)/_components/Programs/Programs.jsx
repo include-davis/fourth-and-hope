@@ -74,7 +74,7 @@ export default function Programs() {
       <div>
         <div className={styles.hero_container}>
       <Image
-        src="/images//staff.svg"
+        src="/images/Header.png"
         alt="Staff"
         width={0}
         height={0}

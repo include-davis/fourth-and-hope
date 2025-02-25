@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import styles from './stats.modules.scss';
+import styles from './stats.module.scss';
 
 const StatItem = ({ value, label, image }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    // Convert value to a number
     const numericValue = Number(value);
 
     if (isNaN(numericValue) || typeof numericValue !== "number") return;
