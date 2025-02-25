@@ -1,37 +1,43 @@
 @import '../../_globals/mixins.scss';
 
 // "Header" section
-.imageSlides{
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    position: relative;
-}
-
-.slider{
+.imageSlides {
     position: relative;
     width: 100%;
-    height: 43rem;
     overflow: hidden;
+    padding-bottom: 56.25%;
+  }
+
+  .imageSlides > div > span {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
 }
 
-.sliderImage{
-    // width: 100%;
-    // height: auto;
-    // object-fit: cover;
-    // transition: opacity 2s ease-in-out;
+.imageSlides img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+  
+  .headerImageContainer {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: opacity 1s ease-in-out; /* Match the JS timeout */
-}
-
-.slidesTitle{
-    position: relative;
-}
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .activeImage {
+    opacity: 1;
+  }
+  
+  .inactiveImage {
+    opacity: 0;
+  }
 
 
 // Buttons section
@@ -100,9 +106,7 @@
 }
 
 .whoWeAreVideo{
-    background-color: var(--green);
-    width: 58.5%;
-    border-radius: 3%;
+    width: 80%;
 }
 
 

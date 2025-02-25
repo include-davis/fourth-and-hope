@@ -6,72 +6,32 @@ import PageButtons from "./PageButtons"
 import ProgramsBox from "./ProgramsBox"
 import StoriesSlide from "./StoriesSlide"
 import SliderWithText from './SliderWithText';
+import YoutubeVideo from "./YoutubeVideo"; // Adjust the path as needed
 
-
-
-/* function for header image slider */
-// should be able to edit later on... to add more pictures.
-const ImageSlider = () => {
-  const images = [
-    "/images/Home/houseHeader.svg",
-    "/images/Home/checkHeader.svg",
-    "/images/Home/kitchenHeader.svg",
-  ];
-
-  const [currentImage, setCurrentImage] = useState(0);
-  const imageRef = useRef(null);
-
-  //function to move to the next image
-  const nextImage = () => {
-    setCurrentImage((prev) => (prev + 1) % images.length);
-  };
-
-  // automatically change image every 4 seconds
-  // FIXME: ask about how long each image should be up for and what the transition should look like
-  useEffect(() => {
-    // const interval = setInterval(nextImage, 4000);
-    // return () => clearInterval(interval);
-    let timeoutId;
-
-    const interval = setInterval(() => {
-      if (imageRef.current) {
-        imageRef.current.style.opacity = 0; // Fade out current image
-      }
-
-      timeoutId = setTimeout(() => {
-          setCurrentImage((prev) => (prev + 1) % images.length);
-          if (imageRef.current) {
-              imageRef.current.style.opacity = 1; // Fade in next image
-          }
-        }, 1000); // Transition time (adjust to match CSS)
-      }, 4000);
-
-      return () => {
-        clearInterval(interval);
-        clearTimeout(timeoutId);
-      };
-  }, []);
-
-  return (
-    <div className={styles.slider}> 
-        <Image 
-        ref={imageRef}
-        className={styles.sliderImage}
-        src={images[currentImage]}
-        width={500}
-        height={500}
-        alt="Slider"
-        key={currentImage} // Key is still important!
-        style={{ opacity: 1 }} // Initial opacity
-        />
-    </div>
-  );
-};
 
 
 
 export default function Home() {
 
+  /* function for header image slider */
+  // should be able to edit later on... to add more pictures. 
+
+  const images = [
+    '/images/Home/houseHeader.svg',
+    '/images/Home/kitchenHeader.svg',
+    '/images/Home/checkHeader.svg',
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+  
   const buttonData = [
     {
       imageSrc: '/images/Home/handshakeImage.svg',
@@ -160,11 +120,25 @@ export default function Home() {
       {/* top image with transitions */}
       <div className={styles.imageSlides}>
         {/* the images should just jec images without text... need to add the text and style it to look like the figma header */}
-        <ImageSlider/>
-        <div className={styles.slidesTitle}>
+        {images.map((image, index) => (
+          <div
+            key={image}
+            className={`${styles.headerImageContainer} ${
+              index === currentImageIndex ? styles.activeImage : styles.inactiveImage
+            }`}
+          >
+            <Image
+              src={image}
+              alt={`Header Image ${index + 1}`}
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+        ))}
+        {/* <div className={styles.slidesTitle}>
             <h2>A Mission to Change Lives</h2>
             <h1>FOURTH & HOPE</h1>
-        </div>
+        </div> */}
       </div>
 
       {/* donate, volunteer, resources buttons */}
@@ -198,7 +172,8 @@ export default function Home() {
           </div>
         {/* replace images with youtube video (just use some random one for now) */}
         <div className={styles.whoWeAreVideo}>
-          youtube vid here
+          <YoutubeVideo/>
+          {/* ARGHHH */}
         </div>
       </div>
       </div>
