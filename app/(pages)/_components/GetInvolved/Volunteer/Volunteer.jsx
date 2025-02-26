@@ -38,7 +38,7 @@ export default function Volunteer() {
                   width={300}
                   height={300}
                   unoptimized={true}
-                  style={{width: "100%", height: "auto", minHeight: "100%", maxHeight: "100%", objectFit: "contain", borderRadius: "15px"}}
+                  style={{width: "100%", height: "auto", borderRadius: "15px"}}
                 />
             </div>
           </div>

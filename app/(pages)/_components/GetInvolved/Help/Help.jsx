@@ -5,7 +5,7 @@ import PrimaryButton from "../../Button/PrimaryButton.jsx";
 export default function Help() {
     return (
         <div className={styles.container}>
-            <h1>Other Ways to Help</h1>
+            <h1 className={styles.title}>Other Ways to Help</h1>
             <div className={styles.content}>
                 <div>
                     <h3 className={styles.h3_override}>DONATE</h3>

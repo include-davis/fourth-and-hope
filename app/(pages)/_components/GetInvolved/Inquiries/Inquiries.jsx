@@ -40,7 +40,7 @@ export default function Inquiries() {
                         </div>
                     </div>
                     <div className={styles.info}>
-                        <div>
+                        <div className={styles.info_top}> 
                             <p>All volunteers are asked to read and digitally sign the </p>
                             <p className={styles.p_override}>volunteer guidelines and waivers.</p>
                             <p>

@@ -4,7 +4,6 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    gap: 2.2vw;
 }
 
 .top {
@@ -12,7 +11,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1.7vw;
+    margin-bottom: 2.2%;
+}
+
+.title{
+    margin-bottom: 1.7%;
+    
 }
 
 .p_override {
@@ -22,18 +26,18 @@
 .bottom {
     height: auto;
     display: flex;          
-    gap: 2vw;              
+    gap: 2%;              
 }
 
-.new, .used {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.7vw;  
-    flex: 1;
-    justify-content: flex-start;
-    align-items: flex-start; 
-}
+// .new, .used {
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 1.7vw;  
+//     flex: 1;
+//     justify-content: flex-start;
+//     align-items: flex-start; 
+// }
 
 .h4_override {
     color: var(--green);

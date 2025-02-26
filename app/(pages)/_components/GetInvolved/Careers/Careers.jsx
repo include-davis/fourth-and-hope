@@ -19,13 +19,14 @@ const jobPositions = [
         title: "Client Care Coordinator",
         description: "Full-Time Swing Shift: You will support and coordinate our clients during the swing shift hours.",
     }
+    
 ];
 
 export default function Careers() {
     return (
         <div className={styles.container}>
             <div className={styles.top}>
-                <h2>Careers</h2>
+                <h2 className={styles.title}>Careers</h2>
                 <p>Join our team and make a lasting impact in our community. We’re currently seeking motivated individuals for the following positions:</p>
             </div>
             <div className={styles.bottom}>

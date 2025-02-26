@@ -30,13 +30,14 @@ const listData = [
             "Blankets twin size",
         ],
     },
+    
 ];
 
 export default function List() {
     return (
         <div className={styles.container}>
             <div className={styles.top}>
-                <h2>Needs List</h2>
+                <h2 className={styles.title}>Needs List</h2>
                 <p className={styles.p_override}>
                     All items may be delivered to the Fourth & Hope campus:
                     <strong> 1901 East Beamer St, Woodland, CA 95776</strong>.
