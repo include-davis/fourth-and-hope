@@ -248,7 +248,7 @@
   @include sm-desktop {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem; // adjust as needed for spacing
+    gap: 0.5rem; 
   }
 }
 
@@ -260,9 +260,9 @@
   color: var(--green);
 
   @include sm-desktop {
-    width: auto; /* allow it to shrink on smaller screens */
+    width: auto; 
     margin-right: 0;
-  }
+  } 
 }
 
 .numberedValue {
