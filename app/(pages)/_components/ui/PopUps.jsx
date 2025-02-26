@@ -1,7 +1,23 @@
+"use client";
+
+import React, { useState } from "react";
 import styles from "./PopUps.module.scss";
 
-export default function PopUp({ isOpen, onClose }) {
-  // if (!isOpen) return null;
+export default function PopUp() {
+  const [isOpen, setIsOpen] = useState(true); 
+
+  const onClose = () => {
+    setIsOpen(false); 
+  };
+
+  const onOpen = () => {
+    setIsOpen(true);  
+  };
+
+  if (!isOpen) return (
+    <button onClick={onOpen}>Open Popup</button> 
+
+  );
 
   return (
     <div className={styles.popupContainer}>
@@ -37,3 +53,4 @@ export default function PopUp({ isOpen, onClose }) {
     </div>
   );
 }
+
