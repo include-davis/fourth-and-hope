@@ -1,4 +1,4 @@
-// @import '../../_globals/mixins.scss';
+@use '../../_globals/mixins.scss';
 
 .sliderContainer {
     position: relative;
@@ -7,8 +7,6 @@
   }
   
   .slide {
-    position: relative;
-    width: 100%;
     display: flex;
     transition: transform 0.5s ease-in-out;
   }
@@ -20,8 +18,8 @@
   
   .dots span {
     display: inline-block;
-    width: 1%;
-    height: 1%;
+    width: 1.25rem;
+    height: 1.25rem;
     border-radius: 50%;
     background-color: var(--grey);
     margin: 0 0.5%;
@@ -39,7 +37,7 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding: 0 10px;
+    padding: 0 3%;
     box-sizing: border-box;
     z-index: 10;
   }

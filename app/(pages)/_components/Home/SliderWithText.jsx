@@ -6,35 +6,36 @@ const SliderWithText = ({ slides }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const sliderRef = useRef(null);
   
+    //automatic sliding
     useEffect(() => {
-      if (slides && slides.length > 0) {
         const interval = setInterval(() => {
           setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-        }, 7000);
+        }, 3500);
   
         return () => clearInterval(interval);
-      }
     }, [slides]);
   
-    const goToSlide = (index) => {
-      setCurrentIndex(index);
-    };
+    // const goToSlide = (index) => {
+    //   setCurrentIndex(index);
+    // };
   
     const nextSlide = () => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
     };
   
-    const prevSlide = () => {
-      setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
-    };
+    // const prevSlide = () => {
+    //   setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
+    // };
 
   return (
     <div className={styles.sliderContainer}>
       <div
         className={styles.slide}
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        ref={sliderRef}
       >
-        {slides &&
+        {
+        // slides &&
           slides.map((slide, index) => (
             <div
               key={index}
@@ -48,7 +49,8 @@ const SliderWithText = ({ slides }) => {
           ))}
       </div>
       <div className={styles.dots}>
-        {slides &&
+        {
+        // slides &&
           slides.map((_, index) => (
             <span
               key={index}
@@ -58,14 +60,6 @@ const SliderWithText = ({ slides }) => {
           ))}
       </div>
       <div className={styles.arrows}>
-        {/* there is no back button in the design.. should there be one? */}
-        {/* <Image 
-        src={'/images/Home/arrow_circle_right.svg'} 
-        alt="Previous Slide" 
-        onClick={prevSlide} 
-        width={500}
-        height={500}
-        /> */}
         <Image 
         src={'/images/Home/arrow_circle_right.svg'} 
         alt="Next Slide" 

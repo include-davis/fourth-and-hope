@@ -1,4 +1,4 @@
-// @import '../../_globals/mixins.scss';
+@use '../../_globals/mixins.scss';
 
 
 .story {
@@ -31,7 +31,6 @@
 .storyImageContainer{
     width: 57.75%;
     display: flex;
-    // border-style: solid;
     border-radius: 2%;
 }
 

@@ -13,7 +13,6 @@ export default function Home() {
 
   /* function for header image slider */
   // should be able to edit later on... to add more pictures. 
-
   const images = [
     '/images/Home/houseHeader.svg',
     '/images/Home/kitchenHeader.svg',
@@ -30,6 +29,9 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
   
+
+  //JSONs
+  //Buttons Json
   const buttonData = [
     {
       imageSrc: '/images/Home/handshakeImage.svg',
@@ -51,7 +53,7 @@ export default function Home() {
     },
   ];
 
-  // imageSrc, altText, Title, bodyText, href
+  // Programs Components Json
   const programData = [
     {
       imageSrc: '/images/Home/programsBeds.svg',
@@ -60,7 +62,6 @@ export default function Home() {
       bodyText: 'Providing overnight services, housing, outreach support, and thousands of meals to those in need.', 
       href: '/programs' ,
       //should go to the emergency shelter section
-
     }, 
     {
       imageSrc: '/images/Home/programsTreatment.svg',
@@ -69,19 +70,19 @@ export default function Home() {
       bodyText: 'Offering residential care at Walter’s House, outpatient support, referrals, and  program completions to aid recovery and connection to further services.' , 
       href: '/programs' ,
       //should go to the treatment section 
-
     }, 
     {
       imageSrc: '/images/Home/programsHousing.svg',
       altText: 'Group of older people holding gardening tools and smiling at the camera.',
-      heading: 'Housing Program', 
+      heading: 'Housing \n Program', //idk why this line break isn't showing, how do i put a linebreak 
       bodyText: 'Providing permanent supportive housing and transitional sober living opportunities to individuals and households in need.', 
       href: '/programs' ,
       //directs to the housing section
-     
     },
   ];
 
+  //Our Stories component Json
+  // all of the slides are the same right now bc the design only has one
   const storiesData = [
     {
       imageSrc: '/images/Home/ourStories.jpeg',
@@ -102,7 +103,7 @@ export default function Home() {
       bodyText: 'Join Fourth & Hope’s 16th Annual Empty Bowls Event on October 23, 2024, at Life Pointe Church in Woodland. Help raise $35,000 to support their food budget, which served over 92,000 meals last year. Enjoy soup, bread, and a raffle while fighting hunger and homelessness.'
     },
   ];
-
+  
   const slides = storiesData.map((story, index) => (
     <StoriesSlide
         key={index.toString()}
@@ -117,7 +118,7 @@ export default function Home() {
     <>
       {/* top image with transitions */}
       <div className={styles.imageSlides}>
-        {/* the images should just jec images without text... need to add the text and style it to look like the figma header */}
+        {/* the images should just be images without text... need to add the text and style it to look like the figma header */}
         {images.map((image, index) => (
           <div
             key={image}
@@ -147,7 +148,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* About Us section will be added later (check for design) */}
       {/* Who We Are section; text and images */}
       <div className={styles.whoWeAre}>
         <div className={styles.WWATitle}>
@@ -163,14 +163,12 @@ export default function Home() {
           </div>
           <div className={styles.ourValuesWWA}>
             <h2>Our Values</h2>
-            <p>We welcome all and provide a safe environment; we do not discriminate on the basis of religion. <br/> 
+            <p>We welcome all and provide a safe environment; we do not discriminate on the basis of religion. <br/><br/>
             Our values are compassion, faith, integrity, service, and stewardship. As Jesus Christ has served us, we serve His people.</p>
           </div>
           </div>
-        {/* replace images with youtube video (just use some random one for now) */}
         <div className={styles.whoWeAreVideo}>
           <YoutubeVideo/>
-          {/* ARGHHH */}
         </div>
       </div>
       </div>
@@ -180,7 +178,7 @@ export default function Home() {
         <h1>PROGRAMS</h1>
         <div className={styles.programsComponents}>
           {programData.map((program, index) => (
-          <ProgramsBox key={index} {...program} /> //this had an error and gemini fix
+          <ProgramsBox key={index} {...program} /> 
           ))}
         </div>
       </div>

@@ -1,20 +1,22 @@
 import React from "react";
 import YouTube from "react-youtube";
+import styles from './YoutubeVideo.module.scss'
 
 export default class YoutubeVideo extends React.Component {
     render() {
         const opts = {
-            height: "390",
-            width: "640",
             playerVars: {
                 autoplay: 1,
             },
         };
 
         return (
-            <div>
-                <YouTube videoId="NRgZuuwD2WY" 
+            <div className={styles.videoBox}>
+                <div className={styles.videoResponsive}>
+                    {/* need actual youtube video id to put here */}
+                    <YouTube videoId="NRgZuuwD2WY" 
                     opts={opts} onReady={this._onReady} />
+                </div>
             </div>
         );
     }
