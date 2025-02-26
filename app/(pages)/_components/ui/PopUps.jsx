@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "./PopUps.module.scss";
+import { useState } from "react";
 
 export default function PopUp({ isOpen, onClose, type }) {
   console.log("Popup isOpen:", isOpen);
@@ -72,5 +73,18 @@ function BoardMeetingContent() {
         </div>
       </div>
     </>
+  );
+}
+
+export function PopUpTestButton() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [popupType, setPopupType] = useState("certification");
+
+  return (
+    <div style={{ padding: "20px" }}>
+      <button onClick={() => { setPopupType("certification"); setIsOpen(true); }}>Open Certification Popup</button>
+      <button onClick={() => { setPopupType("boardMeeting"); setIsOpen(true); }} style={{ marginLeft: "10px" }}>Open Board Meeting Popup</button>
+      <PopUp isOpen={isOpen} onClose={() => setIsOpen(false)} type={popupType} />
+    </div>
   );
 }
