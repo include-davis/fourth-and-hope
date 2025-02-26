@@ -1,12 +1,18 @@
+@import "../../_globals/mixins.scss";
+
 .dm_hero {
   display: flex;
-  height: 473px;
-  padding: 81px 100px;
+  padding: 5.0625rem 6.25rem; 
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   align-self: stretch;
   background: var(--white, #fafafa);
+
+  @include sm-desktop {
+    flex-direction: column;
+    gap: 2rem; 
+  }
 }
 
 .dm_content_container {
@@ -14,48 +20,52 @@
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
+
+  @include sm-desktop {
+    flex-direction: column;
+    gap: 2rem;  
+  }
 }
 
 .dm_text_container {
   display: flex;
-  width: 670.217px;
+  width: 100%;           
+  max-width: 41.8886rem; 
   flex-direction: column;
   align-items: flex-start;
-  gap: 32px;
+  gap: 2rem;
+}
 
-  h2 {
-    transform: rotate(-0.251deg);
-    align-self: stretch;
-    color: #323232;
 
-    /* h2 */
-    font-family: "Be Vietnam Pro";
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+.dm_text_container h2 {
+  transform: rotate(-0.251deg);
+  align-self: stretch;
+  color: #323232;
+  font-size: 2.5rem; 
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+  @include sm-desktop {
+    flex-direction: column;
+    gap: 2rem;
   }
+}
 
-  p {
-    color: var(--black, #323232);
-    transform: rotate(-0.251deg);
-    align-self: stretch;
-    /* p */
-    font-family: "Be Vietnam Pro";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 150%; /* 30px */
-  }
+.dm_text_container p {
+  color: var(--black, #323232);
+  transform: rotate(-0.251deg);
+  align-self: stretch;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+}
 
-  span {
-    color: var(--black, #323232);
-
-    /* span */
-    font-family: "Be Vietnam Pro";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 150%;
-  }
+.dm_text_container span {
+  color: var(--black, #323232);
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
 }

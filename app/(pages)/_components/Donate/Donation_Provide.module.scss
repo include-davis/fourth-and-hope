@@ -1,52 +1,58 @@
+@import "../../_globals/mixins.scss";
+
 .dp_hero {
   display: flex;
-  padding: 64px 100px;
+  width: 100%;
+  padding: 4rem 6.25rem; 
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 0.625rem; 
   align-self: stretch;
   background: var(--white, #fafafa);
 }
 
 .provide_container {
   display: flex;
-  width: 1242px;
   flex-direction: column;
   align-items: center;
-  gap: 52px;
+  gap: 3.25rem; 
   color: var(--black);
+}
 
-  h2 {
-    align-self: stretch;
-    text-align: center;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-  }
+.provide_container h2 {
+  align-self: stretch;
+  text-align: center;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .hero_data_card {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   align-self: stretch;
   color: var(--green);
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; 
+  }
 }
 
 .data_card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
+  gap: 0.1875rem;
   flex: 1 0 0;
 }
 
 .card_title {
   align-self: stretch;
   text-align: center;
-  /* h1 */
-  font-size: 80px;
+  font-size: 5rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -57,20 +63,18 @@
   align-self: stretch;
   color: #323232;
   text-align: center;
-  /* a or p */
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 300;
-  line-height: 30px; /* 150% */
+  line-height: 1.875rem;
 }
 
 .card_description {
   align-self: stretch;
   color: var(--black, #323232);
   text-align: center;
-  /* p */
-  font-size: 20px;
+  font-size: 1.25rem; 
   font-style: normal;
   font-weight: 300;
-  line-height: 150%; /* 30px */
+  line-height: 1.875rem;
 }
