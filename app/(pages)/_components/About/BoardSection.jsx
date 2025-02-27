@@ -1,15 +1,10 @@
 'use client';
 
-import { useState } from 'react';
 import MemberCard from './MemberCard';
-import PrimaryButton from '../Button/PrimaryButton';
 import { boardMembers } from './boardData';
 import styles from './About.module.scss';
 
 export default function BoardSection() {
-  // Instead of using a popup component, we'll use a direct link to a page
-  // This avoids the removeChild error by not trying to manipulate the DOM directly
-  
   return (
     <section className={styles.boardSection}>
       <h2>Board of Trustees</h2>
@@ -21,6 +16,8 @@ export default function BoardSection() {
             key={index}
             name={member.name}
             title={member.title}
+            // The photoUrl prop will be null for now, but you can add it to boardData.js later
+            photoUrl={member.photoUrl || null}
           />
         ))}
       </div>
