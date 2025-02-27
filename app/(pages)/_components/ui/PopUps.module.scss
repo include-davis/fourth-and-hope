@@ -90,17 +90,45 @@
   margin-bottom: 3%;
 }
 
+.boardContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
 
 .meetingContent {
   position: relative;
   background: white;
-  padding: 5%;
-  width: 60%;
+  padding: 3%;
+  width: 70%;
+  height: 95%;
   max-width: 80%;
   border-radius: 1.2%;
   box-shadow: 0 0.5% 1.2% rgba(0, 0, 0, 0.2);
   text-align: center;
   font-family: Arial, sans-serif;
+
+  h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 3%;
+    font-weight: 500;
+  }
+  
+  h3 {
+    color: black;
+    font-size: 200%;
+    margin-bottom: 2%;
+    font-weight: 400;
+  }
+
 
   .popupButton {
     font-size: 18px;
@@ -153,8 +181,8 @@
   .meetingsContainer {
     display: flex;
     justify-content: center;
-    gap: 50px;
-    margin-top: 20px;
+    gap: 10%;
+    margin-top: 3%;
   }
   
   .meetingYear {
@@ -163,15 +191,17 @@
   
   .meetingGrid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(100px, 1fr)); /* Adjust column width */
-    gap: 15px;
+    grid-template-columns: repeat(2, minmax(30%, 1fr)); 
+    gap: 5%;
   }
   
   .meetingBox {
     background: none;
-    border: 2px solid #2f855a;
-    padding: 12px;
-    font-size: 16px;
+    border: 2% solid;
+    border-color: #2f855a;
+    padding: 15%;
+    font-size: 100%;
+    color: #2f855a;
     cursor: pointer;
     transition: background 0.3s;
     width: 100%;

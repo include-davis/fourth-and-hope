@@ -58,7 +58,7 @@ export default function PopUps() {
       )}
 
       {isBoardOpen && (
-        <div className={styles.popupContainer}>
+        <div className={styles.boardContainer}>
           <div className={styles.meetingContent}>
             <button className={styles.closeButton} onClick={toggleBoardPopup}>Close ✖</button>
             <h2>Board Meetings</h2>
