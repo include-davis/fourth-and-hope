@@ -3,12 +3,18 @@
 import React, { useState } from "react";
 import styles from "./PopUps.module.scss";
 
-export default function PopUps() {
-  const [isCertOpen, setIsCertOpen] = useState(true);
-  const [isBoardOpen, setIsBoardOpen] = useState(false);
+const boardMeetings = [
+  { year: 2022, months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Aug", "Sep", "Oct", "Nov"] },
+  { year: 2023, months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec"] }
+];
 
-  const toggleCertPopup = () => setIsCertOpen(!isCertOpen);
-  const toggleBoardPopup = () => setIsBoardOpen(!isBoardOpen);
+
+export default function PopUps() {
+  const [isCertOpen, openCertifications] = useState(true);
+  const [isBoardOpen, openBoard] = useState(false);
+
+  const toggleCertPopup = () => openCertifications(!isCertOpen);
+  const toggleBoardPopup = () => openBoard(!isBoardOpen);
 
   return (
     <div>
@@ -28,6 +34,7 @@ export default function PopUps() {
                 <p><b>Effective Date:</b> 09/01/2023</p>
                 <p><b>Expiration Date:</b> 08/31/2025</p>
               </section>
+
               <section className={styles.program}>
                 <h3>Outpatient Program</h3>
                 <p>Certified by the California Department of Health Care Services (DHCS).</p>
@@ -51,45 +58,24 @@ export default function PopUps() {
       )}
 
       {isBoardOpen && (
-        <div className={styles.meetingContainer}>
+        <div className={styles.popupContainer}>
           <div className={styles.meetingContent}>
             <button className={styles.closeButton} onClick={toggleBoardPopup}>Close ✖</button>
-            <h5>Board Meetings</h5>
+            <h2>Board Meetings</h2>
             <p>Board of Trustees meet 11 times a year.</p>
             <p>Meetings take place on the fourth Tuesday of the month at 6 p.m.</p>
-            <div className={styles.meetingsGrid}>
-              <div>
-                <h3>2022</h3>
-                <div className={styles.meetingButtons}>
-                  <button>Jan</button>
-                  <button>Feb</button>
-                  <button>Mar</button>
-                  <button>Apr</button>
-                  <button>May</button>
-                  <button>Jun</button>
-                  <button>Aug</button>
-                  <button>Sep</button>
-                  <button>Oct</button>
-                  <button>Nov</button>
+
+            <div className={styles.meetingsContainer}>
+              {boardMeetings.map(({ year, months }) => (
+                <div key={year} className={styles.meetingYear}>
+                  <h3>{year}</h3>
+                  <div className={styles.meetingGrid}>
+                    {months.map((month) => (
+                      <button key={month} className={styles.meetingBox}>{month}</button>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div>
-                <h3>2023</h3>
-                <div className={styles.meetingButtons}>
-                  <button>Jan</button>
-                  <button>Feb</button>
-                  <button>Mar</button>
-                  <button>Apr</button>
-                  <button>May</button>
-                  <button>Jun</button>
-                  <button>July</button>
-                  <button>Aug</button>
-                  <button>Sep</button>
-                  <button>Oct</button>
-                  <button>Nov</button>
-                  <button>Dec</button>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
