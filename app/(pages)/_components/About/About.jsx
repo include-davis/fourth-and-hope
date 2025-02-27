@@ -9,17 +9,14 @@ import SecondaryButton from '../Button/SecondaryButton';
 
 export default function About() {
   const scrollToFooter = () => {
-    // First check if there's a footer element with id
     const footer = document.getElementById('footer');
     if (footer) {
       footer.scrollIntoView({ behavior: 'smooth' });
     } else {
-      // Try to find the footer element by tag name or class
       const footerElement = document.querySelector('footer');
       if (footerElement) {
         footerElement.scrollIntoView({ behavior: 'smooth' });
       } else {
-        // As a last resort, scroll to the bottom of the page
         window.scrollTo({
           top: document.documentElement.scrollHeight,
           behavior: 'smooth'
