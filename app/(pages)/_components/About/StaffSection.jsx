@@ -1,7 +1,8 @@
 'use client';
 
 import MemberCard from './MemberCard';
-import { executiveStaff } from './boardData';
+import boardData from './boardData.json';
+const { executiveStaff } = boardData;
 import styles from './About.module.scss';
 
 export default function StaffSection() {

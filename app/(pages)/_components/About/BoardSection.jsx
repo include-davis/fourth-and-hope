@@ -4,17 +4,16 @@ import { useState, useEffect, useCallback } from 'react';
 import MemberCard from './MemberCard';
 import BoardPopup from './BoardPopup';
 import PrimaryButton from '../Button/PrimaryButton';
-import { boardMembers } from './boardData';
+import boardData from './boardData.json';
+const { boardMembers } = boardData;
 import styles from './About.module.scss';
 
 export default function BoardSection() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   
-  // Use useCallback to memoize the functions
   const checkHashAndOpenPopup = useCallback(() => {
     if (window.location.hash === '#board-info') {
       setIsPopupOpen(true);
-      // Use replaceState to remove the hash without adding to history
       window.history.replaceState(
         null, 
         '', 
@@ -34,14 +33,11 @@ export default function BoardSection() {
   }, [isPopupOpen, handleClosePopup]);
 
   useEffect(() => {
-    // Initial check when component mounts
     checkHashAndOpenPopup();
 
-    // Add event listeners
     window.addEventListener('hashchange', checkHashAndOpenPopup);
     document.addEventListener('keydown', handleEscapeKey);
 
-    // Cleanup function
     return () => {
       window.removeEventListener('hashchange', checkHashAndOpenPopup);
       document.removeEventListener('keydown', handleEscapeKey);
