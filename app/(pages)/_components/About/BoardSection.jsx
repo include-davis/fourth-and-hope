@@ -8,18 +8,13 @@ import { boardMembers } from './boardData';
 import styles from './About.module.scss';
 
 export default function BoardSection() {
-  // State to control popup visibility
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   
-  // Safely handle hash-based popup trigger
   useEffect(() => {
-    // Function to check if the hash is for board-info
     const checkHashAndOpenPopup = () => {
       try {
         if (window.location.hash === '#board-info') {
-          // Open the popup
           setIsPopupOpen(true);
-          // Clear the hash to allow reopening
           window.history.pushState('', document.title, window.location.pathname + window.location.search);
         }
       } catch (error) {
@@ -27,19 +22,15 @@ export default function BoardSection() {
       }
     };
 
-    // Check hash on initial render
     checkHashAndOpenPopup();
 
-    // Add event listener for hash changes
     window.addEventListener('hashchange', checkHashAndOpenPopup);
 
-    // Cleanup
     return () => {
       window.removeEventListener('hashchange', checkHashAndOpenPopup);
     };
   }, []);
 
-  // Safe popup close handler
   const handleClosePopup = () => {
     try {
       setIsPopupOpen(false);

@@ -16,7 +16,6 @@ export default function StaffSection() {
             name={member.name}
             title={member.title}
             email={member.email}
-            // The photoUrl prop will be null for now, but you can add it to boardData.js later
             photoUrl={member.photoUrl || null}
           />
         ))}

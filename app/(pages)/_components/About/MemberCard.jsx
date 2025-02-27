@@ -7,14 +7,12 @@ export default function MemberCard({ name, title, email, photoUrl }) {
     <div className={styles.memberCard}>
       {/* This can be easily updated when you have actual photos */}
       {photoUrl ? (
-        // When you have a photo, this part will render
         <img 
           src={photoUrl} 
           alt={`${name} portrait`}
           className={styles.profileImage}
         />
       ) : (
-        // Until then, this placeholder will display
         <div 
           className={styles.profileImage} 
           aria-label={`${name} profile photo (placeholder)`}
