@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 
 
-export default function storiesSlide({heading, bodyText, imageSrc, altText}){
+export default function StoriesSlide({heading, bodyText, imageSrc, altText}){
     
     return(
         <div className={styles.story}> 
