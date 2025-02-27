@@ -1,11 +1,11 @@
 'use client';
 
+import React from 'react';
 import styles from './About.module.scss';
 
 export default function MemberCard({ name, title, email, photoUrl }) {
   return (
     <div className={styles.memberCard}>
-      {/* This can be easily updated when you have actual photos */}
       {photoUrl ? (
         <img 
           src={photoUrl} 
@@ -14,11 +14,9 @@ export default function MemberCard({ name, title, email, photoUrl }) {
         />
       ) : (
         <div 
-          className={styles.profileImage} 
-          aria-label={`${name} profile photo (placeholder)`}
-        >
-          {/* Optional: Add initials or placeholder icon here */}
-        </div>
+          className={styles.profileImage}
+          aria-label={`${name} profile placeholder`}
+        />
       )}
       
       <div className={styles.memberInfo}>

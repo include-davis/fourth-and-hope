@@ -16,7 +16,6 @@ export default function StaffSection() {
             name={member.name}
             title={member.title}
             email={member.email}
-            photoUrl={member.photoUrl || null}
           />
         ))}
       </div>

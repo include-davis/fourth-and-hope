@@ -2,48 +2,47 @@ export const boardMembers = [
   { 
     name: "Scott Mansell", 
     title: "President",
-    // Add photoUrl when you have the actual photo
-    // photoUrl: "/images/board/scott-mansell.jpg"
+    // photoUrl placeholder
   },
   { 
     name: "Theresa Lee", 
     title: "Vice President",
-    // photoUrl: "/images/board/theresa-lee.jpg"
+    // photoUrl placeholder
   },
   { 
     name: "Bruce Watts", 
     title: "Secretary",
-    // photoUrl: "/images/board/bruce-watts.jpg"
+    // photoUrl placeholder
   },
   { 
     name: "Nancy Lofton", 
     title: "Treasurer",
-    // photoUrl: "/images/board/nancy-lofton.jpg"
+    // photoUrl placeholder
   },
   { 
     name: "Brad Miller", 
     title: "",
-    // photoUrl: "/images/board/brad-miller.jpg"
+    // photoUrl placeholder
   },
   { 
     name: "Marla Garske", 
     title: "",
-    // photoUrl: "/images/board/marla-garske.jpg"
+    // photoUrl placeholder
   },
   { 
     name: "Nick Roncoroni", 
     title: "",
-    // photoUrl: "/images/board/nick-roncoroni.jpg"
+    // photoUrl placeholder
   },
   { 
     name: "Catherine Portman", 
     title: "",
-    // photoUrl: "/images/board/catherine-portman.jpg"
+    // photoUrl placeholder
   },
   { 
     name: "Deborah Grochau", 
     title: "",
-    // photoUrl: "/images/board/deborah-grochau.jpg"
+    // photoUrl placeholder
   }
 ];
 
@@ -52,12 +51,12 @@ export const executiveStaff = [
     name: "Doug Zeck",
     title: "Executive Director, Fourth and Hope",
     email: "dzeck@fourthandhope.org",
-    // photoUrl: "/images/staff/doug-zeck.jpg"
+    // photoUrl placeholder
   },
   {
     name: "R. Amara Pickens, MPA/HAS",
     title: "Deputy Executive Director, Fourth and Hope",
     email: "apickens@fourthandhope.org",
-    // photoUrl: "/images/staff/amara-pickens.jpg"
+    // photoUrl placeholder
   }
 ];

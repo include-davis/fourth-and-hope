@@ -15,21 +15,29 @@ export default function BoardSection() {
       try {
         if (window.location.hash === '#board-info') {
           setIsPopupOpen(true);
-          window.history.pushState('', document.title, window.location.pathname + window.location.search);
+          window.history.replaceState('', document.title, window.location.pathname + window.location.search);
         }
       } catch (error) {
         console.error('Error handling hash change:', error);
       }
     };
 
+    const handleEscapeKey = (e) => {
+      if (e.key === 'Escape' && isPopupOpen) {
+        handleClosePopup();
+      }
+    };
+
     checkHashAndOpenPopup();
 
     window.addEventListener('hashchange', checkHashAndOpenPopup);
+    document.addEventListener('keydown', handleEscapeKey);
 
     return () => {
       window.removeEventListener('hashchange', checkHashAndOpenPopup);
+      document.removeEventListener('keydown', handleEscapeKey);
     };
-  }, []);
+  }, [isPopupOpen]);
 
   const handleClosePopup = () => {
     try {
@@ -61,7 +69,6 @@ export default function BoardSection() {
         />
       </div>
 
-      {/* Only render the popup when isPopupOpen is true */}
       {isPopupOpen && (
         <BoardPopup 
           isOpen={true} 
