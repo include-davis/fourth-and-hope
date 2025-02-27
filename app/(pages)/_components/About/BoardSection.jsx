@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import MemberCard from './MemberCard';
 import BoardPopup from './BoardPopup';
 import PrimaryButton from '../Button/PrimaryButton';
@@ -10,42 +10,43 @@ import styles from './About.module.scss';
 export default function BoardSection() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   
+  // Use useCallback to memoize the functions
+  const checkHashAndOpenPopup = useCallback(() => {
+    if (window.location.hash === '#board-info') {
+      setIsPopupOpen(true);
+      // Use replaceState to remove the hash without adding to history
+      window.history.replaceState(
+        null, 
+        '', 
+        window.location.pathname + window.location.search
+      );
+    }
+  }, []);
+
+  const handleClosePopup = useCallback(() => {
+    setIsPopupOpen(false);
+  }, []);
+
+  const handleEscapeKey = useCallback((e) => {
+    if (e.key === 'Escape' && isPopupOpen) {
+      handleClosePopup();
+    }
+  }, [isPopupOpen, handleClosePopup]);
+
   useEffect(() => {
-    const checkHashAndOpenPopup = () => {
-      try {
-        if (window.location.hash === '#board-info') {
-          setIsPopupOpen(true);
-          window.history.replaceState('', document.title, window.location.pathname + window.location.search);
-        }
-      } catch (error) {
-        console.error('Error handling hash change:', error);
-      }
-    };
-
-    const handleEscapeKey = (e) => {
-      if (e.key === 'Escape' && isPopupOpen) {
-        handleClosePopup();
-      }
-    };
-
+    // Initial check when component mounts
     checkHashAndOpenPopup();
 
+    // Add event listeners
     window.addEventListener('hashchange', checkHashAndOpenPopup);
     document.addEventListener('keydown', handleEscapeKey);
 
+    // Cleanup function
     return () => {
       window.removeEventListener('hashchange', checkHashAndOpenPopup);
       document.removeEventListener('keydown', handleEscapeKey);
     };
-  }, [isPopupOpen]);
-
-  const handleClosePopup = () => {
-    try {
-      setIsPopupOpen(false);
-    } catch (error) {
-      console.error('Error closing popup:', error);
-    }
-  };
+  }, [checkHashAndOpenPopup, handleEscapeKey]);
 
   return (
     <section className={styles.boardSection}>
@@ -55,7 +56,7 @@ export default function BoardSection() {
       <div className={styles.membersGrid}>
         {boardMembers.map((member, index) => (
           <MemberCard 
-            key={index}
+            key={member.name || index}
             name={member.name}
             title={member.title}
           />
@@ -71,7 +72,7 @@ export default function BoardSection() {
 
       {isPopupOpen && (
         <BoardPopup 
-          isOpen={true} 
+          isOpen={isPopupOpen} 
           onClose={handleClosePopup} 
         />
       )}

@@ -14,8 +14,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 3%; // Reduced top margin
+  margin-bottom: 3%; // Reduced bottom margin
 
   @include tablet {
     grid-template-columns: 1fr;
@@ -35,6 +35,7 @@
       line-height: 1.2;
       font-weight: bold;
       margin: 0;
+      text-align: left;
 
       @include tablet {
         font-size: 2.5em;
@@ -47,6 +48,10 @@
   }
 
   .introContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     h2 {
       font-size: 2.5em;
       margin-bottom: 1%;
@@ -75,7 +80,7 @@
 
     .buttonContainer {
       display: flex;
-      gap: 1%;
+      gap: 3%; // Increased gap between buttons
       margin-top: 2%;
 
       @include sm-phone {
@@ -224,16 +229,17 @@
 .boardSection {
   width: 100%;
   max-width: 100%;
-  margin: 5% auto;
+  margin: 2% auto; // Reduced top margin
   padding: 0 8%;  
   position: relative;
   background-color: var(--white);
 
   h2 {
     font-size: 2.5em;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
     font-weight: bold;
     color: var(--black);
+    text-align: left; // Ensure left alignment
 
     @include tablet {
       font-size: 2em;
@@ -246,7 +252,7 @@
 
   p {
     font-size: 1.125em;
-    margin-bottom: 3%;
+    margin-bottom: 2%;
     line-height: 1.5;
     color: var(--black);
 
@@ -259,8 +265,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5%;
-    row-gap: 4%;
-    margin-bottom: 3%;  
+    row-gap: 3%;
+    margin-bottom: 2%;  
 
     @include tablet {
       grid-template-columns: repeat(2, 1fr);
@@ -276,11 +282,30 @@
   .buttonWrapper {
     display: flex;
     justify-content: flex-end;
-    margin-top: 5%;
-    margin-bottom: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 
     @include sm-phone {
       justify-content: center;
+    }
+  }
+
+  .boardMeetingButton {
+    display: inline-block;
+    padding: 1% 2.5%; // Adjusted padding
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em; // Slightly reduced font size
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.2s ease;
+    
+    &:hover, &:active {
+      background-color: darken(#2E6C4A, 5%);
     }
   }
 }
@@ -298,10 +323,7 @@
     height: 10em;
     border-radius: 50%;
     background-color: var(--grey);
-    margin-bottom: 4%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 3%; // Slightly reduced bottom margin
 
     @include tablet {
       width: 8em;
@@ -309,8 +331,8 @@
     }
 
     @include sm-phone {
-      width: 6em;
-      height: 6em;
+      width: 7em;
+      height: 7em;
     }
   }
 
@@ -359,14 +381,15 @@
 .staffSection {
   width: 100%;
   max-width: 100%;
-  margin: 8% auto 5% auto;
+  margin: 2% auto 5% auto; // Reduced top margin
   padding: 0 8%;
 
   h2 {
     font-size: 2.5em;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     font-weight: bold;
     color: var(--black);
+    text-align: center;
 
     @include tablet {
       font-size: 2em;
@@ -377,14 +400,20 @@
     }
   }
 
+
   .staffGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5%;
+    justify-content: center;
 
     @include tablet {
       grid-template-columns: 1fr;
       gap: 4%;
+    }
+
+    @include sm-phone {
+      gap: 3%;
     }
   }
 }

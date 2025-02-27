@@ -6,19 +6,22 @@ export default function BoardPopup({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   const handleOverlayClick = (e) => {
-    if (onClose && typeof onClose === 'function') {
+    // Ensure click is on the overlay itself
+    if (e.target === e.currentTarget && onClose) {
       onClose();
     }
   };
 
   const handleContentClick = (e) => {
-    if (e && e.stopPropagation) {
-      e.stopPropagation();
-    }
+    // Prevent click from propagating to overlay
+    e.stopPropagation();
   };
 
   return (
-    <div className={styles.popupOverlay} onClick={handleOverlayClick}>
+    <div 
+      className={styles.popupOverlay} 
+      onClick={handleOverlayClick}
+    >
       <div 
         className={styles.popupContent}
         onClick={handleContentClick}
