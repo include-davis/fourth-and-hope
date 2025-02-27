@@ -307,3 +307,39 @@
     }
   }
 }
+
+// Popup styles for a blank page
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popupContent {
+  background-color: white;
+  border-radius: 0.5em;
+  width: 90%;
+  max-width: 500px;
+  min-height: 200px;
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupBody {
+  padding: 5%;
+  text-align: center;
+
+  p {
+    font-size: 1em;
+    color: var(--black);
+  }
+}
