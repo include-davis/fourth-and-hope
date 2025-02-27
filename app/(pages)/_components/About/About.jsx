@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useEffect } from 'react';
 import styles from './About.module.scss';
 import BoardSection from './BoardSection';
 import StaffSection from './StaffSection';
@@ -8,22 +8,24 @@ import PrimaryButton from '../Button/PrimaryButton';
 import SecondaryButton from '../Button/SecondaryButton';
 
 export default function About() {
-  const scrollToFooter = () => {
-    const footer = document.getElementById('footer');
-    if (footer) {
-      footer.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      const footerElement = document.querySelector('footer');
-      if (footerElement) {
-        footerElement.scrollIntoView({ behavior: 'smooth' });
-      } else {
+  useEffect(() => {
+    const checkHashAndScroll = () => {
+      if (window.location.hash === '#subscribe') {
         window.scrollTo({
           top: document.documentElement.scrollHeight,
           behavior: 'smooth'
         });
       }
-    }
-  };
+    };
+
+    checkHashAndScroll();
+
+    window.addEventListener('hashchange', checkHashAndScroll);
+
+    return () => {
+      window.removeEventListener('hashchange', checkHashAndScroll);
+    };
+  }, []);
 
   return (
     <div className={styles.pageContainer}>
@@ -42,8 +44,7 @@ export default function About() {
             <PrimaryButton name="Donate" link="/donate" />
             <SecondaryButton 
               name="Subscribe" 
-              link="#" 
-              onClick={scrollToFooter}
+              link="#subscribe" 
             />
           </div>
         </div>
@@ -51,7 +52,7 @@ export default function About() {
 
       <div className={styles.heroImage}>
         <img 
-          src="\images\images\first photo.png"
+          src="/images/images/first photo.png"
           alt="Fourth and Hope Community" 
         />
       </div>
@@ -60,7 +61,7 @@ export default function About() {
         <div className={styles.storyContent}>
           <div className={styles.imageContainer}>
             <img 
-              src="\images\images\second photo.png"
+              src="/images/images/second photo.png"
               alt="Our Story" 
               className={styles.circleImage}
             />

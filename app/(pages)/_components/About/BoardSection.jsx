@@ -2,25 +2,14 @@
 
 import { useState } from 'react';
 import MemberCard from './MemberCard';
-import BoardPopup from './BoardPopup';
 import PrimaryButton from '../Button/PrimaryButton';
+import { boardMembers } from './boardData';
 import styles from './About.module.scss';
 
 export default function BoardSection() {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-  const boardMembers = [
-    { name: "Scott Mansell", title: "President" },
-    { name: "Theresa Lee", title: "Vice President" },
-    { name: "Bruce Watts", title: "Secretary" },
-    { name: "Nancy Lofton", title: "Treasurer" },
-    { name: "Brad Miller", title: "" },
-    { name: "Marla Garske", title: "" },
-    { name: "Nick Roncoroni", title: "" },
-    { name: "Catherine Portman", title: "" },
-    { name: "Deborah Grochau", title: "" }
-  ];
-
+  // Instead of using a popup component, we'll use a direct link to a page
+  // This avoids the removeChild error by not trying to manipulate the DOM directly
+  
   return (
     <section className={styles.boardSection}>
       <h2>Board of Trustees</h2>
@@ -37,17 +26,13 @@ export default function BoardSection() {
       </div>
 
       <div className={styles.buttonWrapper}>
-        <PrimaryButton 
-          name="Board Meeting Info" 
-          link="#"
-          onClick={() => setIsPopupOpen(true)}
-        />
+        <a 
+          href="/board-info" 
+          className={styles.boardMeetingButton}
+        >
+          Board Meeting Info
+        </a>
       </div>
-
-      <BoardPopup 
-        isOpen={isPopupOpen} 
-        onClose={() => setIsPopupOpen(false)} 
-      />
     </section>
   );
 }
