@@ -36,10 +36,11 @@ export default function BoardSection() {
         ))}
       </div>
 
-      <div className={styles.buttonWrapper} onClick={() => setIsPopupOpen(true)}>
+      <div className={styles.buttonWrapper}>
         <PrimaryButton 
           name="Board Meeting Info" 
           link="#"
+          onClick={() => setIsPopupOpen(true)}
         />
       </div>
 

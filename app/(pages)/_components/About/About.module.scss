@@ -7,31 +7,31 @@
 // Header Section
 .headerSection {
   width: 100%;
-  max-width: 90rem;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 8%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10%;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 5%;
+  margin-bottom: 5%;
 
   @include phone {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2%;
   }
 }
 
 .mainHeading {
   h1 {
     color: var(--green);
-    font-size: 4rem;
+    font-size: 3.5em;
     line-height: 1.5;
     font-weight: bold;
     margin: 0;
 
     @include phone {
-      font-size: 2.5rem;
+      font-size: 1.8em;
       line-height: 1.2;
     }
   }
@@ -39,23 +39,23 @@
 
 .introContent {
   h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2.5em;
+    margin-bottom: 1%;
     font-weight: bold;
     color: var(--black);
   }
 
   p {
-    font-size: 1.125rem;
-    margin-bottom: 2rem;
+    font-size: 1em;
+    margin-bottom: 2%;
     line-height: 1.5;
     color: var(--black);
   }
 
   .buttonContainer {
     display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
+    gap: 1%;
+    margin-top: 2%;
   }
 }
 
@@ -63,7 +63,7 @@
 .heroImage {
   width: 100%;
   height: auto;
-  margin-bottom: 5rem;
+  margin-bottom: 5%;
 
   img {
     width: 100%;
@@ -75,24 +75,24 @@
 // Story Section
 .storySection {
   width: 100%;
-  max-width: 90rem;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 8%;
-  margin-bottom: 5rem;
+  margin-bottom: 5%;
 
   .storyContent {
     display: grid;
-    grid-template-columns: minmax(20rem, 35%) 1fr;
-    gap: 4rem;
+    grid-template-columns: minmax(35%, 35%) 1fr;
+    gap: 4%;
     align-items: flex-start;
 
     @include tablet {
-      gap: 3rem;
+      gap: 3%;
     }
 
     @include phone {
       grid-template-columns: 1fr;
-      gap: 2rem;
+      gap: 2%;
     }
 
     .imageContainer {
@@ -109,17 +109,17 @@
 
     .textContent {
       h2 {
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
+        font-size: 2.5em;
+        margin-bottom: 2%;
         font-weight: bold;
         color: var(--black);
       }
 
       p {
-        font-size: 1.125rem;
+        font-size: 1em;
         line-height: 1.6;
         color: var(--black);
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.5%;
 
         &:last-child {
           margin-bottom: 0;
@@ -133,28 +133,28 @@
 .missionSection {
   width: 100%;
   background-color: var(--light-grey);
-  padding: 5rem 0;
+  padding: 5% 0;
 
   h2 {
-    max-width: 90rem;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 8%;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 3em;
+    margin-bottom: 2%;
     font-weight: bold;
     color: var(--black);
   }
 
   .missionContent {
-    max-width: 90rem;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 8%;
 
     p {
-      font-size: 1.125rem;
+      font-size: 1em;
       line-height: 1.6;
       color: var(--black);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.5%;
 
       &:last-child {
         margin-bottom: 0;
@@ -166,35 +166,46 @@
 // Board Section
 .boardSection {
   width: 100%;
-  max-width: 90rem;
-  margin: 5rem auto;
+  max-width: 100%;
+  margin: 5% auto;
   padding: 0 8%;  
   position: relative;
+
+  h2 {
+    font-size: 2.5em;
+    margin-bottom: 1%;
+    font-weight: bold;
+    color: var(--black);
+  }
+
+  p {
+    margin-bottom: 3%;
+    font-size: 1em;
+    line-height: 1.5;
+    color: var(--black);
+  }
 
   .membersGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    margin-bottom: 3rem;  
+    gap: 2%;
+    margin-bottom: 3%;  
 
     @include tablet {
       grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
+      gap: 2%;
     }
 
     @include phone {
       grid-template-columns: 1fr;
-      gap: 2rem;
+      gap: 2%;
     }
   }
 
   .buttonWrapper {
-    width: calc(100% - 16%);  
-    position: absolute;
-    right: 8%;  
     display: flex;
     justify-content: flex-end;
-    margin-top: 2rem;  
+    margin-top: 2%;  
   }
 }
 
@@ -204,49 +215,88 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-bottom: 1.5%;
 
   .profileImage {
-    width: 8rem;
-    height: 8rem;
+    width: 8em;
+    height: 8em;
     border-radius: 50%;
     background-color: var(--grey);
-    margin-bottom: 1rem;
+    margin-bottom: 1%;
   }
 
   h4 {
-    font-size: 1.25rem;
+    font-size: 1em;
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5%;
     color: var(--black);
   }
 
   p {
-    font-size: 1rem;
+    font-size: 0.9em;
     color: var(--dark-grey);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5%;
+    margin-top: 0;
   }
 }
 
 // Staff Section
 .staffSection {
   width: 100%;
-  max-width: 90rem;
-  margin: 5rem auto;
+  max-width: 100%;
+  margin: 5% auto;
   padding: 0 8%;
 
   h2 {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 2.5em;
+    margin-bottom: 3%;
     font-weight: bold;
+    color: var(--black);
   }
 
   .staffGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+    gap: 2%;
 
     @include phone {
       grid-template-columns: 1fr;
     }
+  }
+}
+
+// Simple popup styles for a blank page
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popupContent {
+  background-color: white;
+  border-radius: 0.5em;
+  width: 90%;
+  max-width: 500px;
+  min-height: 200px;
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupBody {
+  padding: 5%;
+  text-align: center;
+  
+  p {
+    font-size: 1em;
+    color: var(--black);
   }
 }

@@ -1,11 +1,33 @@
 'use client';
 
+import { useRef } from 'react';
 import styles from './About.module.scss';
 import BoardSection from './BoardSection';
 import StaffSection from './StaffSection';
-import PrimaryButton from '../Button/PrimaryButton';  
+import PrimaryButton from '../Button/PrimaryButton';
+import SecondaryButton from '../Button/SecondaryButton';
 
 export default function About() {
+  const scrollToFooter = () => {
+    // First check if there's a footer element with id
+    const footer = document.getElementById('footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // Try to find the footer element by tag name or class
+      const footerElement = document.querySelector('footer');
+      if (footerElement) {
+        footerElement.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // As a last resort, scroll to the bottom of the page
+        window.scrollTo({
+          top: document.documentElement.scrollHeight,
+          behavior: 'smooth'
+        });
+      }
+    }
+  };
+
   return (
     <div className={styles.pageContainer}>
       <div className={styles.headerSection}>
@@ -20,36 +42,40 @@ export default function About() {
           <h2>Who we are</h2>
           <p>A faith - based organization assisting with care and recovery for those in need.</p>
           <div className={styles.buttonContainer}>
-            <PrimaryButton name="Donate" link="https://app.etapestry.com/onlineforms/YoloWayfarerCenterChristianMi/fourth_hope_giving.html" />
-            <PrimaryButton name="Subscribe" link="#" />
+            <PrimaryButton name="Donate" link="/donate" />
+            <SecondaryButton 
+              name="Subscribe" 
+              link="#" 
+              onClick={scrollToFooter}
+            />
           </div>
         </div>
       </div>
 
       <div className={styles.heroImage}>
         <img 
-          src="\images\first photo.png"
+          src="\images\images\first photo.png"
           alt="Fourth and Hope Community" 
         />
       </div>
 
       <div className={styles.storySection}>
-  <div className={styles.storyContent}>
-    <div className={styles.imageContainer}>
-      <img 
-        src="/images/second photo.png"
-        alt="Our Story" 
-        className={styles.circleImage}
-      />
-    </div>
-    <div className={styles.textContent}>
-      <h2>Our Story</h2>
-      <p>In the 1980s a group of Woodland residents became concerned about Woodland's homeless and hungry and began passing out peanut butter sandwiches and bananas in sack lunches. This initial effort grew to become a soup kitchen in partnership with local churches.</p>
-      <p>A short time later, there was the realization of a greater need. Over the past several decades, programs have been established to assure that every person has food to eat, a place to sleep, dignity, and hope.</p>
-      <p>Our programs address physical and mental health, substance use, employment and income needs, and housing. We operate a 100-bed emergency shelter with a commercial kitchen for hot meals; permanent supportive housing programs, and Walter's House, a 44-bed residential treatment program.</p>
-    </div>
-  </div>
-</div>
+        <div className={styles.storyContent}>
+          <div className={styles.imageContainer}>
+            <img 
+              src="\images\images\second photo.png"
+              alt="Our Story" 
+              className={styles.circleImage}
+            />
+          </div>
+          <div className={styles.textContent}>
+            <h2>Our Story</h2>
+            <p>In the 1980s a group of Woodland residents became concerned about Woodland's homeless and hungry and began passing out peanut butter sandwiches and bananas in sack lunches. This initial effort grew to become a soup kitchen in partnership with local churches.</p>
+            <p>A short time later, there was the realization of a greater need. Over the past several decades, programs have been established to assure that every person has food to eat, a place to sleep, dignity, and hope.</p>
+            <p>Our programs address physical and mental health, substance use, employment and income needs, and housing. We operate a 100-bed emergency shelter with a commercial kitchen for hot meals; permanent supportive housing programs, and Walter's House, a 44-bed residential treatment program.</p>
+          </div>
+        </div>
+      </div>
 
       <div className={styles.missionSection}>
         <h2>Our Mission</h2>
