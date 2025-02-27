@@ -37,7 +37,7 @@ const programs = [
     title:'Walter\'s House' , 
     subtitle: 'Walter’s House is a residential substance use disorder treatment facility for women and men',
     text: 'Services include assessment, treatment planning, counseling, education, family therapy, crisis intervention, and aftercare planning. The outpatient program offers group and individual sessions.',
-    image:'<img src="/images/meals.jpg" alt="Housing Program" />',
+    image:'<img src="/images/meals.jpg" alt="WalterHouse" />',
   },
 ];
 
@@ -45,27 +45,27 @@ const byNumbers = [
   {
     value: '242',
     description: 'emergency shelters',
-    image: '<img src="/images/meals.jpg" alt="EmergencyShelters" width={50} height={50}/>',
+    image: '<img src="/images/meals.jpg" alt="EmergencyShelters" />',
   },
   {
     value: '58',
     description: 'in permanent supportive housing',
-    image: '<img src="/images/meals.jpg" alt="SupportiveHousing" width={50} height={50}/>',
+    image: '<img src="/images/meals.jpg" alt="SupportiveHousing" />',
   },
   {
     value: '92000',
     description: 'meals served',
-    image: '<img src="/images/meals.jpg" alt="MealsServed" width={50} height={50}/>',
+    image: '<img src="/images/meals.jpg" alt="MealsServed" />',
   },
   {
     value: '41',
     description: 'in stable housing',
-    image: '<img src="/alcohol" alt="StableHousing" width={50} height={50} />',
+    image: '<img src="/images/meals.jpg" alt="StableHousing" />',
   },
   {
     value: '88',
     description: 'in transitional sober living',
-    image: '<img src="/images/meals.jpg" alt="SoberLiving" width={50} height={50}/>',
+    image: '<img src="/images/meals.jpg" alt="SoberLiving" />',
   },
 ]
 
@@ -94,7 +94,7 @@ export default function Programs() {
 
 
         {/*RISING NUMBERS HERE ~ Function call */}
-        <div className="stats-container">
+        <div className={styles.statsContainer}>
         {byNumbers.map((s, index) => (
           <Stat 
             key={index} // Use a unique identifier if available

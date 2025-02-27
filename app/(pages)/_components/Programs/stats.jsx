@@ -6,8 +6,7 @@ const StatItem = ({ value, label, image }) => {
 
   useEffect(() => {
     const numericValue = Number(value);
-
-    if (isNaN(numericValue) || typeof numericValue !== "number") return;
+    if (isNaN(numericValue)) return;
 
     let start = 0;
     const duration = 2000;
@@ -26,10 +25,12 @@ const StatItem = ({ value, label, image }) => {
   }, [value]);
 
   return (
-    <div className={styles.statItem}> {/* Use styles for class names */}
-      {image && <img src={image} alt={label} className={styles.statIcon} />} {/* Use styles for class names */}
-      <span className={styles.statValue}>{count.toLocaleString()}</span> {/* Use styles for class names */}
-      <span className={styles.statLabel}>{label}</span> {/* Use styles for class names */}
+    <div className={styles.statItem}>
+      {image && <img src={image} alt={label} className={styles.statIcon} />}
+      <div className={styles.statContent}>
+        <span className={styles.statValue}>{count.toLocaleString()}</span>
+        <span className={styles.statLabel}>{label}</span>
+      </div>
     </div>
   );
 };
