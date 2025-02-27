@@ -15,9 +15,9 @@ const SliderWithText = ({ slides }) => {
         return () => clearInterval(interval);
     }, [slides]);
   
-    // const goToSlide = (index) => {
-    //   setCurrentIndex(index);
-    // };
+    const goToSlide = (index) => {
+      setCurrentIndex(index);
+    };
   
     const nextSlide = () => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
@@ -61,6 +61,7 @@ const SliderWithText = ({ slides }) => {
       </div>
       <div className={styles.arrows}>
         <Image 
+        className={styles.arrowImg}
         src={'/images/Home/arrow_circle_right.svg'} 
         alt="Next Slide" 
         onClick={nextSlide} 
