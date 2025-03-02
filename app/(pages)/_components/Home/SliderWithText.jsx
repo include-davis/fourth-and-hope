@@ -23,9 +23,6 @@ const SliderWithText = ({ slides }) => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
     };
   
-    // const prevSlide = () => {
-    //   setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
-    // };
 
   return (
     <div className={styles.sliderContainer}>
@@ -35,7 +32,6 @@ const SliderWithText = ({ slides }) => {
         ref={sliderRef}
       >
         {
-        // slides &&
           slides.map((slide, index) => (
             <div
               key={index}
@@ -50,7 +46,6 @@ const SliderWithText = ({ slides }) => {
       </div>
       <div className={styles.dots}>
         {
-        // slides &&
           slides.map((_, index) => (
             <span
               key={index}

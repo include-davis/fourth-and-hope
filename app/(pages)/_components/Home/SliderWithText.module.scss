@@ -6,17 +6,16 @@
     overflow: hidden;
   }
   
-  .slide {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .dots {
-    text-align: center;
-    margin-top: 1%;
-  }
-  
-  .dots span {
+.slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 1%;
+
+  span {
     display: inline-block;
     width: 1.25rem;
     height: 1.25rem;
@@ -25,29 +24,32 @@
     margin: 0 0.5%;
     cursor: pointer;
   }
-  
-  .dots span.active {
+
+  span.active {
     background-color: var(--dark-grey);
   }
+}
   
-  .arrows {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    padding: 0 3%;
-    box-sizing: border-box;
-    z-index: 10;
-  }
+.arrows {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 3%;
+  box-sizing: border-box;
+  z-index: 10;
   
-  .arrows img {
+  img {
     cursor: pointer;
     width: 3.75%;
   }
+}
 
-  .arrowImg{
-    width: 100%;
-    height: auto;
-  }
+
+
+.arrowImg{
+  width: 100%;
+  height: auto;
+}

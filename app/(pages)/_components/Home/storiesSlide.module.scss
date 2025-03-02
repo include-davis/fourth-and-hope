@@ -1,6 +1,5 @@
 @use '../../_globals/mixins.scss';
 
-
 .story {
     flex: 0 0 100%; /* Each story takes 100% width */
     display: flex; 
@@ -15,17 +14,17 @@
     padding-top: 1.4%;
     font-weight: 280;
     color: var(--black);
-}
 
-.storyText h2{
-    font-size: 2.48rem;
-    padding-bottom: 5%;
-    font-weight: 580;
-}
+    h2{
+        font-size: 2.48rem;
+        padding-bottom: 5%;
+        font-weight: 580;
+    }
 
-.storyText p{
-    font-size: 1.25rem;
-    line-height: 1.85rem;
+    p{
+        font-size: 1.25rem;
+        line-height: 1.85rem;
+    }
 }
 
 .storyImageContainer{

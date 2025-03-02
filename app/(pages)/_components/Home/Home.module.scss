@@ -9,19 +9,19 @@
     padding-bottom: 56.25%;
   }
 
-.imageSlides > div > span {
-    position: absolute !important;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-}
+    .imageSlides > div > span {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
 
-.imageSlides img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
+    .imageSlides img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
   
 .headerImageContainer {
     position: absolute;
@@ -30,10 +30,10 @@
     width: 100%;
     height: 100%;
     transition: opacity 1s ease-in-out;
-}
 
-.headerImageContainer img { 
-    object-fit: cover;
+    img { 
+        object-fit: cover;
+    }
 }
   
 .activeImage {
@@ -93,21 +93,21 @@
     flex-direction: column;
     width: 40%;
     color: var(--black);
+
+    h2{
+        font-weight: 548;
+        margin-bottom: 3%;
+    }
+
+    p{
+        font-size: 1.28rem; //make globals?
+        font-weight: 275;
+        line-height: 1.8rem;
+    }
 }
 
 .text1{
     margin-bottom: 9%;
-}
-
-.whoWeAreText h2{
-    font-weight: 548;
-    margin-bottom: 3%;
-}
-
-.whoWeAreText p{
-    font-size: 1.28rem; //make globals?
-    font-weight: 275;
-    line-height: 1.8rem;
 }
 
 .whoWeAreVideo{
@@ -123,24 +123,23 @@
     align-items: center;
     flex-direction: column;
     padding-bottom: 4.4%;
-}
 
-.programs h1{
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 2.2%;
-    color: var(--green);
-    font-size: 5rem; //make globals?
-    font-weight: 500;
-    width: 87%;
+    h1{
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 2.2%;
+        color: var(--green);
+        font-size: 5rem; //make globals?
+        font-weight: 500;
+        width: 87%;
+    }
 }
-
 .programsComponents{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     width: 87%;
-    height: 38.9rem; //idk if i can have rem
+    height: 38%;
 }
 
 //our stories section
@@ -150,15 +149,15 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
 
-.ourStories h1{
-    color: var(--green);
-    width: 87%;
-    font-size: 5rem; //make globals
-    font-weight: 500;
-    margin-bottom: 2.2%;
-    margin-top: 3%;
+    h1{
+        color: var(--green);
+        width: 87%;
+        font-size: 5rem; //make globals
+        font-weight: 500;
+        margin-bottom: 2.2%;
+        margin-top: 3%;
+    }
 }
 
 .storiesComponents{
