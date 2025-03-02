@@ -20,6 +20,8 @@ const jobPositions = [
         description: "Full-Time Swing Shift: You will support and coordinate our clients during the swing shift hours.",
     }
     
+    
+    
 ];
 
 export default function Careers() {

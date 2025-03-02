@@ -49,9 +49,9 @@ export default function Inquiries() {
                             </p>
                         </div>
 
-                        <div className={styles.button}>
-                            <SecondaryButton name="Volunteer Guidelines" link="/volunteer-guidelines" />
-                        </div>
+                        <a href="/volunteer-guidelines" className={styles.button}>
+                            Volunteer Guidelines
+                        </a>
                     </div>
                 </div>
             </div>

@@ -47,7 +47,7 @@ export default function Volunteer() {
             {volunteerLinks.map((button, index) => (
               <PrimaryButton key={index} name={button.name} link={button.link} />
             ))}
-          </div>
+          </div>          
 
         </div>
       </div>

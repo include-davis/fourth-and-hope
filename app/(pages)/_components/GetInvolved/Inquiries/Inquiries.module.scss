@@ -21,6 +21,7 @@
     height: auto;
     display: flex;
     justify-content: space-between;
+    gap: 5%;
 
 }
 
@@ -35,14 +36,14 @@
 .number{
     display: flex;
     flex-direction: row;
-    line-height: 150%;
+    line-height: 1.5rem;
     gap: 2%;
 }
 
 .mail{
     display: flex;
     flex-direction: row;
-    line-height: 150%;
+    line-height: 1.5rem;
     gap: 2%;
     color: var(--green)
 }
@@ -55,10 +56,29 @@
 }
 
 .info_top{
-    margin-bottom: 1.7%;
+    margin-bottom: 2.7%;
 }
 
 .p_override{
     font-weight: bold;
-    line-height: 150%;
+    line-height: 1.5rem;
+}
+
+.button{
+    width: fit-content;
+    padding: 2.3% 4.5%;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--green);
+    outline: 2px solid var(--green);
+    background-color: var(--white);
+
+
+    &:hover, &:active {
+      background-color: var(--green);
+      color: var(--white);
+
+    }
 }
