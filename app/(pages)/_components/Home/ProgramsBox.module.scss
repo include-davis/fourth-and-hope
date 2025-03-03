@@ -20,6 +20,9 @@
     color: var(--black);
     height: 100%;
     margin-bottom: 9%;
+    @include mixins.phone{
+        padding: 3.21%;
+    }
 
 
     h2{
