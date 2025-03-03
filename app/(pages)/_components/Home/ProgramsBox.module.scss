@@ -16,6 +16,8 @@
     flex-direction: column;
     color: var(--black);
     height: 100%;
+    margin-bottom: 9%;
+
 
     h2{
         font-weight: 548;
@@ -23,9 +25,9 @@
     }
 
     p{
-        margin-top: 6.9%;
+        margin: 6.9% 0;
         line-height: 1.8rem;
-        font-weight: 275;
+        font-weight: 300;
         font-size: 1.28rem; //might have to change units for responsiveness
     }
 }
