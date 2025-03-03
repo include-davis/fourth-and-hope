@@ -4,9 +4,11 @@
 // "Header" section
 .imageSlides {
     position: relative;
-    width: 100%;
+    // width: 100%;
+    height: 22%;
     overflow: hidden;
     padding-bottom: 56.25%;
+    width: auto;
   }
 
     .imageSlides > div > span {
@@ -49,6 +51,8 @@
 .threeButtons{ //used this to make the margins between header and out mission
     margin-top: 5%;
     margin-bottom: 5%;
+    height: 9%;
+    width: auto;
 }
 
 .buttonContent{ //the components of buttons
@@ -68,6 +72,8 @@
     flex-direction: column;
     padding-top: 4.4%;
     padding-bottom: 4.4%;
+    height: 22%;
+    width: auto;
 }
 
 .WWATitle{
@@ -123,6 +129,8 @@
     align-items: center;
     flex-direction: column;
     padding-bottom: 4.4%;
+    height: 26.1%;
+    width: auto;
 
     h1{
         display: flex;
@@ -135,11 +143,13 @@
     }
 }
 .programsComponents{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
     width: 87%;
-    height: 38%;
+}
+
+.programsComponentsBox{
+    display: flex;
+    justify-content: space-between;
+    max-height: 50%;
 }
 
 //our stories section
@@ -149,6 +159,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    height: 21.03%;
+    width: auto;
 
     h1{
         color: var(--green);

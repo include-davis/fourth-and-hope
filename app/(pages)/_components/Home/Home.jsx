@@ -177,9 +177,13 @@ export default function Home() {
       <div className={styles.programs}>
         <h1>PROGRAMS</h1>
         <div className={styles.programsComponents}>
-          {programData.map((program, index) => (
-          <ProgramsBox key={index} {...program} /> 
-          ))}
+          <div className={styles.programsComponentsBox}>
+            
+            {programData.map((program, index) => (
+            <ProgramsBox key={index} {...program} /> 
+            ))}
+
+          </div>  
         </div>
       </div>
 
