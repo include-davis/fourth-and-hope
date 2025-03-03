@@ -31,7 +31,7 @@ export default function Home() {
   
 
   //JSONs
-  //Buttons Json
+  //Buttons Json 
   const buttonData = [
     {
       imageSrc: '/images/Home/handshakeImage.svg',
