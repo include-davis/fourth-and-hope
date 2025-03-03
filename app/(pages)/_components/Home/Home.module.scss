@@ -161,6 +161,7 @@
 
 
 //Programs section
+//needs to account for if more programs are added and how it will wrap
 .programs{
     display: flex;
     align-items: center;
@@ -190,6 +191,9 @@
     display: flex;
     justify-content: space-between;
     max-height: 50%;
+    @include mixins.phone{
+        flex-direction: column;
+    }
 }
 
 //our stories section
