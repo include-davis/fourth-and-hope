@@ -60,8 +60,8 @@ const SliderWithText = ({ slides }) => {
         src={'/images/Home/arrow_circle_right.svg'} 
         alt="Next Slide" 
         onClick={nextSlide} 
-        width={500}
-        height={500}
+        width={50}
+        height={50}
         />
       </div>
     </div>

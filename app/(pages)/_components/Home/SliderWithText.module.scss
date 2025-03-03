@@ -14,15 +14,19 @@
 .dots {
   text-align: center;
   margin-top: 1%;
+  display: flex; // Use flexbox
+  justify-content: center; // Center dots horizontally
+  
 
   span {
-    display: inline-block;
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1.4%;
+    min-height: 1.4%;
     border-radius: 50%;
     background-color: var(--grey);
-    margin: 0 0.5%;
+    margin: 0.5% 0.5%;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    aspect-ratio: 1/1; /* keep the dot circular */
   }
 
   span.active {
@@ -46,8 +50,6 @@
     width: 3.75%;
   }
 }
-
-
 
 .arrowImg{
   width: 100%;
