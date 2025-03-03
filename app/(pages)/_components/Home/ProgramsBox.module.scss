@@ -35,7 +35,7 @@
 
     p{
         margin: 6.9% 0;
-        line-height: 1.8rem;
+        line-height: 1.8;
         font-weight: 300;
         font-size: 1.28rem; //might have to change units for responsiveness\
         @include mixins.phone{

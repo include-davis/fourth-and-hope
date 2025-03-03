@@ -36,7 +36,7 @@
 
     p{
         font-size: 1.25rem;
-        line-height: 1.85rem;
+        line-height: 1.8;
         @include mixins.phone{
             font-size: 1.28rem;   
         }
