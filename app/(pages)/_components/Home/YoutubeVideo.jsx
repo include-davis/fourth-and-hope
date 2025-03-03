@@ -8,13 +8,13 @@ export default class YoutubeVideo extends React.Component {
             playerVars: {
                 autoplay: 1,
             },
-        };
+        }; 
 
         return (
             <div className={styles.videoBox}>
                 <div className={styles.videoResponsive}>
                     {/* need actual youtube video id to put here */}
-                    <YouTube videoId="NRgZuuwD2WY" 
+                    <YouTube videoId="tiKFuzpX-NA" 
                     opts={opts} onReady={this._onReady} />
                 </div>
             </div>
