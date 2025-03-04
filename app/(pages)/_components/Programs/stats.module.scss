@@ -1,45 +1,38 @@
 @import "../../_globals/mixins.scss";
 
-.statsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    background-color: var(--white);
-    padding: 2rem 0;
-}
 
-/* Each stat item will take up 30% width to ensure 3 in a row */
-.statItem {
-    flex: 1 1 calc(33.333% - 20px); /* Three items in a row */
+
+
+.statBox {
+    flex: 1 1 33.333%; 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: center; 
+    text-align: center; 
     color: var(--black);
     font-weight: bold;
-}ithu
-
-
-/* Ensure last 2 items stay on a second row */
-.statItem:nth-child(4),
-.statItem:nth-child(5) {
-    flex: 1 1 calc(50% - 2rem); /* Two items in a row for second row */
+    margin-bottom: 20px;
 }
 
 
-/* Icon size */
+/* Ensure the last 2 items stay on a second row */
+.statBox:nth-child(4),
+.statBox:nth-child(5) {
+    flex: 1 1 calc(50% - 20px); /* Two items in a row for the second row */
+}
+
 .statIcon {
-    width: 20px;
-    height: 20px;
+    width: 50px; 
+    height: 50px; 
+    margin-right: 20px; 
 }
 
-/* Text styling */
 .statContent {
     display: flex;
     flex-direction: column;
+    justify-content: center; 
 }
 
-/* Number */
 .statValue {
     font-size: 2rem;
     color: var(--green);
@@ -47,11 +40,8 @@
     margin-bottom: 0.25rem;
 }
 
-/* Label */
 .statLabel {
     font-size: 1rem;
     color: var(--dark-grey);
     font-weight: 100;
 }
-
-

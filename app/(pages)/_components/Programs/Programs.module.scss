@@ -1,6 +1,12 @@
 @import "../../_globals/mixins.scss";
 
 
+.hero_container {
+  width: 100%;
+  height: auto; /* Allow the image to take its natural height */
+  max-height: none; /* Remove the strict height limit */
+}
+
 .Titles {
   //color: var(--green);
   width: 100%;
@@ -12,13 +18,131 @@
   text-align: left; 
 }
 
-.Support{
+.TitleNumbers {
+  //color: var(--green);
   width: 100%;
-  padding: 10%;
+  padding-bottom: 0%;
   display: flex;
   flex-direction: column; 
   justify-content: center; 
-  align-items: Center; 
-  text-align: Center; 
-  background: var(--white);
+  align-items: center; 
+  text-align: center; 
 }
+.ProgramTitle {
+  width: 100%;
+  display: flex;
+  padding-left: 10%;
+  padding-top: 8%;
+  padding-bottom: 0%;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: left; 
+  text-align: left; 
+}
+
+.statsContainer {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to create multiple rows */
+  justify-content: space-between; /* Space between items */
+  width: 100%;
+  background-color: var(--white);
+  padding: 2rem 0 2rem 2rem;
+
+}
+
+.Support {
+  width: 100%;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--white);
+  gap: 1.5rem; // Adds spacing between text and buttons
+}
+
+.button_container {
+  display: flex;
+  gap: 1.5rem; // Space between buttons
+}
+
+.Walter {
+  width: 100%;
+  padding: 5% 10%;
+}
+
+.Walters {
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+  justify-content: space-between;
+  background: var(--white);
+  padding: 5%; /* Reduced padding for better spacing */
+  margin: 5% 0;
+  border-radius: 3%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  max-width: 1200px; /* Optional: prevents excessive width */
+  margin-left: auto;
+  margin-right: auto;
+
+  .text {
+    flex: 1;
+    max-width: 50%; /* Ensures text doesn't exceed half the page */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image {
+    flex: 1; /* Ensures the image takes the remaining space */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    img {
+      max-width: 100%; /* Ensures responsiveness */
+      height: auto;
+      border-radius: 3%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+
+/* Responsive Design for Tablets & Mobile */
+@media (max-width: 768px) {
+  .Walters {
+    flex-direction: column; /* Stacks text and image */
+    align-items: center;
+    text-align: center;
+  }
+
+  .text,
+  .image {
+    max-width: 100%; /* Full width on smaller screens */
+    justify-content: center;
+  }
+}
+
+
+  .Linksbutton {
+    display: inline-block;
+    margin: 10px;
+    padding: 1rem 2rem;
+    border-radius: 0.25rem;
+    background-color: var(--green);
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.1); 
+      //background-color: darken(var(--green), 10%);
+    }
+  }

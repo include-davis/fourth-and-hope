@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from './stats.module.scss';
 
+
 const StatItem = ({ value, label, image }) => {
   const [count, setCount] = useState(0);
 
@@ -9,7 +10,7 @@ const StatItem = ({ value, label, image }) => {
     if (isNaN(numericValue)) return;
 
     let start = 0;
-    const duration = 2000;
+    const duration = 2500;
     const stepTime = Math.max(duration / numericValue, 10);
 
     const counter = setInterval(() => {
@@ -25,7 +26,7 @@ const StatItem = ({ value, label, image }) => {
   }, [value]);
 
   return (
-    <div className={styles.statItem}>
+    <div className={styles.statBox}>
       {image && <img src={image} alt={label} className={styles.statIcon} />}
       <div className={styles.statContent}>
         <span className={styles.statValue}>{count.toLocaleString()}</span>
