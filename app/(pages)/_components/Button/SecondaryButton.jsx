@@ -7,3 +7,4 @@ export default function PrimaryButton({ name = "Donate", link = "#" }) {
         </a>
     );
 }
+
