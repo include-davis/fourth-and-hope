@@ -27,14 +27,14 @@ const programs = [
     title:'Housing' , 
     subtitle: 'Fourth & Hope provides permanent supportive and transitional housing to promote stability and recovery',
     text: 'Permanent Supportive Housing serves individuals and families with disabilities who have experienced homelessness. All housing clients receive ongoing case management.',
-    image:'images/Programs/EmergencyShelters.svg',
+    image:'images/Programs/Housing.svg',
   },
   {
     title:'Meals' , 
     subtitle: '',
     text: 'Fourth & Hope offers 3 meals/day to anyone in need of a hot meal. Lunch is served every day at 12 PM, and dinner at 5 PM.',
-    image:'images/Programs/EmergencyShelters.svg',
-  },
+    image:'images/Programs/Meals.svg',
+  }
 
 ];
 
@@ -63,8 +63,8 @@ const byNumbers = [
     value: '88',
     description: 'in transitional sober living',
     image: 'images/Programs/soberLiving.svg',
-  },
-]
+  }
+];
 
 export default function Programs() {
     return (

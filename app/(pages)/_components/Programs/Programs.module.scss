@@ -74,15 +74,15 @@
 
 .Walters {
   display: flex;
-  align-items: center; /* Ensures vertical alignment */
+  align-items: center;
   justify-content: space-between;
   background: var(--white);
-  padding: 5%; /* Reduced padding for better spacing */
+  padding: 5%; 
   margin: 5% 0;
   border-radius: 3%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
-  max-width: 1200px; /* Optional: prevents excessive width */
+  max-width: 1200px; 
   margin-left: auto;
   margin-right: auto;
 
@@ -101,7 +101,7 @@
     justify-content: flex-end;
 
     img {
-      max-width: 100%; /* Ensures responsiveness */
+      max-width: 100%;
       height: auto;
       border-radius: 3%;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
