@@ -10,6 +10,7 @@ const data = [
 ];
 
 export default function Donation_Provide() {
+  
   return (
     <div className={styles.dp_hero}>
       <div className={styles.provide_container}>
