@@ -1,3 +1,5 @@
+@import "../../../_globals/mixins.scss";
+
 .sponsorlist {
     display: flex;
     gap: 4%;
@@ -9,5 +11,13 @@
         border-radius: 15.5px;
     }
 
+}
+
+@include phone {
+    .sponsorlist {
+        img {
+            box-shadow: 0 0 15px var(--dark-grey);
+        }
+    }
 }
 

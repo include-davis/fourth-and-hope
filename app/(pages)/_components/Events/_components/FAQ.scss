@@ -1,13 +1,14 @@
+@import "../../../_globals/mixins.scss";
+
 .faq-question {
     color: var(--white);
     background-color: var(--black);
 
-    padding: 1.5% 3% 1.5% 3%;
+    padding: 2% 3% 2% 3%;
     border-radius: 10px;
 
     display: flex;
     justify-content: space-between;
-    margin-top: 3%;
     position: relative;
     z-index: 20;
 }
@@ -16,8 +17,8 @@
     background-color: var(--black);
     border: none;
     color: white;
-    font-size: 3.6em;
-    line-height: 10px;
+    font-size: 3.6rem;
+    line-height: 0.25;
     font-weight: 200;
     cursor: pointer;
 
@@ -28,16 +29,55 @@
 }
 
 .faq-answer {
-    padding: 4% 3.5% 2% 3.5%;
-    margin-top: -1%;
-    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    transition: flex-grow 0.5s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out;
+    opacity: 0;
+    padding: 0 3.5%;
+    overflow: hidden; 
+}
+
+.faq-answer.open {
     background-color: var(--light-grey);
-    border-radius: 0 0 10px 10px;
-    z-index: 10;
+    flex-grow: 1;
+    opacity: 1;
+    padding: 4% 3.5% 2% 3.5%;
+    margin-bottom: 2%;
+    border-radius: 10px;
 }
 
 .faq-answer p {
     margin-bottom: 2%;
     font-weight: 300;
+    height: 0;
+    opacity: 0;
+    transition: opacity 0.2 ease-out;
+    line-height: 1.5;
 }
+
+.faq-answer.open p {
+    height: auto;
+    opacity: 1;
+}
+
+@include phone {
+    .faq-question {
+        padding: 3% 4% 3% 4%;
+    }
+
+    .toggle-btn {
+        font-size: 3.0rem;
+    }
+
+    .faq-answer {
+        margin-bottom: 3%;
+    }
+
+    .faq-answer.open p {
+        font-size: 1rem;
+        margin-bottom: 5%;
+    }
+}
+
 

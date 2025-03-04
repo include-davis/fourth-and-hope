@@ -1,3 +1,5 @@
+@import "../../../_globals/mixins.scss";
+
 .summary {
     padding: 5% 0 5% 0;
 
@@ -20,7 +22,7 @@
         gap: 5%;
 
         .parent {
-            width: 50vw;
+            width: 50%;
             flex: 2;
 
             img {
@@ -33,7 +35,48 @@
             padding: 1% 0 1% 0;
             flex: 3;
             font-weight: 300;
-            line-height: 150%;
+            line-height: 1.6;
+        }
+    }
+}
+
+@include phone {
+    .summary {
+        .summaryhead {
+            h4 {
+                font-size: 1rem;
+            }
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+        .summarycontent {
+            flex-direction: column;
+
+            .parent {
+                width: 100%;
+            }
+
+            p {
+                font-size: 1rem;
+                padding: 5% 0 10% 0;
+            }
+        }
+    }
+}
+
+@include tablet {
+    .summary {
+        .summarycontent {
+            flex-direction: column;
+
+            .parent {
+                width: 100%;
+            }
+
+            p {
+                padding: 5% 0 5% 0;
+            }
         }
     }
 }

@@ -18,11 +18,10 @@ const FAQ = ({question, answer}) => {
                 <button className="toggle-btn">{isOpen ? "-" : "+"}</button>
             </div>
     
-            {isOpen && (
-                <div className="faq-answer">
-                    <div>{answerParagraphs}</div>
-                </div>
-            )}
+            <div className={`faq-answer ${isOpen ? "open" : ""}`}>
+                <div>{answerParagraphs}</div>
+            </div>
+
         </div>
     );    
 };

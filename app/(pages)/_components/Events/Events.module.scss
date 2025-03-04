@@ -1,3 +1,5 @@
+@import "../../_globals/mixins.scss";
+
 .events {
 
     padding: 0 12% 0 12%;
@@ -40,6 +42,7 @@
         .impactnumbers {
             display: flex;
             justify-content: space-between;
+            align-items:last baseline;
         }
     }
 
@@ -61,6 +64,52 @@
         text-align: center;
         padding: 6% 0 6% 0;
         margin: 5% -15.75% 5% -15.75%;
+    }
+
+}
+
+@include phone {
+    .events {
+        padding: 0 5% 0 5%;
+
+        .quote {
+            margin: 5% -5.5% 5% -5.5%;
+            h3 {
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 1.5;
+            }
+        }
+
+        .impact {
+            margin: 5% -5.5% 5% -5.5%;
+            h3 {
+                font-size: 2rem;
+            }
+
+            .impactnumbers {
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+                padding-bottom: 8%;
+            }
+        }
+
+        .fighthunger {
+            h3 {
+                font-size: 1.6rem;
+                line-height: 1.7;
+            }
+        }
+
+        .sponsors {
+            h2 {
+                padding: 2% 7% 14% 7%;
+                font-size: 2.2rem;
+            }
+
+            margin: 5% -5.5% 5% -5.5%
+        }
     }
 
 }
