@@ -52,7 +52,7 @@ export default function About() {
 
       <div className={styles.heroImage}>
         <img 
-          src="/images/images/first photo.png"
+          src="/images/About/first photo.png"
           alt="Fourth and Hope Community" 
         />
       </div>
@@ -61,7 +61,7 @@ export default function About() {
         <div className={styles.storyContent}>
           <div className={styles.imageContainer}>
             <img 
-              src="/images/images/second photo.png"
+              src="/images/About/second photo.png"
               alt="Our Story" 
               className={styles.circleImage}
             />
