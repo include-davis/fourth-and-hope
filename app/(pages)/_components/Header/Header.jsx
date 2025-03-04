@@ -8,7 +8,7 @@ export default function Header() {
         <div className={styles.contentContainer}>
           <div className={styles.logo}><img src="/images/headerlogo.svg" alt="Fourth Hope Logo" className={styles.logo}/></div>
           <div className={styles.buttonsContainer}>
-            <Link href="/donate"><button className={styles.button}>Donate</button></Link>
+            <a href="/donate" className={styles.button}>Donate</a>
             <div className={styles.otherbuttons}>
               <Link href="/" className={[styles.links, styles.bold].join(' ')}>Home</Link>
               <Link href="/about" className={styles.links}>About</Link>
