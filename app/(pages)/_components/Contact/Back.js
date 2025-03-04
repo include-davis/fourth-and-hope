@@ -21,7 +21,7 @@ app.post('/contact', (req, res) => {
 
   // Create the email data in JSON format
   const emailData = {
-    to: 'recipient-email@example.com',  // Replace with your email to receive the messages
+    to: 'recipient-email@example.com',  // Replace with company's email
     from: email,  // The user's email from the form
     subject: `Message from ${name} - Contact Form`,
     text: `Message: ${message}\n\nFrom: ${name}\nEmail: ${email}`,

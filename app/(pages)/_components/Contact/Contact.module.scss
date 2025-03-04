@@ -1,76 +1,240 @@
-
+.contactimage{
+    mask-image: url('/Images_Contact/contact_picture.svg');
+}
 
 .header{
     color: var(--green);
+    padding-left: 6.94%;
+    padding-bottom: 4%;
+    padding-top: 4.5%;
+}
+.email{
+    color: var(--green);
 }
 
-.otherinfo{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.infocontainer {
+    display: flex;
+    align-items: flex-start;
+    gap: 1%; // Sets the gap between columns
+    padding-left: 6.94%;
+    padding-right: 6.94%;
 
-    gap: 2%;
-    width: 85%;
-    padding-left: 10%;
-    padding-right: 10%;
-    margin: 0 auto;
-    border: #6B6B6B;
-}
-
-.shelter{
     
+    
+    
+}
+
+
+
+
+
+.infocontainer a{
+    color: var(--green);
+    font-family: "Be Vietnam Pro", serif;
+    font-size: 1.25rem;
+}
+
+
+// Format of the whole thing
+.shelter{ 
+    display: flex 0;
+    flex:1;
+    
+    
+}
+
+.shelter h4{
+    padding-bottom: 5.84%;
 }
 
 .treatment{
+    display: flex 0;
+    flex:1;
+    
 
+}
+
+.treatment h4{
+    padding-bottom: 5.84%;
 }
 
 .inquiries{
+    display: flex 0;
+    flex:1;
     
+    
+}
+
+.inquiries h4{
+    padding-bottom: 1.09%;
 }
 
 
 
 
+
+
+
+
+// Location, phone number, and email format 
+.section {
+    display: flex;
+    flex-wrap: wrap; // Allows items to wrap if needed
+    justify-content: space-between;
+    align-items: stretch;
+    padding-bottom: 5.83%;
+}
+
+.icon {
+    flex-shrink: 0; // Prevents icons from shrinking
+    align-self: flex-start;
+}
+
+.upicon{
+    flex-shrink: 0; // Prevents icons from shrinking
+    align-self: flex-end;
+
+}
+
+.shortinfo {
+    
+    flex: 1; // Takes available space
+    min-width: 0; // Allows flex items to shrink properly if needed
+    max-width: 90%; // Ensures it doesn't exceed its intended width
+
+    white-space: normal; // Allows text to wrap
+    overflow-wrap: break-word; // Breaks long words
+    word-break: break-word; // Ensures breaking when necessary
+
+    padding-left: 2%;
+}
+
+.shortsection {
+    padding-bottom: 5.83%;
+    flex: 1; // Takes available space
+    min-width: 0; // Allows flex items to shrink properly if needed
+    max-width: 90%; // Ensures it doesn't exceed its intended width
+
+    white-space: normal; // Allows text to wrap
+    overflow-wrap: break-word; // Breaks long words
+    word-break: break-word; // Ensures breaking when necessary
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// The feedback text on the left side of the contact form
 .feedback {
-    padding: 2%;
-    max-width: 80%;
-    margin: 2% auto;
-    border-radius: 10px;
-    box-shadow: 0 4% 8% rgba(0, 0, 0, 0.1);
-    text-align: center;
+    display: flex;
+    
+    align-items: flex-start;
+    align-self: stretch;
+    padding-left: 6.94%;
+    padding-right: 6.94%;
+    padding-top: 124px;
+    
+
+    gap: 3.87%;
     
 }
 
-.feedback p{
+.textinfo{
+    width: 372px;
+    height: 566px;
+    font-size: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+    
+}
+
+.textinfo p{
     font-size: 1rem; 
+    word-wrap: break-word;
+    
+    line-height: 1.875rem; // Converted from 30px
 }
 
-.feedback a{
-    color: #006837;
+.textinfo a{
+    color: var(--green);
 }
 
-.form {
-    margin-top: 2%;
+
+
+
+
+// The contact form the user will into for feedback
+.contactform{
+    display: flex;
+    flex-direction: column;
+    width: 85%; // Converted from 
+    height: 566px;
+    margin: auto;
+
+
+    .inputgroup{
+        display: flex;
+        gap: 2%;
+        margin-bottom: 2%;
+        
+
+        input{
+            flex: 1;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            padding-left: 3.9%;
+            padding-right: 3.9%;
+            background-color: var(--light-grey);
+            border: none;
+            border-radius: 1.49% / 16.67%;
+
+        }
+    }
+
+    textarea{
+        height: 55%;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        padding-left: 3.9%;
+        padding-right: 3.9%;
+        background-color: var(--light-grey);
+        border: none;
+        border-radius: 0.61% / 1.79%;
+
+        margin-bottom: 6.53%;
+        resize: none;
+    }
+    
+    button {
+        width: 22.8%;
+        height: 9.37%;
+        padding: 1.3% 3.5%;
+        border: none;
+        border-radius: 2.14% / 7.55%;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        background-color: var(--light-grey);
+
+        &:hover, &:active {
+        background-color: var(--light-green);
+        color: var(--white);
+        }
+    }
+    
 }
 
-.formgrid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
-    gap: 2%;
-    padding: 2%;
-    width: 100%;
-}
-
-.input textarea{
-    width: 100%;
-    padding: 2%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.textarea{
-    grid-column: span 2;
-    min-height: 20%;
-}
 
