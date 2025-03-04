@@ -16,8 +16,8 @@ const EventsRecapSection = () => {
                 ]}
 
                 images = {[
-                    { src: "/images/events-pic-2.svg", alt:"catering-photo" },
-                    { src: "/images/events-pic-3.svg", alt: "catering-photo2"}
+                    { src: "/images/events/events-pic-2.svg", alt:"catering-photo" },
+                    { src: "/images/events/events-pic-3.svg", alt: "catering-photo2"}
                 ]}
             />
         </>

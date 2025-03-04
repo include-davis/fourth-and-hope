@@ -5,25 +5,25 @@ const ImpactSection = () => {
     return (
         <>
             <ImpactNumbers
-                image = "/images/house.svg"
+                image = "/images/events/house.svg"
                 number = "66"
                 description = "permanent housing"
             />
 
             <ImpactNumbers
-                image = "/images/bandaid.svg"
+                image = "/images/events/bandaid.svg"
                 number = "280"
                 description = "emergency shelters"
             />
 
             <ImpactNumbers
-                image = "/images/people.svg"
+                image = "/images/events/people.svg"
                 number = "234"
                 description = "support services"
             />
 
             <ImpactNumbers
-                image = "/images/restaurant.svg"
+                image = "/images/events/restaurant.svg"
                 number = "93,000"
                 description = "prepared meals"
             />
