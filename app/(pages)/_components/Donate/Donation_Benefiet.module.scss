@@ -1,19 +1,17 @@
 .benefiet_hero {
   display: flex;
-  padding: 4rem 6.25rem;
+  padding: 4.44% 6.94%;
   flex-direction: column;
   align-items: center;
-  gap: 4rem;
+  gap: 64px;
   align-self: stretch;
-  
 }
 
 .benefiet_hero h2 {
-  color: #323232;
+  color: var(--black);
   text-align: center;
   font-size: 2.5rem;
   font-weight: 600;
-
 }
 
 .card_container {
@@ -27,11 +25,10 @@
 .card {
   display: flex;
   width: 100%;
-  max-width: 22.3125rem; /* 357px */
+  max-width: 24.8%;
   flex-direction: column;
   align-items: center;
-  gap: 3.125rem;
-
+  gap: 50px;
 }
 
 .card_title {
@@ -39,12 +36,11 @@
   text-align: center;
   font-size: 2.25rem;
   font-weight: 500;
-
 }
 
 .card_image_wrapper {
   width: 100%;
-  max-width: 22.3125rem;
+  max-width: 357px;
   height: auto;
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -65,5 +61,5 @@
 }
 
 .card_image_wrapper:hover {
-  box-shadow: 0px 0.375rem 0.1875rem 0px #00000080;
+  box-shadow: 0px 6px 3px 0px #00000080;
 }

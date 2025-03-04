@@ -2,16 +2,16 @@
 
 .dm_hero {
   display: flex;
-  padding: 5.0625rem 6.25rem; 
+  padding: 5.63% 6.94%;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   align-self: stretch;
-  background: var(--white, #fafafa);
+  background: var(--white);
 
   @include sm-desktop {
     flex-direction: column;
-    gap: 2rem; 
+    gap: 32px;
   }
 }
 
@@ -23,49 +23,48 @@
 
   @include sm-desktop {
     flex-direction: column;
-    gap: 2rem;  
+    gap: 32px;
   }
 }
 
 .dm_text_container {
   display: flex;
-  width: 100%;           
-  max-width: 41.8886rem; 
+  width: 100%;
+  max-width: 670px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 32px;
 }
-
 
 .dm_text_container h2 {
   transform: rotate(-0.251deg);
   align-self: stretch;
-  color: #323232;
-  font-size: 2.5rem; 
+  color: var(--black);
+  font-size: 2.5rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 
   @include sm-desktop {
     flex-direction: column;
-    gap: 2rem;
+    gap: 32px;
   }
 }
 
 .dm_text_container p {
-  color: var(--black, #323232);
+  color: var(--black);
   transform: rotate(-0.251deg);
   align-self: stretch;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 300;
-  line-height: 150%;
+  line-height: 1.5; 
 }
 
 .dm_text_container span {
-  color: var(--black, #323232);
+  color: var(--black);
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 150%;
+  line-height: 1.5;  
 }

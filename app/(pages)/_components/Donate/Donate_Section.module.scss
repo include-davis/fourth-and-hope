@@ -2,17 +2,16 @@
 
 .donate_container {
   display: flex;
-  padding: 4rem 6.25rem; 
+  padding: 64px 100px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 4rem; 
   align-self: stretch;
 }
 
 .donate_container h1 {
   color: var(--green, #2e6c4a);
   font-family: "Be Vietnam Pro";
-  font-size: 5rem; 
+  font-size: 5rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -25,10 +24,10 @@
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
-  
-  @include sm-desktop { 
+
+  @include sm-desktop {
     flex-direction: column;
-    gap: 2rem;
+    gap: 32px;
   }
 }
 
@@ -36,7 +35,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 2rem; 
+  gap: 32px;
 }
 
 .inline_text {
@@ -45,26 +44,24 @@
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 150%;
+  line-height: 1.5;
 }
 
 .text_content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1.125rem;
+  gap: 18px;
   align-self: stretch;
-  color: var(--black, #323232);
-  font-family: "Be Vietnam Pro";
+  color: var(--black);
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 300;
-  line-height: 150%; 
+  line-height: 1.5;
 }
 
 .donate_text_hero_container h2 {
-  color: #323232;
-  font-family: "Be Vietnam Pro";
+  color: var(--black);
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 600;
@@ -74,37 +71,37 @@
 .buttons_container {
   display: flex;
   align-items: center;
-  gap: 1.5rem; 
+  gap: 24px;
 }
 
 .donate_online,
 .donate_by_check {
   display: flex;
-  min-width: 10rem; 
-  padding: 1.25rem 3.375rem;
+  min-width: 160px;
+  padding: 20px 54px;
   justify-content: center;
   align-items: center;
-  gap: 0.625rem;
-  border-radius: 0.25rem; 
+  gap: 10px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 .donate_online {
   color: var(--white);
   background-color: var(--green);
-  border: 0.125rem solid transparent;
+  border: 2px solid transparent;
 }
 
 .donate_by_check {
   color: var(--green);
   background-color: var(--white);
-  border: 0.125rem solid var(--green);
+  border: 2px solid var(--green);
 }
 
 .donate_online:hover {
   color: var(--green);
   background-color: var(--white);
-  border: 0.125rem solid var(--green);
+  border: 2px solid var(--green);
 }
 
 .donate_by_check:hover {
@@ -115,65 +112,59 @@
 .buttons_container p {
   color: #000;
   text-align: center;
-  font-family: "Be Vietnam Pro";
-  font-size: 1.25rem; 
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 300;
-  line-height: 150%;
+  line-height: 1.5;
 }
 
 .circle-wrap {
-  top: 0.1875rem;
-  left: 50.4375rem;
-  width: 26.9375rem; 
-  height: 26.9375rem;
+  top: 3px;
+  left: 807px;
+  width: 431px;
+  height: 431px;
   background: #ffeebe;
   border-radius: 50%;
 }
 
 .circle-wrap .circle {
-  width: 26.9375rem;
-  height: 26.9375rem;
+  width: 431px;
+  height: 431px;
   position: relative;
 }
 
 .circle-wrap .circle .mask,
 .circle-wrap .circle .fill {
-  width: 26.9375rem;
-  height: 26.9375rem;
+  width: 431px;
+  height: 431px;
   position: absolute;
   border-radius: 50%;
 }
 
 .circle-wrap .circle .mask {
-  clip: rect(
-    0px,
-    26.9375rem,
-    26.9375rem,
-    13.46875rem
-  ); 
+  clip: rect(0px, 431px, 431px, 215.5px);
 }
 
 .circle-wrap .circle .mask .fill {
-  clip: rect(0px, 13.46875rem, 26.9375rem, 0px);
+  clip: rect(0px, 215.5px, 431px, 0px);
   background-color: #ffc21c;
 }
 
 .circle-wrap .inside-circle {
-  width: 21.9375rem;
-  height: 21.9375rem;
+  width: 351px;
+  height: 351px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 2.5rem;
-  left: 2.5rem;
+  top: 40px;
+  left: 40px;
   z-index: 100;
   font-weight: 700;
   font-size: 2rem;
-  color: #323232;
+  color: var(--black);
   text-align: center;
 }
 
@@ -194,8 +185,8 @@
 .overlayContent {
   position: relative;
   background: #ffffff;
-  border-radius: 0.375rem; 
-  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   color: var(--green);
   padding: 5%;
   display: flex;
@@ -205,9 +196,9 @@
   text-align: center;
 
   @include sm-desktop {
-    width: 90%;   
-    height: auto; 
-    padding: 3rem; 
+    width: 90%;
+    height: auto;
+    padding: 48px;
   }
 }
 
@@ -217,26 +208,26 @@
   font-size: 1rem;
   cursor: pointer;
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 16px;
+  right: 16px;
   color: var(--black);
   text-decoration: underline;
-  padding-bottom: 0.125rem; 
+  padding-bottom: 2px;
 }
 
 .overlayHeading {
   font-weight: 500;
-  font-size: 2.25rem; 
-  line-height: 2.84625rem; 
+  font-size: 2.25rem;
+  line-height: 1.28;
   color: var(--green);
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
 }
 
 .text_content {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 24px;
   text-align: left;
 }
 
@@ -248,34 +239,34 @@
   @include sm-desktop {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem; 
+    gap: 8px;
   }
 }
 
 .numberedLabel {
-  width: 31.25rem; 
-  margin-right: 1rem;
+  width: 34.7%;
+  margin-right: 16px;
   font-weight: 500;
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   color: var(--green);
 
   @include sm-desktop {
-    width: auto; 
+    width: auto;
     margin-right: 0;
-  } 
+  }
 }
 
 .numberedValue {
   flex: 1;
   font-weight: 500;
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   color: var(--black);
 }
 
 .thankYou {
-  margin-top: 1.5rem;
+  margin-top: 24px;
   font-weight: 500;
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   color: var(--green);
   text-align: center;
 }
