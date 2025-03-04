@@ -1,0 +1,44 @@
+@use '../../_globals/mixins.scss';
+
+.buttonsContainer { //holds the image and button
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 27.5%;
+    height: 93.7%;
+  }
+
+  .buttonImage{ //the image
+    margin: auto;
+    width: 23.8%;
+    height: auto;
+  }
+  
+  .button { //actual button
+    margin-top: 7.9%;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    background-color: var(--green);
+    color: var(--white);
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 1.28rem; //how to use globals fonts
+    font-weight: 275;
+
+    border: none;
+    border: 1px solid var(--white);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover, &:active {
+      background-color: var(--white);
+      color: var(--green);
+      border: 1px solid var(--green);
+    }
+
+    @include mixins.phone(){
+      font-size: 1rem;
+    }
+  }
