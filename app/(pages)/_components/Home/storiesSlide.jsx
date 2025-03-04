@@ -3,24 +3,24 @@ import React from "react";
 import Image from "next/image";
 
 
-export default function StoriesSlide({heading, bodyText, imageSrc, altText}){
-    
-    return(
-        <div className={styles.story}> 
-        <div className={styles.storyText}>
-            <h2>{heading}</h2>
-            <p>{bodyText}</p>
+export default function StoriesSlide({ heading, bodyText, imageSrc, altText }) {
+
+    return (
+        <div className={styles.story}>
+            <div className={styles.storyText}>
+                <h2>{heading}</h2>
+                <p>{bodyText}</p>
+            </div>
+            <div className={styles.storyImageContainer}>
+                <Image
+                    className={styles.storyImage}
+                    src={imageSrc}
+                    alt={altText}
+                    width={500}
+                    height={500}
+                    object-fit='cover'
+                />
+            </div>
         </div>
-        <div className={styles.storyImageContainer}>
-        <Image
-            className={styles.storyImage}
-            src={imageSrc}
-            alt= {altText}
-            width={500}
-            height={500}
-            object-fit='cover'
-        />
-        </div>      
-        </div> 
     );
 }
