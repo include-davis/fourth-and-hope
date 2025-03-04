@@ -138,6 +138,7 @@
     .imageContainer {
       width: 100%;
       aspect-ratio: 1;
+      overflow: hidden; 
       
       @include tablet {
         max-width: 300px;
@@ -149,6 +150,7 @@
         height: 100%;
         border-radius: 50%;
         object-fit: cover;
+        object-position: center; 
       }
     }
 
@@ -319,8 +321,8 @@
     height: 10rem;
     border-radius: 50%;
     background-color: var(--grey);
-    padding-bottom: 6%; 
     margin-bottom: 6%; 
+    overflow: hidden; 
 
     @include tablet {
       width: 8rem;
