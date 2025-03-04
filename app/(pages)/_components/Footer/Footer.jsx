@@ -24,7 +24,7 @@ export default function Footer() {
             <div className={styles.middleContainer}>
               <div className={styles.midSubContainer}>
                 <div className={styles.subGroup}>
-                  <p className={styles.subTitle}>Content</p>
+                  <p className={styles.subTitle}>Contact</p>
                   <div className={styles.subContent}>
                     <p>P.O Box 1248 Woodland, CA 95776</p>
                     <p>connect@fourthandhope.org</p>

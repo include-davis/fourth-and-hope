@@ -9,9 +9,23 @@
     align-items: center;
     p{
         font-size: 1.25vw; //20px
+
     }
     a{
         color: white;
+    }
+    @include phone{
+        height:auto;
+        p{
+            font-size: 0.8rem;
+        }
+    }
+
+    @include sm-phone{
+        height:auto;
+        p{
+            font-size: 0.8rem;
+        }
     }
 }
 
@@ -23,23 +37,38 @@
     gap: 9%;
     color: var(--white);
     white-space: nowrap; 
+    @include phone{
+        flex-direction: column;
+        margin: 10% 0%;
+    }
 }
 
 .logo{
     filter: brightness(0) invert(1);
     width: 15.21vw;
+    @include phone{
+        width: 60%;
+    }
 }
 
 .middleContainer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @include phone{
+        flex-direction: column;
+        margin: 10% 0%;
+    }
 }
 
 .midSubContainer{
     display:flex;
     flex-direction: row;
     gap: 6vw;
+    @include phone{
+        flex-direction: column;
+        margin-bottom: 15%;
+    }
 }
 
 .subGroup{
@@ -54,7 +83,7 @@
     gap: 1.7vh;
     p{
         color: white;
-        font-weight: 300;
+        font-weight: 200;
     }
 }
 
@@ -67,6 +96,19 @@
     flex-direction: column;   
     justify-content: space-between;
     gap: 2.6vh;
+    @include phone{
+        p{
+            font-size: 1.1rem;
+            font-weight: 300;
+        } 
+    }
+
+    @include sm-phone{
+        p{
+            font-size: 1.1rem;
+            font-weight: 300;
+        } 
+    }
 }
 
 .functionality{
@@ -85,11 +127,18 @@
     height: 7.5vh;
     padding: 0.88vh 1vw;
     align-items: center;
+    @include phone{
+        padding: 7.5%;
+        width: 100%;
+    }
 }
 
 .emailInput::placeholder {
     font-size: 1.25vw;
     /* other styles like color, font-weight, etc. */
+    @include phone{
+        font-size: 0.8rem;
+    }
   }
 
 .bottomContainer{
@@ -99,6 +148,12 @@
     p{
         font-size: 1.12vw;
         font-weight: 200;
+    }
+    @include phone{
+        p{
+            font-size: .75rem;
+        }
+        white-space: normal;
     }
 }
 
@@ -121,6 +176,12 @@
       background-color: var(--white);
       color: var(--green);
       border: 1px solid var(--green);
+    }
+    @include phone{
+        width: 100%;
+        p{
+            font-size: 1rem;
+        }
     }
   }
 
