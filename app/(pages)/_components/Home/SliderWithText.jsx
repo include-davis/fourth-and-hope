@@ -55,6 +55,7 @@ const SliderWithText = ({ slides }) => {
           ))}
       </div>
       <div className={styles.arrows}>
+        {/* need another arrow (back arrow) */}
         <Image 
         className={styles.arrowImg}
         src={'/images/Home/arrow_circle_right.svg'} 

@@ -37,8 +37,8 @@
       color: var(--green);
       border: 1px solid var(--green);
     }
-    
-    @include mixins.phone{
+
+    @include mixins.phone(){
       font-size: 1rem;
     }
   }

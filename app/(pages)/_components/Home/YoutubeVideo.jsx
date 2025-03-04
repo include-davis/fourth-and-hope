@@ -14,7 +14,7 @@ export default class YoutubeVideo extends React.Component {
             <div className={styles.videoBox}>
                 <div className={styles.videoResponsive}>
                     {/* need actual youtube video id to put here */}
-                    <YouTube videoId="tiKFuzpX-NA" 
+                    <YouTube videoId="KLPApSRku8Y" 
                     opts={opts} onReady={this._onReady} />
                 </div>
             </div>
