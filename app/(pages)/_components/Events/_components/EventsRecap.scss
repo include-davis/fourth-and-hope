@@ -1,0 +1,86 @@
+@import "../../../_globals/mixins.scss";
+
+.recapgroup {
+
+    display: flex;
+    gap: 5%;
+    align-items: stretch;
+
+    .recapcontent {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+
+        h4 {
+            color: var(--green);
+            padding: 1% 0 1% 0;
+            font-weight: 300;
+        }
+
+        h2 {
+            padding-bottom: 3%;
+            font-weight: 500;
+        }
+
+        .recap {
+            display: flex;
+            align-items: top;
+            gap: 5%;
+            padding: 3% 0 3% 0;
+
+            .paragraphs{
+                p {
+                    padding: 1.5% 0 1.5% 0;
+                    font-weight: 300;
+                    line-height: 150%;
+                }
+            }
+        }
+
+    }
+
+    .parent {
+        flex: 1.5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            height: auto;
+            padding: 2%;
+        }
+    }
+}
+
+@include tablet {
+    .recapgroup{
+        flex-direction: column;
+        padding: 5% 0 5% 0;
+    }
+}
+
+@include phone {
+    .recapgroup{
+        flex-direction: column;
+        padding-bottom: 5%;
+
+        .recapcontent {
+            h4 {
+                font-size: 1rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .recap {
+                .paragraphs{
+                    p {
+                        font-size: 1rem;
+                        line-height: 1.7;
+                    }
+                }
+            }
+        }
+    }
+}

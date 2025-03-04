@@ -1,0 +1,49 @@
+@import "../../../_globals/mixins.scss";
+
+.impactcomp {
+    width: 17%;
+    padding-top: 3%;
+
+    h1 {
+        font-weight: 600;
+    }  
+
+    p {
+        font-weight: 300;
+        text-align: center;
+    }
+
+    img {
+        padding-bottom: 3%;
+    }
+}
+
+@include tablet {
+    .impactcomp {
+        width: 20%;
+        padding-top: 3%;
+    
+        h1 {
+            font-size: 2.2rem;
+        }  
+    
+        p {
+            font-size: 1rem;
+            text-align: center;
+        }
+    
+        img {
+            padding-bottom: 3%;
+        }
+    }
+}
+
+@include phone {
+    .impactcomp{
+        width: 100%;
+
+        img {
+            display: none;
+        }
+    }
+}
