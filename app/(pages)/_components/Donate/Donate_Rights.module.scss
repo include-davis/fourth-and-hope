@@ -88,9 +88,9 @@
 
 .overlayContent {
   position: relative;
-  background: #ffffff;
+  background: var(--white);
   width: 86.1%; 
-  height: 605px;
+  height: 75%;
   border-radius: 6px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   color: var(--green);
@@ -113,7 +113,7 @@
 
 .text_content {
   width: 100%;
-  max-height: 60%;
+  max-height: 85%;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
