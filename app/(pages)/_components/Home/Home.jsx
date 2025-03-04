@@ -2,9 +2,9 @@
 import styles from "./Home.module.scss";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import PageButtons from "./PageButtons"
-import ProgramsBox from "./ProgramsBox"
-import StoriesSlide from "./StoriesSlide"
+import PageButtons from "./PageButtons";
+import ProgramsBox from "./ProgramsBox";
+import StoriesSlide from "./StoriesSlide";
 import SliderWithText from "./SliderWithText";
 import YoutubeVideo from "./YoutubeVideo";
 
