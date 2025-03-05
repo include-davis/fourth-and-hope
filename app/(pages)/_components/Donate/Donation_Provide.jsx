@@ -1,6 +1,6 @@
+import React from "react";
 import styles from "./Donation_Provide.module.scss";
-
-// Note: dp denotes donation provide
+import AnimatedNumber from "./AnimatedNumber";
 
 const data = [
   { id: 1, title: "66", sub_section: "permanent housings" },
@@ -10,17 +10,17 @@ const data = [
 ];
 
 export default function Donation_Provide() {
-  
   return (
     <div className={styles.dp_hero}>
       <div className={styles.provide_container}>
         <h2>Because of YOU, we were able to provide:</h2>
         <div className={styles.hero_data_card}>
           {data.map((section) => (
-            <div key={section.id} className={styles.data_card}>
-              <h1 className={styles.card_title}>{section.title}</h1>
-              <p className={styles.card_subtitle}>{section.sub_section}</p>
-            </div>
+            <AnimatedNumber
+              key={section.id}
+              number={section.title}
+              description={section.sub_section}
+            />
           ))}
         </div>
         <p className={styles.card_description}>
