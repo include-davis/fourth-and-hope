@@ -1,0 +1,185 @@
+@import "../../_globals/mixins.scss";
+
+.dp_hero {
+  display: flex;
+  width: 100%;
+  padding: 4.44% 6.94%;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  background: var(--white);
+
+  @include sm-desktop {
+    padding: 4.44% 5.5%;
+  }
+
+  @include tablet {
+    padding: 4.44% 4%;
+  }
+
+  @include phone {
+    padding: 4.44% 3%;
+  }
+
+  @include sm-phone {
+    padding: 4.44% 2%;
+  }
+}
+
+.provide_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 52px;
+  color: var(--black);
+
+  @include sm-desktop {
+    gap: 48px;
+  }
+
+  @include tablet {
+    gap: 44px;
+  }
+
+  @include phone {
+    gap: 40px;
+  }
+
+  @include sm-phone {
+    gap: 36px;
+  }
+}
+
+.provide_container h2 {
+  align-self: stretch;
+  text-align: center;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+  @include sm-desktop {
+    font-size: 2.4rem;
+  }
+
+  @include tablet {
+    font-size: 2.2rem;
+  }
+
+  @include phone {
+    font-size: 2rem;
+  }
+
+  @include sm-phone {
+    font-size: 1.8rem;
+  }
+}
+
+.hero_data_card {
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+  color: var(--green);
+
+  @include tablet {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  @include phone {
+    gap: 28px;
+  }
+
+  @include sm-phone {
+    gap: 24px;
+  }
+}
+
+.data_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  flex: 1 0 0;
+}
+
+.card_title {
+  align-self: stretch;
+  text-align: center;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+
+  @include sm-desktop {
+    font-size: 4.8rem;
+  }
+
+  @include tablet {
+    font-size: 4.2rem;
+  }
+
+  @include phone {
+    font-size: 3.6rem;
+  }
+
+  @include sm-phone {
+    font-size: 3.2rem;
+  }
+}
+
+.card_subtitle {
+  align-self: stretch;
+  color: var(--black);
+  text-align: center;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.5;
+
+  @include sm-desktop {
+    font-size: 1.2rem;
+  }
+
+  @include tablet {
+    font-size: 1.15rem;
+  }
+
+  @include phone {
+    font-size: 1.1rem;
+  }
+
+  @include sm-phone {
+    font-size: 1rem;
+  }
+}
+
+.card_description {
+  align-self: stretch;
+  color: var(--black);
+  text-align: center;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.5;
+
+  @include sm-desktop {
+    font-size: 1.2rem;
+  }
+
+  @include tablet {
+    font-size: 1.15rem;
+  }
+
+  @include phone {
+    font-size: 1.1rem;
+  }
+
+  @include sm-phone {
+    font-size: 1rem;
+  }
+}
