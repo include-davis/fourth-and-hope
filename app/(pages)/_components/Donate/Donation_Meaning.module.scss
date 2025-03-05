@@ -10,8 +10,20 @@
   background: var(--white);
 
   @include sm-desktop {
-    flex-direction: column;
+    padding: 5.63% 5.5%;
     gap: 32px;
+  }
+
+  @include tablet {
+    padding: 5.63% 4%;
+  }
+
+  @include phone {
+    padding: 5.63% 3%;
+  }
+
+  @include sm-phone {
+    padding: 5.63% 2%;
   }
 }
 
@@ -25,6 +37,18 @@
     flex-direction: column;
     gap: 32px;
   }
+
+  @include tablet {
+    gap: 28px;
+  }
+
+  @include phone {
+    gap: 24px;
+  }
+
+  @include sm-phone {
+    gap: 20px;
+  }
 }
 
 .dm_text_container {
@@ -34,6 +58,43 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
+
+  @include tablet {
+    max-width: 600px;
+  }
+
+  @include phone {
+    max-width: 100%;
+    gap: 28px;
+  }
+
+  @include sm-phone {
+    gap: 24px;
+  }
+}
+
+.responsiveImage {
+  padding-left: 10%;
+  width: 100%; 
+  height: auto;
+  border-radius: 20px;
+  max-width: 475.905px; 
+
+  @include sm-desktop {
+    max-width: 450px;
+  }
+
+  @include tablet {
+    max-width: 400px;
+  }
+
+  @include phone {
+    max-width: 350px;
+  }
+
+  @include sm-phone {
+    max-width: 300px;
+  }
 }
 
 .dm_text_container h2 {
@@ -46,8 +107,20 @@
   line-height: normal;
 
   @include sm-desktop {
-    flex-direction: column;
-    gap: 32px;
+    text-align: center;
+    font-size: 2.2rem;
+  }
+
+  @include tablet {
+    font-size: 2rem;
+  }
+
+  @include phone {
+    font-size: 1.8rem;
+  }
+
+  @include sm-phone {
+    font-size: 1.6rem;
   }
 }
 
@@ -58,7 +131,23 @@
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 300;
-  line-height: 1.5; 
+  line-height: 1.5;
+
+  @include sm-desktop {
+    font-size: 1.2rem;
+  }
+
+  @include tablet {
+    font-size: 1.15rem;
+  }
+
+  @include phone {
+    font-size: 1rem;
+  }
+
+  @include sm-phone {
+    font-size: 0.95rem;
+  }
 }
 
 .dm_text_container span {
@@ -66,5 +155,21 @@
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.5;  
+  line-height: 1.5;
+
+  @include sm-desktop {
+    font-size: 1.2rem;
+  }
+
+  @include tablet {
+    font-size: 1.15rem;
+  }
+
+  @include phone {
+    font-size: 1rem;
+  }
+
+  @include sm-phone {
+    font-size: 0.95rem;
+  }
 }

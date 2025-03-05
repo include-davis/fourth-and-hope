@@ -17,8 +17,9 @@ export default function Donation_Rights() {
       <Image
         src="/images/donate_assets/AFP.svg"
         alt="Staff"
-        width={502}
-        height={327}
+        width={0}
+        height={0}
+        style={{ width: "50%", height: "auto" }}
       />
 
       <div className={styles.bor}>

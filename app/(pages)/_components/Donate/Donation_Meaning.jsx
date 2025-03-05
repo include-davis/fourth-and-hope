@@ -22,13 +22,9 @@ export default function Donation_Meaning() {
           <Image
             src="/images/donate_assets/kitchen_staff.svg"
             alt="Kitchen Staff"
-            width={0}
-            height={0}
-            style={{
-              width: "475.905px",
-              height: "306.127px",
-              borderRadius: "20px",
-            }}
+            width={475.905} // intrinsic dimensions to preserve ratio
+            height={306.127}
+            className={styles.responsiveImage}
           />
         </div>
       </div>
