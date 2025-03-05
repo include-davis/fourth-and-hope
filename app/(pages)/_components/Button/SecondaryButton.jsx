@@ -7,3 +7,4 @@ export default function SecondaryButton({ name = "Donate", link = "#" }) {
         </a>
     );
 }
+

@@ -1,0 +1,195 @@
+@import "../../_globals/mixins.scss";
+
+.footerContainer{
+    // height: 70vh;
+    // width: 100vw;
+    padding: 7% 5%;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+    p{
+        font-size: 1.25vw; //20px
+
+    }
+    a{
+        color: white;
+    }
+    @include phone{
+        height:auto;
+        p{
+            font-size: 0.8rem;
+        }
+    }
+
+    @include sm-phone{
+        height:auto;
+        p{
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.contentContainer{
+    height: 77%;
+    width: 86%;
+    display: flex;
+    flex-direction: column;
+    gap: 9%;
+    color: var(--white);
+    white-space: nowrap; 
+    @include phone{
+        flex-direction: column;
+        margin: 10% 0%;
+    }
+}
+
+.logo{
+    filter: brightness(0) invert(1);
+    width: 15.21vw;
+    @include phone{
+        width: 60%;
+    }
+}
+
+.middleContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include phone{
+        flex-direction: column;
+        margin: 10% 0%;
+    }
+}
+
+.midSubContainer{
+    display:flex;
+    flex-direction: row;
+    gap: 6vw;
+    @include phone{
+        flex-direction: column;
+        margin-bottom: 15%;
+    }
+}
+
+.subGroup{
+    display:flex; 
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.subContent{
+    display:flex;
+    flex-direction: column;
+    gap: 1.7vh;
+    p{
+        color: white;
+        font-weight: 200;
+    }
+}
+
+.subTitle{
+    font-weight: 500;
+}
+
+.newsLetterContainer{
+    display:flex;
+    flex-direction: column;   
+    justify-content: space-between;
+    gap: 2.6vh;
+    padding-left: 5%;
+
+    @include phone{
+        padding: 0%;
+
+        p{
+            font-size: 0.9rem;
+            font-weight: 300;
+        } 
+    }
+
+    @include sm-phone{
+        padding: 0%;
+
+        p{
+            font-size: 0.9rem;
+            font-weight: 300;
+        } 
+    }
+}
+
+.functionality{
+    display:flex;
+    flex-direction: column;   
+    justify-content: space-between;
+    gap: 1.3vh;
+    p{
+        font-size: 1.25vw; //18px
+    }
+}
+
+.emailInput{
+    display: flex;
+    width: 32.2vw;
+    height: 7.5vh;
+    padding: 0.88vh 1vw;
+    align-items: center;
+    @include phone{
+        padding: 7.5%;
+        width: 100%;
+    }
+}
+
+.emailInput::placeholder {
+    font-size: 1.25vw;
+    /* other styles like color, font-weight, etc. */
+    @include phone{
+        font-size: 0.8rem;
+    }
+  }
+
+.bottomContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3vh;
+    p{
+        font-size: 1.12vw;
+        font-weight: 200;
+    }
+    @include phone{
+        p{
+            font-size: .75rem;
+        }
+        white-space: normal;
+    }
+}
+
+.button {
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: var(--green);
+    color: var(--white);
+
+    display: flex;
+    width: 39%;
+    padding: 2.22vh 3.75vw;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    &:hover, &:active {
+      background-color: var(--white);
+      color: var(--green);
+      border: 1px solid var(--green);
+    }
+    @include phone{
+        width: 100%;
+        p{
+            font-size: 1rem;
+        }
+    }
+  }
+
+
