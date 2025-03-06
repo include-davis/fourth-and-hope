@@ -1,8 +1,8 @@
-import Donate_Section from "./Donate_Section"
-import Donation_Meaning from "./Donation_Meaning"
-import Donation_Benefiet from "./Donation_Benefiet";
-import Donation_Provide from "./Donation_Provide"
-import Donation_Rights from "./Donate_Rights"
+import Donate_Section from "./_components/Donate_Section"
+import Donation_Meaning from "./_components/Donation_Meaning"
+import Donation_Benefiet from "./_components/Donation_Benefiet";
+import Donation_Provide from "./_components/Donation_Provide"
+import Donation_Rights from "./_components/Donate_Rights"
 
 import styles from "./Donate.module.scss";
 import Image from "next/image";
