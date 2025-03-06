@@ -276,7 +276,8 @@
   padding: 0 8% 5% 8%;
 
   @include sm-phone {
-    padding: 0 0 8% 0; 
+    padding: 0;
+    margin: 0;
   }
 
   .storyContent {
@@ -363,6 +364,61 @@
 
         &:last-child {
           padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// Story Section for Mobile
+.storySection {
+  @include sm-phone {
+    padding: 0;
+    margin: 0;
+  }
+
+  .storyContent {
+    @include sm-phone {
+      grid-template-columns: 1fr;
+      gap: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .imageContainer {
+      @include sm-phone {
+        max-width: 100%;
+        aspect-ratio: unset;
+        margin: 0;
+        
+        .circleImage {
+          width: 100%;
+          height: auto;
+          border-radius: 0;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+
+    .textContent {
+      @include sm-phone {
+        padding: 4% 4%;
+        background-color: var(--white);
+        
+        h2 {
+          font-size: 1.5rem;
+          padding-bottom: 3%;
+          margin-left: 0 !important;
+          text-align: left;
+        }
+
+        p {
+          font-size: 0.95rem;
+          line-height: 1.4rem;
+          padding-bottom: 0;
+          margin-left: 0 !important;
+          text-align: left;
         }
       }
     }
