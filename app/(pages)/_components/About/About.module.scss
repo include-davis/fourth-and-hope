@@ -258,29 +258,31 @@
       margin-left: 0;
     }
 
-    .imageContainer {
-      width: 100%;
-      aspect-ratio: 1;
-      overflow: hidden; 
-      
-      @include tablet {
-        max-width: 300px;
-        margin: 0 auto;
-      }
-      
-      @include sm-phone {
-        max-width: 220px;
-        margin: 0 auto 6% auto;
-      }
-      
-      .circleImage {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        object-fit: cover;
-        object-position: center; 
-      }
-    }
+//circular image
+.imageContainer {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden; 
+  margin-top: 3rem; 
+  
+  @include tablet {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  @include sm-phone {
+    max-width: 220px;
+    margin: 0 auto 6% auto;
+  }
+  
+  .circleImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center; 
+  }
+}
 
     .textContent {
       h2 {
