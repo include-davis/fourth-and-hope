@@ -10,7 +10,7 @@ import styles from './About.module.scss';
 
 export default function BoardSection() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-
+  
   const checkHashAndOpenPopup = useCallback(() => {
     if (window.location.hash === '#board-info') {
       setIsPopupOpen(true);
@@ -45,34 +45,26 @@ export default function BoardSection() {
   }, [checkHashAndOpenPopup, handleEscapeKey]);
 
   return (
-    <>
-      <section className={styles.boardSection}>
-        <h2>Board of Trustees</h2>
-        <p>Board of Trustees oversees the governance and strategic direction of Fourth & Hope.</p>
-
-        <div className={styles.membersGrid}>
-          {boardMembers.map((member, index) => (
-            <MemberCard 
-              key={member.name || index}
-              name={member.name}
-              title={member.title}
-            />
-          ))}
-        </div>
-
-        {/* Desktop button wrapper */}
-        <div className={styles.buttonWrapper}>
-          <PrimaryButton 
-            name="Board Meeting Info" 
-            link="#board-info"
+    <section className={styles.boardSection}>
+      <h2>Board of Trustees</h2>
+      <p>Board of Trustees oversees the governance and strategic direction of Fourth & Hope.</p>
+      
+      <div className={styles.membersGrid}>
+        {boardMembers.map((member, index) => (
+          <MemberCard 
+            key={member.name || index}
+            name={member.name}
+            title={member.title}
           />
-        </div>
-      </section>
+        ))}
+      </div>
 
-      {/* Mobile button - positioned outside of boardSection to appear between sections */}
-      <a href="#board-info" className={styles.boardMeetingInfoButton}>
-        Board Meeting Info
-      </a>
+      <div className={styles.buttonWrapper}>
+        <PrimaryButton 
+          name="Board Meeting Info" 
+          link="#board-info"
+        />
+      </div>
 
       {isPopupOpen && (
         <BoardPopup 
@@ -80,6 +72,6 @@ export default function BoardSection() {
           onClose={handleClosePopup} 
         />
       )}
-    </>
+    </section>
   );
 }

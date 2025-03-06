@@ -13,7 +13,7 @@
   padding-top: 4%;
   padding-bottom: 3%;
   display: grid;
-  grid-template-columns: 42% 58%; // Giving more space to the right column
+  grid-template-columns: 42% 58%; 
   align-items: flex-start;
   gap: 0;
 
@@ -25,10 +25,10 @@
   @include sm-phone {
     grid-template-columns: 1fr;
     gap: 2%;
-    padding: 0;  // Remove all padding to allow consistent left alignment with Our Story
+    padding: 0;  
     padding-top: 4%;
     padding-bottom: 4%;
-    text-align: left;  // Ensure left alignment to match Our Story and Our Mission
+    text-align: left;  
   }
 
   .mainHeading {
@@ -37,7 +37,7 @@
     align-items: flex-start;
     padding-right: 0;
     padding-top: 0;
-    margin-left: 10%; // For desktop
+    margin-left: 10%; 
     
     h1 {
       color: var(--green);
@@ -61,7 +61,7 @@
         margin: 0;
         width: 100%;
         padding-left: 0 !important;
-        margin-left: 4% !important; // Match consistent alignment with Our Story and Our Mission
+        margin-left: 4% !important;
       }
     }
     
@@ -70,7 +70,7 @@
       justify-content: flex-start;
       width: 100%;
       padding-left: 0;
-      margin-left: 0; // Reset margin for mobile
+      margin-left: 0; 
     }
   }
 
@@ -79,13 +79,13 @@
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 1%;
-    padding-left: 10%; // For desktop
+    padding-left: 10%; 
     margin-right: 0;
 
     @include sm-phone {
-      padding-left: 0; // Reset padding for mobile to align left
+      padding-left: 0; 
       margin-left: 0;
-      align-items: flex-start; // Ensure all content is left-aligned
+      align-items: flex-start; 
     }
 
     h2 {
@@ -103,7 +103,7 @@
         text-align: left;
         padding-top: 5%;
         padding-left: 0 !important;
-        margin-left: 4% !important; // Match consistent alignment with Our Story and Our Mission
+        margin-left: 4% !important; 
       }
     }
 
@@ -123,7 +123,7 @@
         line-height: 1.4rem;
         padding-left: 0 !important;
         padding-right: 4%;
-        margin-left: 4% !important; // Match consistent alignment with Our Story and Our Mission
+        margin-left: 4% !important; 
       }
     }
 
@@ -133,7 +133,6 @@
       gap: 5%;
       padding-top: 1%;
 
-      // Target PrimaryButton
       a:first-child, button:first-child {
         padding: 16px 40px !important;
         font-size: 1.3rem !important;
@@ -142,7 +141,6 @@
         text-align: center !important;
       }
       
-      // Target SecondaryButton
       a:last-child, button:last-child {
         padding: 16px 40px !important;
         font-size: 1.3rem !important;
@@ -154,10 +152,10 @@
       @include sm-phone {
         flex-direction: row;
         gap: 3%;
-        justify-content: flex-start; // Ensure buttons align left
+        justify-content: flex-start; 
         padding-bottom: 5%;
         padding-left: 0 !important;
-        margin-left: 4% !important; // Match consistent alignment with Our Story and Our Mission
+        margin-left: 4% !important; 
         
         a, button {
           padding: 12px 25px !important;
@@ -169,10 +167,10 @@
   }
 }
 
-// UPDATED - Provide Hope and Care text styling
+//Provide Hope and Care text styling
 .provideHopeCare {
   position: relative;
-  left: 10%; // For desktop
+  left: 10%; 
   max-width: 90%;
   
   h1 {
@@ -194,17 +192,17 @@
       font-size: 2.5rem;
       line-height: 3rem;
       left: 0;
-      padding-left: 0 !important; // Reset padding
-      margin-left: 4% !important; // Match consistent alignment with Our Story and Our Mission
-      text-align: left !important; // Ensure left alignment
+      padding-left: 0 !important; 
+      margin-left: 4% !important; 
+      text-align: left !important; 
     }
   }
   
   @include sm-phone {
-    left: 0; // Reset left offset for mobile
+    left: 0; 
     max-width: 100%;
-    margin-left: 0 !important; // Ensure no margin
-    padding-left: 0 !important; // Ensure no padding that would offset alignment
+    margin-left: 0 !important;
+    padding-left: 0 !important; 
   }
 }
 
@@ -231,7 +229,7 @@
   padding: 3% 8% 4% 8%;
   
   @include sm-phone {
-    padding: 3% 0 4% 0; // Remove horizontal padding
+    padding: 3% 0 4% 0; 
   }
   
   h2 {
@@ -241,8 +239,8 @@
     
     @include sm-phone {
       font-size: 1.5rem;
-      padding-left: 0 !important; // Reset padding
-      margin-left: 4% !important; // Match consistent alignment
+      padding-left: 0 !important;
+      margin-left: 4% !important;
     }
   }
   
@@ -254,8 +252,8 @@
     @include sm-phone {
       font-size: 0.95rem;
       line-height: 1.4rem;
-      padding-left: 0 !important; // Reset padding
-      margin-left: 4% !important; // Match consistent alignment
+      padding-left: 0 !important;
+      margin-left: 4% !important; 
     }
   }
   
@@ -265,8 +263,8 @@
     margin-top: 2%;
     
     @include sm-phone {
-      padding-left: 0 !important; // Reset padding
-      margin-left: 4% !important; // Match consistent alignment
+      padding-left: 0 !important; 
+      margin-left: 4% !important; 
     }
   }
 }
@@ -278,7 +276,7 @@
   padding: 0 8% 5% 8%;
 
   @include sm-phone {
-    padding: 0 0 8% 0; // Remove horizontal padding
+    padding: 0 0 8% 0; 
   }
 
   .storyContent {
@@ -338,8 +336,8 @@
           font-size: 1.5rem;
           text-align: left;
           padding-bottom: 5%;
-          padding-left: 0 !important; // Reset padding
-          margin-left: 4% !important; // Match consistent alignment
+          padding-left: 0 !important;
+          margin-left: 4% !important; 
         }
       }
 
@@ -358,8 +356,8 @@
           font-size: 0.95rem;
           line-height: 1.4rem;
           text-align: left;
-          padding-left: 0 !important; // Reset padding
-          margin-left: 4% !important; // Match consistent alignment
+          padding-left: 0 !important; 
+          margin-left: 4% !important; 
           padding-right: 4%;
         }
 
@@ -396,8 +394,8 @@
     @include sm-phone {
       font-size: 1.5rem;
       text-align: left;
-      padding: 0 0 4% 0 !important; // Reset padding
-      margin-left: 4% !important; // Match consistent alignment
+      padding: 0 0 4% 0 !important; 
+      margin-left: 4% !important; 
     }
   }
 
@@ -424,9 +422,9 @@
         line-height: 1.4rem;
         padding-bottom: 4%;
         text-align: left;
-        padding-left: 0 !important; // Reset padding
+        padding-left: 0 !important; 
         padding-right: 4%;
-        margin-left: 4% !important; // Match consistent alignment
+        margin-left: 4% !important; 
       }
 
       &:last-child {
@@ -445,7 +443,7 @@
   background-color: var(--white);
   
   @include sm-phone {
-    padding: 8% 0 !important; // Remove horizontal padding completely
+    padding: 8% 0 !important; 
   }
 
   h2 {
@@ -454,7 +452,7 @@
     color: var(--black);
     text-align: left;
     padding-top: 2%;
-    padding-left: 0; // Align with other section titles in desktop
+    padding-left: 0; 
 
     @include tablet {
       font-size: 2rem;
@@ -464,8 +462,8 @@
       font-size: 1.5rem;
       text-align: left;
       padding-bottom: 4%;
-      padding-left: 0 !important; // Reset padding
-      margin-left: 4% !important; // Use margin instead to match other titles exactly
+      padding-left: 0 !important;
+      margin-left: 4% !important; 
     }
   }
 
@@ -474,7 +472,7 @@
     padding-bottom: 4%; 
     line-height: 1.5rem;
     color: var(--black);
-    padding-left: 0; // Align with other section paragraphs in desktop
+    padding-left: 0; 
 
     @include tablet {
       font-size: 1rem;
@@ -484,10 +482,10 @@
       font-size: 0.95rem;
       line-height: 1.4rem;
       text-align: left;
-      padding-left: 0 !important; // Reset padding
-      margin-left: 4% !important; // Use margin instead
+      padding-left: 0 !important; 
+      margin-left: 4% !important; 
       padding-right: 4%;
-      padding-bottom: 3%; // Reduced padding before the members grid
+      padding-bottom: 3%; 
     }
   }
 
@@ -508,9 +506,9 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 3%;
       row-gap: 6%;
-      padding: 0 0 6% 0 !important; // Remove horizontal padding
-      margin-left: 4% !important; // Add left margin to match titles
-      margin-right: 4% !important; // Add right margin for balance
+      padding: 0 0 6% 0 !important; 
+      margin-left: 4% !important; 
+      margin-right: 4% !important; 
     }
   }
 
@@ -538,14 +536,13 @@
   padding-bottom: 1%;
   
   @include sm-phone {
-    // Better mobile alignment - align with section title
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
     text-align: left !important;
     padding-bottom: 15px;
-    padding-left: 0 !important; // No padding, use margin for precise alignment
-    margin-left: 0 !important; // Align with grid
+    padding-left: 0 !important; 
+    margin-left: 0 !important; 
     width: 100%;
   }
 
@@ -565,8 +562,8 @@
     @include sm-phone {
       width: 4.5rem;
       height: 4.5rem;
-      margin-bottom: 8px; // Add some space between image and text
-      margin-right: 0; // Remove right margin used previously
+      margin-bottom: 8px; 
+      margin-right: 0; 
     }
   }
 
@@ -610,7 +607,7 @@
     @include sm-phone {
       font-size: 0.85rem;
       line-height: 1.2rem;
-      padding-left: 0 !important; // Important to override section padding
+      padding-left: 0 !important; 
     }
   }
 
@@ -630,34 +627,44 @@
 }
 
 .boardMeetingInfoButton {
-  display: none; // Hidden by default on desktop
+  display: none; 
 
   @include sm-phone {
     display: block !important;
     width: 90% !important;
     background-color: var(--green);
     color: white !important;
-    padding: 10px;
-    border-radius: 4px;
+    
+    padding: 16px 40px !important;
+    border-radius: 8px !important; 
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    
     text-align: center;
-    font-weight: bold;
     cursor: pointer;
     text-decoration: none;
-    margin: 15px 0 25px 4% !important;
+    
+    margin: 100px 0 25px 4% !important;
     position: relative !important;
     z-index: 10 !important;
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
-// Staff Section - Reduced gap between the button and staff section
+// Staff Section 
 .staffSection {
   width: 100%;
   max-width: 100%;
   padding: 1% 8% 5% 8%;
   
   @include sm-phone {
-    padding: 0 0 10% 0 !important; // Remove horizontal padding
-    margin-top: 40px !important; // FIXED: Reduced margin to match Figma design
+    padding: 0 0 10% 0 !important; 
+    margin-top: 40px !important; 
   }
 
   h2 {
@@ -666,7 +673,7 @@
     padding-top: 0;
     color: var(--black);
     text-align: left;
-    padding-left: 0; // Match board section alignment for desktop
+    padding-left: 0; 
 
     @include tablet {
       font-size: 2rem;
@@ -676,9 +683,9 @@
       font-size: 1.5rem;
       text-align: left;
       padding-bottom: 6%;
-      padding-left: 0 !important; // Reset padding
-      margin-left: 4% !important; // Use margin to match other titles exactly
-      margin-top: 0; // Reset top margin
+      padding-left: 0 !important;
+      margin-left: 4% !important; 
+      margin-top: 0; 
     }
   }
 
@@ -701,22 +708,10 @@
       grid-template-columns: 1fr;
       gap: 6%;
       max-width: 100%;
-      padding-left: 0 !important; // Reset padding
-      margin-left: 4% !important; // Use margin instead
-      margin-right: 4% !important; // Use margin for right side too
-      padding-top: 1% !important; // Reduced top padding to match Figma design
-    }
-  }
-}
-
-// Button styles for mobile
-@include sm-phone {
-  .buttonContainer {
-    a:first-child, button:first-child {
-      order: 1;
-    }
-    a:last-child, button:last-child {
-      order: 2;
+      padding-left: 0 !important; 
+      margin-left: 4% !important; 
+      margin-right: 4% !important; 
+      padding-top: 1% !important;
     }
   }
 }
@@ -763,50 +758,4 @@
   }
 }
 
-// Board member container position fix
-.boardMembersContainer {
-  @include sm-phone {
-    position: relative;
-  }
-}
-
-// New mobile-specific Board Meeting Info button container
-.mobileBoardMeetingContainer {
-  display: none; // Hide on desktop
-  
-  @include sm-phone {
-    display: block !important; // Show on mobile
-    margin: 20px 0 30px 0;
-    width: 100%;
-  }
-}
-
-// Executive staff member card specific styles
-.staffSection .memberCard {
-  @include sm-phone {
-    // Adjust staff profile images to match board profile images
-    .profileImage {
-      width: 4.5rem;
-      height: 4.5rem;
-    }
-    // Ensure alignment with other cards
-    padding-left: 0 !important; // Reset padding
-    margin-left: 0 !important; // Align with grid margin
-  }
-}
-
-// Styles for button/donate/subscribe
-.donateButton, .subscribeButton {
-  padding: 16px 40px !important;
-  font-size: 1.3rem !important;
-  min-width: 160px !important;
-  display: inline-block !important;
-  text-align: center !important;
-  
-  @include sm-phone {
-    padding: 12px 25px !important;
-    font-size: 1rem !important;
-    min-width: 120px !important;
-  }
-}
 
