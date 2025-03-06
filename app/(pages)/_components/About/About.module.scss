@@ -25,10 +25,10 @@
   @include sm-phone {
     grid-template-columns: 1fr;
     gap: 2%;
-    padding: 0 4%;
+    padding: 0;  // Remove all padding to allow consistent left alignment with Our Story
     padding-top: 4%;
     padding-bottom: 4%;
-    text-align: center;
+    text-align: left;  // Ensure left alignment to match Our Story and Our Mission
   }
 
   .mainHeading {
@@ -61,7 +61,7 @@
         margin: 0;
         width: 100%;
         padding-left: 0 !important;
-        margin-left: 4% !important; // Match consistent alignment
+        margin-left: 4% !important; // Match consistent alignment with Our Story and Our Mission
       }
     }
     
@@ -103,7 +103,7 @@
         text-align: left;
         padding-top: 5%;
         padding-left: 0 !important;
-        margin-left: 4% !important; // Match consistent alignment
+        margin-left: 4% !important; // Match consistent alignment with Our Story and Our Mission
       }
     }
 
@@ -123,7 +123,7 @@
         line-height: 1.4rem;
         padding-left: 0 !important;
         padding-right: 4%;
-        margin-left: 4% !important; // Match consistent alignment
+        margin-left: 4% !important; // Match consistent alignment with Our Story and Our Mission
       }
     }
 
@@ -157,7 +157,7 @@
         justify-content: flex-start; // Ensure buttons align left
         padding-bottom: 5%;
         padding-left: 0 !important;
-        margin-left: 4% !important; // Match consistent alignment
+        margin-left: 4% !important; // Match consistent alignment with Our Story and Our Mission
         
         a, button {
           padding: 12px 25px !important;
@@ -195,7 +195,8 @@
       line-height: 3rem;
       left: 0;
       padding-left: 0 !important; // Reset padding
-      margin-left: 4% !important; // Match consistent alignment
+      margin-left: 4% !important; // Match consistent alignment with Our Story and Our Mission
+      text-align: left !important; // Ensure left alignment
     }
   }
   
@@ -527,7 +528,8 @@
     }
 
     @include sm-phone {
-      display: none !important; // Hide on mobile devices with high specificity
+      // Move this below membersGrid but above Executive Staff
+      display: none !important; // Hide desktop button wrapper on mobile - still using this approach
     }
   }
 }
@@ -646,7 +648,7 @@
   text-decoration: none;
   
   @include sm-phone {
-    display: block !important; // Show as block on mobile
+    display: block !important; // Show as block on mobile - FIXED to ensure it's visible
     width: 90% !important; // Width to match your drawing
     font-size: 0.9rem;
     padding: 10px;
@@ -660,24 +662,7 @@
   }
 }
 
-// Deborah's Card Container
-.deborahCardContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  @include sm-phone {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important; // Changed to align left
-    width: 100% !important;
-    margin-bottom: 0 !important; // No bottom margin needed
-    padding-bottom: 0 !important; // No padding needed
-    padding-left: 0 !important; // No padding, handled by grid margin
-  }
-}
-
-// Staff Section - Add margin to create space after the board meeting button
+// Staff Section - Reduced gap between the button and staff section
 .staffSection {
   width: 100%;
   max-width: 100%;
@@ -685,7 +670,7 @@
   
   @include sm-phone {
     padding: 0 0 10% 0 !important; // Remove horizontal padding
-    margin-top: 20px; // Add margin at the top to create space after the button
+    margin-top: 40px !important; // FIXED: Reduced margin to match Figma design
   }
 
   h2 {
@@ -732,6 +717,7 @@
       padding-left: 0 !important; // Reset padding
       margin-left: 4% !important; // Use margin instead
       margin-right: 4% !important; // Use margin for right side too
+      padding-top: 1% !important; // Reduced top padding to match Figma design
     }
   }
 }
@@ -745,16 +731,6 @@
     a:last-child, button:last-child {
       order: 2;
     }
-  }
-}
-
-// Executive Staff heading class - add this to your StaffSection component
-.executiveStaffHeading {
-  @include sm-phone {
-    margin-top: 0 !important; // Reset margin since we have the button margin
-    padding-top: 0 !important; // Reset padding
-    padding-left: 0 !important; // Reset padding
-    margin-left: 4% !important; // Use margin to match exactly with other headings
   }
 }
 
@@ -804,6 +780,17 @@
 .boardMembersContainer {
   @include sm-phone {
     position: relative;
+  }
+}
+
+// New mobile-specific Board Meeting Info button container
+.mobileBoardMeetingContainer {
+  display: none; // Hide on desktop
+  
+  @include sm-phone {
+    display: block !important; // Show on mobile
+    margin: 20px 0 30px 0;
+    width: 100%;
   }
 }
 
