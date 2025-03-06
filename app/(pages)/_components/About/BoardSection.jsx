@@ -10,7 +10,7 @@ import styles from './About.module.scss';
 
 export default function BoardSection() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  
+
   const checkHashAndOpenPopup = useCallback(() => {
     if (window.location.hash === '#board-info') {
       setIsPopupOpen(true);
@@ -49,7 +49,7 @@ export default function BoardSection() {
       <section className={styles.boardSection}>
         <h2>Board of Trustees</h2>
         <p>Board of Trustees oversees the governance and strategic direction of Fourth & Hope.</p>
-        
+
         <div className={styles.membersGrid}>
           {boardMembers.map((member, index) => (
             <MemberCard 
