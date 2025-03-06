@@ -433,6 +433,7 @@
   
   @include sm-phone {
     padding: 8% 0;
+    background-color: transparent !important; 
   }
 
   h2 {
@@ -541,7 +542,7 @@
       padding-left: 0 !important; 
       margin-left: 4% !important; 
       padding-right: 4%;
-      padding-bottom: 3%; 
+      padding-bottom: 12%; // Increased to create more space before the grid
     }
   }
 
@@ -565,6 +566,7 @@
       padding: 0 0 6% 0 !important; 
       margin-left: 4% !important; 
       margin-right: 4% !important; 
+      padding-top: 0 !important; // Remove top padding
     }
   }
 
