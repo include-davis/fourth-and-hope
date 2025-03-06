@@ -9,11 +9,13 @@
 .headerSection {
   width: 100%;
   max-width: 100%;
-  padding: 0 8%;
+  padding: 0 5%;
   padding-top: 4%;
   padding-bottom: 3%;
   display: grid;
-  grid-template-columns: 45% 55%;
+  grid-template-columns: 42% 58%; // Giving more space to the right column
+  align-items: flex-start;
+  gap: 0;
 
   @include tablet {
     grid-template-columns: 1fr;
@@ -31,22 +33,24 @@
 
   .mainHeading {
     display: flex;
-    padding-right: 8%;
-    padding-top: 5%; 
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-right: 0;
+    padding-top: 0;
+    margin-left: 10%; // For desktop
     
     h1 {
       color: var(--green);
-      font-size: 3.5rem;
-      line-height: 4.5rem; 
+      font-size: 4.5rem;
+      line-height: 5.5rem;
       font-weight: 700;
       margin: 0;
       text-align: left;
       letter-spacing: -0.01em;
 
       @include tablet {
-        font-size: 2.8rem;
-        line-height: 3.6rem; 
-        padding-top: 3%;
+        font-size: 3.2rem;
+        line-height: 4rem;
       }
 
       @include sm-phone {
@@ -64,13 +68,23 @@
       justify-content: flex-start;
       width: 100%;
       padding-left: 4%;
+      margin-left: 0; // Reset margin for mobile
     }
   }
 
   .introContent {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 1%;
+    padding-left: 10%; // For desktop
+    margin-right: 0;
+
+    @include sm-phone {
+      padding-left: 0; // Reset padding for mobile to align left
+      margin-left: 0;
+      align-items: flex-start; // Ensure all content is left-aligned
+    }
 
     h2 {
       font-size: 2.5rem;
@@ -86,7 +100,7 @@
         font-size: 1.5rem;
         text-align: left;
         padding-top: 5%;
-        padding-left: 4%;
+        padding-left: 4%; // Keep some padding for mobile
       }
     }
 
@@ -109,19 +123,78 @@
       }
     }
 
+    // Button container styling
     .buttonContainer {
       display: flex;
-      gap: 3%;
-      padding-top: 2%;
+      gap: 5%;
+      padding-top: 1%;
 
+      // Target PrimaryButton
+      a:first-child, button:first-child {
+        padding: 16px 40px !important;
+        font-size: 1.3rem !important;
+        min-width: 160px !important;
+        display: inline-block !important;
+        text-align: center !important;
+      }
+      
+      // Target SecondaryButton
+      a:last-child, button:last-child {
+        padding: 16px 40px !important;
+        font-size: 1.3rem !important;
+        min-width: 160px !important;
+        display: inline-block !important;
+        text-align: center !important;
+      }
+      
       @include sm-phone {
         flex-direction: row;
         gap: 3%;
-        justify-content: flex-start;
+        justify-content: flex-start; // Ensure buttons align left
         padding-bottom: 5%;
-        padding-left: 4%;
+        padding-left: 4%; // Keep left padding consistent with other elements
+        
+        a, button {
+          padding: 12px 25px !important;
+          font-size: 1rem !important;
+          min-width: 120px !important;
+        }
       }
     }
+  }
+}
+
+// UPDATED - Provide Hope and Care text styling
+.provideHopeCare {
+  position: relative;
+  left: 10%; // For desktop
+  max-width: 90%;
+  
+  h1 {
+    color: var(--green);
+    font-size: 4.5rem;
+    line-height: 5.2rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.01em;
+    text-align: left;
+    
+    @include tablet {
+      font-size: 3.5rem;
+      line-height: 4.2rem;
+      left: 5%;
+    }
+    
+    @include sm-phone {
+      font-size: 2.5rem;
+      line-height: 3rem;
+      left: 0;
+    }
+  }
+  
+  @include sm-phone {
+    left: 0; // Reset left offset for mobile
+    max-width: 100%;
   }
 }
 
@@ -130,6 +203,7 @@
   width: 100%;
   height: auto;
   padding-bottom: 5%;
+  margin-top: 2%;
 
   img {
     width: 100%;
@@ -348,6 +422,7 @@
       text-align: left;
       padding-left: 4%;
       padding-right: 4%;
+      padding-bottom: 3%; // Reduced padding before the members grid
     }
   }
 
@@ -368,28 +443,7 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 3%;
       row-gap: 6%;
-      padding: 0 4% 15% 4%;  // Increased bottom padding to push button further down
-      position: relative; // Added for absolute positioning of button
-      
-      // Align individual member cards to the left on mobile
-      .memberCard {
-        align-items: flex-start;
-        
-        .profileImage {
-          margin-left: 0;
-        }
-        
-        .memberInfo {
-          text-align: left;
-          margin-left: 0;
-          padding-left: 0;
-        }
-        
-        h4, p {
-          text-align: left;
-          margin-left: 0;
-        }
-      }
+      padding: 0 4% 6% 4%;
     }
   }
 
@@ -406,9 +460,7 @@
     }
 
     @include sm-phone {
-      justify-content: center;
-      padding-top: 8%;
-      padding-bottom: 6%;
+      display: none !important; // Hide on mobile devices with high specificity
     }
   }
 }
@@ -422,8 +474,12 @@
   padding-bottom: 1%;
   
   @include sm-phone {
-    align-items: center;
-    text-align: center;
+    // Modified for mobile to align profile pictures to the left and names below
+    align-items: flex-start;
+    text-align: left;
+    padding-bottom: 15px;
+    padding-left: 4%; // Add left padding to align with the grid
+    width: 100%;
   }
 
   .profileImage {
@@ -440,8 +496,10 @@
     }
 
     @include sm-phone {
-      width: 5.5rem;
-      height: 5.5rem;
+      width: 4.5rem; // Slightly smaller than before
+      height: 4.5rem; // Slightly smaller than before
+      margin-bottom: 8px; // Add some space between image and text
+      margin-right: 0; // Remove right margin used previously
     }
   }
 
@@ -449,8 +507,9 @@
     text-align: center;
     
     @include sm-phone {
-      text-align: center;
-      padding-bottom: 10px;
+      text-align: left;
+      padding-bottom: 5px;
+      width: 100%;
     }
   }
 
@@ -467,6 +526,7 @@
     @include sm-phone {
       font-size: 0.95rem;
       padding-bottom: 1%;
+      padding-top: 0;
     }
   }
 
@@ -501,14 +561,59 @@
   }
 }
 
-// Staff Section
+// Board Meeting Info Button
+.boardMeetingInfoButton {
+  display: inline-block;
+  background-color: var(--green);
+  color: white !important;
+  padding: 12px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  text-decoration: none;
+  
+  @include sm-phone {
+    display: block !important;
+    width: calc(100% - 8px) !important; // Slightly less than 100% to prevent overflow
+    font-size: 0.9rem;
+    padding: 10px;
+    margin: 10px 0 40px 0 !important; // Increased bottom margin to create space before Executive Staff
+    position: static !important;
+    float: none !important;
+    clear: both !important;
+  }
+  
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+// Deborah's Card Container
+.deborahCardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  @include sm-phone {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important; // Changed to align left
+    width: 100% !important;
+    margin-bottom: 10px !important; // Add space after Deborah's card
+  }
+}
+
+// Staff Section - Add margin to create space after the board meeting button
 .staffSection {
   width: 100%;
   max-width: 100%;
   padding: 1% 8% 5% 8%;
   
   @include sm-phone {
-    padding: 12% 4% 10% 4%; // Increased top padding to create more space after the button
+    padding: 0 4% 10% 4%; // Reduced top padding
+    margin-top: 25px; // Add margin at the top to create space after the button
   }
 
   h2 {
@@ -527,6 +632,7 @@
       text-align: left;
       padding-bottom: 6%;
       padding-left: 4%;
+      margin-top: 10px; // Add space above the heading
     }
   }
 
@@ -550,33 +656,26 @@
       gap: 6%;
       max-width: 100%;
     }
-    
-    .memberCard {
-      @include sm-phone {
-        align-items: flex-start;
-        text-align: left;
-        
-        .profileImage {
-          margin-left: 0;
-        }
-        
-        .memberInfo {
-          text-align: left;
-        }
-      }
-    }
   }
 }
 
 // Button styles for mobile
 @include sm-phone {
   .buttonContainer {
-    .donateButton {
+    a:first-child, button:first-child {
       order: 1;
     }
-    .subscribeButton {
+    a:last-child, button:last-child {
       order: 2;
     }
+  }
+}
+
+// Executive Staff heading class - add this to your StaffSection component
+.executiveStaffHeading {
+  @include sm-phone {
+    margin-top: 20px !important; // Add space above the heading
+    padding-top: 10px !important;
   }
 }
 
@@ -622,74 +721,36 @@
   }
 }
 
-// Board Meeting Info Button 
-.boardMeetingInfoButton {
-  width: 100%;
-  background-color: var(--green);
-  color: white;
-  padding: 12px;
-  border-radius: 4px;
-  text-align: center;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 10px;
-  
+// Board member container position fix
+.boardMembersContainer {
   @include sm-phone {
-    font-size: 0.9rem;
-    padding: 10px;
-    margin-top: 0;
-    margin-bottom: 20px;
     position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    clear: both;
   }
 }
 
 // Executive staff member card specific styles
 .staffSection .memberCard {
   @include sm-phone {
-    padding-left: 4%;
-    
+    // Adjust staff profile images to match board profile images
     .profileImage {
-      width: 5.5rem;  // Updated to match Board of Trustees profile image size
-      height: 5.5rem; // Updated to match Board of Trustees profile image size
-    }
-    
-    .memberInfo {
-      padding-top: 5px;
+      width: 4.5rem;
+      height: 4.5rem;
     }
   }
 }
 
-// Special styling for board member with button
-.boardMemberWithButton {
+// Styles for button/donate/subscribe
+.donateButton, .subscribeButton {
+  padding: 16px 40px !important;
+  font-size: 1.3rem !important;
+  min-width: 160px !important;
+  display: inline-block !important;
+  text-align: center !important;
+  
   @include sm-phone {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    
-    .profileImage {
-      margin-left: 0;
-    }
-    
-    .memberInfo {
-      text-align: left;
-    }
-    
-    .boardMeetingInfoButton {
-      width: 100%;
-      margin-top: 15px;
-    }
-  }
-}
-
-// Board member container position fix
-.boardMembersContainer {
-  @include sm-phone {
-    position: relative;
-    padding-bottom: 60px; // Space for button at bottom
+    padding: 12px 25px !important;
+    font-size: 1rem !important;
+    min-width: 120px !important;
   }
 }
 

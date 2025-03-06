@@ -34,7 +34,8 @@
     },
     { 
       "name": "Deborah Grochau", 
-      "title": ""
+      "title": "",
+      "hasBoardMeetingButton": true
     }
   ],
   "executiveStaff": [

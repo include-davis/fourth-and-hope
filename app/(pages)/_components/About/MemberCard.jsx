@@ -3,12 +3,12 @@
 import React from 'react';
 import styles from './About.module.scss';
 
-export default function MemberCard({ name, title, email, photoUrl }) {
+export default function MemberCard({ name, title, email, photoUrl, hasBoardMeetingButton }) {
   return (
-    <div className={styles.memberCard}>
+    <div className={`${styles.memberCard} ${hasBoardMeetingButton ? styles.boardMemberWithButton : ''}`}>
       {photoUrl ? (
-        <img 
-          src={photoUrl} 
+        <img
+          src={photoUrl}
           alt={`${name} portrait`}
           className={styles.profileImage}
         />
@@ -28,6 +28,13 @@ export default function MemberCard({ name, title, email, photoUrl }) {
           </a>
         )}
       </div>
+      
+      {/* Add Board Meeting Info button for Deborah Grochau */}
+      {hasBoardMeetingButton && (
+        <a href="#board-info" className={styles.boardMeetingInfoButton}>
+          Board Meeting Info
+        </a>
+      )}
     </div>
   );
 }
