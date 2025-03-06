@@ -13,8 +13,7 @@
   padding-top: 4%;
   padding-bottom: 3%;
   display: grid;
-  grid-template-columns: 45% 55%; 
-  // gap: 10%;
+  grid-template-columns: 45% 55%;
 
   @include tablet {
     grid-template-columns: 1fr;
@@ -25,11 +24,13 @@
     grid-template-columns: 1fr;
     gap: 2%;
     padding: 0 4%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    text-align: center;
   }
 
   .mainHeading {
     display: flex;
-    // justify-content: flex-end;
     padding-right: 8%;
     padding-top: 5%; 
     
@@ -50,9 +51,19 @@
 
       @include sm-phone {
         font-size: 2.2rem;
-        line-height: 3rem; 
-        padding-top: 2%;
+        line-height: 2.8rem; 
+        padding-top: 0;
+        text-align: left;
+        margin: 0;
+        width: 100%;
       }
+    }
+    
+    @include sm-phone {
+      padding-right: 0;
+      justify-content: flex-start;
+      width: 100%;
+      padding-left: 4%;
     }
   }
 
@@ -73,6 +84,9 @@
 
       @include sm-phone {
         font-size: 1.5rem;
+        text-align: left;
+        padding-top: 5%;
+        padding-left: 4%;
       }
     }
 
@@ -85,6 +99,14 @@
       @include tablet {
         font-size: 1rem;
       }
+      
+      @include sm-phone {
+        text-align: left;
+        font-size: 1rem;
+        line-height: 1.4rem;
+        padding-left: 4%;
+        padding-right: 4%;
+      }
     }
 
     .buttonContainer {
@@ -93,8 +115,11 @@
       padding-top: 2%;
 
       @include sm-phone {
-        flex-direction: column;
-        gap: 2%;
+        flex-direction: row;
+        gap: 3%;
+        justify-content: flex-start;
+        padding-bottom: 5%;
+        padding-left: 4%;
       }
     }
   }
@@ -111,6 +136,10 @@
     height: 100%;
     object-fit: cover;
   }
+  
+  @include sm-phone {
+    padding-bottom: 8%;
+  }
 }
 
 // Story Section
@@ -118,6 +147,10 @@
   width: 100%;
   max-width: 100%;
   padding: 0 8% 5% 8%;
+
+  @include sm-phone {
+    padding: 0 4% 8% 4%;
+  }
 
   .storyContent {
     display: grid;
@@ -145,6 +178,11 @@
         margin: 0 auto;
       }
       
+      @include sm-phone {
+        max-width: 220px;
+        margin: 0 auto 6% auto;
+      }
+      
       .circleImage {
         width: 100%;
         height: 100%;
@@ -164,11 +202,13 @@
 
         @include tablet {
           font-size: 2rem;
-          text-align: center;
         }
 
         @include sm-phone {
           font-size: 1.5rem;
+          text-align: left;
+          padding-bottom: 5%;
+          padding-left: 2%;
         }
       }
 
@@ -181,7 +221,14 @@
 
         @include tablet {
           font-size: 1rem;
-          text-align: center;
+        }
+        
+        @include sm-phone {
+          font-size: 0.95rem;
+          line-height: 1.4rem;
+          text-align: left;
+          padding-left: 2%;
+          padding-right: 2%;
         }
 
         &:last-child {
@@ -197,6 +244,10 @@
   width: 100%;
   background-color: var(--light-grey);
   padding: 5% 0;
+  
+  @include sm-phone {
+    padding: 8% 0;
+  }
 
   h2 {
     max-width: 100%;
@@ -211,12 +262,18 @@
 
     @include sm-phone {
       font-size: 1.5rem;
+      padding: 0 4% 4% 6%;
+      text-align: left;
     }
   }
 
   .missionContent {
     max-width: 100%;
     padding: 0 8%;
+    
+    @include sm-phone {
+      padding: 0 4%;
+    }
 
     p {
       font-size: 1.125rem;
@@ -226,6 +283,15 @@
 
       @include tablet {
         font-size: 1rem;
+      }
+      
+      @include sm-phone {
+        font-size: 0.95rem;
+        line-height: 1.4rem;
+        padding-bottom: 4%;
+        text-align: left;
+        padding-left: 2%;
+        padding-right: 2%;
       }
 
       &:last-child {
@@ -242,6 +308,10 @@
   padding: 3% 8% 4% 8%;
   position: relative;
   background-color: var(--white);
+  
+  @include sm-phone {
+    padding: 8% 4%;
+  }
 
   h2 {
     font-size: 2.5rem;
@@ -256,6 +326,9 @@
 
     @include sm-phone {
       font-size: 1.5rem;
+      text-align: left;
+      padding-bottom: 4%;
+      padding-left: 4%;
     }
   }
 
@@ -267,6 +340,14 @@
 
     @include tablet {
       font-size: 1rem;
+    }
+    
+    @include sm-phone {
+      font-size: 0.95rem;
+      line-height: 1.4rem;
+      text-align: left;
+      padding-left: 4%;
+      padding-right: 4%;
     }
   }
 
@@ -284,8 +365,31 @@
     }
 
     @include sm-phone {
-      // grid-template-columns: 1fr;
-      gap: 2%;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3%;
+      row-gap: 6%;
+      padding: 0 4% 15% 4%;  // Increased bottom padding to push button further down
+      position: relative; // Added for absolute positioning of button
+      
+      // Align individual member cards to the left on mobile
+      .memberCard {
+        align-items: flex-start;
+        
+        .profileImage {
+          margin-left: 0;
+        }
+        
+        .memberInfo {
+          text-align: left;
+          margin-left: 0;
+          padding-left: 0;
+        }
+        
+        h4, p {
+          text-align: left;
+          margin-left: 0;
+        }
+      }
     }
   }
 
@@ -304,6 +408,7 @@
     @include sm-phone {
       justify-content: center;
       padding-top: 8%;
+      padding-bottom: 6%;
     }
   }
 }
@@ -315,6 +420,11 @@
   align-items: center;
   text-align: center;
   padding-bottom: 1%;
+  
+  @include sm-phone {
+    align-items: center;
+    text-align: center;
+  }
 
   .profileImage {
     width: 10rem;
@@ -330,13 +440,18 @@
     }
 
     @include sm-phone {
-      width: 7rem;
-      height: 7rem;
+      width: 5.5rem;
+      height: 5.5rem;
     }
   }
 
   .memberInfo {
     text-align: center;
+    
+    @include sm-phone {
+      text-align: center;
+      padding-bottom: 10px;
+    }
   }
 
   h4 {
@@ -350,7 +465,8 @@
     }
 
     @include sm-phone {
-      font-size: 1rem;
+      font-size: 0.95rem;
+      padding-bottom: 1%;
     }
   }
 
@@ -363,12 +479,21 @@
     @include tablet {
       font-size: 1rem;
     }
+    
+    @include sm-phone {
+      font-size: 0.85rem;
+      line-height: 1.2rem;
+    }
   }
 
   a {
     color: var(--green);
     text-decoration: none;
     font-size: 1rem;
+    
+    @include sm-phone {
+      font-size: 0.85rem;
+    }
     
     &:hover {
       text-decoration: underline;
@@ -381,6 +506,10 @@
   width: 100%;
   max-width: 100%;
   padding: 1% 8% 5% 8%;
+  
+  @include sm-phone {
+    padding: 12% 4% 10% 4%; // Increased top padding to create more space after the button
+  }
 
   h2 {
     font-size: 2.5rem;
@@ -391,11 +520,13 @@
 
     @include tablet {
       font-size: 2rem;
-      text-align: center;
     }
 
     @include sm-phone {
       font-size: 1.5rem;
+      text-align: left;
+      padding-bottom: 6%;
+      padding-left: 4%;
     }
   }
 
@@ -415,7 +546,36 @@
     }
 
     @include sm-phone {
-      gap: 3%;
+      grid-template-columns: 1fr;
+      gap: 6%;
+      max-width: 100%;
+    }
+    
+    .memberCard {
+      @include sm-phone {
+        align-items: flex-start;
+        text-align: left;
+        
+        .profileImage {
+          margin-left: 0;
+        }
+        
+        .memberInfo {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+// Button styles for mobile
+@include sm-phone {
+  .buttonContainer {
+    .donateButton {
+      order: 1;
+    }
+    .subscribeButton {
+      order: 2;
     }
   }
 }
@@ -454,5 +614,98 @@
     font-size: 1rem;
     color: var(--black);
     line-height: 1.5rem; 
+    
+    @include sm-phone {
+      font-size: 0.9rem;
+      line-height: 1.3rem;
+    }
+  }
+}
+
+// Board Meeting Info Button 
+.boardMeetingInfoButton {
+  width: 100%;
+  background-color: var(--green);
+  color: white;
+  padding: 12px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  
+  @include sm-phone {
+    font-size: 0.9rem;
+    padding: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    clear: both;
+  }
+}
+
+// Executive staff member card specific styles
+.staffSection .memberCard {
+  @include sm-phone {
+    padding-left: 4%;
+    
+    .profileImage {
+      width: 5.5rem;  // Updated to match Board of Trustees profile image size
+      height: 5.5rem; // Updated to match Board of Trustees profile image size
+    }
+    
+    .memberInfo {
+      padding-top: 5px;
+    }
+  }
+}
+
+// Special styling for board member with button
+.boardMemberWithButton {
+  @include sm-phone {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    .profileImage {
+      margin-left: 0;
+    }
+    
+    .memberInfo {
+      text-align: left;
+    }
+    
+    .boardMeetingInfoButton {
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+}
+
+// Board member container position fix
+.boardMembersContainer {
+  @include sm-phone {
+    position: relative;
+    padding-bottom: 60px; // Space for button at bottom
+  }
+}
+
+// Footer Logo
+.footerLogo {
+  width: 100%;
+  max-width: 250px;
+  margin-top: 20px;
+  
+  @include sm-phone {
+    max-width: 180px;
+    margin: 15px auto 0;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
   }
 }
