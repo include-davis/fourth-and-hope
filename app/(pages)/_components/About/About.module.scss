@@ -683,7 +683,7 @@
 }
 
 .boardMeetingInfoButton {
-  display: none; 
+  display: none; // Hidden by default on desktop
 
   @include sm-phone {
     display: block !important;
@@ -691,8 +691,9 @@
     background-color: var(--green);
     color: white !important;
     
+    // Matching Figma design
     padding: 16px 40px !important;
-    border-radius: 8px !important; 
+    border-radius: 8px !important; // Slightly rounded corners
     font-size: 16px !important;
     font-weight: 600 !important;
     
@@ -700,12 +701,15 @@
     cursor: pointer;
     text-decoration: none;
     
-    margin: 100px 0 25px 4% !important;
+    // Increased bottom margin to create more space
+    margin: 100px 0 50px 4% !important;
     position: relative !important;
     z-index: 10 !important;
     
+    // Optional: Add a subtle shadow for depth
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     
+    // Ensure text doesn't wrap
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
