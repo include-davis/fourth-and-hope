@@ -636,29 +636,22 @@
 
 // Board Meeting Info Button
 .boardMeetingInfoButton {
-  display: inline-block;
-  background-color: var(--green);
-  color: white !important;
-  padding: 12px;
-  border-radius: 4px;
-  text-align: center;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 10px;
-  text-decoration: none;
+  display: none; // Hide on desktop
   
   @include sm-phone {
-    display: block !important; // Show as block on mobile - FIXED to ensure it's visible
-    width: 90% !important; // Width to match your drawing
-    font-size: 0.9rem;
+    display: block !important; // Show only on mobile
+    width: 90% !important;
+    background-color: var(--green);
+    color: white !important;
     padding: 10px;
-    margin: 10px 0 60px 4% !important; // Match with Our Story and Our Mission (4%)
-    position: relative !important; // Position relative
-    clear: both !important;
-  }
-  
-  &:hover {
-    text-decoration: none !important;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 15px 0 25px 4% !important;
+    position: relative !important;
+    z-index: 10 !important; // Add z-index to ensure proper layering
   }
 }
 
