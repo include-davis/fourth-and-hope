@@ -13,7 +13,16 @@ export default function Header() {
       <>
       <div className={`headerContainer ${menuOpen ? styles.open : ""}`}>
         <div className={styles.contentContainer}>
-          <div className={styles.logo}><img src="/images/headerlogo.svg" alt="Fourth Hope Logo" className={styles.logo}/></div>
+        {/* <Link href="/destination-page" passHref>
+      <img 
+        src="/images/example.jpg" 
+        alt="Example Image" 
+        style={{ cursor: "pointer", width: "200px", height: "auto" }}
+      />
+    </Link> */}
+          <div className={styles.logo}>
+            <Link href="/" passHref><img src="/images/headerlogo.svg" alt="Fourth Hope Logo" className={styles.logo}/></Link>
+            </div>
           <div className={styles.xHolder}><button className={styles.xButton} onClick={toggleMenu}>
             <img src="/images/exitsymbol.svg" alt="Header Exit Button"/>
           </button></div>
