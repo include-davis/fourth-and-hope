@@ -31,7 +31,7 @@ export default function About() {
     <div className={styles.pageContainer}>
       <div className={styles.headerSection}>
         {/* Added provideHopeCare class to properly style the heading */}
-        <div className={`${styles.mainHeading} ${styles.provideHopeCare}`}>
+        <div className={styles.mainHeading}>
           <h1>
             PROVIDE HOPE
             <br />
