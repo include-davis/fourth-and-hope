@@ -60,6 +60,8 @@
         text-align: left;
         margin: 0;
         width: 100%;
+        padding-left: 0 !important;
+        margin-left: 4% !important; // Match consistent alignment
       }
     }
     
@@ -67,7 +69,7 @@
       padding-right: 0;
       justify-content: flex-start;
       width: 100%;
-      padding-left: 4%;
+      padding-left: 0;
       margin-left: 0; // Reset margin for mobile
     }
   }
@@ -100,7 +102,8 @@
         font-size: 1.5rem;
         text-align: left;
         padding-top: 5%;
-        padding-left: 4%; // Keep some padding for mobile
+        padding-left: 0 !important;
+        margin-left: 4% !important; // Match consistent alignment
       }
     }
 
@@ -118,8 +121,9 @@
         text-align: left;
         font-size: 1rem;
         line-height: 1.4rem;
-        padding-left: 4%;
+        padding-left: 0 !important;
         padding-right: 4%;
+        margin-left: 4% !important; // Match consistent alignment
       }
     }
 
@@ -152,7 +156,8 @@
         gap: 3%;
         justify-content: flex-start; // Ensure buttons align left
         padding-bottom: 5%;
-        padding-left: 4%; // Keep left padding consistent with other elements
+        padding-left: 0 !important;
+        margin-left: 4% !important; // Match consistent alignment
         
         a, button {
           padding: 12px 25px !important;
@@ -189,12 +194,16 @@
       font-size: 2.5rem;
       line-height: 3rem;
       left: 0;
+      padding-left: 0 !important; // Reset padding
+      margin-left: 4% !important; // Match consistent alignment
     }
   }
   
   @include sm-phone {
     left: 0; // Reset left offset for mobile
     max-width: 100%;
+    margin-left: 0 !important; // Ensure no margin
+    padding-left: 0 !important; // Ensure no padding that would offset alignment
   }
 }
 
@@ -216,6 +225,51 @@
   }
 }
 
+// Who We Are section styling
+.whoWeAreSection {
+  padding: 3% 8% 4% 8%;
+  
+  @include sm-phone {
+    padding: 3% 0 4% 0; // Remove horizontal padding
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--black);
+    
+    @include sm-phone {
+      font-size: 1.5rem;
+      padding-left: 0 !important; // Reset padding
+      margin-left: 4% !important; // Match consistent alignment
+    }
+  }
+  
+  p {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    color: var(--black);
+    
+    @include sm-phone {
+      font-size: 0.95rem;
+      line-height: 1.4rem;
+      padding-left: 0 !important; // Reset padding
+      margin-left: 4% !important; // Match consistent alignment
+    }
+  }
+  
+  .buttonContainer {
+    display: flex;
+    gap: 5%;
+    margin-top: 2%;
+    
+    @include sm-phone {
+      padding-left: 0 !important; // Reset padding
+      margin-left: 4% !important; // Match consistent alignment
+    }
+  }
+}
+
 // Story Section
 .storySection {
   width: 100%;
@@ -223,7 +277,7 @@
   padding: 0 8% 5% 8%;
 
   @include sm-phone {
-    padding: 0 4% 8% 4%;
+    padding: 0 0 8% 0; // Remove horizontal padding
   }
 
   .storyContent {
@@ -240,6 +294,7 @@
 
     @include sm-phone {
       gap: 2%;
+      margin-left: 0;
     }
 
     .imageContainer {
@@ -282,7 +337,8 @@
           font-size: 1.5rem;
           text-align: left;
           padding-bottom: 5%;
-          padding-left: 2%;
+          padding-left: 0 !important; // Reset padding
+          margin-left: 4% !important; // Match consistent alignment
         }
       }
 
@@ -301,8 +357,9 @@
           font-size: 0.95rem;
           line-height: 1.4rem;
           text-align: left;
-          padding-left: 2%;
-          padding-right: 2%;
+          padding-left: 0 !important; // Reset padding
+          margin-left: 4% !important; // Match consistent alignment
+          padding-right: 4%;
         }
 
         &:last-child {
@@ -329,6 +386,7 @@
     font-size: 2.5rem;
     font-weight: bold;
     color: var(--black);
+    text-align: left;
 
     @include tablet {
       font-size: 2rem;
@@ -336,8 +394,9 @@
 
     @include sm-phone {
       font-size: 1.5rem;
-      padding: 0 4% 4% 6%;
       text-align: left;
+      padding: 0 0 4% 0 !important; // Reset padding
+      margin-left: 4% !important; // Match consistent alignment
     }
   }
 
@@ -346,7 +405,7 @@
     padding: 0 8%;
     
     @include sm-phone {
-      padding: 0 4%;
+      padding: 0;
     }
 
     p {
@@ -364,8 +423,9 @@
         line-height: 1.4rem;
         padding-bottom: 4%;
         text-align: left;
-        padding-left: 2%;
-        padding-right: 2%;
+        padding-left: 0 !important; // Reset padding
+        padding-right: 4%;
+        margin-left: 4% !important; // Match consistent alignment
       }
 
       &:last-child {
@@ -384,7 +444,7 @@
   background-color: var(--white);
   
   @include sm-phone {
-    padding: 8% 4%;
+    padding: 8% 0 !important; // Remove horizontal padding completely
   }
 
   h2 {
@@ -393,6 +453,7 @@
     color: var(--black);
     text-align: left;
     padding-top: 2%;
+    padding-left: 0; // Align with other section titles in desktop
 
     @include tablet {
       font-size: 2rem;
@@ -402,7 +463,8 @@
       font-size: 1.5rem;
       text-align: left;
       padding-bottom: 4%;
-      padding-left: 4%;
+      padding-left: 0 !important; // Reset padding
+      margin-left: 4% !important; // Use margin instead to match other titles exactly
     }
   }
 
@@ -411,6 +473,7 @@
     padding-bottom: 4%; 
     line-height: 1.5rem;
     color: var(--black);
+    padding-left: 0; // Align with other section paragraphs in desktop
 
     @include tablet {
       font-size: 1rem;
@@ -420,7 +483,8 @@
       font-size: 0.95rem;
       line-height: 1.4rem;
       text-align: left;
-      padding-left: 4%;
+      padding-left: 0 !important; // Reset padding
+      margin-left: 4% !important; // Use margin instead
       padding-right: 4%;
       padding-bottom: 3%; // Reduced padding before the members grid
     }
@@ -443,7 +507,9 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 3%;
       row-gap: 6%;
-      padding: 0 4% 6% 4%;
+      padding: 0 0 6% 0 !important; // Remove horizontal padding
+      margin-left: 4% !important; // Add left margin to match titles
+      margin-right: 4% !important; // Add right margin for balance
     }
   }
 
@@ -454,6 +520,7 @@
     padding-bottom: 3%;
     position: relative;
     right: 0;
+    padding-right: 4%; // Added padding for alignment
 
     @include tablet {
       padding-top: 8%;
@@ -474,11 +541,14 @@
   padding-bottom: 1%;
   
   @include sm-phone {
-    // Modified for mobile to align profile pictures to the left and names below
-    align-items: flex-start;
-    text-align: left;
+    // Better mobile alignment - align with section title
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
     padding-bottom: 15px;
-    padding-left: 4%; // Add left padding to align with the grid
+    padding-left: 0 !important; // No padding, use margin for precise alignment
+    margin-left: 0 !important; // Align with grid
     width: 100%;
   }
 
@@ -496,8 +566,8 @@
     }
 
     @include sm-phone {
-      width: 4.5rem; // Slightly smaller than before
-      height: 4.5rem; // Slightly smaller than before
+      width: 4.5rem;
+      height: 4.5rem;
       margin-bottom: 8px; // Add some space between image and text
       margin-right: 0; // Remove right margin used previously
     }
@@ -543,6 +613,7 @@
     @include sm-phone {
       font-size: 0.85rem;
       line-height: 1.2rem;
+      padding-left: 0 !important; // Important to override section padding
     }
   }
 
@@ -575,13 +646,12 @@
   text-decoration: none;
   
   @include sm-phone {
-    display: block !important;
-    width: calc(100% - 8px) !important; // Slightly less than 100% to prevent overflow
+    display: block !important; // Show as block on mobile
+    width: 90% !important; // Width to match your drawing
     font-size: 0.9rem;
     padding: 10px;
-    margin: 10px 0 40px 0 !important; // Increased bottom margin to create space before Executive Staff
-    position: static !important;
-    float: none !important;
+    margin: 10px 0 60px 4% !important; // Match with Our Story and Our Mission (4%)
+    position: relative !important; // Position relative
     clear: both !important;
   }
   
@@ -601,7 +671,9 @@
     flex-direction: column !important;
     align-items: flex-start !important; // Changed to align left
     width: 100% !important;
-    margin-bottom: 10px !important; // Add space after Deborah's card
+    margin-bottom: 0 !important; // No bottom margin needed
+    padding-bottom: 0 !important; // No padding needed
+    padding-left: 0 !important; // No padding, handled by grid margin
   }
 }
 
@@ -612,8 +684,8 @@
   padding: 1% 8% 5% 8%;
   
   @include sm-phone {
-    padding: 0 4% 10% 4%; // Reduced top padding
-    margin-top: 25px; // Add margin at the top to create space after the button
+    padding: 0 0 10% 0 !important; // Remove horizontal padding
+    margin-top: 20px; // Add margin at the top to create space after the button
   }
 
   h2 {
@@ -622,6 +694,7 @@
     padding-top: 0;
     color: var(--black);
     text-align: left;
+    padding-left: 0; // Match board section alignment for desktop
 
     @include tablet {
       font-size: 2rem;
@@ -631,8 +704,9 @@
       font-size: 1.5rem;
       text-align: left;
       padding-bottom: 6%;
-      padding-left: 4%;
-      margin-top: 10px; // Add space above the heading
+      padding-left: 0 !important; // Reset padding
+      margin-left: 4% !important; // Use margin to match other titles exactly
+      margin-top: 0; // Reset top margin
     }
   }
 
@@ -655,6 +729,9 @@
       grid-template-columns: 1fr;
       gap: 6%;
       max-width: 100%;
+      padding-left: 0 !important; // Reset padding
+      margin-left: 4% !important; // Use margin instead
+      margin-right: 4% !important; // Use margin for right side too
     }
   }
 }
@@ -674,8 +751,10 @@
 // Executive Staff heading class - add this to your StaffSection component
 .executiveStaffHeading {
   @include sm-phone {
-    margin-top: 20px !important; // Add space above the heading
-    padding-top: 10px !important;
+    margin-top: 0 !important; // Reset margin since we have the button margin
+    padding-top: 0 !important; // Reset padding
+    padding-left: 0 !important; // Reset padding
+    margin-left: 4% !important; // Use margin to match exactly with other headings
   }
 }
 
@@ -736,6 +815,9 @@
       width: 4.5rem;
       height: 4.5rem;
     }
+    // Ensure alignment with other cards
+    padding-left: 0 !important; // Reset padding
+    margin-left: 0 !important; // Align with grid margin
   }
 }
 

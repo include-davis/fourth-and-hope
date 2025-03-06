@@ -54,19 +54,10 @@ export default function BoardSection() {
     };
   }, [checkHashAndOpenPopup, handleEscapeKey]);
 
-  // Inline styles for mobile
-  const deborahCardStyle = isMobile ? {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    width: '100%',
-    position: 'relative',
-    paddingLeft: '4%'
-  } : {};
-  
+  // Button style for mobile below Deborah's card as per the drawing
   const buttonStyle = isMobile ? {
     display: 'block',
-    width: 'calc(100% - 8px)',
+    width: '90%',
     backgroundColor: 'var(--green)',
     color: 'white',
     padding: '10px',
@@ -74,16 +65,21 @@ export default function BoardSection() {
     textAlign: 'center',
     fontWeight: 'bold',
     marginTop: '10px',
-    marginBottom: '40px', // Increased margin to create space before Executive Staff heading
+    marginBottom: '60px',
+    marginLeft: '4%', // Match with Our Story and Our Mission (4%)
     textDecoration: 'none',
-    fontSize: '0.9rem'
+    fontSize: '0.9rem',
+    position: 'relative'
   } : {
-    display: 'none'
+    display: 'none' // Hide on desktop
   };
   
+  // Keep the buttonWrapper hidden on mobile
   const buttonWrapperStyle = isMobile ? {
     display: 'none'
-  } : {};
+  } : {
+    paddingRight: '4%' // Add padding for desktop alignment
+  };
 
   return (
     <section className={styles.boardSection}>
@@ -93,18 +89,11 @@ export default function BoardSection() {
       <div className={styles.membersGrid}>
         {boardMembers.map((member, index) => (
           member.name === "Deborah Grochau" ? (
-            <div key={member.name || index} className={styles.deborahCardContainer} style={deborahCardStyle}>
+            <div key={member.name || index} className={styles.deborahCardContainer}>
               <MemberCard 
                 name={member.name}
                 title={member.title}
               />
-              <a 
-                href="#board-info" 
-                className={styles.boardMeetingInfoButton}
-                style={buttonStyle}
-              >
-                Board Meeting Info
-              </a>
             </div>
           ) : (
             <MemberCard 
@@ -115,6 +104,17 @@ export default function BoardSection() {
           )
         ))}
       </div>
+
+      {/* Board Meeting Info button for mobile - positioned below the grid */}
+      {isMobile && (
+        <a 
+          href="#board-info" 
+          className={styles.boardMeetingInfoButton}
+          style={buttonStyle}
+        >
+          Board Meeting Info
+        </a>
+      )}
 
       <div className={styles.buttonWrapper} style={buttonWrapperStyle}>
         <PrimaryButton 
