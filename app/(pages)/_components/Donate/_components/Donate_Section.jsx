@@ -102,7 +102,7 @@ export default function Donate_Section() {
             <h3 className={styles.overlayHeading}>
               Please use the following instructions to donate by check.
             </h3>
-            <div className={styles.text_content}>
+            <div className={styles.overlay_text_content}>
               <div className={styles.instructionsRow}>
                 <p className={styles.numberedLabel}>1. Make payable to:</p>
                 <p className={styles.numberedValue}>Fourth and Hope</p>
