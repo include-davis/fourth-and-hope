@@ -16,18 +16,26 @@
     padding-top: 0.7%;
     padding-bottom: 0.7%;
     height: auto;
+
+    margin-bottom: 1.9%;
+
+    @include mixins.phone(){
+        margin-bottom: 2.9%;
+    }
 }
 
 .headerOverride {
     white-space: nowrap;
     text-align: left;
     font-weight: 500;
+
 }
 
 .volunteer{
     height: auto;
     display:flex;
     flex-direction: column;
+    
 }
 
 .volunteer_top{
@@ -58,6 +66,8 @@
     font-weight: 500;
     margin-bottom: 1.6%;
     line-height: 24px;
+
+    
 }
 
 
