@@ -9,57 +9,83 @@
 .headerSection {
   width: 100%;
   max-width: 100%;
-  padding: 0 8%;
+  padding: 0 5%;
   padding-top: 4%;
   padding-bottom: 3%;
   display: grid;
-  grid-template-columns: 45% 55%; 
-  // gap: 10%;
+  grid-template-columns: 42% 58%; 
+  align-items: flex-start;
+  gap: 0;
 
   @include tablet {
     grid-template-columns: 1fr;
     gap: 5%;
+    padding: 5% 10%;
   }
 
   @include sm-phone {
     grid-template-columns: 1fr;
     gap: 2%;
-    padding: 0 4%;
+    padding: 0;  
+    padding-top: 4%;
+    padding-bottom: 4%;
+    text-align: left;  
   }
 
-  .mainHeading {
-    display: flex;
-    // justify-content: flex-end;
-    padding-right: 8%;
-    padding-top: 5%; 
+//provide hope, provide care
+.mainHeading {
+  position: relative;
+  // left: 15%; 
+  max-width: 90%;
+  
+  h1 {
+    color: var(--green);
+    font-size: 3.5rem;
+    // line-height: 5.5rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.05em;
+    text-align: left;
     
-    h1 {
-      color: var(--green);
-      font-size: 3.5rem;
-      line-height: 4.5rem; 
-      font-weight: 700;
-      margin: 0;
-      text-align: left;
-      letter-spacing: -0.01em;
-
-      @include tablet {
-        font-size: 2.8rem;
-        line-height: 3.6rem; 
-        padding-top: 3%;
-      }
-
-      @include sm-phone {
-        font-size: 2.2rem;
-        line-height: 3rem; 
-        padding-top: 2%;
-      }
+    @include tablet {
+      font-size: 2.5rem;
+      // line-height: 3.6rem;
+      left: 5%;
+    }
+    
+    @include sm-phone {
+      font-size: 2.5rem;
+      line-height: 3rem;
+      left: 0;
+      padding-left: 0 !important; 
+      margin-left: 4% !important; 
+      text-align: left !important;
     }
   }
+  
+  @include sm-phone {
+    left: 0; 
+    max-width: 100%;
+    margin-left: 0 !important; 
+    padding-left: 0 !important; 
+    margin-top: 1.5rem;
+  }
+}
+
 
   .introContent {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    // padding-top: 1%;
+    // padding-left: 10%; 
+    margin-right: 0;
+
+    @include sm-phone {
+      padding-left: 0; 
+      margin-left: 0;
+      align-items: flex-start; 
+    }
 
     h2 {
       font-size: 2.5rem;
@@ -73,6 +99,10 @@
 
       @include sm-phone {
         font-size: 1.5rem;
+        text-align: left;
+        padding-top: 5%;
+        padding-left: 0 !important;
+        margin-left: 4% !important; 
       }
     }
 
@@ -85,31 +115,118 @@
       @include tablet {
         font-size: 1rem;
       }
+      
+      @include sm-phone {
+        text-align: left;
+        font-size: 1rem;
+        line-height: 1.4rem;
+        padding-left: 0 !important;
+        padding-right: 4%;
+        margin-left: 4% !important; 
+      }
     }
 
+    // Button container styling
     .buttonContainer {
       display: flex;
-      gap: 3%;
-      padding-top: 2%;
+      gap: 5%;
+      padding-top: 1%;
 
+      a:first-child, button:first-child {
+        padding: 16px 40px !important;
+        font-size: 1.3rem !important;
+        min-width: 160px !important;
+        display: inline-block !important;
+        text-align: center !important;
+      }
+      
+      a:last-child, button:last-child {
+        padding: 16px 40px !important;
+        font-size: 1.3rem !important;
+        min-width: 160px !important;
+        display: inline-block !important;
+        text-align: center !important;
+      }
+      
       @include sm-phone {
-        flex-direction: column;
-        gap: 2%;
+        flex-direction: row;
+        gap: 3%;
+        justify-content: flex-start; 
+        padding-bottom: 5%;
+        padding-left: 0 !important;
+        margin-left: 4% !important; 
+        
+        a, button {
+          padding: 12px 25px !important;
+          font-size: 1rem !important;
+          min-width: 120px !important;
+        }
       }
     }
   }
 }
+
 
 // Hero Image
 .heroImage {
   width: 100%;
   height: auto;
   padding-bottom: 5%;
+  margin-top: 2%;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  
+  @include sm-phone {
+    padding-bottom: 8%;
+  }
+}
+
+// Who We Are section styling
+.whoWeAreSection {
+  padding: 3% 8% 4% 8%;
+  
+  @include sm-phone {
+    padding: 3% 0 4% 0; 
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--black);
+    
+    @include sm-phone {
+      font-size: 1.5rem;
+      padding-left: 0 !important;
+      margin-left: 4% !important;
+    }
+  }
+  
+  p {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    color: var(--black);
+    
+    @include sm-phone {
+      font-size: 0.95rem;
+      line-height: 1.4rem;
+      padding-left: 0 !important;
+      margin-left: 4% !important; 
+    }
+  }
+  
+  .buttonContainer {
+    display: flex;
+    gap: 5%;
+    margin-top: 2%;
+    
+    @include sm-phone {
+      padding-left: 0 !important; 
+      margin-left: 4% !important; 
+    }
   }
 }
 
@@ -118,6 +235,11 @@
   width: 100%;
   max-width: 100%;
   padding: 0 8% 5% 8%;
+
+  @include sm-phone {
+    padding: 0;
+    margin: 0;
+  }
 
   .storyContent {
     display: grid;
@@ -133,26 +255,34 @@
 
     @include sm-phone {
       gap: 2%;
+      margin-left: 0;
     }
 
-    .imageContainer {
-      width: 100%;
-      aspect-ratio: 1;
-      overflow: hidden; 
-      
-      @include tablet {
-        max-width: 300px;
-        margin: 0 auto;
-      }
-      
-      .circleImage {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        object-fit: cover;
-        object-position: center; 
-      }
-    }
+//circular image
+.imageContainer {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden; 
+  margin-top: 3rem; 
+  
+  @include tablet {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  @include sm-phone {
+    max-width: 220px;
+    margin: 0 auto 6% auto;
+  }
+  
+  .circleImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center; 
+  }
+}
 
     .textContent {
       h2 {
@@ -164,11 +294,14 @@
 
         @include tablet {
           font-size: 2rem;
-          text-align: center;
         }
 
         @include sm-phone {
           font-size: 1.5rem;
+          text-align: left;
+          padding-bottom: 5%;
+          padding-left: 0 !important;
+          margin-left: 4% !important; 
         }
       }
 
@@ -181,11 +314,75 @@
 
         @include tablet {
           font-size: 1rem;
-          text-align: center;
+        }
+        
+        @include sm-phone {
+          font-size: 0.95rem;
+          line-height: 1.4rem;
+          text-align: left;
+          padding-left: 0 !important; 
+          margin-left: 4% !important; 
+          padding-right: 4%;
         }
 
         &:last-child {
           padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// Story Section for Mobile
+.storySection {
+  @include sm-phone {
+    padding: 0;
+    margin: 0;
+  }
+
+  .storyContent {
+    @include sm-phone {
+      grid-template-columns: 1fr;
+      gap: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .imageContainer {
+      @include sm-phone {
+        max-width: 100%;
+        aspect-ratio: unset;
+        margin: 0;
+        
+        .circleImage {
+          width: 100%;
+          height: auto;
+          border-radius: 10%;
+          padding: 5%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+
+    .textContent {
+      @include sm-phone {
+        padding: 4% 4%;
+        background-color: var(--white);
+        
+        h2 {
+          font-size: 1.5rem;
+          padding-bottom: 3%;
+          margin-left: 0 !important;
+          text-align: left;
+        }
+
+        p {
+          font-size: 0.95rem;
+          line-height: 1.4rem;
+          padding-bottom: 0;
+          margin-left: 0 !important;
+          text-align: left;
         }
       }
     }
@@ -197,6 +394,11 @@
   width: 100%;
   background-color: var(--light-grey);
   padding: 5% 0;
+  
+  @include sm-phone {
+    padding: 8% 0;
+    background-color: transparent !important; 
+  }
 
   h2 {
     max-width: 100%;
@@ -204,6 +406,7 @@
     font-size: 2.5rem;
     font-weight: bold;
     color: var(--black);
+    text-align: left;
 
     @include tablet {
       font-size: 2rem;
@@ -211,12 +414,19 @@
 
     @include sm-phone {
       font-size: 1.5rem;
+      text-align: left;
+      padding: 0 0 4% 0 !important; 
+      margin-left: 4% !important; 
     }
   }
 
   .missionContent {
     max-width: 100%;
     padding: 0 8%;
+    
+    @include sm-phone {
+      padding: 0;
+    }
 
     p {
       font-size: 1.125rem;
@@ -226,6 +436,16 @@
 
       @include tablet {
         font-size: 1rem;
+      }
+      
+      @include sm-phone {
+        font-size: 0.95rem;
+        line-height: 1.4rem;
+        padding-bottom: 4%;
+        text-align: left;
+        padding-left: 0 !important; 
+        padding-right: 4%;
+        margin-left: 4% !important; 
       }
 
       &:last-child {
@@ -242,6 +462,10 @@
   padding: 3% 8% 4% 8%;
   position: relative;
   background-color: var(--white);
+  
+  @include sm-phone {
+    padding: 8% 0 !important; 
+  }
 
   h2 {
     font-size: 2.5rem;
@@ -249,6 +473,7 @@
     color: var(--black);
     text-align: left;
     padding-top: 2%;
+    padding-left: 0; 
 
     @include tablet {
       font-size: 2rem;
@@ -256,6 +481,10 @@
 
     @include sm-phone {
       font-size: 1.5rem;
+      text-align: left;
+      padding-bottom: 4%;
+      padding-left: 0 !important;
+      margin-left: 4% !important; 
     }
   }
 
@@ -264,9 +493,20 @@
     padding-bottom: 4%; 
     line-height: 1.5rem;
     color: var(--black);
+    padding-left: 0; 
 
     @include tablet {
       font-size: 1rem;
+    }
+    
+    @include sm-phone {
+      font-size: 0.95rem;
+      line-height: 1.4rem;
+      text-align: left;
+      padding-left: 0 !important; 
+      margin-left: 4% !important; 
+      padding-right: 4%;
+      padding-bottom: 8%;
     }
   }
 
@@ -284,8 +524,13 @@
     }
 
     @include sm-phone {
-      // grid-template-columns: 1fr;
-      gap: 2%;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3%;
+      row-gap: 6%;
+      padding: 0 0 6% 0 !important; 
+      margin-left: 4% !important; 
+      margin-right: 4% !important; 
+      padding-top: 0 !important;
     }
   }
 
@@ -296,14 +541,10 @@
     padding-bottom: 3%;
     position: relative;
     right: 0;
-
-    @include tablet {
-      padding-top: 8%;
-    }
-
+    padding-right: 4%;
+  
     @include sm-phone {
-      justify-content: center;
-      padding-top: 8%;
+      display: none !important;
     }
   }
 }
@@ -315,6 +556,17 @@
   align-items: center;
   text-align: center;
   padding-bottom: 1%;
+  
+  @include sm-phone {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    padding-bottom: 15px;
+    padding-left: 0 !important; 
+    margin-left: 0 !important; 
+    width: 100%;
+  }
 
   .profileImage {
     width: 10rem;
@@ -330,13 +582,21 @@
     }
 
     @include sm-phone {
-      width: 7rem;
-      height: 7rem;
+      width: 4.5rem;
+      height: 4.5rem;
+      margin-bottom: 8px; 
+      margin-right: 0; 
     }
   }
 
   .memberInfo {
     text-align: center;
+    
+    @include sm-phone {
+      text-align: left;
+      padding-bottom: 5px;
+      width: 100%;
+    }
   }
 
   h4 {
@@ -350,7 +610,9 @@
     }
 
     @include sm-phone {
-      font-size: 1rem;
+      font-size: 0.95rem;
+      padding-bottom: 1%;
+      padding-top: 0;
     }
   }
 
@@ -363,6 +625,12 @@
     @include tablet {
       font-size: 1rem;
     }
+    
+    @include sm-phone {
+      font-size: 0.85rem;
+      line-height: 1.2rem;
+      padding-left: 0 !important; 
+    }
   }
 
   a {
@@ -370,17 +638,64 @@
     text-decoration: none;
     font-size: 1rem;
     
+    @include sm-phone {
+      font-size: 0.85rem;
+    }
+    
     &:hover {
       text-decoration: underline;
     }
   }
 }
 
-// Staff Section
+.boardMeetingInfoButton {
+  display: none; 
+
+  @include sm-phone {
+    display: block !important;
+    width: 90% !important;
+    background-color: var(--green);
+    color: white !important;
+    
+    padding: 16px 40px !important;
+    border-radius: 8px !important; 
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    
+    margin: 100px 0 50px 4% !important;
+    position: relative !important;
+    z-index: 10 !important;
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+// Staff Section 
 .staffSection {
   width: 100%;
   max-width: 100%;
   padding: 1% 8% 5% 8%;
+
+  @include tablet {
+    padding: 8%;
+  }
+
+  @include phone {
+    padding: 8%;
+  }
+  
+  @include sm-phone {
+    padding: 0 0 10% 0 !important; 
+    margin-top: 40px !important; 
+  }
 
   h2 {
     font-size: 2.5rem;
@@ -388,14 +703,19 @@
     padding-top: 0;
     color: var(--black);
     text-align: left;
+    padding-left: 0; 
 
     @include tablet {
       font-size: 2rem;
-      text-align: center;
     }
 
     @include sm-phone {
       font-size: 1.5rem;
+      text-align: left;
+      padding-bottom: 6%;
+      padding-left: 0 !important;
+      margin-left: 4% !important; 
+      margin-top: 0; 
     }
   }
 
@@ -415,7 +735,13 @@
     }
 
     @include sm-phone {
-      gap: 3%;
+      grid-template-columns: 1fr;
+      gap: 6%;
+      max-width: 100%;
+      padding-left: 0 !important; 
+      margin-left: 4% !important; 
+      margin-right: 4% !important; 
+      padding-top: 1% !important;
     }
   }
 }
@@ -454,5 +780,10 @@
     font-size: 1rem;
     color: var(--black);
     line-height: 1.5rem; 
+    
+    @include sm-phone {
+      font-size: 0.9rem;
+      line-height: 1.3rem;
+    }
   }
 }

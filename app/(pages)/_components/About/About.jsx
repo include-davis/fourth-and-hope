@@ -30,6 +30,7 @@ export default function About() {
   return (
     <div className={styles.pageContainer}>
       <div className={styles.headerSection}>
+        {/* Added provideHopeCare class to properly style the heading */}
         <div className={styles.mainHeading}>
           <h1>
             PROVIDE HOPE
@@ -41,10 +42,15 @@ export default function About() {
           <h2>Who we are</h2>
           <p>A faith - based organization assisting with care and recovery for those in need.</p>
           <div className={styles.buttonContainer}>
-            <PrimaryButton name="Donate" link="/donate" />
+            <PrimaryButton 
+              name="Donate" 
+              link="/donate" 
+              customClass={styles.donateButton} 
+            />
             <SecondaryButton 
               name="Subscribe" 
               link="#subscribe" 
+              customClass={styles.subscribeButton}
             />
           </div>
         </div>
