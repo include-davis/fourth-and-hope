@@ -196,6 +196,9 @@
     @include mixins.phone(){
         flex-direction: column;
     }
+    :hover{
+        background-color: var(--grey);
+    }
 }
 
 //our stories section
