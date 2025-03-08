@@ -7,7 +7,7 @@ export default function Help() {
         <div className={styles.container}>
             <h1 className={styles.title}>Other Ways to Help</h1>
             <div className={styles.content}>
-                <div>
+                <div className={styles.text}>
                     <h3 className={styles.h3_override}>DONATE</h3>
                     <p>When you donate to Fourth & Hope, your contribution goes toward providing 
                         food and shelter 365 days a year for our neighbors in need from Woodland 

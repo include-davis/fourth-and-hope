@@ -13,21 +13,27 @@ import List from "./List/List.jsx";
 export default function GetInvolved() {
     return (
       <div >
-        <Image
+        <Image className={styles.img}
           src="images/GetInvolved_images/get-involved-image.png"
           alt="Description"
           width={500}
           height={300}
-          
           unoptimized={true}
-          style={{width: "100%",height: "auto", marginBottom: "5.1vw"}}
         />
         
-        <div className={styles.content}>
+        <div className={styles.element}>
           <Volunteer/>
+        </div>
+        <div className={styles.element}>
           <Inquiries/>
+        </div>
+        <div className={styles.element}>
           <Careers/>
+        </div>
+        <div className={styles.element}>
           <Help/>
+        </div>
+        <div className={styles.element}>
           <List/>
         </div>
 

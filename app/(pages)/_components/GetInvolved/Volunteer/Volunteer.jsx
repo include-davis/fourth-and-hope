@@ -32,13 +32,14 @@ export default function Volunteer() {
               </p>
             </div>
             <div className={styles.volunteer_right}>
-               <Image
+               <Image classname = {styles.img}
                   src="images/GetInvolved_images/get-involved-volunteer-img.png"
                   alt="Description"
-                  width={300}
-                  height={300}
+                  width={540}
+                  height={420}
                   unoptimized={true}
-                  style={{width: "100%", height: "auto", borderRadius: "15px"}}
+                  style = {{borderRadius: "15px"}}
+
                 />
             </div>
           </div>
