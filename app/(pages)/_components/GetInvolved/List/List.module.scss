@@ -1,3 +1,5 @@
+@use '../../../_globals/mixins.scss';
+
 .container {
     margin-right: 6.9%;
     margin-left: 6.9%;
@@ -12,10 +14,18 @@
     flex-direction: column;
     justify-content: center;
     margin-bottom: 2.2%;
+
+    @include mixins.phone(){
+        margin-top: 7.9%;
+        margin-bottom: 7.9%;
+      }
 }
 
 .title{
     margin-bottom: 1.7%;
+    @include mixins.phone(){
+        margin-bottom: 5.9%;
+    }
     
 }
 
@@ -26,7 +36,13 @@
 .bottom {
     height: auto;
     display: flex;          
-    gap: 2%;              
+    gap: 2%;  
+    
+    @include mixins.phone(){
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2.9%;
+    }
 }
 
 // .new, .used {

@@ -1,3 +1,5 @@
+@use '../../../_globals/mixins.scss';
+
 .container {
     height: auto;
     display: flex;
@@ -9,10 +11,19 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 0.5%;
+
+    @include mixins.phone(){
+      margin-bottom: 5.9%;
+      line-height: 30px;
+    }
   }
 
   .title{
     margin-bottom: 2.2%;
+
+    @include mixins.phone(){
+      margin-bottom: 7.9%;
+    }
   }
 
   .bottom {
@@ -23,6 +34,11 @@
     flex-direction: column;
     margin: 3.2% 6.9%;
     padding: 3.3%;
+
+    @include mixins.phone(){
+      padding-top: 5.97%;
+    }
+
   }
   
   .careers {
@@ -30,7 +46,11 @@
     grid-template-columns: 50% 50%;
     gap: 32px; 
     width: 100%;
-
+    
+    @include mixins.phone(){
+      display: flex;
+      flex-direction: column;
+    }
 }
 
   

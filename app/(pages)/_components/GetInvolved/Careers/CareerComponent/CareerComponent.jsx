@@ -1,5 +1,5 @@
 import styles from "./CareerComponent.module.scss";
-import PrimaryButton from "../../../Button/PrimaryButton.jsx";
+import PrimaryButton from "../Button/PrimaryButton.jsx";
 
 export default function CareerComponent({ title, description }) {
     return (

@@ -1,8 +1,15 @@
+@use '../../../../_globals/mixins.scss';
+
+
 .container{
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-    line-height: 1.5rem;
+    line-height: 24px;
     height: 100%;
+
+    @include mixins.phone(){
+        line-height: 30px;
+      }
 }
 

@@ -1,3 +1,5 @@
+@use '../../../_globals/mixins.scss';
+
 .container{
     margin-right: 6.9%;
     margin-left: 6.9%;
@@ -8,22 +10,34 @@
 }
 .title{
     margin-bottom: 2.2%;
+    @include mixins.phone(){
+        margin-bottom: 7.9%;    
+    }
+    
 }
 
 .h3_override{
     color: var(--green);
     margin-bottom: 0.83%;
+    @include mixins.phone(){
+        margin-bottom: 2.9%;    
+    }
 }
 
 .p_override{
-    line-height: 1.5rem;
+    line-height: 24px;
+    
 }
 
 .content{
     display: flex;
     flex-direction: column;
+   
 }
 
 .text{
     margin-bottom: 3%;
+    @include mixins.phone(){
+        margin-bottom: 5.9%;    
+    }
 }

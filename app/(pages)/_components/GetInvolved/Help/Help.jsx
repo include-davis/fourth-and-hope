@@ -1,5 +1,5 @@
 import styles from "./Help.module.scss";
-import PrimaryButton from "../../Button/PrimaryButton.jsx";
+import PrimaryButton from "./Button/PrimaryButton.jsx";
 
 
 export default function Help() {
@@ -19,7 +19,7 @@ export default function Help() {
                         to our Mission to Change Lives.</p>
                 </div>
                 <div>
-                    <PrimaryButton name="Serve a Meal" link="/serve-meal" />
+                    <PrimaryButton name="Donate" link="/donate" />
                 </div>
             </div>
         </div>

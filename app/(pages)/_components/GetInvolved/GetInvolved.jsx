@@ -20,6 +20,13 @@ export default function GetInvolved() {
           height={300}
           unoptimized={true}
         />
+        <Image className={styles.mobile_img}
+          src="images/GetInvolved_images/get-involved-mobile.png"
+          alt="Description"
+          width={420}
+          height={300}
+          unoptimized={true}
+        />
         
         <div className={styles.element}>
           <Volunteer/>

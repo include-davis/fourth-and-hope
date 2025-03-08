@@ -1,3 +1,6 @@
+@use '../../../_globals/mixins.scss';
+
+
 .container{
     margin-right: 6.9%;
     margin-left: 6.9%;
@@ -34,26 +37,57 @@
     justify-content: space-between;
     gap: 5.4%;  //79
     margin-bottom: 2.2%;
+
+    @include mixins.phone(){
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        margin-bottom: 5.4%; 
+    }
+}
+
+.paragraph{
+    margin-bottom: 1%;
+    line-height: 24px;
 }
 
 .headerOverride2 {
     white-space: nowrap;
     text-align: left;
     font-weight: 500;
-    
+    margin-bottom: 1.6%;
+    line-height: 24px;
 }
+
+
 
 .volunteer_left{
     text-align: left;
     width: 52.9%;
     display: flex;  
     flex-direction: column; 
-    gap: 2.5%;     
+
+    @include mixins.phone(){
+        width: 100%;    
+    }
+    
 }
 
 .volunteer_right{
     object-fit: contain;
     border-radius: 15px;
+
+    @include mixins.phone(){
+        width: 100%;
+        align-self: center;
+        display: flex;
+        justify-content:center;
+        margin-right: 6.9%;
+        margin-left: 6.9%;
+        margin-top: 6.3%;
+        margin-bottom: 7.9%;
+    }
 }
 
 .img{
@@ -65,6 +99,7 @@
 .p1_volunteer{
     font-weight: bold;
     background-color: transparent;
+    margin-bottom: 1%;
 }
 
 .volunteer_bottom{
@@ -73,8 +108,14 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-}
 
+    @include mixins.phone(){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
 
 // .button{
 //     width: 29.5%;
@@ -89,28 +130,29 @@
 // }
 
 
-@media (max-width: 1000px) {
+
+@media (min-width: 760px) and (max-width: 1000px) {
     .volunteer_top{
         height: auto;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: space-between;
         margin-bottom: 5.4%;  //79
     }
-
     .volunteer_left{
         width: 100%;
         margin-bottom: 5.4%;
        
     }
     .volunteer_right{
-        width: 60%;
+        width: 100%;
         align-self: center;
         display: flex;
         justify-content:center;
-
+        margin-right: 6.9%;
+        margin-left: 6.9%;
+        margin-top: 0.8%;
+        margin-bottom: 2.22%;
     }
-    
-   
   }
   
