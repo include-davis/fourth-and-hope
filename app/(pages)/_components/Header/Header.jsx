@@ -1,19 +1,19 @@
 "use client";
 import styles from "./Header.module.scss";
 import Link from "next/link";
-import {useState} from "react";
+import { useState } from "react";
 
 export default function Header() {
-    const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    const toggleMenu = () =>{
-      setMenuOpen((prev) => !prev);
-    }
-    return (
-      <>
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+  }
+  return (
+    <>
       <div className={`headerContainer ${menuOpen ? styles.open : ""}`}>
         <div className={styles.contentContainer}>
-        {/* <Link href="/destination-page" passHref>
+          {/* <Link href="/destination-page" passHref>
       <img 
         src="/images/example.jpg" 
         alt="Example Image" 
@@ -21,10 +21,10 @@ export default function Header() {
       />
     </Link> */}
           <div className={styles.logo}>
-            <Link href="/" passHref><img src="/images/headerlogo.svg" alt="Fourth Hope Logo" className={styles.logo}/></Link>
-            </div>
+            <Link href="/" passHref><img src="/images/headerlogo.svg" alt="Fourth Hope Logo" className={styles.logo} /></Link>
+          </div>
           <div className={styles.xHolder}><button className={styles.xButton} onClick={toggleMenu}>
-            <img src="/images/exitsymbol.svg" alt="Header Exit Button"/>
+            <img src="/images/exitsymbol.svg" alt="Header Exit Button" />
           </button></div>
           <div className={styles.buttonsContainer}>
             <a href="/donate" className={[styles.button, styles.bold].join(' ')}>Donate</a>
@@ -38,13 +38,13 @@ export default function Header() {
             </div>
           </div>
           <button className={styles.menuButton} onClick={toggleMenu}>
-            <img src="/images/menu-rounded.svg" alt="Header Dropdown Button"/>
+            <img src="/images/menu-rounded.svg" alt="Header Dropdown Button" />
           </button>
 
-      
+
         </div>
       </div>
-      {menuOpen && <div className={styles.overlay} onClick={toggleMenu}></div>} 
-      </>
-    );
+      {menuOpen && <div className={styles.overlay} onClick={toggleMenu}></div>}
+    </>
+  );
 } // Questions: Images? Proper Font Sizing? 
