@@ -1,0 +1,143 @@
+@use '../../../_globals/mixins.scss';
+
+.container {
+    height: auto;
+    background-color: var(--white);
+    padding: 0.01%;
+
+    @include mixins.phone() {
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 2.25rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+
+.content {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 4.4% 6.9%;
+
+    @include mixins.phone() {
+        margin-top: 15.9%;
+        margin-bottom: 15.9%;
+    }
+
+}
+
+.top {
+    margin-bottom: 2.2%;
+    background-color: transparent;
+
+    @include mixins.phone() {
+        margin-bottom: 7.9%;
+    }
+
+}
+
+.bottom {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+
+    @include mixins.phone() {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+.contact {
+    height: auto;
+    width: 41.29%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+
+    @include mixins.phone() {
+        width: 100%;
+        margin-bottom: 7.9%;
+    }
+}
+
+.number {
+    display: flex;
+    flex-direction: row;
+    line-height: 1.5rem;
+    gap: 2%;
+}
+
+.mail {
+    display: flex;
+    flex-direction: row;
+    line-height: 1.5rem;
+    gap: 2%;
+    color: var(--green)
+}
+
+.info {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 24px;
+
+
+    @include mixins.phone() {
+        width: 100%;
+    }
+}
+
+.info_top {
+    margin-bottom: 2.7%;
+
+    @include mixins.phone() {
+        margin-bottom: 5.9%;
+    }
+
+}
+
+.p_override {
+    font-weight: bold;
+    line-height: 1.5rem;
+}
+
+.button {
+    width: fit-content;
+    padding: 2.3% 4.5%;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--green);
+    outline: 2px solid var(--green);
+    background-color: var(--white);
+
+
+    &:hover,
+    &:active {
+        background-color: var(--green);
+        color: var(--white);
+    }
+
+    @include mixins.phone() {
+        padding: 2.3% 3.5%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 5.97%;
+    }
+}

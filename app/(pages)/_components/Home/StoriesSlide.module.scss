@@ -1,0 +1,74 @@
+@use '../../_globals/mixins.scss';
+
+.story {
+    flex: 0 0 100%;
+    /* Each story takes 100% width */
+    display: flex;
+    align-content: center;
+    /* Vertically center content */
+    justify-content: space-between;
+
+    @include mixins.phone() {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+}
+
+.storyText {
+    flex: 1;
+    /* Text takes available space */
+    padding-right: 6%;
+    width: 32%;
+    padding-top: 1.4%;
+    font-weight: 300;
+    color: var(--black);
+
+    @include mixins.phone() {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        padding-bottom: 5%;
+        font-weight: 580;
+
+        @include mixins.phone() {
+            font-size: 1.5rem;
+            padding: 2.4%;
+        }
+    }
+
+    p {
+        font-size: 1.25rem;
+        line-height: 1.8;
+
+        @include mixins.phone() {
+            font-size: 1rem;
+            padding: 2.4%;
+        }
+    }
+}
+
+.storyImageContainer {
+    width: 57.75%;
+    display: flex;
+    justify-content: center;
+    border-radius: 2%;
+
+    @include mixins.phone() {
+        width: 100%;
+        flex: 1;
+    }
+}
+
+.storyImage {
+    flex: 1;
+    /* Image takes available space */
+    text-align: center;
+    /* Center the image */
+    object-fit: cover;
+    border-radius: 2%;
+    width: 100%;
+    height: auto;
+}
