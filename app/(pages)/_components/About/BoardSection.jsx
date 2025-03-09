@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import MemberCard from './MemberCard';
 import BoardPopup from './BoardPopup';
-import PrimaryButton from '../Button/PrimaryButton';
+import MeetingButton from '../PopUps/MeetingButton';
 import boardData from './boardData.json';
 const { boardMembers } = boardData;
 import styles from './About.module.scss';
@@ -11,15 +11,8 @@ import styles from './About.module.scss';
 export default function BoardSection() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   
-  const checkHashAndOpenPopup = useCallback(() => {
-    if (window.location.hash === '#board-info') {
-      setIsPopupOpen(true);
-      window.history.replaceState(
-        null, 
-        '', 
-        window.location.pathname + window.location.search
-      );
-    }
+  const handleOpenPopup = useCallback(() => {
+    setIsPopupOpen(true);
   }, []);
 
   const handleClosePopup = useCallback(() => {
@@ -33,16 +26,11 @@ export default function BoardSection() {
   }, [isPopupOpen, handleClosePopup]);
 
   useEffect(() => {
-    checkHashAndOpenPopup();
-
-    window.addEventListener('hashchange', checkHashAndOpenPopup);
     document.addEventListener('keydown', handleEscapeKey);
-
     return () => {
-      window.removeEventListener('hashchange', checkHashAndOpenPopup);
       document.removeEventListener('keydown', handleEscapeKey);
     };
-  }, [checkHashAndOpenPopup, handleEscapeKey]);
+  }, [handleEscapeKey]);
 
   return (
     <section className={styles.boardSection}>
@@ -60,10 +48,12 @@ export default function BoardSection() {
       </div>
 
       <div className={styles.buttonWrapper}>
-        <PrimaryButton 
-          name="Board Meeting Info" 
-          link="#board-info"
-        />
+        {/* Wrap the button with MeetingButton to trigger the popup */}
+        <MeetingButton>
+          <button className={styles.meetingButton}>
+            Board Meeting Info
+          </button>
+        </MeetingButton>
       </div>
 
       {isPopupOpen && (

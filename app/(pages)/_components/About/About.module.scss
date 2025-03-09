@@ -474,7 +474,7 @@
 .boardSection {
   width: 100%;
   max-width: 100%;
-  padding: 3% 8% 4% 8%;
+  padding: 13% 8% 4% 8%;
   position: relative;
   background-color: var(--white);
 
@@ -551,9 +551,14 @@
 
   .buttonWrapper {
     display: flex;
+    align-items: center;
     justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 10px;
+
     padding-top: 8%;
     padding-bottom: 3%;
+    padding-right: 10%;
     position: relative;
     right: 0;
     padding-right: 4%;
@@ -692,6 +697,31 @@
     text-overflow: ellipsis;
   }
 }
+
+.meetingButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10% 25%;
+  margin-right: 5%;
+  font-size: 1.2rem;
+  border: 1px solid var(--white);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: var(--green);
+  color: var(--white);
+  white-space: nowrap;
+
+  &:hover,
+  &:active {
+    background-color: var(--white);
+    color: var(--green);
+    border: 1px solid var(--green);
+  }
+}
+
 
 // Staff Section 
 .staffSection {
