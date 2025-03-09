@@ -1,27 +1,47 @@
 @use '../../_globals/mixins.scss';
 
-.element{
+.container {
+    @include mixins.phone() {
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 2.25rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+
+.element {
     margin-bottom: 8.1%;
 }
 
-.img{
+.img {
     width: 100%;
     height: auto;
     margin-bottom: 5.1%;
 
-    @include mixins.phone(){
+    @include mixins.phone() {
         margin-bottom: 5.97%;
         margin-top: 5.97%;
         display: none;
     }
 }
 
-.mobile_img{
+.mobile_img {
     width: 100%;
     height: auto;
-    display:none;
+    display: none;
 
-    @include mixins.phone(){
+    @include mixins.phone() {
         margin-bottom: 5.97%;
         margin-top: 5.97%;
         display: block;

@@ -15,7 +15,7 @@ export default function Volunteer() {
         <h1 className={styles.headerOverride}> GET INVOLVED</h1>
       </div>
       <br />
-      <h2 className={styles.headerOverride2}>Volunteer</h2>
+      <h3 className={styles.headerOverride2}>Volunteer</h3>
       <div className={styles.volunteer}>
         <div className={styles.volunteer_top}>
           <div className={styles.volunteer_left}>

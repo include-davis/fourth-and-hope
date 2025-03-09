@@ -20,9 +20,9 @@ export default function Inquiries() {
                                 alt="Phone"
                                 width={32}
                                 height={32}
-                                
+
                                 unoptimized={true}
-                                style={{width: "1.25rem",height: "auto"}}
+                                style={{ width: "1.25rem", height: "auto" }}
                             />
                             <p>(530) 503-0550 </p>
                         </div>
@@ -32,15 +32,15 @@ export default function Inquiries() {
                                 alt="Mail"
                                 width={32}
                                 height={32}
-                                
+
                                 unoptimized={true}
-                                style={{width: "1.25rem",height: "auto"}}
+                                style={{ width: "1.25rem", height: "auto" }}
                             />
                             <p>volunteer@fourthandhope.org</p>
                         </div>
                     </div>
                     <div className={styles.info}>
-                        <div className={styles.info_top}> 
+                        <div className={styles.info_top}>
                             <p>All volunteers are asked to read and digitally sign the </p>
                             <p className={styles.p_override}>volunteer guidelines and waivers.</p>
                             <p>
@@ -56,6 +56,6 @@ export default function Inquiries() {
                 </div>
             </div>
         </div>
-      
+
     );
 }

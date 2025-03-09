@@ -6,6 +6,24 @@
     height: auto;
     display: flex;
     flex-direction: column;
+
+    @include mixins.phone() {
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 2.25rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
 }
 
 .top {
@@ -15,18 +33,19 @@
     justify-content: center;
     margin-bottom: 2.2%;
 
-    @include mixins.phone(){
+    @include mixins.phone() {
         margin-top: 7.9%;
         margin-bottom: 7.9%;
-      }
+    }
 }
 
-.title{
+.title {
     margin-bottom: 1.7%;
-    @include mixins.phone(){
+
+    @include mixins.phone() {
         margin-bottom: 5.9%;
     }
-    
+
 }
 
 .p_override {
@@ -35,10 +54,10 @@
 
 .bottom {
     height: auto;
-    display: flex;          
-    gap: 2%;  
-    
-    @include mixins.phone(){
+    display: flex;
+    gap: 2%;
+
+    @include mixins.phone() {
         display: flex;
         flex-direction: column;
         margin-bottom: 2.9%;
