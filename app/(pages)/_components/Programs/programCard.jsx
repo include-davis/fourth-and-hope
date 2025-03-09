@@ -5,7 +5,9 @@ export default function ProgramCard({ title, subtitle, text, image }) {
     <div className={styles.program}>
       <div className={styles.text}>
         <h2>{title}</h2>
-        <p>{subtitle}</p>
+        <br />
+        <p><b>{subtitle}</b></p>
+        <br />
         <p>{text}</p>
       </div>
       <div className={styles.image}>

@@ -44,20 +44,14 @@
     justify-content: center;
     align-items: left;
     text-align: left;
+
+    @include tablet {
+        padding: 10% 5%;
+    }
 }
 
 .ProgramTitle {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 10%;
-    padding-top: 8%;
-    padding-bottom: 0%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    text-align: left;
-    color: var(--green);
+    padding: 5% 5% 0% 5%;
 }
 
 .statsContainer {
@@ -95,6 +89,10 @@
     display: flex;
     justify-content: center;
     gap: 5%;
+
+    @include tablet {
+        flex-direction: column;
+    }
 }
 
 .Walter {
@@ -163,17 +161,6 @@
     }
 
 
-}
-
-
-@include tablet {
-    .Titles {
-        padding: 10% 5%;
-    }
-
-    .button_container {
-        flex-direction: column;
-    }
 }
 
 @include phone {
