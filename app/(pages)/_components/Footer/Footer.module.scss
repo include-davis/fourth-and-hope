@@ -47,8 +47,10 @@
 .logo{
     filter: brightness(0) invert(1);
     width: 15.21vw;
+    padding-bottom: 3%;
     @include phone{
         width: 60%;
+        padding-bottom: 1%;
     }
 }
 

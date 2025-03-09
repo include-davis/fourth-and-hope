@@ -8,9 +8,8 @@
     overflow: hidden;
     padding-bottom: 50%;
     width: auto;
-  }
 
-    .imageSlides > div > span {
+    .imageSlides>div>span {
         position: absolute !important;
         top: 0;
         left: 0;
@@ -23,63 +22,90 @@
         width: 100%;
         height: 100%;
     }
-  
-.headerImageContainer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    animation-duration: 1s; 
-    animation-timing-function: linear; 
-    animation-fill-mode: forwards;
 
-    img { 
-        object-fit: cover;
+    .headerImageContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    .activeImage {
+        opacity: 1;
+        animation-name: fadeIn;
+    }
+
+    .inactiveImage {
+        opacity: 0;
+        animation-name: fadeOut;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
     }
 }
-  
-.activeImage {
-    opacity: 1;
-    animation-name: fadeIn; 
-}
-  
-.inactiveImage {
-    opacity: 0;
-    animation-name: fadeOut; 
-}
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
 
-@keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
 
 
 // Buttons section
-.threeButtons{ //used this to make the margins between header and out mission
+.threeButtons {
+    //used this to make the margins between header and out mission
     margin-top: 5%;
     margin-bottom: 5%;
     height: 9%;
     width: auto;
+
+    @include mixins.phone() {
+        width: 100%;
+    }
+
+    .buttonContent {
+        //the components of buttons
+        width: 86.1%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 35%;
+        margin: auto; //centers div
+
+        @include mixins.phone() {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 }
 
-.buttonContent{ //the components of buttons
-    width: 86.1%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 35%; 
-    margin: auto; //centers div
-}
+
 
 
 // Our Mission Section
-.whoWeAre{ //holds all content of our mission
+.whoWeAre {
+    //holds all content of our mission
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -87,20 +113,23 @@
     padding-bottom: 4.4%;
     height: 22%;
     width: auto;
-}
 
-.WWATitle{
-    width: 87%;
-    margin-bottom: 2.2%;
-    color: var(--green);
-    font-size: 5rem; //make globals
-    font-weight: 500;
-    @include mixins.phone(){
-        font-size: 3.85rem;
+    h1 {
+        width: 87%;
+        margin-bottom: 2.2%;
+        color: var(--green);
+        // font-size: 5rem; //make globals
+        // font-weight: 500;
+
+        @include mixins.phone() {
+            font-size: 2rem;
+        }
     }
 }
 
-.whoWeAreComponents{
+
+
+.whoWeAreComponents {
     width: 87%;
     color: var(--black);
     display: flex;
@@ -108,53 +137,58 @@
     justify-content: space-between;
     margin-bottom: 6%;
     gap: 2%;
-    @include mixins.phone(){
+
+    @include mixins.phone() {
         flex-direction: column;
         justify-content: center;
     }
 }
 
-.whoWeAreText{
+.whoWeAreText {
     display: flex;
     flex-direction: column;
     width: 47.77%;
     color: var(--black);
     margin-right: 4.68%;
-    @include mixins.phone(){
+
+    @include mixins.phone() {
         width: 100%;
         margin-right: 0;
     }
 
-    h2{
+    h2 {
         font-weight: 548;
         margin-bottom: 3%;
-        @include mixins.phone(){
-            font-size: 2.7rem;
+
+        @include mixins.phone() {
+            font-size: 1.5rem;
             margin-bottom: 1%;
         }
     }
 
-    p{
-        font-size: 1.28rem; //make globals?
+    p {
+        font-size: 1.25rem; //make globals?
         font-weight: 300;
         line-height: 1.8;
-        @include mixins.phone(){
-            font-size: 1.28rem;
+
+        @include mixins.phone() {
+            font-size: 1rem;
             line-height: 1.7;
         }
     }
 
 }
 
-.text1{
+.text1 {
     margin-bottom: 9%;
 }
 
-.whoWeAreVideo{
+.whoWeAreVideo {
     width: 80%;
     display: flex;
     justify-content: center;
-    @include mixins.phone(){
+
+    @include mixins.phone() {
         width: 100%;
         height: auto;
     }
@@ -164,7 +198,7 @@
 //Programs section
 //needs to account for if more programs are added and how it will wrap
 //make hover effect like in handoff presentation
-.programs{
+.programs {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -172,7 +206,7 @@
     height: 26.1%;
     width: auto;
 
-    h1{
+    h1 {
         display: flex;
         justify-content: flex-start;
         margin-bottom: 2.2%;
@@ -180,26 +214,29 @@
         font-size: 5rem; //make globals?
         font-weight: 500;
         width: 87%;
-        @include mixins.phone(){
-            font-size: 3.85rem;
+
+        @include mixins.phone() {
+            font-size: 2rem;
         }
     }
 }
-.programsComponents{
+
+.programsComponents {
     width: 87%;
 }
 
-.programsComponentsBox{
+.programsComponentsBox {
     display: flex;
     justify-content: space-between;
     max-height: 50%;
-    @include mixins.phone(){
+
+    @include mixins.phone() {
         flex-direction: column;
     }
 }
 
 //our stories section
-.ourStories{
+.ourStories {
     background-color: var(--light-grey);
     display: flex;
     align-items: center;
@@ -208,20 +245,21 @@
     height: 21.03%;
     width: auto;
 
-    h1{
+    h1 {
         color: var(--green);
         width: 87%;
         font-size: 5rem; //make globals
         font-weight: 500;
         margin-bottom: 2.2%;
         margin-top: 3%;
-        @include mixins.phone(){
-            font-size: 3.85rem;
+
+        @include mixins.phone() {
+            font-size: 2rem;
         }
     }
 }
 
-.storiesComponents{
+.storiesComponents {
     max-width: 87%;
     display: flex;
     align-items: center;
