@@ -9,9 +9,10 @@
   border: 1px solid var(--green);
   text-decoration: none;
   display: inline-block;
-  
-  &:hover, &:active {
-    background-color: var(--light-green);
+
+  &:hover,
+  &:active {
+    background-color: var(--green); //can change back to --light-green if design requests..
     color: var(--white);
   }
 }
