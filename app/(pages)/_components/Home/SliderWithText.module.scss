@@ -33,6 +33,13 @@
   span.active {
     background-color: var(--dark-grey);
   }
+
+  @include mixins.phone{
+    span{
+      width: 2.5%;
+      margin: 5% .5%;
+    }
+  }
 }
   
 .arrowLeft,

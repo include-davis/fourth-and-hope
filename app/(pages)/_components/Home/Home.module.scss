@@ -66,6 +66,13 @@
     margin-bottom: 5%;
     height: 9%;
     width: auto;
+    @include mixins.phone{
+        display: flex;
+        justify-content: center;
+        height: auto;
+        margin: auto;
+        margin-top: 5%;
+    }
 }
 
 .buttonContent{ //the components of buttons
@@ -75,6 +82,9 @@
     justify-content: space-between;
     margin-top: 35%; 
     margin: auto; //centers div
+    @include mixins.phone{
+        flex-direction: column;
+    }
 }
 
 
@@ -96,7 +106,7 @@
     font-size: 5rem; //make globals
     font-weight: 500;
     @include mixins.phone(){
-        font-size: 3.85rem;
+        font-size: 3.3rem;
     }
 }
 
@@ -129,7 +139,7 @@
         font-weight: 548;
         margin-bottom: 3%;
         @include mixins.phone(){
-            font-size: 2.7rem;
+            font-size: 2.2rem;
             margin-bottom: 1%;
         }
     }
@@ -157,6 +167,7 @@
     @include mixins.phone(){
         width: 100%;
         height: auto;
+        margin-top: 7%;
     }
 }
 
@@ -181,7 +192,7 @@
         font-weight: 500;
         width: 87%;
         @include mixins.phone(){
-            font-size: 3.85rem;
+            font-size: 3.3rem;
         }
     }
 }
@@ -219,7 +230,7 @@
         margin-bottom: 2.2%;
         margin-top: 3%;
         @include mixins.phone(){
-            font-size: 3.85rem;
+            font-size: 3.3rem;
         }
     }
 }

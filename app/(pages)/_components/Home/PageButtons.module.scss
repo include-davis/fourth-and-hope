@@ -6,6 +6,11 @@
     flex-direction: column;
     width: 27.5%;
     height: 93.7%;
+
+    @include mixins.phone{
+      margin: 5.5% 0;
+      width: 100%;
+    }
   }
 
   .buttonImage{ //the image
