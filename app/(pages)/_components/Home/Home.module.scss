@@ -71,7 +71,7 @@
         justify-content: center;
         height: auto;
         margin: auto;
-        margin-top: 5%;
+        margin: 7% 0;
     }
 }
 
@@ -106,7 +106,8 @@
     font-size: 5rem; //make globals
     font-weight: 500;
     @include mixins.phone(){
-        font-size: 3.3rem;
+        font-size: 2.7rem;
+        margin-bottom: 5%;
     }
 }
 
@@ -192,7 +193,8 @@
         font-weight: 500;
         width: 87%;
         @include mixins.phone(){
-            font-size: 3.3rem;
+            font-size: 2.7rem;
+            margin-bottom: 5%;
         }
     }
 }
@@ -221,6 +223,10 @@
     flex-direction: column;
     height: 21.03%;
     width: auto;
+    
+    @include mixins.phone{
+        background-color: var(--white);
+    }
 
     h1{
         color: var(--green);
@@ -230,7 +236,8 @@
         margin-bottom: 2.2%;
         margin-top: 3%;
         @include mixins.phone(){
-            font-size: 3.3rem;
+            font-size: 2.7rem;
+            margin-bottom: 5%;
         }
     }
 }

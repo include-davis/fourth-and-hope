@@ -49,6 +49,10 @@
     transform: translateY(-50%);
     z-index: 10;
     cursor: pointer;
+
+    @include mixins.phone{
+      display: none;
+    }
 }
 
 .arrowLeft {

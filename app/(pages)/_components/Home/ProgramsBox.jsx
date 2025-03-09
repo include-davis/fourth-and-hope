@@ -16,19 +16,17 @@ export default function ProgramsBox({imageSrc, altText, heading, bodyText, href}
                 />
                 <h2>{heading}</h2>
                 <p>{bodyText}</p>
-                </div>
+            </div>
             <div className={styles.learnLink}>
-            <Link href={href} className={styles.learnMore}>
-                learn more ➔
-                {/* 
-                    how do you want the learn more button??
-                    line and arrow when hover
-                    always line
-                    always arrow 
-                    always line and arrow
-                    color change on hover? bold?
-                */}
-            </Link>
+                {/* <div className={styles.learnMore}> */}
+                    <h1>
+                        <Link href={href} >
+                        learn more ➔
+                        </Link>
+                    </h1>
+                    
+                {/* </div> */}
+            
             </div>
         </div>
 
