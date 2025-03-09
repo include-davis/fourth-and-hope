@@ -34,7 +34,6 @@
   align-self: stretch;
 
   @include sm-desktop {
-    flex-direction: column;
     gap: 32px;
   }
 
@@ -43,6 +42,7 @@
   }
 
   @include phone {
+    flex-direction: column;
     gap: 24px;
   }
 
@@ -53,18 +53,20 @@
 
 .dm_text_container {
   display: flex;
-  width: 100%;
-  max-width: 670px;
+  width: 60%;
+  // max-width: 670px;
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
+  text-align: left;
 
-  @include tablet {
-    max-width: 600px;
-  }
+  // @include tablet {
+  //   padding: 0% 20%;
+  //   // max-width: 600px;
+  // }
 
   @include phone {
-    max-width: 100%;
+    width: 100%;
     gap: 28px;
   }
 
@@ -74,7 +76,7 @@
 }
 
 .responsiveImage {
-  padding-left: 10%;
+  // padding-left: 10%;
   width: 100%; 
   height: auto;
   border-radius: 20px;
@@ -85,15 +87,16 @@
   }
 
   @include tablet {
-    max-width: 400px;
+    width: 100%;
   }
 
   @include phone {
-    max-width: 350px;
+    width: 100%;
+    // max-width: 350px;
   }
 
   @include sm-phone {
-    max-width: 300px;
+    width: 100%;
   }
 }
 
@@ -107,12 +110,13 @@
   line-height: normal;
 
   @include sm-desktop {
-    text-align: center;
+    text-align: left;
     font-size: 2.2rem;
   }
 
   @include tablet {
     font-size: 2rem;
+    text-align: left;
   }
 
   @include phone {
