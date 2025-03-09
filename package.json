@@ -9,11 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "next": "^15.2.0-canary.51",
-=======
     "next": "^15.1.6",
->>>>>>> 5b49fff02ae21a87687f4b677ff13d7441204286
     "react": "^19.0.0",
     "react-circular-progressbar": "^2.2.0",
     "react-dom": "^19.0.0",
