@@ -5,7 +5,7 @@ import heroGalleryFallbackData from './_data/hero-gallery.json';
 // import SecondaryButton from './_components/Button/SecondaryButton';
 
 async function getImages(){
-  const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/hero-gallery`, 
+  const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/hero-gallery?_published=true`, 
     { next: 
       {
         tags: "cms"
