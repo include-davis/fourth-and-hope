@@ -42,14 +42,14 @@ export default function About() {
           <h2>Who we are</h2>
           <p>A faith - based organization assisting with care and recovery for those in need.</p>
           <div className={styles.buttonContainer}>
-            <PrimaryButton 
-              name="Donate" 
-              link="/donate" 
-              customClass={styles.donateButton} 
+            <PrimaryButton
+              name="Donate"
+              link="/donate"
+              customClass={styles.donateButton}
             />
-            <SecondaryButton 
-              name="Subscribe" 
-              link="#subscribe" 
+            <SecondaryButton
+              name="Subscribe"
+              link="#subscribe"
               customClass={styles.subscribeButton}
             />
           </div>
@@ -57,18 +57,18 @@ export default function About() {
       </div>
 
       <div className={styles.heroImage}>
-        <img 
+        <img
           src="/images/About/first photo.png"
-          alt="Fourth and Hope Community" 
+          alt="Fourth and Hope Community"
         />
       </div>
 
       <div className={styles.storySection}>
         <div className={styles.storyContent}>
           <div className={styles.imageContainer}>
-            <img 
+            <img
               src="/images/About/second photo.png"
-              alt="Our Story" 
+              alt="Our Story"
               className={styles.circleImage}
             />
           </div>
