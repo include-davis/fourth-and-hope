@@ -3,8 +3,8 @@
 
 .hero_container {
   width: 100%;
-  height: auto; /* Allow the image to take its natural height */
-  max-height: none; /* Remove the strict height limit */
+  height: auto; 
+  max-height: none; 
 }
 
 .Titles {
@@ -39,12 +39,13 @@
   justify-content: center; 
   align-items: left; 
   text-align: left; 
+  color: var(--green);
 }
 
 .statsContainer {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping to create multiple rows */
-  justify-content: space-between; /* Space between items */
+  flex-wrap: wrap; 
+  justify-content: space-between; 
   width: 100%;
   background-color: var(--white);
   padding: 10%
@@ -64,12 +65,12 @@
 
 .button_container {
   display: flex;
-  gap: 1.5rem; // Space between buttons
+    justify-content: center; 
+    gap: 20px; 
 }
 
 .Walter {
   width: 100%;
-  //padding: 5% 10%;
 }
 
 .Walters {
@@ -90,10 +91,11 @@
     text-align: left;
     display: flex;
     flex-direction: column;
+    padding-bottom: 10%;
   }
 
   .image {
-    flex: 1; /* Ensures the image takes the remaining space */
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -108,23 +110,6 @@
 }
 
 
-/* Responsive Design for Tablets & Mobile 
-@media (max-width: 768px) {
-  .Walters {
-    flex-wrap: wrap;
-    flex-direction: column; 
-    align-items: center;
-    text-align: center;
-  }
-
-  .text,
-  .image {
-    max-width: 100%; Full width on smaller screens 
-    justify-content: center;
-  }
-}
-  */
-
 
   .Linksbutton {
     display: inline-block;
@@ -134,15 +119,50 @@
     background-color: var(--green);
     color: var(--white);
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 350;
     text-align: center;
     text-decoration: none;
     border: none;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    margin-top: 20%; 
+    
   
     &:hover {
-      transform: scale(1.1); 
-      //background-color: darken(var(--green), 10%);
-    }
+      background-color: var(--white); 
+      color: var(--green); 
+      outline: 2px solid var(--green); 
   }
+
+ 
+}
+
+
+@media (max-width: 1024px) {
+  .Titles {
+      padding: 5%; 
+      text-align: center; 
+  }
+
+  .button_container {
+      flex-direction: column; 
+  }
+}
+
+@media (max-width: 720px) {
+  .Linksbutton {
+      width: 100%; 
+      margin: 10px 0; 
+  }
+
+  .Walters {
+      flex-direction: column; 
+      align-items: center;
+  }
+
+  .text, .image {
+      max-width: 100%; 
+      justify-content: center;
+  }
+}
+

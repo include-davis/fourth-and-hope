@@ -132,9 +132,9 @@ export default function Programs() {
                 <p>Walter’s House has supported 209 participants, with 61 completing treatment and 39 graduating from outpatient programs.</p>
                 
                   <Link href="/walters-house">
-                  <button className={styles.Linksbutton}>Walter's House</button>
+                  <button className={styles.Linksbutton}>Certifications</button>
                   </Link>     
-              </div>
+                  </div>
 
               <div className={styles.image}>
                 <img src= "images/Programs/Walters.svg"/>
@@ -145,8 +145,8 @@ export default function Programs() {
 
               <div className={styles.Support}>
                 <h2>Support our programs</h2>
-                  <p>Considering donating? Just $35 provides a night of shelter and food for one person.</p>
-                  <p>Can’t donate? Our dedicated volunteers help our team prepare, cook, and serve these meals. We are so grateful to the 
+                  <p>Considering donating? Just <strong>$35</strong> provides a night of shelter and food for one person.</p>
+                  <p> <strong>Can’t donate?</strong> Our dedicated volunteers help our team prepare, cook, and serve these meals. We are so grateful to the 
                     community members who support our program and help those in need. </p>
                   
 
