@@ -1,0 +1,144 @@
+@import "../../_globals/mixins.scss";
+
+/* General styles for the contact cards container */
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 30%;
+    gap: 3%;
+    box-sizing: border-box;
+    margin-bottom: 10%;
+
+    .images_override {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.imageContainer {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+
+
+
+/* Title for each contact card, using class .h4 for title styling */
+.cardtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+/* Email links inside the card */
+.card a {
+    color: var(--green);
+    font-family: "Be Vietnam Pro", serif;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+
+/* Styles for each section inside the card (location, phone, email) */
+.section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3%;
+    width: 100%;
+    line-height: 2rem;
+}
+
+/* Apply this class only when the section contains more than one email */
+.alignEmail {
+    align-items: flex-start;
+}
+
+/* Apply flex-start alignment for location */
+.alignLocation {
+    align-items: flex-start;
+}
+
+
+/* Styling for the icons in the section */
+.icon {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8%;
+    height: 53%;
+
+}
+
+/* Styling for the text content (location, phone, email) */
+.shortinfo {
+    flex: 1;
+    min-width: 0;
+    max-width: 90%;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+
+/* Specific styling for "shortsection" (typically for large content text) */
+.shortsection {
+    flex: 1;
+    min-width: 0;
+    max-width: 90%;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+
+
+
+
+
+/* Container for all contact cards (3 columns layout) */
+.contactcards {
+    display: flex;
+    justify-content: space-between;
+    gap: 2%;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+/* Each card takes up 30% of the container's width on larger screens */
+.contactcards>* {
+    flex: 1 1 30%;
+    box-sizing: border-box;
+}
+
+@include phone {
+    .contactcards {
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 0;
+        display: unset;
+
+    }
+
+    .cardtitle {
+        margin-bottom: 5%;
+    }
+
+    .section {
+        padding-bottom: 5%;
+    }
+
+    .imageContainer {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .contactcards>* {
+        flex: 1 1 100%;
+    }
+
+}
