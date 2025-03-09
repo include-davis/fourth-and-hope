@@ -4,22 +4,23 @@
 
 
 .statBox {
-    flex: 1 1 33.333%; 
+   // flex: 1 1 33.333%; 
+   flex-wrap: wrap;
     display: flex;
     flex-direction: column;
     align-items: center; 
     text-align: center; 
     color: var(--black);
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 2%;
 }
 
 
 /* Ensure the last 2 items stay on a second row */
-.statBox:nth-child(4),
+/*.statBox:nth-child(4),
 .statBox:nth-child(5) {
-    flex: 1 1 calc(50% - 20px); /* Two items in a row for the second row */
-}
+    flex: 1 1 calc(50% - 20px);  Two items in a row for the second row 
+} */
 
 .statIcon {
     width: 50px; 
@@ -34,14 +35,14 @@
 }
 
 .statValue {
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--green);
     font-weight: 500;
     margin-bottom: 0.25rem;
 }
 
 .statLabel {
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: var(--dark-grey);
     font-weight: 100;
 }

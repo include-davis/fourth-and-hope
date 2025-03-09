@@ -46,7 +46,7 @@ const byNumbers = [
   },
   {
     value: '58',
-    description: 'in permanent supportive housing',
+    description: 'in permanent \nsupportive housing',
     image: 'images/Programs/housingSupport.svg',
   },
   {
@@ -69,95 +69,97 @@ const byNumbers = [
 export default function Programs() {
     return (
       <div>
-        <div>
-           <div className={styles.hero_container}>
-          <Image src="images/Programs/ProgramHeader.svg"
-            width={0}
-            height={0}
-            style={{ width: "100%", height: "auto" }}
-          />
-        </div>
-        </div>
-
-        <div className={styles.Titles}>
-          <h1>OUTREACH</h1>
-          <p>Fourth & Hope provides day services from 8:00 a.m. to 5:30 p.m. in a gated courtyard, offering protection from exrtreme weather.
-            Client care coordinators connect inidividuals to resources, including healthcare, housing, and the Coordinated Entry System.
-          </p>
-          <p>
-            The Woodland Police Departement's HOST team builds relationships with individials experienceing homelessness, offering 
-            asssments and housing navigation across Yolo County.
-          </p>
-        </div>
-
-      <div>
-          <div className={styles.TitleNumbers}>
-            <h2>2023 By the Numbers</h2>
-          </div>
-
-
-          {/*RISING NUMBERS HERE ~ Function call */}
-          <div className={styles.statsContainer}>
-            {byNumbers.map((s, index) => (
-              <Stat 
-                key={index} // Use a unique identifier if available
-                value={s.value}
-                label={s.description}
-                image={s.image}
+            <div>
+              <div className={styles.hero_container}>
+              <Image src="images/Programs/ProgramHeader.svg"
+                width={0}
+                height={0}
+                style={{ width: "100%", height: "auto" }}
               />
-              ))}
-          </div>
-        </div>
-        
+            </div>
+            </div>
 
-        <div>
-          <div className={styles.ProgramTitle}>
-          <h1>PROGRAMS</h1>
-          </div>
+            <div className={styles.Titles}>
+              <h1>OUTREACH</h1>
+              <p>Fourth & Hope provides day services from 8:00 a.m. to 5:30 p.m. in a gated courtyard, offering protection from exrtreme weather.
+                Client care coordinators connect inidividuals to resources, including healthcare, housing, and the Coordinated Entry System.
+              </p>
+              <p>
+                The Woodland Police Departement's HOST team builds relationships with individials experienceing homelessness, offering 
+                asssments and housing navigation across Yolo County.
+              </p>
+            </div>
 
-          {programs.map((p)=> (
-            <ProgramCard title={p.title} subtitle={p.subtitle} text={p.text} image={p.image}/>
-              
-            ))}
-        
-        </div>
-
-
-        <div className={styles.Walters}>
-          <div className={styles.text}>
-            <h2>Walter's House</h2>
-            <p>Walter’s House is a residential substance use disorder treatment facility for women and men.</p>
-            <p>Walter’s House has supported 209 participants, with 61 completing treatment and 39 graduating from outpatient programs.</p>
-            
-              <Link href="/walters-house">
-              <button className={styles.Linksbutton}>Walter's House</button>
-              </Link>     
-          </div>
-
-          <div className={styles.image}>
-            <img src= "images/Programs/Walters.svg"/>
-          </div>
-        </div>
-
-
-
-          <div className={styles.Support}>
-            <h2>Support our programs</h2>
-              <p>Considering donating? Just $35 provides a night of shelter and food for one person.</p>
-              <p>Can’t donate? Our dedicated volunteers help our team prepare, cook, and serve these meals. We are so grateful to the 
-                community members who support our program and help those in need. </p>
+          <div>
               
 
-                <div className={styles.button_container}>
-                  <Link href="/donate">
-                    <button className={styles.Linksbutton}>Donate</button>
-                  </Link>
-                  <Link href="/volunteer">
-                    <button className={styles.Linksbutton}>Volunteer</button>
-                  </Link>
-                </div>
+
+              {/*RISING NUMBERS HERE ~ Function call */}
+              <div className={styles.statsContainer}>
+              <div className={styles.TitleNumbers}>
+                <h1>2023 By the Numbers</h1>
+                <h2>   </h2>
+              </div>
+                {byNumbers.map((s, index) => (
+                  <Stat 
+                    key={index} // Use a unique identifier if available
+                    value={s.value}
+                    label={s.description}
+                    image={s.image}
+                  />
+                  ))}
+              </div>
+            </div>
             
-          </div>
+
+            <div>
+              <div className={styles.ProgramTitle}>
+              <h1>PROGRAMS</h1>
+              </div>
+
+              {programs.map((p)=> (
+                <ProgramCard title={p.title} subtitle={p.subtitle} text={p.text} image={p.image}/>
+                  
+                ))}
+            
+            </div>
+
+
+            <div className={styles.Walters}>
+              <div className={styles.text}>
+                <h2>Walter's House</h2>
+                <p>Walter’s House is a residential substance use disorder treatment facility for women and men.</p>
+                <p>Walter’s House has supported 209 participants, with 61 completing treatment and 39 graduating from outpatient programs.</p>
+                
+                  <Link href="/walters-house">
+                  <button className={styles.Linksbutton}>Walter's House</button>
+                  </Link>     
+              </div>
+
+              <div className={styles.image}>
+                <img src= "images/Programs/Walters.svg"/>
+              </div>
+            </div>
+
+
+
+              <div className={styles.Support}>
+                <h2>Support our programs</h2>
+                  <p>Considering donating? Just $35 provides a night of shelter and food for one person.</p>
+                  <p>Can’t donate? Our dedicated volunteers help our team prepare, cook, and serve these meals. We are so grateful to the 
+                    community members who support our program and help those in need. </p>
+                  
+
+                    <div className={styles.button_container}>
+                      <Link href="/donate">
+                        <button className={styles.Linksbutton}>Donate</button>
+                      </Link>
+                      <Link href="/volunteer">
+                        <button className={styles.Linksbutton}>Volunteer</button>
+                      </Link>
+                    </div>
+                
+              </div>
 
       </div>
     );

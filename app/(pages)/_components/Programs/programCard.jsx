@@ -1,5 +1,5 @@
-//import styles.
 import styles from "./programCard.module.scss";
+
 export default function ProgramCard({ title, subtitle, text, image }) {
   return (
     <div className={styles.program}>
