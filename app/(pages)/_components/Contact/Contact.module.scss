@@ -1,134 +1,39 @@
-.contactimage{
-    mask-image: url('/Images_Contact/contact_picture.svg');
+@import "../../_globals/mixins.scss";
+
+/* Container for all contact cards (3 columns layout) */
+.contactcards {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 2%; 
+    width: 100%; 
+    flex-wrap: wrap; 
 }
 
-.header{
+/* Each card takes up 30% of the container's width on larger screens */
+.contactcards > * {
+    flex: 1 1 30%; 
+    box-sizing: border-box; 
+}
+
+@include phone {
+    .contactcards {
+        flex-direction: column; 
+        gap: 5%; 
+    }
+
+    .contactcards > * {
+        flex: 1 1 100%; 
+    }
+}
+
+
+/* Styling for the header of the contact section */
+.Title {
     color: var(--green);
-    padding-left: 6.94%;
+    padding-left: 7%;
     padding-bottom: 4%;
     padding-top: 4.5%;
 }
-.email{
-    color: var(--green);
-}
-
-.infocontainer {
-    display: flex;
-    align-items: flex-start;
-    gap: 1%; // Sets the gap between columns
-    padding-left: 6.94%;
-    padding-right: 6.94%;
-
-    
-    
-    
-}
-
-
-
-
-
-.infocontainer a{
-    color: var(--green);
-    font-family: "Be Vietnam Pro", serif;
-    font-size: 1.25rem;
-}
-
-
-// Format of the whole thing
-.shelter{ 
-    display: flex 0;
-    flex:1;
-    
-    
-}
-
-.shelter h4{
-    padding-bottom: 5.84%;
-}
-
-.treatment{
-    display: flex 0;
-    flex:1;
-    
-
-}
-
-.treatment h4{
-    padding-bottom: 5.84%;
-}
-
-.inquiries{
-    display: flex 0;
-    flex:1;
-    
-    
-}
-
-.inquiries h4{
-    padding-bottom: 1.09%;
-}
-
-
-
-
-
-
-
-
-// Location, phone number, and email format 
-.section {
-    display: flex;
-    flex-wrap: wrap; // Allows items to wrap if needed
-    justify-content: space-between;
-    align-items: stretch;
-    padding-bottom: 5.83%;
-}
-
-.icon {
-    flex-shrink: 0; // Prevents icons from shrinking
-    align-self: flex-start;
-}
-
-.upicon{
-    flex-shrink: 0; // Prevents icons from shrinking
-    align-self: flex-end;
-
-}
-
-.shortinfo {
-    
-    flex: 1; // Takes available space
-    min-width: 0; // Allows flex items to shrink properly if needed
-    max-width: 90%; // Ensures it doesn't exceed its intended width
-
-    white-space: normal; // Allows text to wrap
-    overflow-wrap: break-word; // Breaks long words
-    word-break: break-word; // Ensures breaking when necessary
-
-    padding-left: 2%;
-}
-
-.shortsection {
-    padding-bottom: 5.83%;
-    flex: 1; // Takes available space
-    min-width: 0; // Allows flex items to shrink properly if needed
-    max-width: 90%; // Ensures it doesn't exceed its intended width
-
-    white-space: normal; // Allows text to wrap
-    overflow-wrap: break-word; // Breaks long words
-    word-break: break-word; // Ensures breaking when necessary
-
-}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -138,34 +43,30 @@
 // The feedback text on the left side of the contact form
 .feedback {
     display: flex;
-    
+    align-self: center;
     align-items: flex-start;
     align-self: stretch;
-    padding-left: 6.94%;
-    padding-right: 6.94%;
-    padding-top: 124px;
-    
-
-    gap: 3.87%;
-    
+    width: 100%; 
+    padding-left: 7%;
+    padding-right: 7%;
+    gap: 4%; 
+    box-sizing: border-box; 
 }
 
+
 .textinfo{
-    width: 372px;
-    height: 566px;
+    flex: 0 0 30%; /* Set textinfo to take 30% width */
     font-size: 2.25rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
+    gap: 4%;
     align-self: stretch;
-    
 }
 
 .textinfo p{
     font-size: 1rem; 
     word-wrap: break-word;
-    
     line-height: 1.875rem; // Converted from 30px
 }
 
@@ -177,64 +78,140 @@
 
 
 
-// The contact form the user will into for feedback
-.contactform{
+/* Feedback Form Styles */
+.contactform {
+    flex: 0 0 70%; 
     display: flex;
     flex-direction: column;
-    width: 85%; // Converted from 
-    height: 566px;
+    height: 45.71%; //566px
     margin: auto;
-
-
-    .inputgroup{
-        display: flex;
-        gap: 2%;
-        margin-bottom: 2%;
-        
-
-        input{
-            flex: 1;
-            padding-top: 2%;
-            padding-bottom: 2%;
-            padding-left: 3.9%;
-            padding-right: 3.9%;
-            background-color: var(--light-grey);
-            border: none;
-            border-radius: 1.49% / 16.67%;
-
-        }
-    }
-
-    textarea{
-        height: 55%;
-        padding-top: 4%;
-        padding-bottom: 4%;
-        padding-left: 3.9%;
-        padding-right: 3.9%;
-        background-color: var(--light-grey);
-        border: none;
-        border-radius: 0.61% / 1.79%;
-
-        margin-bottom: 6.53%;
-        resize: none;
-    }
-    
-    button {
-        width: 22.8%;
-        height: 9.37%;
-        padding: 1.3% 3.5%;
-        border: none;
-        border-radius: 2.14% / 7.55%;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        background-color: var(--light-grey);
-
-        &:hover, &:active {
-        background-color: var(--light-green);
-        color: var(--white);
-        }
-    }
-    
+    width: 100%;
 }
 
+/* Input group styles */
+.inputgroup {
+    display: flex;
+    gap: 1%;
+    margin-bottom: 2%;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-left: 0%;
+    padding-right: 0%;
+    box-sizing: border-box;
+}
+
+
+/* Styles for input fields inside .inputgroup */
+.inputgroup input {
+    flex: 1;
+    padding: 2% 3.9%;
+    background-color: var(--light-grey);
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    min-height: 9%; 
+    box-sizing: border-box; 
+
+}
+
+.textarea {
+    width: 100%;
+    min-height: 40vh;
+    height: auto;
+    padding: 4% 3.9%;
+    background-color: var(--light-grey);
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 6%;
+    resize: none;
+    box-sizing: border-box;
+}
+
+
+    
+.button {
+    width: 22.8%; 
+    height: 8vh; 
+    padding: 1.3% 3.5%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: var(--light-grey);
+
+    &:hover, &:active {
+    background-color: var(--light-green);
+    color: var(--white);
+    }
+}
+    
+
+@include phone {
+    .Title h1{
+        font-size: 2.25rem;
+    }
+
+    .contactImage {
+        display: none;  
+    }
+
+
+    .feedback {
+        flex-direction: column; 
+        padding-left: 0 5%;
+
+    }
+
+    .textinfo {
+        flex: 0 0 100%;
+        font-size: 1.5rem; 
+    }
+    
+    .textinfo h3 {
+        font-size: 1.5rem;
+    }
+
+    .contactform {
+        flex: 0 0 100%; 
+    }
+
+
+
+    /* Stack the input fields vertically for smaller screens */
+    .inputgroup { 
+        flex-direction: column; 
+        padding-top: 10%;
+        gap: 5vh; //30px
+        
+    }
+
+    .inputgroup input {
+        width: 100%; 
+        height: 100%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    /* Add spacing between textarea and button */
+    .textarea {
+        width: 100%;
+        height: 25vh;
+        resize: none;
+        margin-top: 10%;
+        margin-bottom: 10%; 
+        
+        
+    }
+
+    /* Ensure the button takes up full width on smaller screens */
+    .button {
+        width: 100% ; 
+        height: 7vh; 
+        padding: 0;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+}
+
+    
 
