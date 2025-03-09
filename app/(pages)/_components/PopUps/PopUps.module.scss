@@ -1,0 +1,261 @@
+@import "../../_globals/mixins.scss";
+
+.popupContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popupContent {
+  position: relative;
+  background: white;
+  padding: 5%;
+  width: 60%;
+  max-width: 80%;
+  border-radius: 1.2%;
+  box-shadow: 0 0.5% 1.2% rgba(0, 0, 0, 0.2);
+  text-align: left;
+  font-family: Arial, sans-serif;
+  overflow: scroll;
+
+  @include phone {
+    max-height: 90%;
+    max-width: 90%;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    font-weight: 600;
+
+    @include phone {
+      padding-top: 13%;
+      font-size: 1.8rem;
+    }
+
+    @include sm-phone {
+      font-size: 1.3rem;
+    }
+  }
+
+  h3 {
+    color: #2f855a;
+    font-size: 1.5em;
+    margin-bottom: 2%;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.4;
+    padding-right: 10%;
+  }
+
+  section {
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.3;
+    font-weight: 300;
+
+    @include phone{
+      padding: 7% 0%;
+    }
+  }
+
+  .licensingStatement {
+    margin-top: 6%;
+    font-size: 1.1em;
+
+    h4 {
+      color: #2f855a;
+      font-size: 1em;
+      font-weight: 630;
+    }
+  }
+
+  a {
+    color: #2f855a;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  background: none;
+  border: none;
+  font-size: 0.9em;
+  cursor: pointer;
+  color: #333;
+  text-decoration: underline;
+}
+
+.programsContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3%;
+
+  @include phone {
+    flex-direction: column;
+  }
+}
+
+.boardContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  @include phone {
+    padding-top: 20%;
+  }
+}
+
+.meetingContent {
+  position: relative;
+  background: white;
+  padding: 5% 3%;
+  width: 70%;
+  height: 95%;
+  max-width: 80%;
+  border-radius: 1.2%;
+  box-shadow: 0 0.5% 1.2% rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  overflow: scroll;
+  padding-bottom: 15%;
+
+  @include phone {
+    flex-direction: column;
+
+    h2 {
+      padding-top: 13%;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 3%;
+    font-weight: 500;
+  }
+  
+  h3 {
+    color: black;
+    font-size: 200%;
+    margin-bottom: 2%;
+    font-weight: 400;
+  }
+
+
+  .popupButton {
+    font-size: 100%;
+    padding: 2.8% 5.6%;
+    cursor: pointer;
+    background: #2f855a;
+    color: white;
+    border: none;
+    border-radius: 2%;
+    margin-right: 5%;
+    transition: background 0.3s;
+  }
+  
+  .popupButton:hover {
+    background: #276749;
+  }
+  
+  .popupContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popupContent {
+    background: white;
+    padding: 10%;
+    width: 60%;
+    border-radius: 2%;
+    text-align: center;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background: none;
+    border: none;
+    font-size: 100%;
+    cursor: pointer;
+  }
+  
+  .meetingsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    margin-top: 3%;
+
+    @include phone {
+      flex-direction: column;
+    }
+  }
+  
+  .meetingYear {
+    width: 100%;
+    text-align: center;
+    
+    @include phone {
+      padding: 5% 0% 30% 0%;
+    }
+  }
+  
+  .meetingGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(30%, 1fr)); 
+    gap: 5%;
+  }
+  
+  .meetingBox {
+    background: none;
+    border: 2% solid;
+    border-color: #2f855a;
+    padding: 15%;
+    font-size: 100%;
+    color: #2f855a;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+  }
+  
+  .meetingBox:hover {
+    background: #2f855a;
+    color: white;
+  }
+}

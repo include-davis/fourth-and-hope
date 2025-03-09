@@ -19,7 +19,7 @@ export default function Home({images, storiesData}) {
 
     return () => clearInterval(interval);
   }, []);
-  
+
 
   //JSONs
   //Buttons Json 
@@ -49,39 +49,39 @@ export default function Home({images, storiesData}) {
     {
       imageSrc: '/images/Home/programsBeds.svg',
       altText: 'Red bunk beds.',
-      heading: 'Emergency Shelter', 
-      bodyText: 'Providing overnight services, housing, outreach support, and thousands of meals to those in need.', 
-      href: '/programs' ,
+      heading: 'Emergency Shelter',
+      bodyText: 'Providing overnight services, housing, outreach support, and thousands of meals to those in need.',
+      href: '/programs',
       //should go to the emergency shelter section
-    }, 
+    },
     {
       imageSrc: '/images/Home/programsTreatment.svg',
       altText: 'Woman holding towels in one arm and holding up a fist with the other arm.',
-      heading: 'Treatment Program', 
-      bodyText: 'Offering residential care at Walter’s House, outpatient support, referrals, and  program completions to aid recovery and connection to further services.' , 
-      href: '/programs' ,
+      heading: 'Treatment Program',
+      bodyText: 'Offering residential care at Walter’s House, outpatient support, referrals, and  program completions to aid recovery and connection to further services.',
+      href: '/programs',
       //should go to the treatment section 
-    }, 
+    },
     {
       imageSrc: '/images/Home/programsHousing.svg',
       altText: 'Group of older people holding gardening tools and smiling at the camera.',
       heading: 'Housing \n Program', //idk why this line break isn't showing, how do i put a linebreak 
-      bodyText: 'Providing permanent supportive housing and transitional sober living opportunities to individuals and households in need.', 
-      href: '/programs' ,
+      bodyText: 'Providing permanent supportive housing and transitional sober living opportunities to individuals and households in need.',
+      href: '/programs',
       //directs to the housing section
     },
   ];
   const slides = storiesData.map((story, index) => (
     <StoriesSlide
-        key={index.toString()}
-        heading={story.heading}
-        bodyText={story.bodyText}
-        imageSrc={story.imageSrc}
-        altText={story.altText}
+      key={index.toString()}
+      heading={story.heading}
+      bodyText={story.bodyText}
+      imageSrc={story.imageSrc}
+      altText={story.altText}
     />
   ));
 
-    return (
+  return (
     <>
       {/* top image with transitions */}
       <div className={styles.imageSlides}>
@@ -89,9 +89,8 @@ export default function Home({images, storiesData}) {
         {images.map((image, index) => (
           <div
             key={image}
-            className={`${styles.headerImageContainer} ${
-              index === currentImageIndex ? styles.activeImage : styles.inactiveImage
-            }`}
+            className={`${styles.headerImageContainer} ${index === currentImageIndex ? styles.activeImage : styles.inactiveImage
+              }`}
           >
             <Image
               src={image}
@@ -110,34 +109,32 @@ export default function Home({images, storiesData}) {
       <div className={styles.threeButtons}>
         <div className={styles.buttonContent}>
           {buttonData.map((button, button_index) => (
-          <PageButtons key={button_index} {...button} />
+            <PageButtons key={button_index} {...button} />
           ))}
         </div>
       </div>
 
       {/* Who We Are section; text and images */}
       <div className={styles.whoWeAre}>
-        <div className={styles.WWATitle}>
-          WHO WE ARE
-        </div>
+        <h1>WHO WE ARE</h1>
         <div className={styles.whoWeAreComponents}>
           <div className={styles.whoWeAreText}>
-          <div className={styles.ourMissionWWA}>
-            <h2>Our Mission</h2>
-            <p className={styles.text1}>
-              Fourth & Hope is a community –  a faith-based organization dedicated to providing care, shelter, and recovery to homeless populations in Yolo County. 
-            </p>
+            <div className={styles.ourMissionWWA}>
+              <h2>Our Mission</h2>
+              <p className={styles.text1}>
+                Fourth & Hope is a community –  a faith-based organization dedicated to providing care, shelter, and recovery to homeless populations in Yolo County.
+              </p>
+            </div>
+            <div className={styles.ourValuesWWA}>
+              <h2>Our Values</h2>
+              <p>We welcome all and provide a safe environment; we do not discriminate on the basis of religion. <br /><br />
+                Our values are compassion, faith, integrity, service, and stewardship. As Jesus Christ has served us, we serve His people.</p>
+            </div>
           </div>
-          <div className={styles.ourValuesWWA}>
-            <h2>Our Values</h2>
-            <p>We welcome all and provide a safe environment; we do not discriminate on the basis of religion. <br/><br/>
-            Our values are compassion, faith, integrity, service, and stewardship. As Jesus Christ has served us, we serve His people.</p>
+          <div className={styles.whoWeAreVideo}>
+            <YoutubeVideo />
           </div>
-          </div>
-        <div className={styles.whoWeAreVideo}>
-          <YoutubeVideo/>
         </div>
-      </div>
       </div>
 
       {/* Programs section */}
@@ -145,23 +142,23 @@ export default function Home({images, storiesData}) {
         <h1>PROGRAMS</h1>
         <div className={styles.programsComponents}>
           <div className={styles.programsComponentsBox}>
-            
+
             {programData.map((program, index) => (
-            <ProgramsBox key={index} {...program} /> 
+              <ProgramsBox key={index} {...program} />
             ))}
 
-          </div>  
+          </div>
         </div>
       </div>
 
       {/* Our stories section */}
       <div className={styles.ourStories}>
-        <h1>OUR STORIES</h1>  
+        <h1>OUR STORIES</h1>
         <div className={styles.storiesComponents}>
-            <SliderWithText slides = {slides}/>
+          <SliderWithText slides={slides} />
         </div>
       </div>
 
     </>
-    );
+  );
 }
