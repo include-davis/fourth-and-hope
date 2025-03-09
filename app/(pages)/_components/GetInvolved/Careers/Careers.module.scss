@@ -1,0 +1,58 @@
+@use '../../../_globals/mixins.scss';
+
+.container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  margin: 0 6.9%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5%;
+
+  @include mixins.phone() {
+    margin-bottom: 5.9%;
+    line-height: 30px;
+  }
+}
+
+.title {
+  margin-bottom: 2.2%;
+
+  @include mixins.phone() {
+    margin-bottom: 7.9%;
+  }
+}
+
+.bottom {
+  height: auto;
+  // background-color: var(--white);
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  margin: 3.2% 6.9%;
+  // padding: 3.3%;
+
+  @include mixins.phone() {
+    padding-top: 5.97%;
+  }
+
+}
+
+.careers {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 32px;
+  width: 100%;
+
+  @include mixins.phone() {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
+//grid-template-columns: repeat(2, 1fr);
