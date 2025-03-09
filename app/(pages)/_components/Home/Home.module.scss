@@ -118,8 +118,8 @@
         width: 87%;
         margin-bottom: 2.2%;
         color: var(--green);
-        font-size: 5rem; //make globals
-        font-weight: 500;
+        // font-size: 5rem; //make globals
+        // font-weight: 500;
 
         @include mixins.phone() {
             font-size: 2rem;

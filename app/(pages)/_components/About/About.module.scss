@@ -8,12 +8,13 @@
 // Header Section
 .headerSection {
   width: 100%;
+  background-color: var(--white);
   max-width: 100%;
   padding: 0 5%;
   padding-top: 4%;
   padding-bottom: 3%;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 55% 45%;
   align-items: flex-start;
   gap: 0;
 
@@ -36,20 +37,21 @@
   .mainHeading {
     position: relative;
     // left: 15%; 
-    max-width: 90%;
+    max-width: 95%;
 
     h1 {
       color: var(--green);
-      font-size: 5rem;
+      // font-size: 5rem;
       // line-height: 5.5rem;
-      font-weight: 700;
+      // font-weight: 700;
       margin: 0;
-      letter-spacing: 0.05em;
+      // letter-spacing: 0.05em;
       text-align: left;
 
       @include tablet {
-        font-size: 2.5rem;
-        // line-height: 3.6rem;
+        font-size: 2.8rem;
+        line-height: 3rem;
+        letter-spacing: 0;
         left: 5%;
       }
 
@@ -89,7 +91,7 @@
 
     h2 {
       font-size: 2.5rem;
-      padding-bottom: 1%;
+      // padding-bottom: 1%;
       font-weight: bold;
       color: var(--black);
 
@@ -324,7 +326,7 @@
         font-size: 1.125rem;
         line-height: 1.6rem;
         color: var(--black);
-        padding-bottom: 4%;
+        // padding-bottom: 4%;
         text-align: left;
 
         @include tablet {
@@ -474,7 +476,7 @@
 .boardSection {
   width: 100%;
   max-width: 100%;
-  padding: 13% 8% 4% 8%;
+  padding: 4% 8% 4% 8%;
   position: relative;
   background-color: var(--white);
 
@@ -484,7 +486,7 @@
 
   h2 {
     font-size: 2.5rem;
-    padding-bottom: 2%;
+    // padding-bottom: 2%;
     color: var(--black);
     text-align: left;
     padding-top: 2%;
@@ -505,10 +507,8 @@
 
   p {
     font-size: 1.125rem;
-    padding-bottom: 4%;
     line-height: 1.5rem;
     color: var(--black);
-    padding-left: 0;
 
     @include tablet {
       font-size: 1rem;
@@ -529,9 +529,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5%;
-    row-gap: 5%;
-    padding-bottom: 4%;
-    padding-top: 3%;
+    row-gap: 10%;
+    padding: 5% 3%;
 
     @include tablet {
       grid-template-columns: repeat(2, 1fr);
@@ -556,7 +555,7 @@
     flex-wrap: nowrap;
     gap: 10px;
 
-    padding-top: 8%;
+    padding-top: 10%;
     padding-bottom: 3%;
     padding-right: 10%;
     position: relative;
@@ -719,6 +718,14 @@
     background-color: var(--white);
     color: var(--green);
     border: 1px solid var(--green);
+  }
+
+  p {
+    padding: 0%;
+  }
+
+  h1 {
+    padding: 0%;
   }
 }
 

@@ -48,7 +48,6 @@ export default function BoardSection() {
       </div>
 
       <div className={styles.buttonWrapper}>
-        {/* Wrap the button with MeetingButton to trigger the popup */}
         <MeetingButton>
           <button className={styles.meetingButton}>
             Board Meeting Info
