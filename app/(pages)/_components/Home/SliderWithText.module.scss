@@ -3,12 +3,14 @@
 .sliderContainer {
     position: relative;
     width: 100%;
-    overflow: hidden;
+    overflow: hidden;    
   }
   
 .slide {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  // padding: 0 5%;
+  box-sizing: border-box;
 }
 
 .dots {
@@ -33,24 +35,25 @@
   }
 }
   
-.arrows {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 3%;
-  box-sizing: border-box;
-  z-index: 10;
-  
-  img {
+.arrowLeft,
+.arrowRight {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
     cursor: pointer;
-    width: 3.75%;
-  }
 }
 
-.arrowImg{
-  width: 100%;
-  height: auto;
+.arrowLeft {
+    left: 1%;
 }
+
+.arrowRight {
+    right: 1%;
+}
+
+.arrowLeftImg,
+.arrowRightImg {
+    width: 75%;
+}
+

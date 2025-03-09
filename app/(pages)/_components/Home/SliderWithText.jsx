@@ -22,10 +22,24 @@ const SliderWithText = ({ slides }) => {
     const nextSlide = () => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
     };
+
+    const prevSlide = () => {
+      setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
+    };
   
 
   return (
     <div className={styles.sliderContainer}>
+      <div className={styles.arrowLeft} onClick={nextSlide}>
+      <Image
+          className={styles.arrowLeftImg}
+          src={'images/Home/arrow_circle_right.svg'}
+          alt='Back Slide'
+          onClick={nextSlide}
+          width={50}
+          height={50}
+        />
+      </div>
       <div
         className={styles.slide}
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -41,6 +55,7 @@ const SliderWithText = ({ slides }) => {
               }}
             >
               {slide}
+              
             </div>
           ))}
       </div>
@@ -54,19 +69,20 @@ const SliderWithText = ({ slides }) => {
             />
           ))}
       </div>
-      <div className={styles.arrows}>
-        {/* need another arrow (back arrow) */}
-        <Image 
-        className={styles.arrowImg}
-        src={'/images/Home/arrow_circle_right.svg'} 
-        alt="Next Slide" 
-        onClick={nextSlide} 
-        width={50}
-        height={50}
+      <div className={styles.arrowRight} onClick={prevSlide}>
+      <Image 
+          className={styles.arrowRightImg}
+          src={'/images/Home/arrow_circle_right.svg'} 
+          alt="Next Slide" 
+          onClick={prevSlide} 
+          width={50}
+          height={50}
         />
       </div>
+      
     </div>
   );
+
 };
 
 export default SliderWithText;
