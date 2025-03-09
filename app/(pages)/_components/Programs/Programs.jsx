@@ -105,44 +105,33 @@ export default function Programs() {
           ))}
         </div>
       </div>
-
-
       <div>
         <div className={styles.ProgramTitle}>
           <h1>PROGRAMS</h1>
         </div>
         {programs.map((p) => (
           <ProgramCard title={p.title} subtitle={p.subtitle} text={p.text} image={p.image} />
-
         ))}
       </div>
-
-
       <div className={styles.Walters}>
         <div className={styles.text}>
           <h2>Walter's House</h2>
-          <p>Walter’s House is a residential substance use disorder treatment facility for women and men.</p>
-          <p>Walter’s House has supported 209 participants, with 61 completing treatment and 39 graduating from outpatient programs.</p>
-
+          <br />
+          <p><b>Walter’s House is a residential substance use disorder treatment facility for women and men.</b> Walter’s House has supported 209 participants, with 61 completing treatment and 39 graduating from outpatient programs.</p>
           <Link href="/walters-house">
             <button className={styles.Linksbutton}>Certifications</button>
           </Link>
         </div>
-
         <div className={styles.image}>
           <img src="images/Programs/Walters.svg" />
         </div>
       </div>
-
-
-
       <div className={styles.Support}>
-        <h2>Support our programs</h2>
+        <h2 className={styles.support_title}>Support our programs</h2>
+        <br />
         <p>Considering donating? Just <strong>$35</strong> provides a night of shelter and food for one person.</p>
         <p> <strong>Can’t donate?</strong> Our dedicated volunteers help our team prepare, cook, and serve these meals. We are so grateful to the
           community members who support our program and help those in need. </p>
-
-
         <div className={styles.button_container}>
           <Link href="/donate">
             <button className={styles.Linksbutton}>Donate</button>
@@ -157,22 +146,3 @@ export default function Programs() {
     </div>
   );
 }
-
-
-/*
-
-Notes
-- Divide into thirds 
-  - Animated Numbers
-  - 
-- USE PERCENTAGES - No pixels
-- Numbers increase from 0 
-- Components Folder
-
-notes
-{programs.map(({title, subtitle, text, image},index)=> (
-            <Item key = {index}>
-              <ProgramCard title={program.title} subtitle={program.subtitle}/>
-            <Item/>
-          ))}
-*/

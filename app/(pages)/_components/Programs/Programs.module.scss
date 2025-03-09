@@ -75,23 +75,31 @@
 
 .Support {
     width: 100%;
-    padding: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 5%;
     text-align: center;
     background: var(--white);
-    gap: 1.5rem; // Adds spacing between text and buttons
+
+    .support_title {
+        font-size: 3rem;
+        color: var(--green);
+
+        @include tablet {
+            font-size: 2.5rem;
+        }
+    }
 }
 
 .button_container {
     display: flex;
     justify-content: center;
     gap: 5%;
+    align-items: center;
+    width: 100%;
 
     @include tablet {
         flex-direction: column;
+        width: 100%;
+        align-items: unset;
     }
 }
 
@@ -101,58 +109,57 @@
 
 .Walters {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    //background: var(--white);
     padding: 5%;
-    //margin: 5% 0;
-    //max-width: 1200px; 
-    margin-left: auto;
-    margin-right: auto;
+
+    @include tablet {
+        flex-direction: column;
+    }
 
     .text {
-        flex: 1;
-        max-width: 50%;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 10%;
+        width: 55%;
+
+        @include tablet {
+            width: 100%;
+        }
     }
 
     .image {
-        flex: 1;
         display: flex;
-        align-items: center;
         justify-content: flex-end;
+        width: 45%;
+
+        @include tablet {
+            width: 100%;
+        }
 
         img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 3%;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            border-radius: 10px;
+
+            @include tablet {
+                width: 100%;
+            }
         }
     }
 }
 
-
-
 .Linksbutton {
-    display: inline-block;
-    margin: 5%;
-    padding: 1rem 2rem;
-    border-radius: 0.25rem;
+    padding: 2.5rem 7rem;
+    border-radius: 4px;
     background-color: var(--green);
     color: var(--white);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 350;
-    text-align: center;
-    text-decoration: none;
     border: none;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
     margin-top: 20%;
+    border-radius: 10px;
 
+    @include tablet {
+        width: 100%;
+        margin: 3% 0;
+    }
 
     &:hover {
         background-color: var(--white);
@@ -161,22 +168,4 @@
     }
 
 
-}
-
-@include phone {
-    .Linksbutton {
-        width: 100%;
-        margin: 3% 0;
-    }
-
-    .Walters {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .text,
-    .image {
-        max-width: 100%;
-        justify-content: center;
-    }
 }
