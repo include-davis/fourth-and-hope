@@ -9,16 +9,7 @@ import SliderWithText from "./SliderWithText";
 import YoutubeVideo from "./YoutubeVideo";
 
 
-export default function Home() {
-
-  /* function for header image slider */
-  // should be able to edit later on... to add more pictures. 
-  const images = [
-    '/images/Home/houseHeader.svg',
-    '/images/Home/kitchenHeader.svg',
-    '/images/Home/checkHeader.svg',
-  ];
-
+export default function Home({images, storiesData}) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -80,30 +71,6 @@ export default function Home() {
       //directs to the housing section
     },
   ];
-
-  //Our Stories component Json
-  // all of the slides are the same right now bc the design only has one
-  const storiesData = [
-    {
-      imageSrc: '/images/Home/ourStories.jpeg',
-      altText: 'Group of people working with boxes.',
-      heading: 'Community Triumph: From Streets to Stability',
-      bodyText: 'Join Fourth & Hope’s 16th Annual Empty Bowls Event on October 23, 2024, at Life Pointe Church in Woodland. Help raise $35,000 to support their food budget, which served over 92,000 meals last year. Enjoy soup, bread, and a raffle while fighting hunger and homelessness.'
-    },
-    {
-      imageSrc: '/images/Home/ourStories.jpeg',
-      altText: 'Group of people working with boxes.',
-      heading: 'Community Triumph: From Streets to Stability ##2',
-      bodyText: 'Join Fourth & Hope’s 16th Annual Empty Bowls Event on October 23, 2024, at Life Pointe Church in Woodland. Help raise $35,000 to support their food budget, which served over 92,000 meals last year. Enjoy soup, bread, and a raffle while fighting hunger and homelessness.'
-    },
-    {
-      imageSrc: '/images/Home/ourStories.jpeg',
-      altText: 'Group of people working with boxes.',
-      heading: 'Community Triumph: From Streets to Stability ##3',
-      bodyText: 'Join Fourth & Hope’s 16th Annual Empty Bowls Event on October 23, 2024, at Life Pointe Church in Woodland. Help raise $35,000 to support their food budget, which served over 92,000 meals last year. Enjoy soup, bread, and a raffle while fighting hunger and homelessness.'
-    },
-  ];
-  
   const slides = storiesData.map((story, index) => (
     <StoriesSlide
         key={index.toString()}
