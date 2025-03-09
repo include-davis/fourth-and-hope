@@ -11,16 +11,16 @@ const ContactSection = ({ title, imageSrc, contactData }) => {
                 <Image
                     src={imageSrc}
                     alt={title}
-                    layout="responsive"
                     width={400}
                     height={220}
+                    style={{ width: '100%', height: 'auto' }}
                 />
             </div>
-            
+
             <div className={styles.cardtitle}>
                 <h4>{title}</h4>
             </div>
-            
+
 
             {contactData.map((item, index) => {
                 // Check if the item is an email section and contains multiple email links
@@ -78,13 +78,13 @@ const ContactCard = () => {
             id: 'location',
             icon: '/images/Images_Contact/iconamoon_location-pin-bold.svg',
             alt: 'Location',
-            content: '1901 East Beamer St, Woodland, CA, 95776' 
+            content: '1901 East Beamer St, Woodland, CA, 95776'
         },
         {
             id: 'phone',
             icon: '/images/Images_Contact/solar_phone-linear.svg',
             alt: 'Phone',
-            content: '530-661-1218' 
+            content: '530-661-1218'
         },
         {
             id: 'email',
@@ -95,7 +95,7 @@ const ContactCard = () => {
                     <a href="mailto:shelter@fourthandhope.org">shelter@fourthandhope.org </a>
                     <a href="mailto:volunteer@fourthandhope.org">volunteer@fourthandhope.org</a>
                 </>
-            ) 
+            )
         },
     ];
 
@@ -105,13 +105,13 @@ const ContactCard = () => {
             id: 'location',
             icon: '/images/Images_Contact/iconamoon_location-pin-bold.svg',
             alt: 'Location',
-            content: '285 Fourth St. Woodland, CA, 95695' 
+            content: '285 Fourth St. Woodland, CA, 95695'
         },
         {
             id: 'phone',
             icon: '/images/Images_Contact/solar_phone-linear.svg',
             alt: 'Phone',
-            content: '530-662-2699' 
+            content: '530-662-2699'
         },
         {
             id: 'email',
@@ -124,19 +124,19 @@ const ContactCard = () => {
     // Data for Inquiries Contact Card
     const inquiriesInfo = [
         {
-            info: 'Such as housing, fundraising, and other services', 
+            info: 'Such as housing, fundraising, and other services',
         },
         {
             id: 'phone',
             icon: '/images/Images_Contact/solar_phone-linear.svg',
             alt: 'Phone',
-            content: '530-661-1218' 
+            content: '530-661-1218'
         },
         {
             id: 'email',
             icon: '/images/Images_Contact/line-md_email.svg',
             alt: 'Email',
-            content: <a href="mailto:support@fourthandhope.org">support@fourthandhope.org</a>, 
+            content: <a href="mailto:support@fourthandhope.org">support@fourthandhope.org</a>,
         },
     ];
 
