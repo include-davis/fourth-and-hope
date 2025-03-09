@@ -38,7 +38,7 @@ const DonationProgress = ({ currentDonation, totalDonationGoal }) => {
   }, [targetPercentage]);
 
   return (
-    <div style={{ width: "35%", height: "35%" }}>
+    <div style={{ width: "100%", height: "100%" }}>
       <CircularProgressbar
         value={progress}
         text={`$${currentDonation.toLocaleString()}`}

@@ -6,7 +6,7 @@ import DonationProgress from "./Donation_Progress"; // Adjust the path as needed
 export default function Donate_Section() {
   const totalDonationGoal = 10000;
   const donationIncrement = 35;
-  
+
   // Use state for the current donation so we can update it dynamically.
   const [currentDonation, setCurrentDonation] = useState(9000);
   const [showOverlay, setShowOverlay] = useState(false);
@@ -40,6 +40,7 @@ export default function Donate_Section() {
     <div className={styles.donate_heros}>
       <div className={styles.donate_container}>
         <h1>DONATE</h1>
+        <br />
         <div className={styles.donate_content_container}>
           <div className={styles.donate_text_hero_container}>
             <h2>Support Fourth and Hope now!</h2>
@@ -85,10 +86,13 @@ export default function Donate_Section() {
           </div>
 
           {/* Insert the animated circular progress component */}
-          <DonationProgress
-            currentDonation={currentDonation}
-            totalDonationGoal={totalDonationGoal}
-          />
+          <div className={styles.progress_bar}>
+            <DonationProgress
+              currentDonation={currentDonation}
+              totalDonationGoal={totalDonationGoal}
+            />
+          </div>
+
         </div>
       </div>
 
