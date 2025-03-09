@@ -48,7 +48,7 @@
 }
 
 .textinfo {
-    flex: 0 0 30%; /* Set textinfo to take 30% width */
+    flex: 0 0 30%; 
     font-size: 2.25rem;
     display: flex;
     flex-direction: column;
@@ -69,12 +69,15 @@
 
 /* Feedback Form Styles */
 .contactform {
-    flex: 0 0 70%; 
+    overflow: hidden;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height: 45.71%; /*566px */
+    height: 45.71%; 
     margin: auto;
     width: 100%;
+    max-width: 70vw; /* Had sizing issues but this worked*/
+    
 }
 
 /* Input group styles */
@@ -82,10 +85,8 @@
     display: flex;
     gap: 2%;
     margin-bottom: 2%;
-    width: 100%;
-    padding-left: 0%;
-    padding-right: 0%;
     box-sizing: border-box;
+    width: 100%;
 }
 
 /* Styles for input fields inside .inputgroup */
@@ -97,12 +98,13 @@
     border-radius: 10px;
     min-height: 9%; 
     box-sizing: border-box; 
+    margin: 0;
 }
+
 
 .textarea {
     width: 100%;
     min-height: 40vh;
-    height: auto;
     padding: 4% 3.9%;
     background-color: var(--light-grey);
     border: none;
@@ -111,6 +113,7 @@
     resize: none;
     box-sizing: border-box;
 }
+
 
 .button {
     width: 22.8%; 
@@ -153,22 +156,23 @@
 
     .contactform {
         flex: 0 0 100%; 
+        max-width: 100%;
     }
-
-    /* Stack the input fields vertically for smaller screens */
+    
     .inputgroup { 
         flex-direction: column; 
         padding-top: 10%;
-        gap: 5vh; //30px
+        gap: 5vh; 
     }
+
 
     .inputgroup input {
         width: 100%; 
         height: 100%;
         padding-top: 5%;
         padding-bottom: 5%;
-    }
-
+    } 
+    
     /* Add spacing between textarea and button */
     .textarea {
         width: 100%;
@@ -177,6 +181,8 @@
         margin-top: 10%;
         margin-bottom: 10%; 
     }
+    
+
 
     /* Ensure the button takes up full width on smaller screens */
     .button {
