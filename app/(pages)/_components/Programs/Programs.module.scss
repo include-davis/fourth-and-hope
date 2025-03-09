@@ -1,117 +1,145 @@
 @import "../../_globals/mixins.scss";
 
+.container {
+    h1 {
+        color: var(--green);
+        font-size: 5rem;
+
+        @include phone {
+            font-size: 3rem;
+        }
+    }
+
+    h2 {
+        font-size: 3rem;
+        color: var(--black);
+
+        @include phone {
+            font-size: 1.5rem;
+        }
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 1.25rem;
+
+        @include phone {
+            font-size: 1rem;
+        }
+    }
+}
 
 .hero_container {
-  width: 100%;
-  height: auto; 
-  max-height: none; 
+    width: 100%;
+    height: auto;
+    max-height: none;
 }
 
 .Titles {
-  //color: var(--green);
-  width: 100%;
-  padding: 10%;
-  display: flex;
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: left; 
-  text-align: left; 
+    //color: var(--green);
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
 }
 
-.TitleNumbers {
-  //color: var(--green);
-  width: 100%;
-  padding-bottom: 5%;
-  display: flex;
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: center; 
-  text-align: center; 
-}
 .ProgramTitle {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 10%;
-  padding-top: 8%;
-  padding-bottom: 0%;
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: left; 
-  text-align: left; 
-  color: var(--green);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10%;
+    padding-top: 8%;
+    padding-bottom: 0%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    color: var(--green);
 }
 
 .statsContainer {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between; 
-  width: 100%;
-  background-color: var(--white);
-  padding: 10%
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    background-color: var(--white);
+    padding: 5%;
+
+    .TitleNumbers {
+        width: 100%;
+        padding-bottom: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .Support {
-  width: 100%;
-  padding: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: var(--white);
-  gap: 1.5rem; // Adds spacing between text and buttons
+    width: 100%;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--white);
+    gap: 1.5rem; // Adds spacing between text and buttons
 }
 
 .button_container {
-  display: flex;
-    justify-content: center; 
-    gap: 5%; 
+    display: flex;
+    justify-content: center;
+    gap: 5%;
 }
 
 .Walter {
-  width: 100%;
+    width: 100%;
 }
 
 .Walters {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  //background: var(--white);
-  padding: 5%; 
-  //margin: 5% 0;
-  //max-width: 1200px; 
-  margin-left: auto;
-  margin-right: auto;
-
-  .text {
-    flex: 1;
-    max-width: 50%; 
-    text-align: left;
     display: flex;
-    flex-direction: column;
-    padding-bottom: 10%;
-  }
-
-  .image {
-    flex: 1;
-    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
+    //background: var(--white);
+    padding: 5%;
+    //margin: 5% 0;
+    //max-width: 1200px; 
+    margin-left: auto;
+    margin-right: auto;
 
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 3%;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    .text {
+        flex: 1;
+        max-width: 50%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10%;
     }
-  }
+
+    .image {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 3%;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+    }
 }
 
 
 
-  .Linksbutton {
+.Linksbutton {
     display: inline-block;
     margin: 5%;
     padding: 1rem 2rem;
@@ -125,44 +153,43 @@
     border: none;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    margin-top: 20%; 
-    
-  
-    &:hover {
-      background-color: var(--white); 
-      color: var(--green); 
-      outline: 2px solid var(--green); 
-  }
+    margin-top: 20%;
 
- 
+
+    &:hover {
+        background-color: var(--white);
+        color: var(--green);
+        outline: 2px solid var(--green);
+    }
+
+
 }
 
 
 @include tablet {
-  .Titles {
-      padding: 5%; 
-      text-align: center; 
-  }
+    .Titles {
+        padding: 10% 5%;
+    }
 
-  .button_container {
-      flex-direction: column; 
-  }
+    .button_container {
+        flex-direction: column;
+    }
 }
 
 @include phone {
-  .Linksbutton {
-      width: 100%; 
-      margin: 3% 0; 
-  }
+    .Linksbutton {
+        width: 100%;
+        margin: 3% 0;
+    }
 
-  .Walters {
-      flex-direction: column; 
-      align-items: center;
-  }
+    .Walters {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .text, .image {
-      max-width: 100%; 
-      justify-content: center;
-  }
+    .text,
+    .image {
+        max-width: 100%;
+        justify-content: center;
+    }
 }
-

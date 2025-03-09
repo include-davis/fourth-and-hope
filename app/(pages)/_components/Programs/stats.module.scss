@@ -7,68 +7,55 @@
 }
 
 .statGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     gap: 20px;
     max-width: 800px;
     width: 100%;
-}
 
-/* Force the last two items onto the second row */
-.statBox:nth-child(4) {
-    grid-column: 2 / 3;
-}
-.statBox:nth-child(5) {
-    grid-column: 3 / 4;
-}
-
-@include phone {
-    .statGrid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto auto auto;
-    }
-    .statBox:nth-child(4),
-    .statBox:nth-child(5) {
-        grid-column: auto; 
-    }
-}
-
-@include sm-phone {
-    .statGrid {
-        grid-template-columns: 1fr; 
-        justify-items: center; 
+    @include phone {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
-    .statBox {
-        display: flex; 
-        flex-direction: column; 
-        align-items: center; 
-        justify-content: center; 
-        height: auto; 
-        width: 100%; 
+    @include sm-phone {
+        flex-direction: column;
     }
 }
 
 .statBox {
     background-color: var(--light-gray);
-    padding: 4%;
-    text-align: center;
+    text-align: left;
     font-weight: bold;
     border-radius: 5px;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap: 3%;
+    width: 25%;
+    margin: 2%;
+
+    @include phone {
+        width: 45%;
+    }
+
+    @include sm-phone {
+        height: auto;
+        width: 80%;
+    }
 }
 
 .statIcon {
-    width: 50px; 
-    height: 50px; 
-    margin-bottom: 5%; 
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5%;
 }
 
 .statContent {
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
 }
 
 .statValue {
@@ -76,10 +63,18 @@
     color: var(--green);
     font-weight: 500;
     margin-bottom: 2%;
+
+    @include tablet {
+        font-size: 1.5rem;
+    }
 }
 
 .statLabel {
     font-size: 1.25rem;
     color: var(--dark-grey);
     font-weight: 100;
+
+    @include tablet {
+        font-size: 1rem;
+    }
 }

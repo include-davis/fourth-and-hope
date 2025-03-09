@@ -30,7 +30,7 @@ const StatItem = ({ value, label, image }) => {
       {image && <img src={image} alt={label} className={styles.statIcon} />}
       <div className={styles.statContent}>
         <span className={styles.statValue}>{count.toLocaleString()}</span>
-        <span className={styles.statLabel}>{label}</span>
+        <p className={styles.statLabel}>{label}</p>
       </div>
     </div>
   );
