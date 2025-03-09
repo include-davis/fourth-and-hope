@@ -1,5 +1,5 @@
 const nextConfig = {
-  optimizeFonts: false,
+  optimizeFonts: true,
   reactStrictMode: true, // optional. if your nextConfig was an empty object earlier, skip this
   images: {
     remotePatterns: [
