@@ -66,7 +66,7 @@
 .button_container {
   display: flex;
     justify-content: center; 
-    gap: 20px; 
+    gap: 5%; 
 }
 
 .Walter {
@@ -113,7 +113,7 @@
 
   .Linksbutton {
     display: inline-block;
-    margin: 10px;
+    margin: 5%;
     padding: 1rem 2rem;
     border-radius: 0.25rem;
     background-color: var(--green);
@@ -138,7 +138,7 @@
 }
 
 
-@media (max-width: 1024px) {
+@include tablet {
   .Titles {
       padding: 5%; 
       text-align: center; 
@@ -149,10 +149,10 @@
   }
 }
 
-@media (max-width: 720px) {
+@include phone {
   .Linksbutton {
       width: 100%; 
-      margin: 10px 0; 
+      margin: 3% 0; 
   }
 
   .Walters {
