@@ -1,15 +1,17 @@
 "use client";
-import { useState } from "react";
-import React from "react";
+
+import React, { useState } from "react";
 import styles from "./PopUps.module.scss";
 
-export default function CertificationsButton({ onClick }) {
-    const [isCertOpen, openCertifications] = useState(true);
+export default function CertificationsButton({ children }) {
+  const [isCertOpen, setCertOpen] = useState(false);
+  const toggleCertPopup = () => setCertOpen(!isCertOpen);
 
-    const toggleCertPopup = () => openCertifications(!isCertOpen);
   return (
-    <div>
-      {!isCertOpen && <button onClick={toggleCertPopup}>Certifications</button>}
+    <>
+      <span onClick={toggleCertPopup} style={{ cursor: "pointer" }}>
+        {children}
+      </span>
 
       {isCertOpen && (
         <div className={styles.popupContainer}>
@@ -46,6 +48,6 @@ export default function CertificationsButton({ onClick }) {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }
