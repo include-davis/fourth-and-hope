@@ -1,7 +1,7 @@
 import GetInvolved from "../_components/GetInvolved/GetInvolved";
 import careerFallbackData from "../_data/careers.json";
 import needsListFallbackData from "../_data/needs-list.json";
-
+import buttonLinkFallbackData from "../_data/button-links.json"
 
 async function getCareers() {
   try {
@@ -57,12 +57,40 @@ async function getNeedsList() {
   }
 }
 
+async function getLinks() {
+  try {
+    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/button-links?_published=true`,
+      {
+        next:
+        {
+          tags: "cms"
+        }
+      }
+    );
+    const data = await res.json();
+    if (!data.ok || data.body.length === 0) {
+      throw new Error();
+    }
+
+    const parsedData = data.body.map((buttonLinkItem) => ({
+      name: buttonLinkItem.name,
+      link: buttonLinkItem.link,
+    }));
+
+    return parsedData;
+    } catch {
+    console.log('Failed to fetch button links');
+    return buttonLinkFallbackData;
+  }
+}
+
 export default async function getInvolved() {
     const careerData = await getCareers();
     const needsList = await getNeedsList();
+    const buttonLinks = await getLinks();
     return (
       <main>
-        <div><GetInvolved careerData={careerData} needsList={needsList}/></div>
+        <div><GetInvolved careerData={careerData} needsList={needsList} buttonLinks={buttonLinks}/></div>
       </main>
     );
   }

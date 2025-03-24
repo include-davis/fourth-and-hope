@@ -2,17 +2,19 @@ import styles from "./Volunteer.module.scss";
 import Image from "next/image";
 import PrimaryButton from "./Button/PrimaryButton.jsx";
 
-const volunteerLinks = [
-  { name: "Serve a Meal", link: "/serve-meal" },
-  { name: "Prep & Cook", link: "/prep-cook" },
-  { name: "Lead Activities", link: "/lead-activities" }
-];
-
-export default function Volunteer() {
+export default function Volunteer({ buttonLinks }) {
+  const volunteerButtons = buttonLinks.map((link, index) => (
+    <PrimaryButton
+      key={index.toString()}
+      name={link.name}
+      link={link.link}
+    />
+  ));
+  
   return (
     <div className={styles.container}>
       <div className={styles.title}>
-        <h1 className={styles.headerOverride}> GET INVOLVED</h1>
+        <h1 className={styles.headerOverride}>GET INVOLVED</h1>
       </div>
       <br />
       <h3 className={styles.headerOverride2}>Volunteer</h3>
@@ -33,24 +35,21 @@ export default function Volunteer() {
             </p>
           </div>
           <div className={styles.volunteer_right}>
-            <Image classname={styles.img}
+            <Image 
+              className={styles.img}
               src="images/GetInvolved/get-involved-volunteer-img.png"
-              alt="Description"
+              alt="Volunteer"
               width={516}
               height={400}
               unoptimized={true}
               style={{ borderRadius: "15px", width: "100%", height: "auto" }}
-
             />
           </div>
         </div>
 
         <div className={styles.volunteer_bottom}>
-          {volunteerLinks.map((button, index) => (
-            <PrimaryButton key={index} name={button.name} link={button.link} />
-          ))}
+          {volunteerButtons}
         </div>
-
       </div>
     </div>
   );
