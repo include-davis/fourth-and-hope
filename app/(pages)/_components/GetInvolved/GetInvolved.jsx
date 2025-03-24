@@ -10,7 +10,7 @@ import List from "./List/List.jsx";
 
 
 
-export default function GetInvolved() {
+export default function GetInvolved({careerData}) {
   return (
     <div className={styles.container}>
       <Image className={styles.img}
@@ -35,7 +35,7 @@ export default function GetInvolved() {
         <Inquiries />
       </div>
       <div className={styles.element}>
-        <Careers />
+        <Careers careerData={careerData}/>
       </div>
       <div className={styles.element}>
         <Help />

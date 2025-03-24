@@ -85,43 +85,15 @@ async function getPrograms() {
   }
 }
 
-async function getCareers() {
-  try {
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/careers?_published=true`,
-      {
-        next:
-        {
-          tags: "cms"
-        }
-      }
-    );
-    const data = await res.json();
-    if (!data.ok || data.body.length === 0) {
-      throw new Error();
-    }
-
-    const parsedData = data.body.map((careerItem) => ({
-      title: careerItem.title,
-      description: careerItem.description,
-    }));
-
-    return parsedData;
-  } catch {
-    console.log('Failed to fetch career list');
-    return careerFallbackData;
-  }
-}
-
 export default async function Homepage() {
   const images = await getImages();
   const storiesData = await getStories();
   const programData = await getPrograms();
-  const careerData = await getCareers();
   return (
     <main>
       {/* <PrimaryButton name="Primary Button" link="https://example.com/donate" />
        <SecondaryButton name="Secondary Button" link="https://example.com/donate" /> */}
-      <Home images={images} storiesData={storiesData} programData={programData} careerData={careerData}/>
+      <Home images={images} storiesData={storiesData} programData={programData}/>
     </main>
   );
 }
