@@ -1,0 +1,20 @@
+[
+    {
+        "images": [
+            "/images/events/sponsor1.svg",
+            "./images/events/sponsor2.svg",
+            "./images/events/sponsor3.svg",
+            "./images/events/sponsor4.svg",
+            "./images/events/sponsor5.svg",
+            "./images/events/sponsor6.svg"
+        ],
+        "alt": [
+            "karlkarol",
+            "susanshelton",
+            "woodlandjointunified",
+            "pioneerhs",
+            "woodlandhs",
+            "theresalee"
+        ]
+    }
+]
