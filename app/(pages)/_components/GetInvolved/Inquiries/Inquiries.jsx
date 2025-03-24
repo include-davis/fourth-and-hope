@@ -16,7 +16,7 @@ export default function Inquiries() {
                     <div className={styles.contact}>
                         <div className={styles.number}>
                             <Image
-                                src="/images/GetInvolved_images/solar_phone-linear.png"
+                                src="/images/GetInvolved/solar_phone-linear.png"
                                 alt="Phone"
                                 width={32}
                                 height={32}
@@ -28,7 +28,7 @@ export default function Inquiries() {
                         </div>
                         <div className={styles.mail}>
                             <Image
-                                src="/images/GetInvolved_images/line-md_email.png"
+                                src="/images/GetInvolved/line-md_email.png"
                                 alt="Mail"
                                 width={32}
                                 height={32}

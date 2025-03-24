@@ -34,7 +34,7 @@ export default function Volunteer() {
           </div>
           <div className={styles.volunteer_right}>
             <Image classname={styles.img}
-              src="images/GetInvolved_images/get-involved-volunteer-img.png"
+              src="images/GetInvolved/get-involved-volunteer-img.png"
               alt="Description"
               width={516}
               height={400}

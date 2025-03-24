@@ -20,7 +20,7 @@ export default function Donation_Meaning() {
         <div className={styles.image_container}>
           {" "}
           <Image
-            src="/images/donate_assets/kitchen_staff.svg"
+            src="/images/Donate/kitchen_staff.svg"
             alt="Kitchen Staff"
             width={475.905} // intrinsic dimensions to preserve ratio
             height={306.127}

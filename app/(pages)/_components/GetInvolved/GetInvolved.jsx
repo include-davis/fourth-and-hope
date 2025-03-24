@@ -14,14 +14,14 @@ export default function GetInvolved() {
   return (
     <div className={styles.container}>
       <Image className={styles.img}
-        src="images/GetInvolved_images/get-involved-image.png"
+        src="images/GetInvolved/get-involved-image.png"
         alt="Description"
         width={500}
         height={300}
         unoptimized={true}
       />
       <Image className={styles.mobile_img}
-        src="images/GetInvolved_images/get-involved-mobile.png"
+        src="images/GetInvolved/get-involved-mobile.png"
         alt="Description"
         width={420}
         height={300}

@@ -2,9 +2,9 @@ import Image from "next/image";
 import styles from "./Donation_Benefiet.module.scss";
 
 const users = [
-  { id: 1, name: "Our Volunteers", image: "/images/donate_assets/benefit_1.svg" },
-  { id: 2, name: "Our Centers", image: "/images/donate_assets/benefit_2.svg" },
-  { id: 3, name: "Our Clients", image: "/images/donate_assets/benefit_3.svg" }
+  { id: 1, name: "Our Volunteers", image: "/images/Donate/benefit_1.svg" },
+  { id: 2, name: "Our Centers", image: "/images/Donate/benefit_2.svg" },
+  { id: 3, name: "Our Clients", image: "/images/Donate/benefit_3.svg" }
 ];
 
 export default function Donation_Benefiet() {
@@ -15,11 +15,11 @@ export default function Donation_Benefiet() {
         {users.map(user => (
           <div key={user.id} className={styles.card}>
             <div className={styles.card_image_wrapper}>
-              <Image 
-                src={user.image} 
-                alt={user.name} 
-                width={300}  
-                height={200} 
+              <Image
+                src={user.image}
+                alt={user.name}
+                width={300}
+                height={200}
                 className={styles.card_image}
               />
             </div>

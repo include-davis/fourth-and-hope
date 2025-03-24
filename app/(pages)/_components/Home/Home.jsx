@@ -9,7 +9,7 @@ import SliderWithText from "./SliderWithText";
 import YoutubeVideo from "./YoutubeVideo";
 
 
-export default function Home({images, storiesData}) {
+export default function Home({ images, storiesData }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {

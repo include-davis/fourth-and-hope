@@ -76,19 +76,19 @@ const ContactCard = () => {
     const shelterInfo = [
         {
             id: 'location',
-            icon: '/images/Images_Contact/iconamoon_location-pin-bold.svg',
+            icon: '/images/Contact/iconamoon_location-pin-bold.svg',
             alt: 'Location',
             content: '1901 East Beamer St, Woodland, CA, 95776'
         },
         {
             id: 'phone',
-            icon: '/images/Images_Contact/solar_phone-linear.svg',
+            icon: '/images/Contact/solar_phone-linear.svg',
             alt: 'Phone',
             content: '530-661-1218'
         },
         {
             id: 'email',
-            icon: '/images/Images_Contact/line-md_email.svg',
+            icon: '/images/Contact/line-md_email.svg',
             alt: 'Email',
             content: (
                 <>
@@ -103,19 +103,19 @@ const ContactCard = () => {
     const treatmentInfo = [
         {
             id: 'location',
-            icon: '/images/Images_Contact/iconamoon_location-pin-bold.svg',
+            icon: '/images/Contact/iconamoon_location-pin-bold.svg',
             alt: 'Location',
             content: '285 Fourth St. Woodland, CA, 95695'
         },
         {
             id: 'phone',
-            icon: '/images/Images_Contact/solar_phone-linear.svg',
+            icon: '/images/Contact/solar_phone-linear.svg',
             alt: 'Phone',
             content: '530-662-2699'
         },
         {
             id: 'email',
-            icon: '/images/Images_Contact/line-md_email.svg',
+            icon: '/images/Contact/line-md_email.svg',
             alt: 'Email',
             content: <a href="mailto:recovery@fourthandhope.org">recovery@fourthandhope.org</a>,
         },
@@ -128,13 +128,13 @@ const ContactCard = () => {
         },
         {
             id: 'phone',
-            icon: '/images/Images_Contact/solar_phone-linear.svg',
+            icon: '/images/Contact/solar_phone-linear.svg',
             alt: 'Phone',
             content: '530-661-1218'
         },
         {
             id: 'email',
-            icon: '/images/Images_Contact/line-md_email.svg',
+            icon: '/images/Contact/line-md_email.svg',
             alt: 'Email',
             content: <a href="mailto:support@fourthandhope.org">support@fourthandhope.org</a>,
         },
@@ -145,17 +145,17 @@ const ContactCard = () => {
             {/* Render each contact card */}
             <ContactSection
                 title="Emergency Shelter Services"
-                imageSrc="/images/Images_Contact/shelter.svg"
+                imageSrc="/images/Contact/shelter.svg"
                 contactData={shelterInfo}
             />
             <ContactSection
                 title="Treatment at Walters House"
-                imageSrc="/images/Images_Contact/treatment.svg"
+                imageSrc="/images/Contact/treatment.svg"
                 contactData={treatmentInfo}
             />
             <ContactSection
                 title="All Other Inquiries"
-                imageSrc="/images/Images_Contact/others.svg"
+                imageSrc="/images/Contact/others.svg"
                 contactData={inquiriesInfo}
             />
         </div>

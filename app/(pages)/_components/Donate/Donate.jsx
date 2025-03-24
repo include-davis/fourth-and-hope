@@ -11,7 +11,7 @@ export default function Donate() {
   return (
     <div className={styles.hero_container}>
       <Image
-        src="/images/donate_assets/staff.svg"
+        src="/images/Donate/staff.svg"
         alt="Staff"
         width={0}
         height={0}

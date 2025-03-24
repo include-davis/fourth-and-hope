@@ -15,7 +15,7 @@ export default function Donation_Rights() {
   return (
     <div className={styles.donation_rights_hero}>
       <Image
-        src="/images/donate_assets/AFP.svg"
+        src="/images/Donate/AFP.svg"
         alt="Staff"
         width={0}
         height={0}

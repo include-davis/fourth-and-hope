@@ -9,7 +9,7 @@ export default function Contact() {
       <div>
         <div className={styles.contactImage}>
           <Image
-            src="/images/Images_Contact/Contactpic.svg"
+            src="/images/Contact/Contactpic.svg"
             alt="Contact Image"
             width={0}
             height={0}
