@@ -1,0 +1,5 @@
+[
+    { "name": "Serve a Meal", "link": "/serve-meal" },
+    { "name": "Prep & Cook", "link": "/prep-cook" },
+    { "name": "Lead Activities", "link": "/lead-activities" }
+]
