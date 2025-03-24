@@ -1,16 +1,12 @@
 import styles from "./GetInvolved.module.scss";
 import Image from "next/image";
-
 import Volunteer from "./Volunteer/Volunteer.jsx";
 import Inquiries from "./Inquiries/Inquiries.jsx";
 import Careers from "./Careers/Careers.jsx";
 import Help from "./Help/Help.jsx";
 import List from "./List/List.jsx";
 
-
-
-
-export default function GetInvolved({careerData}) {
+export default function GetInvolved({careerData, needsList}) {
   return (
     <div className={styles.container}>
       <Image className={styles.img}
@@ -41,7 +37,7 @@ export default function GetInvolved({careerData}) {
         <Help />
       </div>
       <div className={styles.element}>
-        <List />
+        <List needsList={needsList}/>
       </div>
 
     </div>

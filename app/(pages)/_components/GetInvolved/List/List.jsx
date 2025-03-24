@@ -1,39 +1,9 @@
 import styles from "./List.module.scss";
 import ListItemComponent from "./ListItemComponent/ListItemComponent.jsx";
 
+export default function List({needsList}) {
+    const listData = Array.isArray(needsList) ? needsList : Object.values(needsList);
 
-const listData = [
-    {
-        category: "Must be brand new",
-        items: [
-            "Suitcase with wheels (24″ – 28″ high)",
-            "Toothbrushes",
-            "Travel size toothpaste",
-            "Razors",
-            "Travel size body wash or bar soap",
-            "Travel size foot powder",
-            "Combs / Brushes",
-            "Shower shoes",
-            "Toilet paper",
-            "Cotton underwear",
-            "Socks",
-            "Shower curtains",
-            "Bottled water",
-        ],
-    },
-    {
-        category: "May be lightly used",
-        items: [
-            "Bath towels",
-            "Pillows",
-            "Twin bed sheet sets",
-            "Blankets twin size",
-        ],
-    },
-
-];
-
-export default function List() {
     return (
         <div className={styles.container}>
             <div className={styles.top}>
@@ -45,7 +15,11 @@ export default function List() {
             </div>
             <div className={styles.bottom}>
                 {listData.map((list, index) => (
-                    <ListItemComponent key={index} category={list.category} items={list.items} />
+                    <ListItemComponent
+                        key={index}
+                        category={list.category}
+                        items={list.items}
+                    />
                 ))}
             </div>
         </div>
