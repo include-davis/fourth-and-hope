@@ -1,12 +1,14 @@
 import styles from "./Careers.module.scss";
 import CareerComponent from "./CareerComponent/CareerComponent.jsx";
 
-export default function Careers({ careerData = [] }) {
+export default function Careers({ careerData }) {
+    console.log("careerData:", careerData);
     const careers = careerData.map((career, index) => (
       <CareerComponent
         key={index.toString()}
         title={career.title}
         description={career.description}
+        link={career.link}
       />
     ));
   

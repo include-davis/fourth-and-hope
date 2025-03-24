@@ -100,7 +100,10 @@ async function getCareers() {
       throw new Error();
     }
 
-    const parsedData = data.body.map((careerItem) => ({title: careerItem.title, description: careerItem.description}));
+    const parsedData = data.body.map((careerItem) => ({
+      title: careerItem.title,
+      description: careerItem.description,
+    }));
 
     return parsedData;
   } catch {

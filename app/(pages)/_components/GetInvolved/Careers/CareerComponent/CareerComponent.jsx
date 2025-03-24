@@ -1,7 +1,7 @@
 import styles from "./CareerComponent.module.scss";
 import PrimaryButton from "../Button/PrimaryButton.jsx";
 
-export default function CareerComponent({ title, description }) {
+export default function CareerComponent({ title, description, link }) {
     return (
         <div className={styles.container}>
             <p>
@@ -11,7 +11,7 @@ export default function CareerComponent({ title, description }) {
                 <br></br>
             </p>
             <div className={styles.button}>
-                <PrimaryButton name="Apply" link="/apply" />
+                <PrimaryButton name="Apply" link={link} />
             </div>
             
         </div>
