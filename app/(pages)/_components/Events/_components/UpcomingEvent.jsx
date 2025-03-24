@@ -2,7 +2,7 @@ import React from "react";
 import "./UpcomingEvent.scss";
 import Image from "next/image";
 
-const UpcomingEvent = ({ date, title, paragraphs, images }) => {
+const UpcomingEvent = ({ date, title, paragraphs, images, alt }) => {
     return (
         <section className={"summary"}>
 
@@ -16,7 +16,7 @@ const UpcomingEvent = ({ date, title, paragraphs, images }) => {
                 <p>{paragraphs}</p>
 
                 <div className={"parent"}>
-                    <Image src={images} alt="event-image" width={100} height={100} />
+                    <Image src={images} alt={alt} width={100} height={100} />
                 </div>
             </div>
 

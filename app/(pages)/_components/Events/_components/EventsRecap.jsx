@@ -22,7 +22,7 @@ const EventsRecap = ({ date, title, paragraphs, images, alt }) => {
 
             <div className="parent">
                 {images.map((img, index) => (
-                    <Image key={index} src={img} alt={alt ? alt[index] : "Event Image"} width={100} height={100} />
+                    <Image key={index} src={img} alt={alt[index]} width={100} height={100} />
                 ))}
             </div>
         </section>
