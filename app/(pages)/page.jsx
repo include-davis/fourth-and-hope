@@ -1,20 +1,22 @@
 import Home from './_components/Home/Home';
 import storyCardsFallbackData from './_data/story-cards.json';
 import heroGalleryFallbackData from './_data/hero-gallery.json';
+import programCardsFallbackData from './_data/program-cards.json'
 // import PrimaryButton from './_components/Button/PrimaryButton';
 // import SecondaryButton from './_components/Button/SecondaryButton';
 
-async function getImages(){
+async function getImages() {
   try {
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/hero-gallery?_published=true`, 
-      { next: 
+    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/hero-gallery?_published=true`,
+      {
+        next:
         {
           tags: "cms"
         }
       }
     );
     const data = await res.json();
-    if(!data.ok || data.body.length === 0){
+    if (!data.ok || data.body.length === 0) {
       throw new Error();
     }
 
@@ -32,23 +34,24 @@ async function getImages(){
   }
 }
 
-async function getStories(){
+async function getStories() {
   try {
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/story-cards?_published=true`, 
-      { next: 
+    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/story-cards?_published=true`,
+      {
+        next:
         {
           tags: "cms"
         }
       }
     );
     const data = await res.json();
-    if(!data.ok || data.body.length === 0){
+    if (!data.ok || data.body.length === 0) {
       throw new Error();
     }
-    
+
     //TODO: add alt text to cms schema 
-    const parsedData = data.body.map((storyItem) => ({imageSrc: storyItem.main_image[0].src, altText: storyItem.image_alt_text, heading: storyItem.title, bodyText: storyItem.description}));
-  
+    const parsedData = data.body.map((storyItem) => ({ imageSrc: storyItem.main_image[0].src, altText: storyItem.image_alt_text, heading: storyItem.title, bodyText: storyItem.description }));
+
     return parsedData;
   } catch {
     console.log('Failed to fetch story cards');
@@ -56,15 +59,40 @@ async function getStories(){
   }
 }
 
+async function getPrograms() {
+  try {
+    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/program-cards?_published=true`,
+      {
+        next:
+        {
+          tags: "cms"
+        }
+      }
+    );
+    const data = await res.json();
+    if (!data.ok || data.body.length === 0) {
+      throw new Error();
+    }
+
+    //TODO: add alt text to cms schema 
+    const parsedData = data.body.map((programItem) => ({ image: programItem.main_image[0].src, altText: programItem.image_alt_text, title: programItem.title, subtitle: programItem.subtitle, text: programItem.description }));
+
+    return parsedData;
+  } catch {
+    console.log('Failed to fetch story cards');
+    return programCardsFallbackData;
+  }
+}
 
 export default async function Homepage() {
   const images = await getImages();
   const storiesData = await getStories();
+  const programData = await getPrograms();
   return (
     <main>
-       {/* <PrimaryButton name="Primary Button" link="https://example.com/donate" />
+      {/* <PrimaryButton name="Primary Button" link="https://example.com/donate" />
        <SecondaryButton name="Secondary Button" link="https://example.com/donate" /> */}
-      <Home images={images} storiesData={storiesData}/>
+      <Home images={images} storiesData={storiesData} programData={programData} />
     </main>
   );
 }

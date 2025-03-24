@@ -9,7 +9,7 @@ import SliderWithText from "./SliderWithText";
 import YoutubeVideo from "./YoutubeVideo";
 
 
-export default function Home({ images, storiesData }) {
+export default function Home({ images, storiesData, programData }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -45,32 +45,16 @@ export default function Home({ images, storiesData }) {
   ];
 
   // Programs Components Json
-  const programData = [
-    {
-      imageSrc: '/images/Home/programsBeds.svg',
-      altText: 'Red bunk beds.',
-      heading: 'Emergency Shelter',
-      bodyText: 'Providing overnight services, housing, outreach support, and thousands of meals to those in need.',
-      href: '/programs',
-      //should go to the emergency shelter section
-    },
-    {
-      imageSrc: '/images/Home/programsTreatment.svg',
-      altText: 'Woman holding towels in one arm and holding up a fist with the other arm.',
-      heading: 'Treatment Program',
-      bodyText: 'Offering residential care at Walter’s House, outpatient support, referrals, and  program completions to aid recovery and connection to further services.',
-      href: '/programs',
-      //should go to the treatment section 
-    },
-    {
-      imageSrc: '/images/Home/programsHousing.svg',
-      altText: 'Group of older people holding gardening tools and smiling at the camera.',
-      heading: 'Housing \n Program', //idk why this line break isn't showing, how do i put a linebreak 
-      bodyText: 'Providing permanent supportive housing and transitional sober living opportunities to individuals and households in need.',
-      href: '/programs',
-      //directs to the housing section
-    },
-  ];
+  const programsData = programData.map((story, index) => (
+    <ProgramsBox
+      key={index.toString()}
+      heading={story.title}
+      bodyText={story.blurb}
+      imageSrc={story.image}
+      altText={story.altText}
+      href={'/programs'}
+    />
+  ));
   const slides = storiesData.map((story, index) => (
     <StoriesSlide
       key={index.toString()}
@@ -142,11 +126,7 @@ export default function Home({ images, storiesData }) {
         <h1>PROGRAMS</h1>
         <div className={styles.programsComponents}>
           <div className={styles.programsComponentsBox}>
-
-            {programData.map((program, index) => (
-              <ProgramsBox key={index} {...program} />
-            ))}
-
+            {programsData}
           </div>
         </div>
       </div>
