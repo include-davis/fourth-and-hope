@@ -39,9 +39,9 @@ export default function CertificationsButton({ children }) {
               <h4>Licensing and Certification Statement</h4>
               <section>
                 <b>Walter’s House is Licensed and Certified by the California Department of Health Care Services (DHCS) to provide residential and outpatient substance use disorder treatment services.</b>
-                For a complete list of California-licensed recovery and treatment facilities, please visit the DHCS database: 
-                <a href="https://data.chhs.ca.gov/dataset/sud-recovery-treatment-facilities">SUD Recovery Treatment Facilities</a>. 
-                To learn more about regulatory requirements, visit: 
+                For a complete list of California-licensed recovery and treatment facilities, please visit the DHCS database:
+                <a href="https://data.chhs.ca.gov/dataset/sud-recovery-treatment-facilities">SUD Recovery Treatment Facilities</a>.
+                To learn more about regulatory requirements, visit:
                 <a href="https://www.dhcs.ca.gov/provgovpart/Documents/BHIN-22-022.pdf">BHIN 22-022 Document</a>.
               </section>
             </section>

@@ -67,7 +67,7 @@
     line-height: 1.3;
     font-weight: 300;
 
-    @include phone{
+    @include phone {
       padding: 7% 0%;
     }
   }
@@ -160,7 +160,7 @@
     margin-bottom: 3%;
     font-weight: 500;
   }
-  
+
   h3 {
     color: black;
     font-size: 200%;
@@ -180,11 +180,11 @@
     margin-right: 5%;
     transition: background 0.3s;
   }
-  
+
   .popupButton:hover {
     background: #276749;
   }
-  
+
   .popupContainer {
     position: fixed;
     top: 0;
@@ -197,7 +197,7 @@
     align-items: center;
     z-index: 1000;
   }
-  
+
   .popupContent {
     background: white;
     padding: 10%;
@@ -205,7 +205,7 @@
     border-radius: 2%;
     text-align: center;
   }
-  
+
   .closeButton {
     position: absolute;
     top: 5%;
@@ -215,7 +215,7 @@
     font-size: 100%;
     cursor: pointer;
   }
-  
+
   .meetingsContainer {
     display: flex;
     justify-content: center;
@@ -226,22 +226,22 @@
       flex-direction: column;
     }
   }
-  
+
   .meetingYear {
     width: 100%;
     text-align: center;
-    
+
     @include phone {
       padding: 5% 0% 30% 0%;
     }
   }
-  
+
   .meetingGrid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(30%, 1fr)); 
+    grid-template-columns: repeat(2, minmax(30%, 1fr));
     gap: 5%;
   }
-  
+
   .meetingBox {
     background: none;
     border: 2% solid;
@@ -253,7 +253,7 @@
     transition: background 0.3s;
     width: 100%;
   }
-  
+
   .meetingBox:hover {
     background: #2f855a;
     color: white;
