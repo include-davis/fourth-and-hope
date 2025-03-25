@@ -101,15 +101,9 @@ export default function Footer() {
               </button>
             </div>
           </form>
-          {/* Constant Contact Active Forms integration */}
-          <Script id="ctct-inline" strategy="afterInteractive">
-            {`var _ctct_m = "";`}
-          </Script>
-          <Script
-            id="signupScript"
-            src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js"
-            strategy="afterInteractive"
-          />
+          {/* Constant Contact Stuff */}
+          <script> var _ctct_m = ""; </script>
+          <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
         </div>
         <div className={styles.bottomContainer}>
           <p className={styles.bottomText}>Fourth &amp; Hope © 2025</p>
