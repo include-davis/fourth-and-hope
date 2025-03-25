@@ -9,35 +9,7 @@ import Stat from "./stats.jsx";
 import CertificationsButton from "../PopUps/CertificationsButton";
 // import PopUps from "../PopUps/PopUps";
 
-const byNumbers = [
-  {
-    value: "242",
-    description: "emergency shelters",
-    image: "images/Programs/emergencyIcon.svg",
-  },
-  {
-    value: "58",
-    description: "in permanent \nsupportive housing",
-    image: "images/Programs/housingSupport.svg",
-  },
-  {
-    value: "92000",
-    description: "meals served",
-    image: "images/Programs/mealsServed.svg",
-  },
-  {
-    value: "41",
-    description: "in stable housing",
-    image: "images/Programs/stableHousing.svg",
-  },
-  {
-    value: "88",
-    description: "in transitional sober living",
-    image: "images/Programs/soberLiving.svg",
-  },
-];
-
-export default function Programs({ programsData }) {
+export default function Programs({ programsData, numbersData }) {
   const programs = programsData.map((program, index) => (
     <ProgramCard
       key={index.toString()}
@@ -47,6 +19,7 @@ export default function Programs({ programsData }) {
       image={program.image}
     />
   ));
+  const { numbers } = numbersData;
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
@@ -98,8 +71,8 @@ export default function Programs({ programsData }) {
 
       <div className={styles.statsContainer}>
         <h2 className={styles.TitleNumbers}>2023 By the Numbers</h2>
-        {byNumbers.map((s, index) => (
-          <Stat key={index} value={s.value} label={s.description} image={s.image} />
+        {numbers.map((n, index) => (
+          <Stat key={index} value={n.value} label={n.description} image={n.image} />
         ))}
       </div>
 

@@ -57,7 +57,7 @@
 .statsContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    // justify-content: space-around;
     width: 100%;
     background-color: var(--white);
     padding: 5%;
@@ -109,7 +109,8 @@
 
 .Walters {
     display: flex;
-    padding: 5%;
+    padding: 3% 5%;
+    gap: 10%;
 
     @include tablet {
         flex-direction: column;

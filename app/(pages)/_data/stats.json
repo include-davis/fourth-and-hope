@@ -25,5 +25,31 @@
             "altText": "meal icon"
         }
     ],
-    "numbers": {}
+    "numbers": [
+        {
+            "value": "242",
+            "description": "emergency shelters",
+            "image": "images/Programs/emergencyIcon.svg"
+        },
+        {
+            "value": "58",
+            "description": "in permanent \nsupportive housing",
+            "image": "images/Programs/housingSupport.svg"
+        },
+        {
+            "value": "92000",
+            "description": "meals served",
+            "image": "images/Programs/mealsServed.svg"
+        },
+        {
+            "value": "41",
+            "description": "in stable housing",
+            "image": "images/Programs/stableHousing.svg"
+        },
+        {
+            "value": "88",
+            "description": "in transitional sober living",
+            "image": "images/Programs/soberLiving.svg"
+        }
+    ]
 }
