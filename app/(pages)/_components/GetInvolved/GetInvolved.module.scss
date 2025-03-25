@@ -1,7 +1,7 @@
-@use '../../_globals/mixins.scss';
+@import '../../_globals/mixins.scss';
 
 .container {
-    @include mixins.phone() {
+    @include phone {
         h1 {
             font-size: 2rem;
         }
@@ -25,7 +25,7 @@
     height: auto;
     // margin-bottom: 5.1%;
 
-    @include mixins.phone() {
+    @include phone {
         margin-bottom: 5.97%;
         margin-top: 5.97%;
         display: none;
@@ -37,7 +37,7 @@
     height: auto;
     display: none;
 
-    @include mixins.phone() {
+    @include phone {
         margin-bottom: 5.97%;
         margin-top: 5.97%;
         display: block;

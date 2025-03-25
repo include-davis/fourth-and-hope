@@ -65,7 +65,6 @@
 @include phone {
     .contactcards {
         grid-template-columns: 1fr; // Single column for mobile
-        padding-bottom: 0;
     }
 
     .card {

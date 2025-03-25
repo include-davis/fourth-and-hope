@@ -26,7 +26,7 @@
         }
     }
 
-    @include sm-phone {
+    @include phone {
         height: auto;
 
         p {
@@ -120,7 +120,7 @@
         }
     }
 
-    @include sm-phone {
+    @include phone {
         padding: 0%;
 
         p {

@@ -19,7 +19,7 @@
         flex-wrap: wrap;
     }
 
-    @include sm-phone {
+    @include phone {
         flex-direction: column;
     }
 }
@@ -40,7 +40,7 @@
         width: 45%;
     }
 
-    @include sm-phone {
+    @include phone {
         height: auto;
         width: 80%;
     }

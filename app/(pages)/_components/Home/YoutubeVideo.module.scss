@@ -1,21 +1,23 @@
-@use '../../_globals/mixins.scss';
+@import '../../_globals/mixins.scss';
 
-.videoBox{
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
+.videoBox {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .videoResponsive {
   position: relative;
   overflow: hidden;
   width: 100%; //fill container
-  @include mixins.phone(){
+
+  @include phone {
     padding-bottom: 75%;
   }
 }
 
-.videoResponsive > div { /* Target the react-youtube wrapper div */
+.videoResponsive>div {
+  /* Target the react-youtube wrapper div */
   position: absolute;
   // top: 0;
   // left: 0;

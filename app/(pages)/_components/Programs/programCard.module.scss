@@ -11,6 +11,10 @@
   padding-top: 3%;
   gap: 10%;
 
+  @include phone {
+    padding: var(--page-padding-top-bottom-only);
+  }
+
   @include tablet {
     flex-direction: column;
     align-items: center;
@@ -40,7 +44,7 @@
     @include tablet {
       width: 100%;
       margin-right: 0;
-      padding-bottom: 10%;
+      padding-bottom: 7%;
     }
   }
 
@@ -65,11 +69,5 @@
         height: auto;
       }
     }
-  }
-}
-
-@include sm-phone {
-  .program {
-    padding: 5%;
   }
 }

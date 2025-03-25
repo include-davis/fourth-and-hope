@@ -1,15 +1,14 @@
-@use '../../../../_globals/mixins.scss';
+@import '../../../../_globals/mixins.scss';
 
 
-.container{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    line-height: 24px;
-    height: 100%;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 24px;
+  height: 100%;
 
-    @include mixins.phone(){
-        line-height: 30px;
-      }
+  @include phone {
+    line-height: 30px;
+  }
 }
-
