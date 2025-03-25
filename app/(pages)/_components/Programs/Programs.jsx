@@ -84,6 +84,7 @@ export default function Programs({ programsData, numbersData }) {
         <div className={styles.Walters}>
           <div className={styles.text}>
             <h2>Walter's House</h2>
+            <br />
             <p>
               <b>Walter’s House is a residential substance use disorder treatment facility for women and men.</b> Walter’s House has supported
               209 participants, with 61 completing treatment and 39 graduating from outpatient programs.
