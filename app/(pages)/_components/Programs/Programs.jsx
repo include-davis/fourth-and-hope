@@ -86,7 +86,7 @@ export default function Programs({ programsData, numbersData }) {
             <h2>Walter's House</h2>
             <br />
             <p>
-              <b>Walter’s House is a residential substance use disorder treatment facility for women and men.</b> Walter’s House has supported
+              <b>Walter’s House is a residential substance use disorder treatment facility for women and men.</b><br /> Walter’s House has supported
               209 participants, with 61 completing treatment and 39 graduating from outpatient programs.
             </p>
             <div className={styles.popupWrapper}>
