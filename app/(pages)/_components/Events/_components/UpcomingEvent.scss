@@ -1,7 +1,7 @@
 @import "../../../_globals/mixins.scss";
 
 .summary {
-    padding: 5% 0 5% 0;
+    padding: var(--page-padding);
 
     .summaryhead {
         padding-bottom: 4%;
@@ -16,7 +16,7 @@
             padding-bottom: 2%;
         }
     }
-    
+
     .summarycontent {
         display: flex;
         gap: 5%;
@@ -46,10 +46,12 @@
             h4 {
                 font-size: 1rem;
             }
+
             h3 {
                 font-size: 1.5rem;
             }
         }
+
         .summarycontent {
             flex-direction: column;
 

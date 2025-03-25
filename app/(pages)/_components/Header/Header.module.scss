@@ -25,7 +25,7 @@
 
 .contentContainer {
     width: 100%;
-    padding: 3.3% 6.94%;
+    padding: var(--page-padding);
     display: flex;
     justify-content: space-between;
     align-items: center;

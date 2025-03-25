@@ -1,142 +1,154 @@
 @import "../../_globals/mixins.scss";
 
-.footerContainer{
+.footerContainer {
     // height: 70vh;
     // width: 100vw;
-    padding: 7% 5%;
+    padding: var(--page-padding);
     background-color: var(--black);
     display: flex;
-    justify-content: center;   
+    // justify-content: center;
     align-items: center;
-    p{
+
+    p {
         font-size: 1.25vw; //20px
 
     }
-    a{
+
+    a {
         color: white;
     }
-    @include phone{
-        height:auto;
-        p{
+
+    @include phone {
+        height: auto;
+
+        p {
             font-size: 0.8rem;
         }
     }
 
-    @include sm-phone{
-        height:auto;
-        p{
+    @include sm-phone {
+        height: auto;
+
+        p {
             font-size: 0.8rem;
         }
     }
 }
 
-.contentContainer{
+.contentContainer {
     height: 77%;
     width: 86%;
     display: flex;
     flex-direction: column;
     gap: 9%;
     color: var(--white);
-    white-space: nowrap; 
-    @include phone{
+    white-space: nowrap;
+
+    @include phone {
         flex-direction: column;
         margin: 10% 0%;
     }
 }
 
-.logo{
+.logo {
     filter: brightness(0) invert(1);
     width: 15.21vw;
     padding-bottom: 3%;
-    @include phone{
+
+    @include phone {
         width: 60%;
         padding-bottom: 1%;
     }
 }
 
-.middleContainer{
+.middleContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    @include phone{
+
+    @include phone {
         flex-direction: column;
         margin: 10% 0%;
     }
 }
 
-.midSubContainer{
-    display:flex;
+.midSubContainer {
+    display: flex;
     flex-direction: row;
     gap: 6vw;
-    @include phone{
+
+    @include phone {
         flex-direction: column;
         margin-bottom: 15%;
     }
 }
 
-.subGroup{
-    display:flex; 
+.subGroup {
+    display: flex;
     flex-direction: column;
     gap: 2vh;
 }
 
-.subContent{
-    display:flex;
+.subContent {
+    display: flex;
     flex-direction: column;
     gap: 1.7vh;
-    p{
+
+    p {
         color: white;
         font-weight: 200;
     }
 }
 
-.subTitle{
+.subTitle {
     font-weight: 500;
 }
 
-.newsLetterContainer{
-    display:flex;
-    flex-direction: column;   
+.newsLetterContainer {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     gap: 2.6vh;
     padding-left: 5%;
 
-    @include phone{
+    @include phone {
         padding: 0%;
 
-        p{
+        p {
             font-size: 0.9rem;
             font-weight: 300;
-        } 
+        }
     }
 
-    @include sm-phone{
+    @include sm-phone {
         padding: 0%;
 
-        p{
+        p {
             font-size: 0.9rem;
             font-weight: 300;
-        } 
+        }
     }
 }
 
-.functionality{
-    display:flex;
-    flex-direction: column;   
+.functionality {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     gap: 1.3vh;
-    p{
+
+    p {
         font-size: 1.25vw; //18px
     }
 }
 
-.emailInput{
+.emailInput {
     display: flex;
     width: 32.2vw;
     height: 7.5vh;
     padding: 0.88vh 1vw;
     align-items: center;
-    @include phone{
+
+    @include phone {
         padding: 7.5%;
         width: 100%;
     }
@@ -144,24 +156,28 @@
 
 .emailInput::placeholder {
     font-size: 1.25vw;
+
     /* other styles like color, font-weight, etc. */
-    @include phone{
+    @include phone {
         font-size: 0.8rem;
     }
-  }
+}
 
-.bottomContainer{
+.bottomContainer {
     display: flex;
     flex-direction: column;
     gap: 1.3vh;
-    p{
+
+    p {
         font-size: 1.12vw;
         font-weight: 200;
     }
-    @include phone{
-        p{
+
+    @include phone {
+        p {
             font-size: .75rem;
         }
+
         white-space: normal;
     }
 }
@@ -181,17 +197,18 @@
     align-items: center;
     gap: 10px;
 
-    &:hover, &:active {
-      background-color: var(--white);
-      color: var(--green);
-      border: 1px solid var(--green);
+    &:hover,
+    &:active {
+        background-color: var(--white);
+        color: var(--green);
+        border: 1px solid var(--green);
     }
-    @include phone{
+
+    @include phone {
         width: 100%;
-        p{
+
+        p {
             font-size: 1rem;
         }
     }
-  }
-
-
+}

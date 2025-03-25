@@ -30,7 +30,7 @@ export default function Events({ recapEventsData, upcomingEventsData, sponsersDa
       </section>
 
       <section className={styles.impact}>
-        <h3>OUR IMPACT</h3>
+        <h2>OUR IMPACT</h2>
         <div className={styles.impactnumbers}>
           <ImpactSection impactData={impactData} />
         </div>

@@ -7,7 +7,7 @@
     h1 {
         font-weight: 600;
         font-size: 3.5rem;
-    }  
+    }
 
     p {
         font-weight: 300;
@@ -22,17 +22,17 @@
 @include tablet {
     .impactcomp {
         width: 20%;
-        padding-top: 3%;
-    
+        // padding-top: 3%;
+
         h1 {
             font-size: 2.2rem;
-        }  
-    
+        }
+
         p {
             font-size: 1rem;
             text-align: center;
         }
-    
+
         img {
             padding-bottom: 3%;
         }
@@ -40,7 +40,7 @@
 }
 
 @include phone {
-    .impactcomp{
+    .impactcomp {
         width: 100%;
 
         img {

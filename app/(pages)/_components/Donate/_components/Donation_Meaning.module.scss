@@ -2,7 +2,7 @@
 
 .dm_hero {
   display: flex;
-  padding: 5.63% 6.94%;
+  padding: var(--page-padding);
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
@@ -77,10 +77,10 @@
 
 .responsiveImage {
   // padding-left: 10%;
-  width: 100%; 
+  width: 100%;
   height: auto;
   border-radius: 20px;
-  max-width: 475.905px; 
+  max-width: 475.905px;
 
   @include sm-desktop {
     max-width: 450px;

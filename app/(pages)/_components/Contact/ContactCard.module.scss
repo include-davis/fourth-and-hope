@@ -6,7 +6,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Responsive grid
     gap: 2rem; // Space between cards
     width: 100%;
-    padding: 5%;
+    padding: var(--page-padding);
     justify-content: center;
 }
 

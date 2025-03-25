@@ -2,7 +2,7 @@
 
 .donation_rights_hero {
   display: flex;
-  padding: 64px 100px;
+  padding: var(--page-padding);
   justify-content: space-between;
   align-items: center;
   align-self: stretch;

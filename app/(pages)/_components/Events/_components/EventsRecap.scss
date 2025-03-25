@@ -5,6 +5,7 @@
     display: flex;
     gap: 5%;
     align-items: stretch;
+    padding: var(--page-padding);
 
     .recapcontent {
         flex: 2;

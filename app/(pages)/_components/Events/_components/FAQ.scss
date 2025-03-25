@@ -1,5 +1,9 @@
 @import "../../../_globals/mixins.scss";
 
+.faq-section {
+    padding: var(--page-padding);
+}
+
 .faq-question {
     color: var(--white);
     background-color: var(--black);
@@ -35,7 +39,8 @@
     transition: flex-grow 0.5s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out;
     opacity: 0;
     padding: 0 3.5%;
-    overflow: hidden; 
+    overflow: hidden;
+
 }
 
 .faq-answer.open {
@@ -79,5 +84,3 @@
         margin-bottom: 5%;
     }
 }
-
-
