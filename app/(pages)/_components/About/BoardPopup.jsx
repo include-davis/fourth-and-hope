@@ -16,11 +16,11 @@ export default function BoardPopup({ isOpen, onClose }) {
   };
 
   return (
-    <div 
-      className={styles.popupOverlay} 
+    <div
+      className={styles.popupOverlay}
       onClick={handleOverlayClick}
     >
-      <div 
+      <div
         className={styles.popupContent}
         onClick={handleContentClick}
       >

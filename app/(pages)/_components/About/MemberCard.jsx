@@ -7,18 +7,18 @@ export default function MemberCard({ name, title, email, photoUrl }) {
   return (
     <div className={styles.memberCard}>
       {photoUrl ? (
-        <img 
-          src={photoUrl} 
+        <img
+          src={photoUrl}
           alt={`${name} portrait`}
           className={styles.profileImage}
         />
       ) : (
-        <div 
+        <div
           className={styles.profileImage}
           aria-label={`${name} profile placeholder`}
         />
       )}
-      
+
       <div className={styles.memberInfo}>
         <h4>{name}</h4>
         {title && <p>{title}</p>}

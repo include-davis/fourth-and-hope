@@ -2,13 +2,10 @@
 
 import React, { useState } from "react";
 import styles from "./PopUps.module.scss";
+import Link from "next/link";
 
-const boardMeetings = [
-  { year: 2022, months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Aug", "Sep", "Oct", "Nov"] },
-  { year: 2023, months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"] }
-];
-
-export default function MeetingButton({ children }) {
+export default function MeetingButton({ children, meetingsData }) {
+  const boardMeetings = meetingsData;
   const [isBoardOpen, setBoardOpen] = useState(false);
   const toggleBoardPopup = () => setBoardOpen(!isBoardOpen);
 
@@ -29,14 +26,16 @@ export default function MeetingButton({ children }) {
             <p>Meetings take place on the fourth Tuesday of the month at 6 p.m.</p>
 
             <div className={styles.meetingsContainer}>
-              {boardMeetings.map(({ year, months }) => (
+              {boardMeetings.map(({ year, months, link }) => (
                 <div key={year} className={styles.meetingYear}>
                   <h3>{year}</h3>
                   <div className={styles.meetingGrid}>
-                    {months.map((month) => (
-                      <button key={month} className={styles.meetingBox}>
-                        {month}
-                      </button>
+                    {months.map((month, index) => (
+                      <Link key={month} href={link[index]} target="_blank">
+                        <button className={styles.meetingBox} disabled={!link[index]}>
+                          {month}
+                        </button>
+                      </Link>
                     ))}
                   </div>
                 </div>

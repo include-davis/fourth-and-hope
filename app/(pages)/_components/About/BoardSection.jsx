@@ -4,13 +4,13 @@ import { useState, useEffect, useCallback } from 'react';
 import MemberCard from './MemberCard';
 import BoardPopup from './BoardPopup';
 import MeetingButton from '../PopUps/MeetingButton';
-import boardData from './boardData.json';
-const { boardMembers } = boardData;
+
 import styles from './About.module.scss';
 
-export default function BoardSection() {
+export default function BoardSection({ peopleData, meetingsData }) {
+  const { boardMembers } = peopleData;
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  
+
   const handleOpenPopup = useCallback(() => {
     setIsPopupOpen(true);
   }, []);
@@ -36,10 +36,10 @@ export default function BoardSection() {
     <section className={styles.boardSection}>
       <h2>Board of Trustees</h2>
       <p>Board of Trustees oversees the governance and strategic direction of Fourth & Hope.</p>
-      
+
       <div className={styles.membersGrid}>
         {boardMembers.map((member, index) => (
-          <MemberCard 
+          <MemberCard
             key={member.name || index}
             name={member.name}
             title={member.title}
@@ -48,7 +48,7 @@ export default function BoardSection() {
       </div>
 
       <div className={styles.buttonWrapper}>
-        <MeetingButton>
+        <MeetingButton meetingsData={meetingsData}>
           <button className={styles.meetingButton}>
             Board Meeting Info
           </button>
@@ -56,9 +56,9 @@ export default function BoardSection() {
       </div>
 
       {isPopupOpen && (
-        <BoardPopup 
-          isOpen={isPopupOpen} 
-          onClose={handleClosePopup} 
+        <BoardPopup
+          isOpen={isPopupOpen}
+          onClose={handleClosePopup}
         />
       )}
     </section>
