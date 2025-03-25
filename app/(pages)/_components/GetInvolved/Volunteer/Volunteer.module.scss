@@ -2,8 +2,10 @@
 
 
 .container {
-    margin-right: 6.9%;
-    margin-left: 6.9%;
+    // margin-right: 6.9%;
+    // margin-left: 6.9%;
+    padding: var(--page-padding);
+
     height: auto;
     display: flex;
     flex-direction: column;
@@ -31,8 +33,6 @@
     display: flex;
     align-items: center;
     color: var(--green);
-    padding-top: 0.7%;
-    padding-bottom: 0.7%;
     height: auto;
 
     margin-bottom: 1.9%;

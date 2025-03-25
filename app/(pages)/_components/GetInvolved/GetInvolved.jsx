@@ -6,7 +6,7 @@ import Careers from "./Careers/Careers.jsx";
 import Help from "./Help/Help.jsx";
 import List from "./List/List.jsx";
 
-export default function GetInvolved({careerData, needsList, buttonLinks}) {
+export default function GetInvolved({ careerData, needsList, buttonLinks }) {
   return (
     <div className={styles.container}>
       <Image className={styles.img}
@@ -24,21 +24,16 @@ export default function GetInvolved({careerData, needsList, buttonLinks}) {
         unoptimized={true}
       />
 
-      <div className={styles.element}>
-        <Volunteer buttonLinks={buttonLinks}/>
-      </div>
-      <div className={styles.element}>
-        <Inquiries />
-      </div>
-      <div className={styles.element}>
-        <Careers careerData={careerData}/>
-      </div>
-      <div className={styles.element}>
-        <Help />
-      </div>
-      <div className={styles.element}>
-        <List needsList={needsList}/>
-      </div>
+      <Volunteer buttonLinks={buttonLinks} />
+
+      <Inquiries />
+
+      <Careers careerData={careerData} />
+
+      <Help />
+
+      <List needsList={needsList} />
+
 
     </div>
 

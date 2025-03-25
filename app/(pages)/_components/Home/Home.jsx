@@ -45,7 +45,7 @@ export default function Home({ images, storiesData, programData }) {
   ];
 
   // Programs Components Json
-  const programsData = programData.map((story, index) => (
+  const programsData = programData.map((story, index) => (index < 3) && (
     <ProgramsBox
       key={index.toString()}
       heading={story.title}

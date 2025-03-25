@@ -1,12 +1,10 @@
 @use '../../../_globals/mixins.scss';
 
 .container {
-    margin-right: 6.9%;
-    margin-left: 6.9%;
+    padding: var(--page-padding);
     height: auto;
     display: flex;
     flex-direction: column;
-    padding-bottom: 1%;
 
     @include mixins.phone() {
         h1 {

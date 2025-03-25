@@ -78,32 +78,33 @@ export default function Programs({ programsData, numbersData }) {
 
       <div className={styles.ProgramTitle}>
         <h1>PROGRAMS</h1>
-      </div>
-      {programs}
 
-      <div className={styles.Walters}>
-        <div className={styles.text}>
-          <h2>Walter's House</h2>
-          <p>
-            <b>Walter’s House is a residential substance use disorder treatment facility for women and men.</b> Walter’s House has supported
-            209 participants, with 61 completing treatment and 39 graduating from outpatient programs.
-          </p>
-          <div className={styles.popupWrapper}>
-            <CertificationsButton>
-              <button className={styles.Linksbutton} onClick={handleOpenPopup}>Certifications</button>
-            </CertificationsButton>
+        {programs}
+
+        <div className={styles.Walters}>
+          <div className={styles.text}>
+            <h2>Walter's House</h2>
+            <p>
+              <b>Walter’s House is a residential substance use disorder treatment facility for women and men.</b> Walter’s House has supported
+              209 participants, with 61 completing treatment and 39 graduating from outpatient programs.
+            </p>
+            <div className={styles.popupWrapper}>
+              <CertificationsButton>
+                <button className={styles.Linksbutton} onClick={handleOpenPopup}>Certifications</button>
+              </CertificationsButton>
+            </div>
+
+            {isPopupOpen && (
+              <CertificationsButton
+                isOpen={isPopupOpen}
+                onClose={handleClosePopup}
+              />
+            )}
+
           </div>
-
-          {isPopupOpen && (
-            <CertificationsButton
-              isOpen={isPopupOpen}
-              onClose={handleClosePopup}
-            />
-          )}
-
-        </div>
-        <div className={styles.image}>
-          <img src="images/Programs/Walters.svg" alt="Walter's House" />
+          <div className={styles.image}>
+            <img src="images/Programs/Walters.svg" alt="Walter's House" />
+          </div>
         </div>
       </div>
 

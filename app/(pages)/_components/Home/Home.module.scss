@@ -75,8 +75,7 @@
 // Buttons section
 .threeButtons {
     //used this to make the margins between header and out mission
-    margin-top: 5%;
-    margin-bottom: 5%;
+    padding: var(--page-padding);
     height: 9%;
     width: auto;
 
@@ -86,7 +85,7 @@
 
     .buttonContent {
         //the components of buttons
-        width: 86.1%;
+        // width: 86.1%;
         height: auto;
         display: flex;
         justify-content: space-between;
@@ -109,8 +108,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 4.4%;
-    padding-bottom: 4.4%;
+    padding: var(--page-padding-top-bottom-only);
     height: 22%;
     width: auto;
 
@@ -202,7 +200,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 4.4%;
+    padding: var(--page-padding-top-bottom-only);
     height: 26.1%;
     width: auto;
 
@@ -244,6 +242,7 @@
     flex-direction: column;
     height: 21.03%;
     width: auto;
+    padding: var(--page-padding-top-bottom-only);
 
     h1 {
         color: var(--green);
@@ -251,7 +250,7 @@
         font-size: 5rem; //make globals
         font-weight: 500;
         margin-bottom: 2.2%;
-        margin-top: 3%;
+        // margin-top: 3%;
 
         @include mixins.phone() {
             font-size: 2rem;
@@ -263,5 +262,5 @@
     max-width: 87%;
     display: flex;
     align-items: center;
-    margin-bottom: 2%;
+    // margin-bottom: 2%;
 }

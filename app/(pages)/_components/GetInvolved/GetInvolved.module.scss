@@ -20,14 +20,10 @@
     }
 }
 
-.element {
-    margin-bottom: 8.1%;
-}
-
 .img {
     width: 100%;
     height: auto;
-    margin-bottom: 5.1%;
+    // margin-bottom: 5.1%;
 
     @include mixins.phone() {
         margin-bottom: 5.97%;

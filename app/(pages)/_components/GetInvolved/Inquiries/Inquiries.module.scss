@@ -28,7 +28,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    margin: 4.4% 6.9%;
+    padding: var(--page-padding);
 
     @include mixins.phone() {
         margin-top: 15.9%;
