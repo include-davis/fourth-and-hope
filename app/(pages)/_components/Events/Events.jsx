@@ -5,7 +5,7 @@ import ImpactSection from "./_components/ImpactSection";
 import UpcomingEventSection from "./_components/UpcomingEventSection";
 import SponsorSection from "./_components/SponsorSection";
 
-export default function Events({ recapEventsData, upcomingEventsData, sponsersData }) {
+export default function Events({ recapEventsData, upcomingEventsData, sponsersData, impactData }) {
   return (
     <div className={styles.events}>
 
@@ -32,7 +32,7 @@ export default function Events({ recapEventsData, upcomingEventsData, sponsersDa
       <section className={styles.impact}>
         <h3>OUR IMPACT</h3>
         <div className={styles.impactnumbers}>
-          <ImpactSection />
+          <ImpactSection impactData={impactData} />
         </div>
       </section>
 
