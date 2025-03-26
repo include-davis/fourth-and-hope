@@ -1,25 +1,25 @@
 {
     "impact": [
         {
-            "image": "/images/events/house.svg",
+            "icon": "/images/events/house.svg",
             "number": "66",
             "description": "permanent housing",
             "altText": "house icon"
         },
         {
-            "image": "/images/events/bandaid.svg",
+            "icon": "/images/events/bandaid.svg",
             "number": "280",
             "description": "emergency shelters",
             "altText": "shelter icon"
         },
         {
-            "image": "/images/events/people.svg",
+            "icon": "/images/events/people.svg",
             "number": "234",
             "description": "support services",
             "altText": "support icon"
         },
         {
-            "image": "/images/events/restaurant.svg",
+            "icon": "/images/events/restaurant.svg",
             "number": "93,000",
             "description": "prepared meals",
             "altText": "meal icon"
@@ -27,29 +27,29 @@
     ],
     "numbers": [
         {
-            "value": "242",
+            "number": "242",
             "description": "emergency shelters",
-            "image": "images/Programs/emergencyIcon.svg"
+            "icon": "images/Programs/emergencyIcon.svg"
         },
         {
-            "value": "58",
+            "number": "58",
             "description": "in permanent \nsupportive housing",
-            "image": "images/Programs/housingSupport.svg"
+            "icon": "images/Programs/housingSupport.svg"
         },
         {
-            "value": "92000",
+            "number": "92000",
             "description": "meals served",
-            "image": "images/Programs/mealsServed.svg"
+            "icon": "images/Programs/mealsServed.svg"
         },
         {
-            "value": "41",
+            "number": "41",
             "description": "in stable housing",
-            "image": "images/Programs/stableHousing.svg"
+            "icon": "images/Programs/stableHousing.svg"
         },
         {
-            "value": "88",
+            "number": "88",
             "description": "in transitional sober living",
-            "image": "images/Programs/soberLiving.svg"
+            "icon": "images/Programs/soberLiving.svg"
         }
     ]
 }

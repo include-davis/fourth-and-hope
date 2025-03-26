@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import styles from './stats.module.scss';
 
 
-const StatItem = ({ value, label, image }) => {
+const StatItem = ({ number, description, icon }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    const numericValue = Number(value);
+    const numericValue = Number(number);
     if (isNaN(numericValue)) return;
 
     let start = 0;
@@ -23,14 +23,14 @@ const StatItem = ({ value, label, image }) => {
     }, stepTime);
 
     return () => clearInterval(counter);
-  }, [value]);
+  }, [number]);
 
   return (
     <div className={styles.statBox}>
-      {image && <img src={image} alt={label} className={styles.statIcon} />}
+      {icon && <img src={icon} alt={description} className={styles.statIcon} />}
       <div className={styles.statContent}>
         <span className={styles.statValue}>{count.toLocaleString()}</span>
-        <p className={styles.statLabel}>{label}</p>
+        <p className={styles.statLabel}>{description}</p>
       </div>
     </div>
   );

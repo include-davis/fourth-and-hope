@@ -48,9 +48,9 @@ export default function Home({ images, storiesData, programData }) {
   const programsData = programData.map((story, index) => (index < 3) && (
     <ProgramsBox
       key={index.toString()}
-      heading={story.title}
-      bodyText={story.blurb}
-      imageSrc={story.image}
+      title={story.title}
+      blurb={story.blurb}
+      image={story.image}
       altText={story.altText}
       href={'/programs'}
     />

@@ -19,8 +19,9 @@ async function getCareers() {
     }
 
     const parsedData = data.body.map((careerItem) => ({
-      title: careerItem.title,
+      position: careerItem.position,
       description: careerItem.description,
+      link: careerItem.link,
     }));
 
     return parsedData;
@@ -51,7 +52,7 @@ async function getNeedsList() {
     }));
 
     return parsedData;
-    } catch {
+  } catch {
     console.log('Failed to fetch needs list');
     return needsListFallbackData;
   }
@@ -78,20 +79,19 @@ async function getLinks() {
     }));
 
     return parsedData;
-    } catch {
+  } catch {
     console.log('Failed to fetch button links');
     return buttonLinkFallbackData;
   }
 }
 
 export default async function getInvolved() {
-    const careerData = await getCareers();
-    const needsList = await getNeedsList();
-    const buttonLinks = await getLinks();
-    return (
-      <main>
-        <div><GetInvolved careerData={careerData} needsList={needsList} buttonLinks={buttonLinks}/></div>
-      </main>
-    );
-  }
-  
+  const careerData = await getCareers();
+  const needsList = await getNeedsList();
+  const buttonLinks = await getLinks();
+  return (
+    <main>
+      <div><GetInvolved careerData={careerData} needsList={needsList} buttonLinks={buttonLinks} /></div>
+    </main>
+  );
+}

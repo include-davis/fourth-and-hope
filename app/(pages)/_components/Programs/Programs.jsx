@@ -15,7 +15,7 @@ export default function Programs({ programsData, numbersData }) {
       key={index.toString()}
       title={program.title}
       subtitle={program.subtitle}
-      text={program.text}
+      description={program.description}
       image={program.image}
     />
   ));
@@ -72,7 +72,7 @@ export default function Programs({ programsData, numbersData }) {
       <div className={styles.statsContainer}>
         <h2 className={styles.TitleNumbers}>2023 By the Numbers</h2>
         {numbers.map((n, index) => (
-          <Stat key={index} value={n.value} label={n.description} image={n.image} />
+          <Stat key={index} number={n.number} description={n.description} icon={n.icon} />
         ))}
       </div>
 

@@ -2,7 +2,7 @@
     {
         "title": "Emergency Shelters",
         "subtitle": "Fourth and Hope's 100-bed shelter, open 24/7 provides essential services like showers, laundry and case management ",
-        "text": "Walter’s House has supported 209 participants, with 61 completing treatment and 39 graduating from outpatient programs. In 2023, it sheltered 242 individuals and placed 41 in stable housing. ",
+        "description": "Walter’s House has supported 209 participants, with 61 completing treatment and 39 graduating from outpatient programs. In 2023, it sheltered 242 individuals and placed 41 in stable housing. ",
         "blurb": "Providing overnight services, housing, outreach support, and thousands of meals to those in need.",
         "image": "images/Programs/EmergencyShelters.svg",
         "altText": "Red bunk beds"
@@ -10,7 +10,7 @@
     {
         "title": "Treatment Program",
         "subtitle": "",
-        "text": "",
+        "description": "",
         "blurb": "Offering residential care at Walter’s House, outpatient support, referrals, and  program completions to aid recovery and connection to further services.",
         "image": "images/Home/programsTreatment.svg",
         "altText": "Woman holding towels in one arm and holding up a fist with the other arm."
@@ -18,7 +18,7 @@
     {
         "title": "Housing Program",
         "subtitle": "Fourth & Hope provides permanent supportive and transitional housing to promote stability and recovery",
-        "text": "Permanent Supportive Housing serves individuals and families with disabilities who have experienced homelessness. All housing clients receive ongoing case management. In 2023, 58 people (43 households) were housed in permanent supportive housing, and 88 were housed in transitional sober living.",
+        "description": "Permanent Supportive Housing serves individuals and families with disabilities who have experienced homelessness. All housing clients receive ongoing case management. In 2023, 58 people (43 households) were housed in permanent supportive housing, and 88 were housed in transitional sober living.",
         "blurb": "Providing permanent supportive housing and transitional sober living opportunities to individuals and households in need.",
         "image": "images/Programs/Housing.svg",
         "altText": "Group of older people holding gardening tools and smiling at the camera"
@@ -26,7 +26,7 @@
     {
         "title": "Meals",
         "subtitle": "",
-        "text": "Fourth & Hope offers 3 meals/day to anyone in need of a hot meal. Lunch is served every day at 12 PM, and dinner at 5 PM. In 2023, 92,000 meals were served.",
+        "description": "Fourth & Hope offers 3 meals/day to anyone in need of a hot meal. Lunch is served every day at 12 PM, and dinner at 5 PM. In 2023, 92,000 meals were served.",
         "image": "images/Programs/Meals.svg",
         "altText": "Two men smiling at camera serving meals"
     }

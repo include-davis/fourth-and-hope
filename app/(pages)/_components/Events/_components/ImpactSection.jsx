@@ -10,7 +10,7 @@ const ImpactSection = ({ impactData }) => {
                     key={index.toString()}
                     number={i.number}
                     description={i.description}
-                    image={i.image}
+                    icon={i.icon}
                     altText={i.altText}
                 />
             ))}

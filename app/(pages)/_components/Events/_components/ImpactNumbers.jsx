@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./ImpactNumbers.scss";
 
-const ImpactNumbers = ({ image, number, description, altText, duration = 2000 }) => {
+const ImpactNumbers = ({ icon, number, description, altText, duration = 2000 }) => {
     // Start the counter at 0
     const [count, setCount] = useState(0);
     const [hasAnimated, setHasAnimated] = useState(false);
@@ -54,7 +54,7 @@ const ImpactNumbers = ({ image, number, description, altText, duration = 2000 })
 
     return (
         <div ref={ref} className="impactcomp">
-            <img src={image} alt={altText} />
+            <img src={icon} alt={altText} />
             <h1>{count.toLocaleString()}</h1> {/* Format with commas */}
             <p>{description}</p>
         </div>

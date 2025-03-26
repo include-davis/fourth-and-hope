@@ -7,7 +7,7 @@ import StaffSection from './StaffSection';
 import PrimaryButton from '../Button/PrimaryButton';
 import SecondaryButton from '../Button/SecondaryButton';
 
-export default function About({ peopleData, meetingData }) {
+export default function About({ execData, trusteeData, meetingData }) {
   useEffect(() => {
     const checkHashAndScroll = () => {
       if (window.location.hash === '#subscribe') {
@@ -89,8 +89,8 @@ export default function About({ peopleData, meetingData }) {
         </div>
       </div>
 
-      <BoardSection peopleData={peopleData} meetingsData={meetingData} />
-      <StaffSection peopleData={peopleData} />
+      <BoardSection trusteeData={trusteeData} meetingsData={meetingData} />
+      <StaffSection execData={execData} />
     </div>
   );
 }

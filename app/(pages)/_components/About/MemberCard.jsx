@@ -3,12 +3,12 @@
 import React from 'react';
 import styles from './About.module.scss';
 
-export default function MemberCard({ name, title, email, photoUrl }) {
+export default function MemberCard({ name, position, email, image }) {
   return (
     <div className={styles.memberCard}>
-      {photoUrl ? (
+      {image ? (
         <img
-          src={photoUrl}
+          src={image}
           alt={`${name} portrait`}
           className={styles.profileImage}
         />
@@ -21,7 +21,7 @@ export default function MemberCard({ name, title, email, photoUrl }) {
 
       <div className={styles.memberInfo}>
         <h4>{name}</h4>
-        {title && <p>{title}</p>}
+        {position && <p>{position}</p>}
         {email && (
           <a href={`mailto:${email}`}>
             {email}

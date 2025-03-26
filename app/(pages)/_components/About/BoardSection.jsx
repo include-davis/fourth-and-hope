@@ -7,8 +7,8 @@ import MeetingButton from '../PopUps/MeetingButton';
 
 import styles from './About.module.scss';
 
-export default function BoardSection({ peopleData, meetingsData }) {
-  const { boardMembers } = peopleData;
+export default function BoardSection({ trusteeData, meetingsData }) {
+  const boardMembers = trusteeData;
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const handleOpenPopup = useCallback(() => {
@@ -42,7 +42,8 @@ export default function BoardSection({ peopleData, meetingsData }) {
           <MemberCard
             key={member.name || index}
             name={member.name}
-            title={member.title}
+            position={member.position}
+            image={member.image}
           />
         ))}
       </div>
