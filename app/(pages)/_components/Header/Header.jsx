@@ -48,20 +48,15 @@ export default function Header() {
             </div>
           </nav>
 
-          {/* Hamburger icon (shown on mobile via CSS media queries) */}
           <button className={styles.menuButton} onClick={toggleMenu}>
             <img src="/images/menu-rounded.svg" alt="Hamburger icon" />
           </button>
         </div>
       </header>
-
-      {/* Render overlay + MobileMenu when open */}
       {menuOpen && (
         <>
-          {/* Overlay that darkens the background */}
           <div className={styles.overlay} onClick={toggleMenu} />
 
-          {/* The actual slide-in mobile menu */}
           <MobileMenu toggleMenu={toggleMenu} />
         </>
       )}

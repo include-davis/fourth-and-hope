@@ -4,7 +4,6 @@ import styles from "./MobileMenu.module.scss";
 export default function MobileMenu({ toggleMenu }) {
   return (
     <div className={styles.mobileMenu}>
-      {/* Close (X) button in top-right */}
       <button className={styles.closeButton} onClick={toggleMenu}>
         &times;
       </button>
@@ -30,7 +29,6 @@ export default function MobileMenu({ toggleMenu }) {
         </Link>
       </nav>
 
-      {/* Optional donate button at the bottom */}
       <div className={styles.donateButtonWrapper}>
         <a href="/donate" className={styles.donateButton} onClick={toggleMenu}>
           Donate
