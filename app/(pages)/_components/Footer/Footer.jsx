@@ -43,22 +43,22 @@ export default function Footer() {
               <p className={styles.subTitle}>Social</p>
               <div className={styles.subContent}>
                 <p>
-                  <Link href="https://www.facebook.com/FourthandHope/">
+                  <Link href="https://www.facebook.com/FourthandHope/" target="_blank">
                     Facebook
                   </Link>
                 </p>
                 <p>
-                  <Link href="https://www.instagram.com/fourth_hope/">
+                  <Link href="https://www.instagram.com/fourth_hope/" target="_blank">
                     Instagram
                   </Link>
                 </p>
                 <p>
-                  <Link href="https://www.youtube.com/channel/UCkSg1q3aaGzVaiiNstGdxYg?view_as=subscriber">
+                  <Link href="https://www.youtube.com/channel/UCkSg1q3aaGzVaiiNstGdxYg?view_as=subscriber" target="_blank">
                     Youtube
                   </Link>
                 </p>
                 <p>
-                  <Link href="https://www.linkedin.com/company/fourth-hope/">
+                  <Link href="https://www.linkedin.com/company/fourth-hope/" target="_blank">
                     LinkedIn
                   </Link>
                 </p>
