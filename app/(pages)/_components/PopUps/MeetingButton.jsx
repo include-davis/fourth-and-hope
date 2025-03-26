@@ -26,13 +26,16 @@ export default function MeetingButton({ children, meetingsData }) {
             <p>Meetings take place on the fourth Tuesday of the month at 6 p.m.</p>
 
             <div className={styles.meetingsContainer}>
-              {boardMeetings.map(({ year, months, link }) => (
+              {boardMeetings.map(({ year, months, links }) => (
                 <div key={year} className={styles.meetingYear}>
                   <h3>{year}</h3>
                   <div className={styles.meetingGrid}>
                     {months.map((month, index) => (
-                      <Link key={month} href={link[index]} target="_blank">
-                        <button className={styles.meetingBox} disabled={!link[index]}>
+                      <Link key={month} href={links[index]} target="_blank">
+                        <button
+                          className={styles.meetingBox}
+                          disabled={!links[index]}
+                        >
                           {month}
                         </button>
                       </Link>

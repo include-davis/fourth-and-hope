@@ -56,29 +56,38 @@ async function getExecs() {
 
 async function getMeetings() {
   try {
-    //TODO: fix query
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true`,
-      {
-        next:
-        {
-          tags: "cms"
-        }
-      }
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/meetings?_published=true`,
+      { next: { tags: "cms" } }
     );
     const data = await res.json();
     if (!data.ok || data.body.length === 0) {
-      throw new Error();
+      throw new Error("No meeting data found");
     }
 
-    //TODO: add alt text to cms schema and add parse of multiple images
-    const parsedData = data.body.map((meetingItem) => ({ year: meetingItem.year, month: meetingItem.month, link: meetingItem.link }));
+    // Group by year
+    const grouped = data.body.reduce((acc, item) => {
+      const { year, month, link } = item;
+      if (!acc[year]) {
+        acc[year] = { year, months: [], links: [] };
+      }
+      acc[year].months.push(month);
+      acc[year].links.push(link);
+      return acc;
+    }, {});
 
-    return parsedData;
-  } catch {
-    console.log('Failed to fetch people');
-    return meetingFallbackData;
+    // Convert grouped object to an array and sort it by year descending
+    const finalArray = Object.values(grouped).sort(
+      (a, b) => parseInt(b.year) - parseInt(a.year)
+    );
+
+    return finalArray;
+  } catch (err) {
+    console.error("Failed to fetch meeting data:", err);
+    return []; // or return fallback data
   }
 }
+
 
 export default async function about() {
   const trusteeData = await getTrustees();
