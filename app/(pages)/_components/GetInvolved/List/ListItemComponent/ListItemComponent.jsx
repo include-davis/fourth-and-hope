@@ -1,14 +1,11 @@
 // ListItemComponent.jsx
-import styles from './ListItemComponent.module.scss'; 
+import styles from './ListItemComponent.module.scss';
 
-export default function ListItemComponent({ category, items }) {
+export default function ListItemComponent({ items }) {
   return (
-    <div className={styles.listSection}> 
-      <h4 className={styles.h4_override}>{category}</h4>  
+    <div className={styles.listSection}>
       <ul className={styles.ul_override}>
-        {items.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
+        <li>{items}</li>
       </ul>
     </div>
   );

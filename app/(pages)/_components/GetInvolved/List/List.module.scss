@@ -25,6 +25,11 @@
     }
 }
 
+.h4_override {
+    color: var(--green);
+    margin-bottom: 1.7%;
+}
+
 .top {
     height: auto;
     display: flex;
@@ -53,8 +58,10 @@
 
 .bottom {
     height: auto;
-    display: flex;
+    display: grid;
     gap: 2%;
+    grid-template-columns: 1fr 1fr;
+
 
     @include phone {
         display: flex;

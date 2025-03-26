@@ -1,8 +1,7 @@
 import styles from "./List.module.scss";
 import ListItemComponent from "./ListItemComponent/ListItemComponent.jsx";
 
-export default function List({needsList}) {
-    const listData = Array.isArray(needsList) ? needsList : Object.values(needsList);
+export default function List({ needsListNew, needsListUsed }) {
 
     return (
         <div className={styles.container}>
@@ -14,13 +13,24 @@ export default function List({needsList}) {
                 </p>
             </div>
             <div className={styles.bottom}>
-                {listData.map((list, index) => (
-                    <ListItemComponent
-                        key={index}
-                        category={list.category}
-                        items={list.items}
-                    />
-                ))}
+                <div>
+                    <h4 className={styles.h4_override}>Must be brand new</h4>
+                    {needsListNew.map((list, index) => (
+                        <ListItemComponent
+                            key={index}
+                            items={list.item}
+                        />
+                    ))}
+                </div>
+                <div>
+                    <h4 className={styles.h4_override}>May be lightly used</h4>
+                    {needsListUsed.map((list, index) => (
+                        <ListItemComponent
+                            key={index}
+                            items={list.item}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );
