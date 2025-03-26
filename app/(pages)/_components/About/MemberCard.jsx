@@ -3,13 +3,13 @@
 import React from 'react';
 import styles from './About.module.scss';
 
-export default function MemberCard({ name, position, email, image }) {
+export default function MemberCard({ name, position, email, image, image_alt }) {
   return (
     <div className={styles.memberCard}>
       {image ? (
         <img
           src={image}
-          alt={`${name} portrait`}
+          alt={image_alt}
           className={styles.profileImage}
         />
       ) : (

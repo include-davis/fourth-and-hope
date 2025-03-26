@@ -11,7 +11,7 @@ const ImpactSection = ({ impactData }) => {
                     number={i.number}
                     description={i.description}
                     icon={i.icon}
-                    altText={i.altText}
+                    image_alt={i.image_alt}
                 />
             ))}
         </>

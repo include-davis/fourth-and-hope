@@ -4,7 +4,6 @@ import donationFallbackData from '../_data/donation.json'
 
 async function getImpact() {
   try {
-    //TODO: fix query
     const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/stats?_published=true&type=impact`,
       {
         next:
@@ -18,8 +17,7 @@ async function getImpact() {
       throw new Error();
     }
 
-    //TODO: add alt text to cms schema and add parse of multiple images
-    const parsedData = data.body.map((impactItem) => ({ icon: impactItem.icon[0].src, altText: impactItem.image_alt_text, number: impactItem.number, description: impactItem.description }));
+    const parsedData = data.body.map((impactItem) => ({ icon: impactItem.icon[0].src, number: impactItem.number, description: impactItem.description }));
 
     return parsedData;
   } catch {
@@ -28,35 +26,9 @@ async function getImpact() {
   }
 }
 
-async function getNumbers() {
-  try {
-    //TODO: fix query
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/stats?_published=true&type=numbers`,
-      {
-        next:
-        {
-          tags: "cms"
-        }
-      }
-    );
-    const data = await res.json();
-    if (!data.ok || data.body.length === 0) {
-      throw new Error();
-    }
-
-    //TODO: add alt text to cms schema and add parse of multiple images
-    const parsedData = data.body.map((impactItem) => ({ icon: impactItem.icon[0].src, altText: impactItem.image_alt_text, number: impactItem.number, description: impactItem.description }));
-
-    return parsedData;
-  } catch {
-    console.log('Failed to fetch numbers');
-    return numbersFallbackData;
-  }
-}
 
 async function getDonation() {
   try {
-    //TODO: fix query
     const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/stats?_published=true&type=donation`,
       {
         next:
@@ -70,7 +42,6 @@ async function getDonation() {
       throw new Error();
     }
 
-    //TODO: add alt text to cms schema and add parse of multiple images
     const parsedData = data.body.map((donationItem) => ({ donation_goal: donationItem.donation_goal, donation_current: donationItem.donation_current, recommended_donation: donationItem.recommended_donation }));
 
     return parsedData;

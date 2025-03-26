@@ -18,8 +18,7 @@ async function getTrustees() {
       throw new Error();
     }
 
-    //TODO: add alt text to cms schema and add parse of multiple images
-    const parsedData = data.body.map((peopleItem) => ({ image: peopleItem.image[0].src, altText: peopleItem.image_alt_text, name: peopleItem.name, position: peopleItem.position, email: peopleItem.email, type: peopleItem.type, }));
+    const parsedData = data.body.map((peopleItem) => ({ image: peopleItem.image[0].src, image_alt: peopleItem.image_alt, name: peopleItem.name, position: peopleItem.position, email: peopleItem.email, type: peopleItem.type, }));
 
     return parsedData;
   } catch {
@@ -30,7 +29,6 @@ async function getTrustees() {
 
 async function getExecs() {
   try {
-    //TODO: fix query
     const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true&type=exec`,
       {
         next:
@@ -44,8 +42,7 @@ async function getExecs() {
       throw new Error();
     }
 
-    //TODO: add alt text to cms schema and add parse of multiple images
-    const parsedData = data.body.map((peopleItem) => ({ image: peopleItem.image[0].src, altText: peopleItem.image_alt_text, name: peopleItem.name, position: peopleItem.position, email: peopleItem.email, type: peopleItem.type, }));
+    const parsedData = data.body.map((peopleItem) => ({ image: peopleItem.image[0].src, image_alt: peopleItem.image_alt, name: peopleItem.name, position: peopleItem.position, email: peopleItem.email, type: peopleItem.type, }));
 
     return parsedData;
   } catch {
@@ -56,7 +53,6 @@ async function getExecs() {
 
 async function getMeetings() {
   try {
-    //TODO: fix query
     const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true`,
       {
         next:
@@ -70,7 +66,6 @@ async function getMeetings() {
       throw new Error();
     }
 
-    //TODO: add alt text to cms schema and add parse of multiple images
     const parsedData = data.body.map((meetingItem) => ({ year: meetingItem.year, month: meetingItem.month, link: meetingItem.link }));
 
     return parsedData;

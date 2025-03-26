@@ -2,7 +2,7 @@ import React from "react";
 import "./EventsRecap.scss";
 import Image from "next/image";
 
-const EventsRecap = ({ date, title, description, images, alt }) => {
+const EventsRecap = ({ date, title, description, images, image_alt }) => {
 
     return (
         <section className="recapgroup">
@@ -22,7 +22,7 @@ const EventsRecap = ({ date, title, description, images, alt }) => {
 
             <div className="parent">
                 {images.map((img, index) => (
-                    <Image key={index} src={img} alt={alt} width={100} height={100} />
+                    <Image key={index} src={img} alt={image_alt} width={100} height={100} />
                 ))}
             </div>
         </section>

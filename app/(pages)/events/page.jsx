@@ -6,7 +6,6 @@ import impactFallbackData from '../_data/impact.json'
 
 async function getRecapEvents() {
   try {
-    //TODO: fix query
     const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/events?_published=true&type=recap`,
       {
         next:
@@ -20,8 +19,8 @@ async function getRecapEvents() {
       throw new Error();
     }
 
-    //TODO: add alt text to cms schema and add parse of multiple images
-    const parsedData = data.body.map((eventItem) => ({ images: eventItem.images[0].src, altText: eventItem.image_alt_text, type: eventItem.type, title: eventItem.title, date: eventItem.date, description: eventItem.description }));
+    //TODO: add parse of multiple images
+    const parsedData = data.body.map((eventItem) => ({ images: eventItem.images[0].src, image_alt: eventItem.image_alt, type: eventItem.type, title: eventItem.title, date: eventItem.date, description: eventItem.description }));
 
     return parsedData;
   } catch {
@@ -32,7 +31,6 @@ async function getRecapEvents() {
 
 async function getUpcomingEvents() {
   try {
-    //TODO: fix query
     const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/events?_published=true&type=upcoming`,
       {
         next:
@@ -46,8 +44,7 @@ async function getUpcomingEvents() {
       throw new Error();
     }
 
-    //TODO: add alt text to cms schema and add parse of multiple images
-    const parsedData = data.body.map((eventItem) => ({ images: eventItem.images[0].src, altText: eventItem.image_alt_text, type: eventItem.type, title: eventItem.title, date: eventItem.date, description: eventItem.description }));
+    const parsedData = data.body.map((eventItem) => ({ images: eventItem.images[0].src, image_alt: eventItem.image_alt, type: eventItem.type, title: eventItem.title, date: eventItem.date, description: eventItem.description }));
 
     return parsedData;
   } catch {
@@ -58,7 +55,6 @@ async function getUpcomingEvents() {
 
 async function getSponsers() {
   try {
-    //TODO: fix query
     const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true`,
       {
         next:
@@ -72,10 +68,14 @@ async function getSponsers() {
       throw new Error();
     }
 
-    //TODO: add alt text to cms schema and add parse of multiple images
-    const parsedData = data.body.map((eventItem) => ({ image: eventItem.main_image[0].src, altText: eventItem.image_alt_text }));
+    const images = [];
+    data.body.forEach(contentItem => {
+      contentItem.images.forEach(imageItem => {
+        images.push(imageItem.src);
+      });
+    });
 
-    return parsedData;
+    return images;
   } catch {
     console.log('Failed to fetch sponsers');
     return sponsersFallbackData;
@@ -84,7 +84,6 @@ async function getSponsers() {
 
 async function getImpact() {
   try {
-    //TODO: fix query
     const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/stats?_published=true&type=impact`,
       {
         next:
@@ -99,7 +98,7 @@ async function getImpact() {
     }
 
     //TODO: add alt text to cms schema and add parse of multiple images
-    const parsedData = data.body.map((impactItem) => ({ icon: impactItem.icon[0].src, altText: impactItem.image_alt_text, number: impactItem.number, description: impactItem.description }));
+    const parsedData = data.body.map((impactItem) => ({ icon: impactItem.icon[0].src, image_alt: impactItem.image_alt, number: impactItem.number, description: impactItem.description }));
 
     return parsedData;
   } catch {

@@ -51,7 +51,7 @@ export default function Home({ images, storiesData, programData }) {
       title={story.title}
       blurb={story.blurb}
       image={story.image}
-      altText={story.altText}
+      image_alt={story.image_alt}
       href={'/programs'}
     />
   ));
@@ -61,7 +61,7 @@ export default function Home({ images, storiesData, programData }) {
       heading={story.heading}
       bodyText={story.bodyText}
       imageSrc={story.imageSrc}
-      altText={story.altText}
+      image_alt={story.image_alt}
     />
   ));
 
