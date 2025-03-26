@@ -4,9 +4,10 @@ import styles from "./Donate_Section.module.scss";
 import DonationProgress from "./Donation_Progress"; // Adjust the path as needed
 
 export default function Donate_Section({ donationData }) {
-  const totalDonationGoal = parseInt(donationData.donation_goal);
-  const donationIncrement = parseInt(donationData.recommended_donation);
-  const currentDonation = parseInt(donationData.current_donation);
+  const totalDonationGoal = parseInt(donationData[0]?.donation_goal);
+  const donationIncrement = parseInt(donationData[0]?.recommended_donation);
+  const currentDonation = parseInt(donationData[0]?.donation_current);
+
 
   // Use state for the current donation so we can update it dynamically.
   // const [currentDonation, setCurrentDonation] = useState(9000);

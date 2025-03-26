@@ -20,7 +20,7 @@ export default function Donate({ impactData, donationData }) {
 
       {/* Start donate container */}
       <Donate_Section donationData={donationData} />
-      <Donation_Meaning />
+      <Donation_Meaning donationData={donationData} />
       <Donation_Benefiet />
       <Donation_Provide impactData={impactData} />
       <Donation_Rights />
