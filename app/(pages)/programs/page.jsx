@@ -1,7 +1,6 @@
 import Programs from "../_components/Programs/Programs";
-
 import programCardsFallbackData from '../_data/program-cards.json'
-import numbersFallbackData from '../_data/stats.json'
+import numbersFallbackData from '../_data/numbers.json'
 
 async function getPrograms() {
   try {
@@ -31,7 +30,7 @@ async function getPrograms() {
 async function getNumbers() {
   try {
     //TODO: fix query
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/stats?_published=true`,
+    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/stats?_published=true&type=numbers`,
       {
         next:
         {
@@ -45,7 +44,7 @@ async function getNumbers() {
     }
 
     //TODO: add alt text to cms schema and add parse of multiple images
-    const parsedData = data.body.map((impactItem) => ({ image: impactItem.main_image[0].src, altText: impactItem.image_alt_text, number: impactItem.number, description: impactItem.description }));
+    const parsedData = data.body.map((impactItem) => ({ icon: impactItem.icon[0].src, altText: impactItem.image_alt_text, number: impactItem.number, description: impactItem.description }));
 
     return parsedData;
   } catch {

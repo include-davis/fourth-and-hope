@@ -3,12 +3,13 @@ import { useState } from "react";
 import styles from "./Donate_Section.module.scss";
 import DonationProgress from "./Donation_Progress"; // Adjust the path as needed
 
-export default function Donate_Section() {
-  const totalDonationGoal = 10000;
-  const donationIncrement = 35;
+export default function Donate_Section({ donationData }) {
+  const totalDonationGoal = parseInt(donationData.donation_goal);
+  const donationIncrement = parseInt(donationData.recommended_donation);
+  const currentDonation = parseInt(donationData.current_donation);
 
   // Use state for the current donation so we can update it dynamically.
-  const [currentDonation, setCurrentDonation] = useState(9000);
+  // const [currentDonation, setCurrentDonation] = useState(9000);
   const [showOverlay, setShowOverlay] = useState(false);
 
   const openDonationsPage = () => {

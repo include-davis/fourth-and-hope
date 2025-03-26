@@ -3,7 +3,7 @@ import styles from "./Donation_Provide.module.scss";
 import AnimatedNumber from "./AnimatedNumber";
 
 export default function Donation_Provide({ impactData }) {
-  const { impact } = impactData;
+  const impact = impactData;
   return (
     <div className={styles.dp_hero}>
       <div className={styles.provide_container}>

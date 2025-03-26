@@ -2,7 +2,7 @@ import Events from "../_components/Events/Events";
 import recapEventsFallbackData from '../_data/recap-events.json'
 import upcomingEventsFallbackData from '../_data/upcoming-events.json'
 import sponsersFallbackData from '../_data/sponsers.json'
-import impactFallbackData from '../_data/stats.json'
+import impactFallbackData from '../_data/impact.json'
 
 async function getRecapEvents() {
   try {
@@ -85,7 +85,7 @@ async function getSponsers() {
 async function getImpact() {
   try {
     //TODO: fix query
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/stats?_published=true`,
+    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/stats?_published=true&type=impact`,
       {
         next:
         {
@@ -99,11 +99,11 @@ async function getImpact() {
     }
 
     //TODO: add alt text to cms schema and add parse of multiple images
-    const parsedData = data.body.map((impactItem) => ({ image: impactItem.main_image[0].src, altText: impactItem.image_alt_text, number: impactItem.number, description: impactItem.description }));
+    const parsedData = data.body.map((impactItem) => ({ icon: impactItem.icon[0].src, altText: impactItem.image_alt_text, number: impactItem.number, description: impactItem.description }));
 
     return parsedData;
   } catch {
-    console.log('Failed to fetch impact numbers');
+    console.log('Failed to fetch impact');
     return impactFallbackData;
   }
 }

@@ -7,7 +7,7 @@ import Donation_Rights from "./_components/Donate_Rights"
 import styles from "./Donate.module.scss";
 import Image from "next/image";
 
-export default function Donate({ impactData }) {
+export default function Donate({ impactData, donationData }) {
   return (
     <div className={styles.hero_container}>
       <Image
@@ -19,7 +19,7 @@ export default function Donate({ impactData }) {
       />
 
       {/* Start donate container */}
-      <Donate_Section />
+      <Donate_Section donationData={donationData} />
       <Donation_Meaning />
       <Donation_Benefiet />
       <Donation_Provide impactData={impactData} />

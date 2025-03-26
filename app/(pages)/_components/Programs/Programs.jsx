@@ -19,7 +19,7 @@ export default function Programs({ programsData, numbersData }) {
       image={program.image}
     />
   ));
-  const { numbers } = numbersData;
+  const numbers = numbersData;
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
