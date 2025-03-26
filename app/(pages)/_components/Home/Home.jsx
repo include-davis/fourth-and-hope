@@ -83,10 +83,10 @@ export default function Home({ images, storiesData, programData }) {
             />
           </div>
         ))}
-        {/* <div className={styles.slidesTitle}>
-            <h2>A Mission to Change Lives</h2>
-            <h1>FOURTH & HOPE</h1>
-        </div> */}
+        <div className={styles.slidesTitle}>
+          <h2>A Mission to Change Lives</h2>
+          <h1>FOURTH & HOPE</h1>
+        </div>
       </div>
 
       {/* donate, volunteer, resources buttons */}
