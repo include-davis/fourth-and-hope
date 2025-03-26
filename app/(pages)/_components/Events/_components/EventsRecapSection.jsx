@@ -7,7 +7,7 @@ const EventsRecapSection = ({ recapEventsData }) => {
             key={index.toString()}
             date={event.date}
             title={event.title}
-            paragraphs={event.description}
+            description={event.description}
             images={event.images}
             alt={event.altText}
         />

@@ -10,26 +10,14 @@
   width: 100%;
   background-color: var(--white);
   max-width: 100%;
-  padding: 0 5%;
-  padding-top: 4%;
-  padding-bottom: 3%;
+  padding: var(--page-padding);
   display: grid;
   grid-template-columns: 55% 45%;
   align-items: flex-start;
-  gap: 0;
 
-  @include tablet {
-    grid-template-columns: 1fr;
-    gap: 5%;
-    padding: 5% 10%;
-  }
-
-  @include sm-phone {
+  @include phone {
     grid-template-columns: 1fr;
     gap: 2%;
-    padding: 0;
-    padding-top: 4%;
-    padding-bottom: 4%;
     text-align: left;
   }
 
@@ -55,17 +43,16 @@
         left: 5%;
       }
 
-      @include sm-phone {
+      @include phone {
         font-size: 2rem;
         line-height: 3rem;
         left: 0;
         padding-left: 0 !important;
-        margin-left: 4% !important;
         text-align: left !important;
       }
     }
 
-    @include sm-phone {
+    @include phone {
       left: 0;
       max-width: 100%;
       margin-left: 0 !important;
@@ -83,7 +70,7 @@
     // padding-left: 10%; 
     margin-right: 0;
 
-    @include sm-phone {
+    @include phone {
       padding-left: 0;
       margin-left: 0;
       align-items: flex-start;
@@ -99,12 +86,11 @@
         font-size: 2rem;
       }
 
-      @include sm-phone {
+      @include phone {
         font-size: 1.5rem;
         text-align: left;
         padding-top: 5%;
         padding-left: 0 !important;
-        margin-left: 4% !important;
       }
     }
 
@@ -118,13 +104,11 @@
         font-size: 1rem;
       }
 
-      @include sm-phone {
+      @include phone {
         text-align: left;
         font-size: 1rem;
         line-height: 1.4rem;
         padding-left: 0 !important;
-        padding-right: 4%;
-        margin-left: 4% !important;
       }
     }
 
@@ -153,13 +137,12 @@
         text-align: center !important;
       }
 
-      @include sm-phone {
+      @include phone {
         flex-direction: row;
         gap: 3%;
         justify-content: flex-start;
         padding-bottom: 5%;
         padding-left: 0 !important;
-        margin-left: 4% !important;
 
         a,
         button {
@@ -188,8 +171,8 @@
 .heroImage {
   width: 100%;
   height: auto;
-  padding-bottom: 5%;
-  margin-top: 2%;
+  // padding-bottom: 5%;
+  // margin-top: 2%;
 
   img {
     width: 100%;
@@ -197,16 +180,13 @@
     object-fit: cover;
   }
 
-  @include sm-phone {
-    padding-bottom: 8%;
-  }
 }
 
 // Who We Are section styling
 .whoWeAreSection {
   padding: 3% 8% 4% 8%;
 
-  @include sm-phone {
+  @include phone {
     padding: 3% 0 4% 0;
   }
 
@@ -215,10 +195,9 @@
     font-weight: bold;
     color: var(--black);
 
-    @include sm-phone {
+    @include phone {
       font-size: 1.5rem;
       padding-left: 0 !important;
-      margin-left: 4% !important;
     }
   }
 
@@ -227,11 +206,10 @@
     line-height: 1.5rem;
     color: var(--black);
 
-    @include sm-phone {
+    @include phone {
       font-size: 0.95rem;
       line-height: 1.4rem;
       padding-left: 0 !important;
-      margin-left: 4% !important;
     }
   }
 
@@ -240,9 +218,8 @@
     gap: 5%;
     margin-top: 2%;
 
-    @include sm-phone {
+    @include phone {
       padding-left: 0 !important;
-      margin-left: 4% !important;
     }
   }
 }
@@ -251,9 +228,9 @@
 .storySection {
   width: 100%;
   max-width: 100%;
-  padding: 0 8% 5% 8%;
+  padding: var(--page-padding);
 
-  @include sm-phone {
+  @include phone {
     padding: 0;
     margin: 0;
   }
@@ -262,7 +239,7 @@
     display: grid;
     grid-template-columns: minmax(30%, 30%) 1fr;
     gap: 8%;
-    align-items: flex-start;
+    align-items: center;
 
     @include tablet {
       grid-template-columns: 1fr;
@@ -270,7 +247,7 @@
       text-align: center;
     }
 
-    @include sm-phone {
+    @include phone {
       gap: 2%;
       margin-left: 0;
     }
@@ -287,7 +264,7 @@
         margin: 0 auto;
       }
 
-      @include sm-phone {
+      @include phone {
         max-width: 220px;
         margin: 0 auto 6% auto;
       }
@@ -313,12 +290,11 @@
           font-size: 2rem;
         }
 
-        @include sm-phone {
+        @include phone {
           font-size: 1.5rem;
           text-align: left;
           padding-bottom: 5%;
           padding-left: 0 !important;
-          margin-left: 4% !important;
         }
       }
 
@@ -333,13 +309,11 @@
           font-size: 1rem;
         }
 
-        @include sm-phone {
+        @include phone {
           font-size: 0.95rem;
           line-height: 1.4rem;
           text-align: left;
           padding-left: 0 !important;
-          margin-left: 4% !important;
-          padding-right: 4%;
         }
 
         &:last-child {
@@ -352,13 +326,13 @@
 
 // Story Section for Mobile
 .storySection {
-  @include sm-phone {
+  @include phone {
     padding: 0;
     margin: 0;
   }
 
   .storyContent {
-    @include sm-phone {
+    @include phone {
       grid-template-columns: 1fr;
       gap: 0;
       margin: 0;
@@ -366,7 +340,7 @@
     }
 
     .imageContainer {
-      @include sm-phone {
+      @include phone {
         max-width: 100%;
         aspect-ratio: unset;
         margin: 0;
@@ -375,7 +349,7 @@
           width: 100%;
           height: auto;
           border-radius: 10%;
-          padding: 5%;
+          padding: var(--page-padding);
           object-fit: cover;
           object-position: center;
         }
@@ -383,8 +357,8 @@
     }
 
     .textContent {
-      @include sm-phone {
-        padding: 4% 4%;
+      @include phone {
+        padding: var(--page-padding);
         background-color: var(--white);
 
         h2 {
@@ -410,16 +384,16 @@
 .missionSection {
   width: 100%;
   background-color: var(--light-grey);
-  padding: 5% 0;
+  padding: var(--page-padding);
 
-  @include sm-phone {
-    padding: 8% 0;
+  @include phone {
+    // padding: 8% 0;
     background-color: transparent !important;
   }
 
   h2 {
     max-width: 100%;
-    padding: 0 8% 2% 8%;
+    padding-bottom: 2%;
     font-size: 2.5rem;
     font-weight: bold;
     color: var(--black);
@@ -429,19 +403,17 @@
       font-size: 2rem;
     }
 
-    @include sm-phone {
+    @include phone {
       font-size: 1.5rem;
       text-align: left;
-      padding: 0 0 4% 0 !important;
-      margin-left: 4% !important;
     }
   }
 
   .missionContent {
     max-width: 100%;
-    padding: 0 8%;
+    // padding: 0 8%;
 
-    @include sm-phone {
+    @include phone {
       padding: 0;
     }
 
@@ -455,14 +427,11 @@
         font-size: 1rem;
       }
 
-      @include sm-phone {
+      @include phone {
         font-size: 0.95rem;
         line-height: 1.4rem;
         padding-bottom: 4%;
         text-align: left;
-        padding-left: 0 !important;
-        padding-right: 4%;
-        margin-left: 4% !important;
       }
 
       &:last-child {
@@ -476,32 +445,29 @@
 .boardSection {
   width: 100%;
   max-width: 100%;
-  padding: 4% 8% 4% 8%;
+  padding: var(--page-padding);
   position: relative;
   background-color: var(--white);
 
-  @include sm-phone {
-    padding: 8% 0 !important;
+  @include phone {
+    padding-bottom: 15%;
   }
 
   h2 {
     font-size: 2.5rem;
-    // padding-bottom: 2%;
     color: var(--black);
     text-align: left;
-    padding-top: 2%;
+    padding-bottom: 2%;
     padding-left: 0;
 
     @include tablet {
       font-size: 2rem;
     }
 
-    @include sm-phone {
+    @include phone {
       font-size: 1.5rem;
       text-align: left;
-      padding-bottom: 4%;
-      padding-left: 0 !important;
-      margin-left: 4% !important;
+
     }
   }
 
@@ -514,13 +480,11 @@
       font-size: 1rem;
     }
 
-    @include sm-phone {
+    @include phone {
       font-size: 0.95rem;
       line-height: 1.4rem;
       text-align: left;
       padding-left: 0 !important;
-      margin-left: 4% !important;
-      padding-right: 4%;
       padding-bottom: 8%;
     }
   }
@@ -530,21 +494,16 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 5%;
     row-gap: 10%;
-    padding: 5% 3%;
+    padding: 5% 0%;
 
     @include tablet {
       grid-template-columns: repeat(2, 1fr);
       gap: 4%;
     }
 
-    @include sm-phone {
+    @include phone {
       grid-template-columns: repeat(2, 1fr);
       gap: 3%;
-      row-gap: 6%;
-      padding: 0 0 6% 0 !important;
-      margin-left: 4% !important;
-      margin-right: 4% !important;
-      padding-top: 0 !important;
     }
   }
 
@@ -560,9 +519,8 @@
     padding-right: 10%;
     position: relative;
     right: 0;
-    // padding-right: 4%;
 
-    @include sm-phone {
+    @include phone {
       display: none !important;
     }
   }
@@ -572,11 +530,11 @@
 .memberCard {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: left;
+  text-align: left;
   padding-bottom: 1%;
 
-  @include sm-phone {
+  @include phone {
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
@@ -600,7 +558,7 @@
       height: 8rem;
     }
 
-    @include sm-phone {
+    @include phone {
       width: 4.5rem;
       height: 4.5rem;
       margin-bottom: 8px;
@@ -609,9 +567,8 @@
   }
 
   .memberInfo {
-    text-align: center;
 
-    @include sm-phone {
+    @include phone {
       text-align: left;
       padding-bottom: 5px;
       width: 100%;
@@ -623,12 +580,13 @@
     font-weight: bold;
     padding-bottom: 2%;
     color: var(--black);
+    text-align: left;
 
     @include tablet {
       font-size: 1.25rem;
     }
 
-    @include sm-phone {
+    @include phone {
       font-size: 0.95rem;
       padding-bottom: 1%;
       padding-top: 0;
@@ -640,12 +598,13 @@
     color: var(--dark-grey);
     padding-bottom: 0.5%;
     padding-top: 0;
+    text-align: left;
 
     @include tablet {
       font-size: 1rem;
     }
 
-    @include sm-phone {
+    @include phone {
       font-size: 0.85rem;
       line-height: 1.2rem;
       padding-left: 0 !important;
@@ -656,8 +615,9 @@
     color: var(--green);
     text-decoration: none;
     font-size: 1rem;
+    text-align: left;
 
-    @include sm-phone {
+    @include phone {
       font-size: 0.85rem;
     }
 
@@ -670,7 +630,7 @@
 .boardMeetingInfoButton {
   display: none;
 
-  @include sm-phone {
+  @include phone {
     display: block !important;
     width: 90% !important;
     background-color: var(--green);
@@ -685,7 +645,6 @@
     cursor: pointer;
     text-decoration: none;
 
-    margin: 100px 0 50px 4% !important;
     position: relative !important;
     z-index: 10 !important;
 
@@ -734,20 +693,7 @@
 .staffSection {
   width: 100%;
   max-width: 100%;
-  padding: 1% 8% 5% 8%;
-
-  @include tablet {
-    padding: 8%;
-  }
-
-  @include phone {
-    padding: 8%;
-  }
-
-  @include sm-phone {
-    padding: 0 0 10% 0 !important;
-    margin-top: 40px !important;
-  }
+  padding: var(--page-padding);
 
   h2 {
     font-size: 2.5rem;
@@ -761,13 +707,12 @@
       font-size: 2rem;
     }
 
-    @include sm-phone {
+    @include phone {
       font-size: 1.5rem;
       text-align: left;
       padding-bottom: 6%;
       padding-left: 0 !important;
-      margin-left: 4% !important;
-      margin-top: 0;
+      margin-top: 10%;
     }
   }
 
@@ -786,13 +731,11 @@
       max-width: 100%;
     }
 
-    @include sm-phone {
+    @include phone {
       grid-template-columns: 1fr;
       gap: 6%;
       max-width: 100%;
       padding-left: 0 !important;
-      margin-left: 4% !important;
-      margin-right: 4% !important;
       padding-top: 1% !important;
     }
   }
@@ -833,7 +776,7 @@
     color: var(--black);
     line-height: 1.5rem;
 
-    @include sm-phone {
+    @include phone {
       font-size: 0.9rem;
       line-height: 1.3rem;
     }

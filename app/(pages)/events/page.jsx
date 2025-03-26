@@ -2,11 +2,12 @@ import Events from "../_components/Events/Events";
 import recapEventsFallbackData from '../_data/recap-events.json'
 import upcomingEventsFallbackData from '../_data/upcoming-events.json'
 import sponsersFallbackData from '../_data/sponsers.json'
+import impactFallbackData from '../_data/impact.json'
 
 async function getRecapEvents() {
   try {
     //TODO: fix query
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/events?_published=true&_type=recap`,
+    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/events?_published=true&type=recap`,
       {
         next:
         {
@@ -20,7 +21,7 @@ async function getRecapEvents() {
     }
 
     //TODO: add alt text to cms schema and add parse of multiple images
-    const parsedData = data.body.map((eventItem) => ({ image: eventItem.main_image[0].src, altText: eventItem.image_alt_text, type: eventItem.type, title: eventItem.title, date: eventItem.date, text: eventItem.description }));
+    const parsedData = data.body.map((eventItem) => ({ images: eventItem.images[0].src, altText: eventItem.image_alt_text, type: eventItem.type, title: eventItem.title, date: eventItem.date, description: eventItem.description }));
 
     return parsedData;
   } catch {
@@ -32,7 +33,7 @@ async function getRecapEvents() {
 async function getUpcomingEvents() {
   try {
     //TODO: fix query
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/events?_published=true&_type=upcoming`,
+    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/events?_published=true&type=upcoming`,
       {
         next:
         {
@@ -46,7 +47,7 @@ async function getUpcomingEvents() {
     }
 
     //TODO: add alt text to cms schema and add parse of multiple images
-    const parsedData = data.body.map((eventItem) => ({ image: eventItem.main_image[0].src, altText: eventItem.image_alt_text, type: eventItem.type, title: eventItem.title, date: eventItem.date, text: eventItem.description }));
+    const parsedData = data.body.map((eventItem) => ({ images: eventItem.images[0].src, altText: eventItem.image_alt_text, type: eventItem.type, title: eventItem.title, date: eventItem.date, description: eventItem.description }));
 
     return parsedData;
   } catch {
@@ -81,13 +82,40 @@ async function getSponsers() {
   }
 }
 
+async function getImpact() {
+  try {
+    //TODO: fix query
+    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/stats?_published=true&type=impact`,
+      {
+        next:
+        {
+          tags: "cms"
+        }
+      }
+    );
+    const data = await res.json();
+    if (!data.ok || data.body.length === 0) {
+      throw new Error();
+    }
+
+    //TODO: add alt text to cms schema and add parse of multiple images
+    const parsedData = data.body.map((impactItem) => ({ icon: impactItem.icon[0].src, altText: impactItem.image_alt_text, number: impactItem.number, description: impactItem.description }));
+
+    return parsedData;
+  } catch {
+    console.log('Failed to fetch impact');
+    return impactFallbackData;
+  }
+}
+
 export default async function events() {
   const recapEventsData = await getRecapEvents();
   const upcomingEventsData = await getUpcomingEvents();
   const sponsersData = await getSponsers();
+  const impactData = await getImpact();
   return (
     <main>
-      <Events recapEventsData={recapEventsData} upcomingEventsData={upcomingEventsData} sponsersData={sponsersData} />
+      <Events recapEventsData={recapEventsData} upcomingEventsData={upcomingEventsData} sponsersData={sponsersData} impactData={impactData} />
     </main>
   );
 }

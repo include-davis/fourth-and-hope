@@ -2,15 +2,12 @@
 
 .benefiet_hero {
   display: flex;
-  padding: 4.44% 6.94%;
+  padding: var(--page-padding);
   flex-direction: column;
   align-items: center;
   gap: 64px;
   align-self: stretch;
 
-  @include tablet {
-    padding: 4.44% 4%;
-  }
 }
 
 .benefiet_hero h2 {
@@ -50,7 +47,7 @@
   }
 
   @include phone {
-    max-width: 90%;
+    max-width: 100%;
   }
 }
 
@@ -79,16 +76,16 @@
   @include sm-desktop {
     max-width: 320px;
   }
-  
+
   @include tablet {
     max-width: 280px;
   }
-  
+
   @include phone {
     max-width: 240px;
   }
-  
-  @include sm-phone {
+
+  @include phone {
     max-width: 200px;
   }
 }

@@ -2,7 +2,6 @@ import Home from './_components/Home/Home';
 import storyCardsFallbackData from './_data/story-cards.json';
 import heroGalleryFallbackData from './_data/hero-gallery.json';
 import programCardsFallbackData from './_data/program-cards.json';
-import careerFallbackData from './_data/careers.json';
 // import PrimaryButton from './_components/Button/PrimaryButton';
 // import SecondaryButton from './_components/Button/SecondaryButton';
 
@@ -93,7 +92,7 @@ export default async function Homepage() {
     <main>
       {/* <PrimaryButton name="Primary Button" link="https://example.com/donate" />
        <SecondaryButton name="Secondary Button" link="https://example.com/donate" /> */}
-      <Home images={images} storiesData={storiesData} programData={programData}/>
+      <Home images={images} storiesData={storiesData} programData={programData} />
     </main>
   );
 }

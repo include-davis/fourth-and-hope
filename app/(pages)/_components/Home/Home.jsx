@@ -45,12 +45,12 @@ export default function Home({ images, storiesData, programData }) {
   ];
 
   // Programs Components Json
-  const programsData = programData.map((story, index) => (
+  const programsData = programData.map((story, index) => (index < 3) && (
     <ProgramsBox
       key={index.toString()}
-      heading={story.title}
-      bodyText={story.blurb}
-      imageSrc={story.image}
+      title={story.title}
+      blurb={story.blurb}
+      image={story.image}
       altText={story.altText}
       href={'/programs'}
     />
@@ -83,10 +83,10 @@ export default function Home({ images, storiesData, programData }) {
             />
           </div>
         ))}
-        {/* <div className={styles.slidesTitle}>
-            <h2>A Mission to Change Lives</h2>
-            <h1>FOURTH & HOPE</h1>
-        </div> */}
+        <div className={styles.slidesTitle}>
+          <h2>A Mission to Change Lives</h2>
+          <h1>FOURTH & HOPE</h1>
+        </div>
       </div>
 
       {/* donate, volunteer, resources buttons */}

@@ -38,29 +38,25 @@
 .Titles {
     //color: var(--green);
     width: 100%;
-    padding: 5%;
+    padding: var(--page-padding);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
     text-align: left;
-
-    @include tablet {
-        padding: 10% 5%;
-    }
 }
 
 .ProgramTitle {
-    padding: 5% 5% 0% 5%;
+    padding: var(--page-padding);
 }
 
 .statsContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    // justify-content: space-around;
     width: 100%;
     background-color: var(--white);
-    padding: 5%;
+    padding: var(--page-padding);
 
     .TitleNumbers {
         width: 100%;
@@ -75,7 +71,7 @@
 
 .Support {
     width: 100%;
-    padding: 5%;
+    padding: var(--page-padding);
     text-align: center;
     background: var(--white);
 
@@ -109,7 +105,8 @@
 
 .Walters {
     display: flex;
-    padding: 5%;
+    padding-top: 3%;
+    gap: 10%;
 
     @include tablet {
         flex-direction: column;

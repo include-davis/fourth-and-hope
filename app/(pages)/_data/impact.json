@@ -1,0 +1,26 @@
+[
+    {
+        "icon": "/images/events/house.svg",
+        "number": "66",
+        "description": "permanent housing",
+        "altText": "house icon"
+    },
+    {
+        "icon": "/images/events/bandaid.svg",
+        "number": "280",
+        "description": "emergency shelters",
+        "altText": "shelter icon"
+    },
+    {
+        "icon": "/images/events/people.svg",
+        "number": "234",
+        "description": "support services",
+        "altText": "support icon"
+    },
+    {
+        "icon": "/images/events/restaurant.svg",
+        "number": "93,000",
+        "description": "prepared meals",
+        "altText": "meal icon"
+    }
+]

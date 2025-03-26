@@ -9,44 +9,17 @@ import Stat from "./stats.jsx";
 import CertificationsButton from "../PopUps/CertificationsButton";
 // import PopUps from "../PopUps/PopUps";
 
-const byNumbers = [
-  {
-    value: "242",
-    description: "emergency shelters",
-    image: "images/Programs/emergencyIcon.svg",
-  },
-  {
-    value: "58",
-    description: "in permanent \nsupportive housing",
-    image: "images/Programs/housingSupport.svg",
-  },
-  {
-    value: "92000",
-    description: "meals served",
-    image: "images/Programs/mealsServed.svg",
-  },
-  {
-    value: "41",
-    description: "in stable housing",
-    image: "images/Programs/stableHousing.svg",
-  },
-  {
-    value: "88",
-    description: "in transitional sober living",
-    image: "images/Programs/soberLiving.svg",
-  },
-];
-
-export default function Programs({ programsData }) {
+export default function Programs({ programsData, numbersData }) {
   const programs = programsData.map((program, index) => (
     <ProgramCard
       key={index.toString()}
       title={program.title}
       subtitle={program.subtitle}
-      text={program.text}
+      description={program.description}
       image={program.image}
     />
   ));
+  const numbers = numbersData;
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
@@ -98,39 +71,41 @@ export default function Programs({ programsData }) {
 
       <div className={styles.statsContainer}>
         <h2 className={styles.TitleNumbers}>2023 By the Numbers</h2>
-        {byNumbers.map((s, index) => (
-          <Stat key={index} value={s.value} label={s.description} image={s.image} />
+        {numbers.map((n, index) => (
+          <Stat key={index} number={n.number} description={n.description} icon={n.icon} />
         ))}
       </div>
 
       <div className={styles.ProgramTitle}>
         <h1>PROGRAMS</h1>
-      </div>
-      {programs}
 
-      <div className={styles.Walters}>
-        <div className={styles.text}>
-          <h2>Walter's House</h2>
-          <p>
-            <b>Walter’s House is a residential substance use disorder treatment facility for women and men.</b> Walter’s House has supported
-            209 participants, with 61 completing treatment and 39 graduating from outpatient programs.
-          </p>
-          <div className={styles.popupWrapper}>
-            <CertificationsButton>
-              <button className={styles.Linksbutton} onClick={handleOpenPopup}>Certifications</button>
-            </CertificationsButton>
+        {programs}
+
+        <div className={styles.Walters}>
+          <div className={styles.text}>
+            <h2>Walter's House</h2>
+            <br />
+            <p>
+              <b>Walter’s House is a residential substance use disorder treatment facility for women and men.</b><br /> Walter’s House has supported
+              209 participants, with 61 completing treatment and 39 graduating from outpatient programs.
+            </p>
+            <div className={styles.popupWrapper}>
+              <CertificationsButton>
+                <button className={styles.Linksbutton} onClick={handleOpenPopup}>Certifications</button>
+              </CertificationsButton>
+            </div>
+
+            {isPopupOpen && (
+              <CertificationsButton
+                isOpen={isPopupOpen}
+                onClose={handleClosePopup}
+              />
+            )}
+
           </div>
-
-          {isPopupOpen && (
-            <CertificationsButton
-              isOpen={isPopupOpen}
-              onClose={handleClosePopup}
-            />
-          )}
-
-        </div>
-        <div className={styles.image}>
-          <img src="images/Programs/Walters.svg" alt="Walter's House" />
+          <div className={styles.image}>
+            <img src="images/Programs/Walters.svg" alt="Walter's House" />
+          </div>
         </div>
       </div>
 

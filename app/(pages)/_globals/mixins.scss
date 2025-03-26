@@ -16,7 +16,7 @@
     }
 }
 
-@mixin sm-phone {
+@mixin phone {
     @media screen and (max-width: 540px) {
         @content;
     }

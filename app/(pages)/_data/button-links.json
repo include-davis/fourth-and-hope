@@ -1,5 +1,14 @@
 [
-    { "name": "Serve a Meal", "link": "/volunteer-link" },
-    { "name": "Prep & Cook", "link": "/volunteer-link" },
-    { "name": "Lead Activities", "link": "/volunteer-link" }
+    {
+        "name": "Serve a Meal",
+        "link": "/volunteer-link"
+    },
+    {
+        "name": "Prep & Cook",
+        "link": "/volunteer-link"
+    },
+    {
+        "name": "Lead Activities",
+        "link": "/volunteer-link"
+    }
 ]

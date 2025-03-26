@@ -3,7 +3,8 @@ import Image from "next/image";
 
 // Note: dm is short for donation_meaning
 
-export default function Donation_Meaning() {
+export default function Donation_Meaning({ donationData }) {
+  const recommended = parseInt(donationData[0]?.recommended_donation);
   return (
     <div className={styles.dm_hero}>
       <div className={styles.dm_content_container}>
@@ -13,7 +14,9 @@ export default function Donation_Meaning() {
             When you donate to Fourth & Hope your contribution goes toward
             providing food and shelter 365 days a year for those in need in
             Woodland and Yolo County. Any amount you give is appreciated. Just{" "}
-            <span>$35</span> provides a night of shelter and food for one
+            <span className={styles.inline_text}>
+              ${recommended}
+            </span>{" "} provides a night of shelter and food for one
             person.
           </p>
         </div>

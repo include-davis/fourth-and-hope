@@ -2,26 +2,10 @@
 
 .donate_container {
   display: flex;
-  padding: 64px 100px;
+  padding: var(--page-padding);
   flex-direction: column;
   align-items: flex-start;
   align-self: stretch;
-
-  @include sm-desktop {
-    padding: 64px 80px;
-  }
-
-  @include tablet {
-    padding: 64px 40px;
-  }
-
-  @include phone {
-    padding: 64px 20px;
-  }
-
-  @include sm-phone {
-    padding: 64px 10px;
-  }
 }
 
 .donate_container h1 {
@@ -44,10 +28,9 @@
 
   @include phone {
     font-size: 3rem;
-    padding-left: 10%;
   }
 
-  @include sm-phone {
+  @include phone {
     font-size: 2.5rem;
   }
 }
@@ -80,9 +63,6 @@
   align-items: flex-start;
   gap: 32px;
 
-  @include phone {
-    padding: 0% 10%;
-  }
 }
 
 .inline_text {
@@ -101,7 +81,7 @@
     font-size: 1rem;
   }
 
-  @include sm-phone {
+  @include phone {
     font-size: 0.9rem;
   }
 }
@@ -126,7 +106,7 @@
     font-size: 1rem;
   }
 
-  @include sm-phone {
+  @include phone {
     font-size: 0.9rem;
   }
 }
@@ -150,7 +130,7 @@
     font-size: 2rem;
   }
 
-  @include sm-phone {
+  @include phone {
     font-size: 1.8rem;
   }
 }
@@ -170,7 +150,7 @@
     width: 100%;
   }
 
-  @include sm-phone {
+  @include phone {
     gap: 12px;
   }
 }
@@ -196,7 +176,7 @@
     padding: 16px 42px;
   }
 
-  @include sm-phone {
+  @include phone {
     padding: 14px 36px;
   }
 }
@@ -240,7 +220,7 @@
     font-size: 1rem;
   }
 
-  @include sm-phone {
+  @include phone {
     font-size: 0.9rem;
   }
 }

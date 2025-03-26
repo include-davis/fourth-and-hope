@@ -3,8 +3,8 @@
 import MemberCard from './MemberCard';
 import styles from './About.module.scss';
 
-export default function StaffSection({ peopleData }) {
-  const { executiveStaff } = peopleData;
+export default function StaffSection({ execData }) {
+  const executiveStaff = execData;
   return (
     <section className={styles.staffSection}>
       {/* Board Meeting Info button for mobile */}
@@ -19,8 +19,9 @@ export default function StaffSection({ peopleData }) {
           <MemberCard
             key={index}
             name={member.name}
-            title={member.title}
+            position={member.position}
             email={member.email}
+            image={member.image}
           />
         ))}
       </div>

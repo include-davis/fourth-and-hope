@@ -1,11 +1,11 @@
 import About from "../_components/About/About";
-import peopleFallbackData from '../_data/people.json';
+import execFallbackData from '../_data/execs.json';
+import trusteeFallbackData from '../_data/trustees.json';
 import meetingFallbackData from '../_data/meetings.json';
 
-async function getPeople() {
+async function getTrustees() {
   try {
-    //TODO: fix query
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true`,
+    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true&type=trustee`,
       {
         next:
         {
@@ -19,12 +19,38 @@ async function getPeople() {
     }
 
     //TODO: add alt text to cms schema and add parse of multiple images
-    const parsedData = data.body.map((peopleItem) => ({ image: peopleItem.main_image[0].src, altText: peopleItem.image_alt_text, name: peopleItem.name, position: peopleItem.name, position: peopleItem.email, type: peopleItem.type, }));
+    const parsedData = data.body.map((peopleItem) => ({ image: peopleItem.image[0].src, altText: peopleItem.image_alt_text, name: peopleItem.name, position: peopleItem.position, email: peopleItem.email, type: peopleItem.type, }));
 
     return parsedData;
   } catch {
     console.log('Failed to fetch people');
-    return peopleFallbackData;
+    return trusteeFallbackData;
+  }
+}
+
+async function getExecs() {
+  try {
+    //TODO: fix query
+    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true&type=exec`,
+      {
+        next:
+        {
+          tags: "cms"
+        }
+      }
+    );
+    const data = await res.json();
+    if (!data.ok || data.body.length === 0) {
+      throw new Error();
+    }
+
+    //TODO: add alt text to cms schema and add parse of multiple images
+    const parsedData = data.body.map((peopleItem) => ({ image: peopleItem.image[0].src, altText: peopleItem.image_alt_text, name: peopleItem.name, position: peopleItem.position, email: peopleItem.email, type: peopleItem.type, }));
+
+    return parsedData;
+  } catch {
+    console.log('Failed to fetch people');
+    return execFallbackData;
   }
 }
 
@@ -55,11 +81,12 @@ async function getMeetings() {
 }
 
 export default async function about() {
-  const peopleData = await getPeople();
+  const trusteeData = await getTrustees();
+  const execData = await getExecs();
   const meetingData = await getMeetings();
   return (
     <main>
-      <About peopleData={peopleData} meetingData={meetingData} />
+      <About trusteeData={trusteeData} execData={execData} meetingData={meetingData} />
     </main>
   );
 }

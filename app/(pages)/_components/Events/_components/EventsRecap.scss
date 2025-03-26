@@ -5,6 +5,7 @@
     display: flex;
     gap: 5%;
     align-items: stretch;
+    padding: var(--page-padding);
 
     .recapcontent {
         flex: 2;
@@ -56,14 +57,12 @@
 @include tablet {
     .recapgroup {
         flex-direction: column;
-        padding: 5% 0 5% 0;
     }
 }
 
 @include phone {
     .recapgroup {
         flex-direction: column;
-        padding-bottom: 5%;
 
         .recapcontent {
             h4 {

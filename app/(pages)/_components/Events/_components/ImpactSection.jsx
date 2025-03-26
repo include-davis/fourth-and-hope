@@ -1,32 +1,19 @@
 import React from "react";
 import ImpactNumbers from "./ImpactNumbers";
 
-const ImpactSection = () => {
+const ImpactSection = ({ impactData }) => {
+    const impact = impactData;
     return (
         <>
-            <ImpactNumbers
-                image = "/images/events/house.svg"
-                number = "66"
-                description = "permanent housing"
-            />
-
-            <ImpactNumbers
-                image = "/images/events/bandaid.svg"
-                number = "280"
-                description = "emergency shelters"
-            />
-
-            <ImpactNumbers
-                image = "/images/events/people.svg"
-                number = "234"
-                description = "support services"
-            />
-
-            <ImpactNumbers
-                image = "/images/events/restaurant.svg"
-                number = "93,000"
-                description = "prepared meals"
-            />
+            {impact.map((i, index) => (
+                <ImpactNumbers
+                    key={index.toString()}
+                    number={i.number}
+                    description={i.description}
+                    icon={i.icon}
+                    altText={i.altText}
+                />
+            ))}
         </>
     );
 };

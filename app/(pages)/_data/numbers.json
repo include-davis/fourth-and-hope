@@ -1,0 +1,27 @@
+[
+    {
+        "number": "242",
+        "description": "emergency shelters",
+        "icon": "images/Programs/emergencyIcon.svg"
+    },
+    {
+        "number": "58",
+        "description": "in permanent \nsupportive housing",
+        "icon": "images/Programs/housingSupport.svg"
+    },
+    {
+        "number": "92000",
+        "description": "meals served",
+        "icon": "images/Programs/mealsServed.svg"
+    },
+    {
+        "number": "41",
+        "description": "in stable housing",
+        "icon": "images/Programs/stableHousing.svg"
+    },
+    {
+        "number": "88",
+        "description": "in transitional sober living",
+        "icon": "images/Programs/soberLiving.svg"
+    }
+]
