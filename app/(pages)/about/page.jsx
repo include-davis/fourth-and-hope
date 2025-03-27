@@ -5,20 +5,23 @@ import meetingFallbackData from '../_data/meetings.json';
 
 async function getTrustees() {
   try {
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true&type=trustee`,
-      {
-        next:
-        {
-          tags: "cms"
-        }
-      }
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true&type=trustee`,
+      { next: { tags: "cms" } }
     );
     const data = await res.json();
     if (!data.ok || data.body.length === 0) {
       throw new Error();
     }
 
-    const parsedData = data.body.map((peopleItem) => ({ image: peopleItem.image[0].src, image_alt: peopleItem.image_alt, name: peopleItem.name, position: peopleItem.position, email: peopleItem.email, type: peopleItem.type, }));
+    const parsedData = data.body.map((peopleItem) => ({
+      image: peopleItem.image[0].src,
+      image_alt: peopleItem.image_alt,
+      name: peopleItem.name,
+      position: peopleItem.position,
+      email: peopleItem.email,
+      type: peopleItem.type,
+    }));
 
     return parsedData;
   } catch {
@@ -29,21 +32,24 @@ async function getTrustees() {
 
 async function getExecs() {
   try {
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true&type=exec`,
-      {
-        next:
-        {
-          tags: "cms"
-        }
-      }
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true&type=exec`,
+      { next: { tags: "cms" } }
     );
     const data = await res.json();
     if (!data.ok || data.body.length === 0) {
       throw new Error();
     }
 
-    const parsedData = data.body.map((peopleItem) => ({ image: peopleItem.image[0].src, image_alt: peopleItem.image_alt, name: peopleItem.name, position: peopleItem.position, email: peopleItem.email, type: peopleItem.type, }));
-    const parsedData = data.body.map((peopleItem) => ({ image: peopleItem.image[0].src, image_alt: peopleItem.image_alt, name: peopleItem.name, position: peopleItem.position, email: peopleItem.email, type: peopleItem.type, }));
+    // Remove the duplicate declaration – one is enough.
+    const parsedData = data.body.map((peopleItem) => ({
+      image: peopleItem.image[0].src,
+      image_alt: peopleItem.image_alt,
+      name: peopleItem.name,
+      position: peopleItem.position,
+      email: peopleItem.email,
+      type: peopleItem.type,
+    }));
 
     return parsedData;
   } catch {
@@ -54,21 +60,10 @@ async function getExecs() {
 
 async function getMeetings() {
   try {
-    const sponsorRes = await fetch(
-      `${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true`,
-      { next: { tags: "cms" } }
-    );
-
+    // Fetch meetings data (remove redundant fetch calls)
     const meetingsRes = await fetch(
       `${process.env.CMS_BASE_URL}/api/content/meetings?_published=true`,
       { next: { tags: "cms" } }
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true`,
-      {
-        next:
-        {
-          tags: "cms"
-        }
-      }
     );
 
     const data = await meetingsRes.json();
@@ -76,13 +71,12 @@ async function getMeetings() {
       throw new Error("No meeting data found");
     }
 
-    // Parse data into an array of meeting items
+    // Parse data into an array of meeting items (avoid duplicate declarations)
     const parsedData = data.body.map((meetingItem) => ({
       year: meetingItem.year,
       month: meetingItem.month,
       link: meetingItem.link,
     }));
-    const parsedData = data.body.map((meetingItem) => ({ year: meetingItem.year, month: meetingItem.month, link: meetingItem.link }));
 
     // Group by year
     const grouped = data.body.reduce((acc, item) => {
@@ -106,7 +100,6 @@ async function getMeetings() {
     return []; // or return fallback data
   }
 }
-
 
 export default async function about() {
   const trusteeData = await getTrustees();
