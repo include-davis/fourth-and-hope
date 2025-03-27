@@ -104,7 +104,7 @@ export default function Footer() {
           {/* Constant Contact Stuff */}
           {/* are we supposed to have a universal key of some sort */}
           {/* <script> var _ctct_m = ""; </script> */}
-          <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+          {/* <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script> */}
         </div>
         <div className={styles.bottomContainer}>
           <p className={styles.bottomText}>Fourth &amp; Hope © 2025</p>
