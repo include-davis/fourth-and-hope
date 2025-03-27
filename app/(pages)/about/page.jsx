@@ -5,20 +5,23 @@ import meetingFallbackData from '../_data/meetings.json';
 
 async function getTrustees() {
   try {
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true&type=trustee`,
-      {
-        next:
-        {
-          tags: "cms"
-        }
-      }
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true&type=trustee`,
+      { next: { tags: "cms" } }
     );
     const data = await res.json();
     if (!data.ok || data.body.length === 0) {
       throw new Error();
     }
 
-    const parsedData = data.body.map((peopleItem) => ({ image: peopleItem.image[0].src, image_alt: peopleItem.image_alt, name: peopleItem.name, position: peopleItem.position, email: peopleItem.email, type: peopleItem.type, }));
+    const parsedData = data.body.map((peopleItem) => ({
+      image: peopleItem.image[0].src,
+      image_alt: peopleItem.image_alt,
+      name: peopleItem.name,
+      position: peopleItem.position,
+      email: peopleItem.email,
+      type: peopleItem.type,
+    }));
 
     return parsedData;
   } catch {
@@ -29,20 +32,24 @@ async function getTrustees() {
 
 async function getExecs() {
   try {
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true&type=exec`,
-      {
-        next:
-        {
-          tags: "cms"
-        }
-      }
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true&type=exec`,
+      { next: { tags: "cms" } }
     );
     const data = await res.json();
     if (!data.ok || data.body.length === 0) {
       throw new Error();
     }
 
-    const parsedData = data.body.map((peopleItem) => ({ image: peopleItem.image[0].src, image_alt: peopleItem.image_alt, name: peopleItem.name, position: peopleItem.position, email: peopleItem.email, type: peopleItem.type, }));
+    // Remove the duplicate declaration – one is enough.
+    const parsedData = data.body.map((peopleItem) => ({
+      image: peopleItem.image[0].src,
+      image_alt: peopleItem.image_alt,
+      name: peopleItem.name,
+      position: peopleItem.position,
+      email: peopleItem.email,
+      type: peopleItem.type,
+    }));
 
     return parsedData;
   } catch {
@@ -53,25 +60,44 @@ async function getExecs() {
 
 async function getMeetings() {
   try {
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true`,
-      {
-        next:
-        {
-          tags: "cms"
-        }
-      }
+    // Fetch meetings data (remove redundant fetch calls)
+    const meetingsRes = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/meetings?_published=true`,
+      { next: { tags: "cms" } }
     );
-    const data = await res.json();
+
+    const data = await meetingsRes.json();
     if (!data.ok || data.body.length === 0) {
-      throw new Error();
+      throw new Error("No meeting data found");
     }
 
-    const parsedData = data.body.map((meetingItem) => ({ year: meetingItem.year, month: meetingItem.month, link: meetingItem.link }));
+    // Parse data into an array of meeting items (avoid duplicate declarations)
+    const parsedData = data.body.map((meetingItem) => ({
+      year: meetingItem.year,
+      month: meetingItem.month,
+      link: meetingItem.link,
+    }));
 
-    return parsedData;
-  } catch {
-    console.log('Failed to fetch people');
-    return meetingFallbackData;
+    // Group by year
+    const grouped = data.body.reduce((acc, item) => {
+      const { year, month, link } = item;
+      if (!acc[year]) {
+        acc[year] = { year, months: [], links: [] };
+      }
+      acc[year].months.push(month);
+      acc[year].links.push(link);
+      return acc;
+    }, {});
+
+    // Convert grouped object to an array and sort it by year descending
+    const finalArray = Object.values(grouped).sort(
+      (a, b) => parseInt(b.year) - parseInt(a.year)
+    );
+
+    return finalArray;
+  } catch (err) {
+    console.error("Failed to fetch meeting data:", err);
+    return []; // or return fallback data
   }
 }
 
