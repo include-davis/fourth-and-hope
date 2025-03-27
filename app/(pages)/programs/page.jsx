@@ -17,8 +17,7 @@ async function getPrograms() {
       throw new Error();
     }
 
-    //TODO: add alt text to cms schema 
-    const parsedData = data.body.map((programItem) => ({ image: programItem.main_image[0].src, altText: programItem.image_alt_text, title: programItem.title, subtitle: programItem.subtitle, text: programItem.description }));
+    const parsedData = data.body.map((programItem) => ({ image: programItem.main_image[0].src, image_alt: programItem.image_alt, title: programItem.title, subtitle: programItem.subtitle, text: programItem.description }));
 
     return parsedData;
   } catch {
@@ -43,8 +42,7 @@ async function getNumbers() {
       throw new Error();
     }
 
-    //TODO: add alt text to cms schema and add parse of multiple images
-    const parsedData = data.body.map((impactItem) => ({ icon: impactItem.icon[0].src, altText: impactItem.image_alt_text, number: impactItem.number, description: impactItem.description }));
+    const parsedData = data.body.map((impactItem) => ({ icon: impactItem.icon[0].src, image_alt: impactItem.image_alt, number: impactItem.number, description: impactItem.description }));
 
     return parsedData;
   } catch {

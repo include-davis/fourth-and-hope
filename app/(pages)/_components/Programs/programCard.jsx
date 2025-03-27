@@ -1,6 +1,6 @@
 import styles from "./programCard.module.scss";
 
-export default function ProgramCard({ title, subtitle, description, image }) {
+export default function ProgramCard({ title, subtitle, description, image, image_alt }) {
   return (
     <div className={styles.program}>
       <div className={styles.text}>
@@ -11,7 +11,7 @@ export default function ProgramCard({ title, subtitle, description, image }) {
         <p>{description}</p>
       </div>
       <div className={styles.image}>
-        <img src={image} alt={title} />
+        <img src={image} alt={image_alt} />
       </div>
     </div>
   );

@@ -22,6 +22,7 @@ export default function StaffSection({ execData }) {
             position={member.position}
             email={member.email}
             image={member.image}
+            image_alt={member.image_alt}
           />
         ))}
       </div>

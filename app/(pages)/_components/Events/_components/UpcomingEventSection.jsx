@@ -9,7 +9,7 @@ const UpcomingEventSection = ({ upcomingEventsData }) => {
             title={event.title}
             description={event.description}
             images={event.images}
-            alt={event.imageAlt}
+            image_alt={event.image_alt}
         />
     ));
     return (

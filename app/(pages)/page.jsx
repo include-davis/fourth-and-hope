@@ -49,8 +49,7 @@ async function getStories() {
       throw new Error();
     }
 
-    //TODO: add alt text to cms schema 
-    const parsedData = data.body.map((storyItem) => ({ imageSrc: storyItem.main_image[0].src, altText: storyItem.image_alt_text, heading: storyItem.title, bodyText: storyItem.description }));
+    const parsedData = data.body.map((storyItem) => ({ imageSrc: storyItem.main_image[0].src, image_alt: storyItem.image_alt, heading: storyItem.title, bodyText: storyItem.description }));
 
     return parsedData;
   } catch {
@@ -74,8 +73,7 @@ async function getPrograms() {
       throw new Error();
     }
 
-    //TODO: add alt text to cms schema 
-    const parsedData = data.body.map((programItem) => ({ image: programItem.main_image[0].src, altText: programItem.image_alt_text, title: programItem.title, subtitle: programItem.subtitle, text: programItem.description }));
+    const parsedData = data.body.map((programItem) => ({ image: programItem.main_image[0].src, image_alt: programItem.image_alt, title: programItem.title, subtitle: programItem.subtitle, text: programItem.description }));
 
     return parsedData;
   } catch {

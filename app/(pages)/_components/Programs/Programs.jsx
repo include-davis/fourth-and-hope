@@ -17,6 +17,7 @@ export default function Programs({ programsData, numbersData }) {
       subtitle={program.subtitle}
       description={program.description}
       image={program.image}
+      image_alt={program.image_alt}
     />
   ));
   const numbers = numbersData;
@@ -72,7 +73,7 @@ export default function Programs({ programsData, numbersData }) {
       <div className={styles.statsContainer}>
         <h2 className={styles.TitleNumbers}>2023 By the Numbers</h2>
         {numbers.map((n, index) => (
-          <Stat key={index} number={n.number} description={n.description} icon={n.icon} />
+          <Stat key={index} number={n.number} description={n.description} icon={n.icon} image_alt={n.image_alt} />
         ))}
       </div>
 

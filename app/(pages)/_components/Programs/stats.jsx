@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from './stats.module.scss';
 
 
-const StatItem = ({ number, description, icon }) => {
+const StatItem = ({ number, description, icon, image_alt }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const StatItem = ({ number, description, icon }) => {
 
   return (
     <div className={styles.statBox}>
-      {icon && <img src={icon} alt={description} className={styles.statIcon} />}
+      {icon && <img src={icon} alt={image_alt} className={styles.statIcon} />}
       <div className={styles.statContent}>
         <span className={styles.statValue}>{count.toLocaleString()}</span>
         <p className={styles.statLabel}>{description}</p>

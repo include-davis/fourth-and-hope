@@ -44,6 +44,7 @@ export default function BoardSection({ trusteeData, meetingsData }) {
             name={member.name}
             position={member.position}
             image={member.image}
+            image_alt={member.image_alt}
           />
         ))}
       </div>

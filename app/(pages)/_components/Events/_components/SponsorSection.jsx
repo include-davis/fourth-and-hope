@@ -6,7 +6,6 @@ const SponsorSection = ({ sponsersData }) => {
         <Sponsors
             key={index.toString()}
             images={sponsor.images}
-            alt={sponsor.altText}
         />
     ));
     return (

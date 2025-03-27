@@ -9,7 +9,7 @@ const EventsRecapSection = ({ recapEventsData }) => {
             title={event.title}
             description={event.description}
             images={event.images}
-            alt={event.altText}
+            image_alt={event.image_alt}
         />
     ));
     return (

@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 
 
-export default function StoriesSlide({ heading, bodyText, imageSrc, altText }) {
+export default function StoriesSlide({ heading, bodyText, imageSrc, image_alt }) {
 
     return (
         <div className={styles.story}>
@@ -11,7 +11,7 @@ export default function StoriesSlide({ heading, bodyText, imageSrc, altText }) {
                 {/* IDEALLY: SWITCH TO SHORT_TEXT AND RENDER LIKE SO: */}
                 <h2>{heading}</h2>
                 <p>{bodyText}</p>
-                {/* ALTERNATELY: DANGEROUSLY HANDLE LONG_TEXT LIKE SO: */} 
+                {/* ALTERNATELY: DANGEROUSLY HANDLE LONG_TEXT LIKE SO: */}
                 {/* <div dangerouslySetInnerHTML={{ __html: heading }}></div>
                 <div dangerouslySetInnerHTML={{ __html: bodyText }}></div> */}
             </div>
@@ -19,7 +19,7 @@ export default function StoriesSlide({ heading, bodyText, imageSrc, altText }) {
                 <Image
                     className={styles.storyImage}
                     src={imageSrc}
-                    alt={altText}
+                    alt={image_alt}
                     width={500}
                     height={500}
                     object-fit='cover'
