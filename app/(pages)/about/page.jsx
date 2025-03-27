@@ -43,6 +43,7 @@ async function getExecs() {
     }
 
     const parsedData = data.body.map((peopleItem) => ({ image: peopleItem.image[0].src, image_alt: peopleItem.image_alt, name: peopleItem.name, position: peopleItem.position, email: peopleItem.email, type: peopleItem.type, }));
+    const parsedData = data.body.map((peopleItem) => ({ image: peopleItem.image[0].src, image_alt: peopleItem.image_alt, name: peopleItem.name, position: peopleItem.position, email: peopleItem.email, type: peopleItem.type, }));
 
     return parsedData;
   } catch {
@@ -61,6 +62,13 @@ async function getMeetings() {
     const meetingsRes = await fetch(
       `${process.env.CMS_BASE_URL}/api/content/meetings?_published=true`,
       { next: { tags: "cms" } }
+    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true`,
+      {
+        next:
+        {
+          tags: "cms"
+        }
+      }
     );
 
     const data = await meetingsRes.json();
@@ -74,6 +82,7 @@ async function getMeetings() {
       month: meetingItem.month,
       link: meetingItem.link,
     }));
+    const parsedData = data.body.map((meetingItem) => ({ year: meetingItem.year, month: meetingItem.month, link: meetingItem.link }));
 
     // Group by year
     const grouped = data.body.reduce((acc, item) => {
