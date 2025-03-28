@@ -89,7 +89,7 @@ async function getNeedsListUsed() {
 
 async function getLinks() {
   try {
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/button-links?_published=true`,
+    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/buttons?_published=true`,
       {
         next:
         {

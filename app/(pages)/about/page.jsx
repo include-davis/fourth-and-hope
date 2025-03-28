@@ -6,7 +6,7 @@ import meetingFallbackData from '../_data/meetings.json';
 async function getTrustees() {
   try {
     const res = await fetch(
-      `${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true&type=trustee`,
+      `${process.env.CMS_BASE_URL}/api/content/people?_published=true&type=trustee`,
       { next: { tags: "cms" } }
     );
     const data = await res.json();
@@ -31,7 +31,7 @@ async function getTrustees() {
 async function getExecs() {
   try {
     const res = await fetch(
-      `${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true&type=exec`,
+      `${process.env.CMS_BASE_URL}/api/content/people?_published=true&type=exec`,
       { next: { tags: "cms" } }
     );
     const data = await res.json();
@@ -41,7 +41,7 @@ async function getExecs() {
 
     // Remove the duplicate declaration – one is enough.
     const parsedData = data.body.map((peopleItem) => ({
-      image: peopleItem.image.length > 0 ? peopleItem.image[0]?.src : null,
+      image: peopleItem.image.length > 0 ? peopleItem.image[0]?.src : "",
       image_alt: peopleItem.image_alt || "",
       name: peopleItem.name,
       position: peopleItem.position || "",
