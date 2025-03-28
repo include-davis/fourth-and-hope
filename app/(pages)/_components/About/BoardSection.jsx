@@ -7,7 +7,7 @@ import MeetingButton from '../PopUps/MeetingButton';
 
 import styles from './About.module.scss';
 
-export default function BoardSection({ trusteeData, meetingsData }) {
+export default function BoardSection({ trusteeData, meetingData }) {
   const boardMembers = trusteeData;
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
@@ -50,7 +50,7 @@ export default function BoardSection({ trusteeData, meetingsData }) {
       </div>
 
       <div className={styles.buttonWrapper}>
-        <MeetingButton meetingsData={meetingsData}>
+        <MeetingButton meetingData={meetingData}>
           <button className={styles.meetingButton}>
             Board Meeting Info
           </button>

@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import styles from "./PopUps.module.scss";
 import Link from "next/link";
 
-export default function MeetingButton({ children, meetingsData }) {
-  const boardMeetings = meetingsData;
+export default function MeetingButton({ children, meetingData }) {
+  const boardMeetings = meetingData;
   const [isBoardOpen, setBoardOpen] = useState(false);
   const toggleBoardPopup = () => setBoardOpen(!isBoardOpen);
 
@@ -29,7 +29,7 @@ export default function MeetingButton({ children, meetingsData }) {
               {boardMeetings.map((yearObj) => {
                 // Extract the 'year' property; everything else is "months"
                 const { year, ...months } = yearObj;
-                
+
                 return (
                   <div key={year} className={styles.meetingYear}>
                     <h3>{year}</h3>

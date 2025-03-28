@@ -89,7 +89,7 @@ export default function About({ execData, trusteeData, meetingData }) {
         </div>
       </div>
 
-      <BoardSection trusteeData={trusteeData} meetingsData={meetingData} />
+      <BoardSection trusteeData={trusteeData} meetingData={meetingData} />
       <StaffSection execData={execData} />
     </div>
   );
