@@ -70,39 +70,88 @@ async function getUpcomingEvents() {
 
 async function getSponsers() {
   try {
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsors?_published=true`,
-      {
-        next:
-        {
-          tags: "cms"
-        }
+    const url = `${process.env.CMS_BASE_URL}/api/content/sponsors?_published=true`;
+    console.log("Fetching sponsors from:", url);
+
+    const res = await fetch(url, {
+      next: {
+        tags: "cms"
       }
-    );
+    });
+
+    console.log("Fetch response status:", res.status);
     const data = await res.json();
-    if (!data.ok || data.body.length === 0) {
-      throw new Error();
+    console.log("Fetched data:", data);
+
+    if (!data.ok || !data.body || data.body.length === 0) {
+      console.warn("Data check failed - data.ok:", data.ok, "data.body:", data.body);
+      throw new Error("No valid sponsor data returned.");
     }
 
+    const sponsersData = data; // this line was missing – fixed here
+    console.log("Sponsor data body:", sponsersData.body);
 
     if (sponsersData && sponsersData.body && sponsersData.body.length > 0) {
       const parsedData = sponsersData.body[0].images;
+      console.log("Parsed sponsor images:", parsedData);
 
       if (parsedData && parsedData.length > 0) {
         const images = parsedData.map((image) => image.src);
+        console.log("Mapped sponsor image URLs:", images);
 
         return [
           {
             images,
           },
         ];
+      } else {
+        console.warn("No sponsor images found in parsed data.");
       }
+    } else {
+      console.warn("Sponsor body was empty or undefined.");
     }
 
-  } catch {
-    console.log('Failed to fetch sponsers');
+  } catch (error) {
+    console.error("Failed to fetch sponsors:", error);
     return sponsersFallbackData;
   }
 }
+
+// async function getSponsers() {
+//   try {
+//     const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsors?_published=true`,
+//       {
+//         next:
+//         {
+//           tags: "cms"
+//         }
+//       }
+//     );
+//     const data = await res.json();
+//     if (!data.ok || data.body.length === 0) {
+//       throw new Error();
+//     }
+
+
+//     if (sponsersData && sponsersData.body && sponsersData.body.length > 0) {
+//       const parsedData = sponsersData.body[0].images;
+
+//       if (parsedData && parsedData.length > 0) {
+//         const images = parsedData.map((image) => image.src);
+
+//         return [
+//           {
+//             images,
+//           },
+//         ];
+//       }
+//     }
+
+//   } catch {
+//     console.log('Failed to fetch sponsers');
+//     return sponsersFallbackData;
+//   }
+// }
 
 async function getImpact() {
   try {
