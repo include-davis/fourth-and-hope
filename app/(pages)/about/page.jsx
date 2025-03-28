@@ -20,7 +20,6 @@ async function getTrustees() {
       name: peopleItem.name,
       position: peopleItem.position,
       email: peopleItem.email,
-      type: peopleItem.type,
     }));
 
     return parsedData;
@@ -48,7 +47,6 @@ async function getExecs() {
       name: peopleItem.name,
       position: peopleItem.position,
       email: peopleItem.email,
-      type: peopleItem.type,
     }));
 
     return parsedData;
@@ -74,7 +72,7 @@ async function getMeetings() {
       return Object.entries(months).flatMap(([month, links]) =>
         links.map((link) => ({ year, month, link }))
       );
-    });    
+    });
 
     return parsedData;
   } catch {
