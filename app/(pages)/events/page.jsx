@@ -55,32 +55,49 @@ async function getUpcomingEvents() {
 
 async function getSponsers() {
   try {
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true`,
+    // 1. Fetch from the endpoint
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true`,
       {
-        next:
-        {
-          tags: "cms"
-        }
+        next: { tags: "cms" },
       }
     );
-    const data = await res.json();
-    if (!data.ok || data.body.length === 0) {
-      throw new Error();
+
+    // 2. If the response is not OK, throw an error
+    if (!res.ok) {
+      throw new Error(`Failed to fetch sponsors with status ${res.status}`);
     }
 
+    // 3. Parse the JSON
+    const data = await res.json();
+
+    // 4. Check for valid data.body
+    if (!data.body || !Array.isArray(data.body) || data.body.length === 0) {
+      throw new Error("No sponsor data found");
+    }
+
+    // 5. Collect all image URLs
     const images = [];
-    data.body.forEach(contentItem => {
-      contentItem.images.forEach(imageItem => {
-        images.push(imageItem.src);
-      });
+    data.body.forEach((contentItem) => {
+      // Make sure contentItem.images exists
+      if (contentItem.images && Array.isArray(contentItem.images)) {
+        contentItem.images.forEach((imageItem) => {
+          images.push(imageItem.src);
+        });
+      }
     });
 
+    // 6. Return the image URLs
     return images;
-  } catch {
-    console.log('Failed to fetch sponsers');
+  } catch (error) {
+    // 7. Log the real error
+    console.error("Failed to fetch sponsors:", error);
+
+    // 8. Return fallback data
     return sponsersFallbackData;
   }
 }
+
 
 async function getImpact() {
   try {
