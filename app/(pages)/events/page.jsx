@@ -71,7 +71,6 @@ async function getUpcomingEvents() {
 async function getSponsers() {
   try {
     const url = `${process.env.CMS_BASE_URL}/api/content/sponsors?_published=true`;
-    console.log("Fetching sponsors from:", url);
 
     const res = await fetch(url, {
       next: {
@@ -79,9 +78,7 @@ async function getSponsers() {
       }
     });
 
-    console.log("Fetch response status:", res.status);
     const data = await res.json();
-    console.log("Fetched data:", data);
 
     if (!data.ok || !data.body || data.body.length === 0) {
       console.warn("Data check failed - data.ok:", data.ok, "data.body:", data.body);
@@ -89,15 +86,12 @@ async function getSponsers() {
     }
 
     const sponsersData = data; // this line was missing – fixed here
-    console.log("Sponsor data body:", sponsersData.body);
 
     if (sponsersData && sponsersData.body && sponsersData.body.length > 0) {
       const parsedData = sponsersData.body[0].images;
-      console.log("Parsed sponsor images:", parsedData);
 
       if (parsedData && parsedData.length > 0) {
         const images = parsedData.map((image) => image.src);
-        console.log("Mapped sponsor image URLs:", images);
 
         return [
           {
@@ -117,41 +111,6 @@ async function getSponsers() {
   }
 }
 
-// async function getSponsers() {
-//   try {
-//     const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsors?_published=true`,
-//       {
-//         next:
-//         {
-//           tags: "cms"
-//         }
-//       }
-//     );
-//     const data = await res.json();
-//     if (!data.ok || data.body.length === 0) {
-//       throw new Error();
-//     }
-
-
-//     if (sponsersData && sponsersData.body && sponsersData.body.length > 0) {
-//       const parsedData = sponsersData.body[0].images;
-
-//       if (parsedData && parsedData.length > 0) {
-//         const images = parsedData.map((image) => image.src);
-
-//         return [
-//           {
-//             images,
-//           },
-//         ];
-//       }
-//     }
-
-//   } catch {
-//     console.log('Failed to fetch sponsers');
-//     return sponsersFallbackData;
-//   }
-// }
 
 async function getImpact() {
   try {
