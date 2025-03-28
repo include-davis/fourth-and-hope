@@ -15,12 +15,10 @@ async function getTrustees() {
     }
 
     const parsedData = data.body.map((peopleItem) => ({
-      image: peopleItem.image[0].src,
-      image_alt: peopleItem.image_alt,
+      image: peopleItem.image.length > 0 ? peopleItem.image[0]?.src : null,
+      image_alt: peopleItem.image_alt || "",
       name: peopleItem.name,
-      position: peopleItem.position,
-      email: peopleItem.email,
-      type: peopleItem.type,
+      position: peopleItem.position || ""
     }));
 
     return parsedData;
@@ -43,12 +41,11 @@ async function getExecs() {
 
     // Remove the duplicate declaration – one is enough.
     const parsedData = data.body.map((peopleItem) => ({
-      image: peopleItem.image[0].src,
-      image_alt: peopleItem.image_alt,
+      image: peopleItem.image.length > 0 ? peopleItem.image[0]?.src : null,
+      image_alt: peopleItem.image_alt || "",
       name: peopleItem.name,
-      position: peopleItem.position,
-      email: peopleItem.email,
-      type: peopleItem.type,
+      position: peopleItem.position || "",
+      email: peopleItem.email || ""
     }));
 
     return parsedData;
@@ -68,13 +65,21 @@ async function getMeetings() {
     if (!data.ok || data.body.length === 0) {
       throw new Error();
     }
-
-    const parsedData = data.body.flatMap((meetingYear) => {
-      const { year, ...months } = meetingYear;
-      return Object.entries(months).flatMap(([month, links]) =>
-        links.map((link) => ({ year, month, link }))
-      );
-    });    
+    const parsedData = data.body.map((meetingItem) => ({
+      year: meetingItem.year,
+      january: meetingItem.january || [],
+      february: meetingItem.february || [],
+      march: meetingItem.march || [],
+      april: meetingItem.april || [],
+      may: meetingItem.may || [],
+      june: meetingItem.june || [],
+      july: meetingItem.july || [],
+      august: meetingItem.august || [],
+      september: meetingItem.september || [],
+      october: meetingItem.october || [],
+      november: meetingItem.november || [],
+      december: meetingItem.december || [],
+    }));
 
     return parsedData;
   } catch {

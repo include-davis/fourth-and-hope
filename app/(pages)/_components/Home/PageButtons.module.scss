@@ -1,4 +1,4 @@
-@import '../../_globals/mixins.scss';
+@use '../../_globals/mixins.scss';
 
 .buttonsContainer {
   //holds the image and button
@@ -8,7 +8,7 @@
   width: 27.5%;
   height: 93.7%;
 
-  @include phone {
+  @include mixins.phone {
     width: 100%;
     padding-top: 5%;
   }

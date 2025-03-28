@@ -1,105 +1,47 @@
 [
   {
     "year": "2024",
-    "january": [
-      "https://fourthandhope.org/wp-content/uploads/2024/03/January-2024-Board-Meeting-Canceled.pdf"
-    ],
-    "february": [
-      "https://fourthandhope.org/wp-content/uploads/2024/03/Minutes-Fourth-and-Hope-Board-Meeting-2-27-2024.pdf"
-    ],
-    "march": [
-      "https://fourthandhope.org/wp-content/uploads/2024/05/Minutes-Fourth-and-Hope-Board-Meeting-3-26-2024.pdf"
-    ],
-    "april": [
-      "https://fourthandhope.org/wp-content/uploads/2024/06/April-2024-Board-Meeting.pdf"
-    ],
-    "may": [
-      "https://fourthandhope.org/wp-content/uploads/2024/07/Minutes-Fourth-and-Hope-Board-Meeting-5-28-2024.pdf"
-    ],
-    "june": [
-      "https://fourthandhope.org/wp-content/uploads/2024/08/Minutes-June-2024.pdf"
-    ],
-    "july": [
-      "https://fourthandhope.org/wp-content/uploads/2024/10/July-Minutes-Fourth-and-Hope-Board-Meeting-7-23-2024-copy.pdf"
-    ],
-    "august": [],
-    "september": [],
-    "october": [],
-    "november": [],
-    "december": []
+    "january": "https://fourthandhope.org/wp-content/uploads/2024/03/January-2024-Board-Meeting-Canceled.pdf",
+    "february": "https://fourthandhope.org/wp-content/uploads/2024/03/Minutes-Fourth-and-Hope-Board-Meeting-2-27-2024.pdf",
+    "march": "https://fourthandhope.org/wp-content/uploads/2024/05/Minutes-Fourth-and-Hope-Board-Meeting-3-26-2024.pdf",
+    "april": "https://fourthandhope.org/wp-content/uploads/2024/06/April-2024-Board-Meeting.pdf",
+    "may": "https://fourthandhope.org/wp-content/uploads/2024/07/Minutes-Fourth-and-Hope-Board-Meeting-5-28-2024.pdf",
+    "june": "https://fourthandhope.org/wp-content/uploads/2024/08/Minutes-June-2024.pdf",
+    "july": "https://fourthandhope.org/wp-content/uploads/2024/10/July-Minutes-Fourth-and-Hope-Board-Meeting-7-23-2024-copy.pdf",
+    "august": "",
+    "september": "",
+    "october": "",
+    "november": "",
+    "december": ""
   },
   {
     "year": "2023",
-    "january": [
-      "https://fourthandhope.org/wp-content/uploads/2023/09/Minutes-January-21-2023-Board-Meeting.pdf"
-    ],
-    "february": [
-      "https://fourthandhope.org/wp-content/uploads/2023/09/Minutes-February-28-2023-Board-Meeting.pdf"
-    ],
-    "march": [
-      "https://fourthandhope.org/wp-content/uploads/2023/09/Minutes-March-28-2023-Board-Meeting.pdf"
-    ],
-    "april": [
-      "https://fourthandhope.org/wp-content/uploads/2023/09/Minutes-April-25-2023-Board-Meeting.pdf"
-    ],
-    "may": [
-      "https://fourthandhope.org/wp-content/uploads/2023/09/Minutes-May-23-2023-Board-Meeting.pdf"
-    ],
-    "june": [
-      "https://fourthandhope.org/wp-content/uploads/2023/09/Minutes-June-27-2023-Board-Meeting.pdf"
-    ],
-    "july": [
-      "https://fourthandhope.org/wp-content/uploads/2023/09/Minutes-July-25-2023-Board-Meeting.pdf"
-    ],
-    "august": [
-      "https://fourthandhope.org/wp-content/uploads/2023/09/Minutes-August-22-2023-Board-Meeting.pdf"
-    ],
-    "september": [
-      "https://fourthandhope.org/wp-content/uploads/2023/12/Minutes-September-26-2023-Board-Meeting-1.pdf"
-    ],
-    "october": [
-      "https://fourthandhope.org/wp-content/uploads/2023/12/Fourth-Hope-Board-of-Trustees-Meeting_Oct-2023.pdf"
-    ],
-    "november": [
-      "https://fourthandhope.org/wp-content/uploads/2023/12/Fourth-Hope-Board-of-Trustees-Meeting-Nov_Dec23.pdf"
-    ],
-    "december": [
-      "https://fourthandhope.org/wp-content/uploads/2024/03/Minutes-December-5-2023-Board-Meeting.pdf"
-    ]
+    "january": "https://fourthandhope.org/wp-content/uploads/2023/09/Minutes-January-21-2023-Board-Meeting.pdf",
+    "february": "https://fourthandhope.org/wp-content/uploads/2023/09/Minutes-February-28-2023-Board-Meeting.pdf",
+    "march": "https://fourthandhope.org/wp-content/uploads/2023/09/Minutes-March-28-2023-Board-Meeting.pdf",
+    "april": "https://fourthandhope.org/wp-content/uploads/2023/09/Minutes-April-25-2023-Board-Meeting.pdf",
+    "may": "https://fourthandhope.org/wp-content/uploads/2023/09/Minutes-May-23-2023-Board-Meeting.pdf",
+    "june": "https://fourthandhope.org/wp-content/uploads/2023/09/Minutes-June-27-2023-Board-Meeting.pdf",
+    "july": "https://fourthandhope.org/wp-content/uploads/2023/09/Minutes-July-25-2023-Board-Meeting.pdf",
+    "august": "https://fourthandhope.org/wp-content/uploads/2023/09/Minutes-August-22-2023-Board-Meeting.pdf",
+    "september": "https://fourthandhope.org/wp-content/uploads/2023/12/Minutes-September-26-2023-Board-Meeting-1.pdf",
+    "october": "https://fourthandhope.org/wp-content/uploads/2023/12/Fourth-Hope-Board-of-Trustees-Meeting_Oct-2023.pdf",
+    "november": "https://fourthandhope.org/wp-content/uploads/2023/12/Fourth-Hope-Board-of-Trustees-Meeting-Nov_Dec23.pdf",
+    "december": "https://fourthandhope.org/wp-content/uploads/2024/03/Minutes-December-5-2023-Board-Meeting.pdf"
   },
   {
     "year": "2022",
-    "january": [
-      "https://fourthandhope.org/wp-content/uploads/2023/10/Minutes-Jan-2022-and-Board-Retreat.pdf"
-    ],
-    "february": [
-      "https://fourthandhope.org/wp-content/uploads/2023/10/Minutes-February-2022.pdf"
-    ],
-    "march": [
-      "https://fourthandhope.org/wp-content/uploads/2023/10/Minutes-March-2022.pdf"
-    ],
-    "april": [
-      "https://fourthandhope.org/wp-content/uploads/2023/10/Minutes-April-2022.pdf"
-    ],
-    "may": [
-      "https://fourthandhope.org/wp-content/uploads/2023/10/Minutes-May-2022.pdf"
-    ],
-    "june": [
-      "https://fourthandhope.org/wp-content/uploads/2023/10/Minutes-June-2022.pdf"
-    ],
-    "july": [],
-    "august": [
-      "https://fourthandhope.org/wp-content/uploads/2023/10/Minutes-August-2022.pdf"
-    ],
-    "september": [
-      "https://fourthandhope.org/wp-content/uploads/2023/09/Minutes-Sept-2022.pdf"
-    ],
-    "october": [
-      "https://fourthandhope.org/wp-content/uploads/2023/09/Minutes-Oct-2022.pdf"
-    ],
-    "november": [
-      "https://fourthandhope.org/wp-content/uploads/2023/10/Minutes-Nov-2022.pdf"
-    ],
-    "december": []
+    "january": "https://fourthandhope.org/wp-content/uploads/2023/10/Minutes-Jan-2022-and-Board-Retreat.pdf",
+    "february": "https://fourthandhope.org/wp-content/uploads/2023/10/Minutes-February-2022.pdf",
+    "march": "https://fourthandhope.org/wp-content/uploads/2023/10/Minutes-March-2022.pdf",
+    "april": "https://fourthandhope.org/wp-content/uploads/2023/10/Minutes-April-2022.pdf",
+    "may": "https://fourthandhope.org/wp-content/uploads/2023/10/Minutes-May-2022.pdf",
+    "june": "https://fourthandhope.org/wp-content/uploads/2023/10/Minutes-June-2022.pdf",
+    "july": "",
+    "august": "https://fourthandhope.org/wp-content/uploads/2023/10/Minutes-August-2022.pdf",
+    "september": "https://fourthandhope.org/wp-content/uploads/2023/09/Minutes-Sept-2022.pdf",
+    "october": "https://fourthandhope.org/wp-content/uploads/2023/09/Minutes-Oct-2022.pdf",
+    "november": "https://fourthandhope.org/wp-content/uploads/2023/10/Minutes-Nov-2022.pdf",
+    "december": ""
   }
 ]

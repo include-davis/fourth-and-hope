@@ -1,4 +1,4 @@
-@import "../../../_globals/mixins.scss";
+@use "../../../_globals/mixins.scss";
 
 .recapgroup {
 
@@ -54,13 +54,13 @@
     }
 }
 
-@include tablet {
+@include mixins.tablet {
     .recapgroup {
         flex-direction: column;
     }
 }
 
-@include phone {
+@include mixins.phone {
     .recapgroup {
         flex-direction: column;
 

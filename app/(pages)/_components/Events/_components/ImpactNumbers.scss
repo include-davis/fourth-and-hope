@@ -1,4 +1,4 @@
-@import "../../../_globals/mixins.scss";
+@use "../../../_globals/mixins.scss";
 
 .impactcomp {
     width: 17%;
@@ -19,7 +19,7 @@
     }
 }
 
-@include tablet {
+@include mixins.tablet {
     .impactcomp {
         width: 20%;
         // padding-top: 3%;
@@ -39,7 +39,7 @@
     }
 }
 
-@include phone {
+@include mixins.phone {
     .impactcomp {
         width: 100%;
 

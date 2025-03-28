@@ -1,11 +1,11 @@
-@import "../../_globals/mixins.scss";
+@use "../../_globals/mixins.scss";
 
 .container {
     h1 {
         color: var(--green);
         font-size: 5rem;
 
-        @include phone {
+        @include mixins.phone {
             font-size: 3rem;
         }
     }
@@ -14,7 +14,7 @@
         font-size: 3rem;
         color: var(--black);
 
-        @include phone {
+        @include mixins.phone {
             font-size: 1.5rem;
         }
     }
@@ -23,7 +23,7 @@
         font-weight: 300;
         font-size: 1.25rem;
 
-        @include phone {
+        @include mixins.phone {
             font-size: 1rem;
         }
     }
@@ -79,7 +79,7 @@
         font-size: 3rem;
         color: var(--green);
 
-        @include tablet {
+        @include mixins.tablet {
             font-size: 2.5rem;
         }
     }
@@ -92,7 +92,7 @@
     align-items: center;
     width: 100%;
 
-    @include tablet {
+    @include mixins.tablet {
         flex-direction: column;
         width: 100%;
         align-items: unset;
@@ -108,14 +108,14 @@
     padding-top: 3%;
     gap: 10%;
 
-    @include tablet {
+    @include mixins.tablet {
         flex-direction: column;
     }
 
     .text {
         width: 55%;
 
-        @include tablet {
+        @include mixins.tablet {
             width: 100%;
         }
     }
@@ -125,7 +125,7 @@
         justify-content: flex-end;
         width: 45%;
 
-        @include tablet {
+        @include mixins.tablet {
             width: 100%;
         }
 
@@ -133,7 +133,7 @@
             width: 90%;
             border-radius: 10px;
 
-            @include tablet {
+            @include mixins.tablet {
                 width: 100%;
             }
         }
@@ -152,7 +152,7 @@
     margin-top: 20%;
     border-radius: 4px;
 
-    @include tablet {
+    @include mixins.tablet {
         width: 100%;
         margin: 3% 0;
     }

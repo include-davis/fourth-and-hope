@@ -1,11 +1,11 @@
-@import '../../../_globals/mixins.scss';
+@use '../../../_globals/mixins.scss';
 
 .container {
     height: auto;
     background-color: var(--white);
     padding: 0.01%;
 
-    @include phone {
+    @include mixins.phone {
         h1 {
             font-size: 2rem;
         }
@@ -30,7 +30,7 @@
     flex-direction: column;
     padding: var(--page-padding);
 
-    @include phone {
+    @include mixins.phone {
         padding-top: 15.9%;
         padding-bottom: 15.9%;
     }
@@ -41,7 +41,7 @@
     margin-bottom: 2.2%;
     background-color: transparent;
 
-    @include phone {
+    @include mixins.phone {
         margin-bottom: 7.9%;
     }
 
@@ -53,7 +53,7 @@
     justify-content: space-between;
     gap: 5%;
 
-    @include phone {
+    @include mixins.phone {
         display: flex;
         flex-direction: column;
     }
@@ -67,7 +67,7 @@
     flex-direction: column;
     gap: 5%;
 
-    @include phone {
+    @include mixins.phone {
         width: 100%;
         margin-bottom: 7.9%;
     }
@@ -96,7 +96,7 @@
     line-height: 24px;
 
 
-    @include phone {
+    @include mixins.phone {
         width: 100%;
     }
 }
@@ -104,7 +104,7 @@
 .info_top {
     margin-bottom: 2.7%;
 
-    @include phone {
+    @include mixins.phone {
         margin-bottom: 5.9%;
     }
 
@@ -133,7 +133,7 @@
         color: var(--white);
     }
 
-    @include phone {
+    @include mixins.phone {
         padding: 2.3% 3.5%;
         width: 100%;
         display: flex;

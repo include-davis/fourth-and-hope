@@ -8,7 +8,7 @@ const UpcomingEventSection = ({ upcomingEventsData }) => {
             date={event.date}
             title={event.title}
             description={event.description}
-            images={event.images}
+            images={event.images[0]}
             image_alt={event.image_alt}
         />
     ));

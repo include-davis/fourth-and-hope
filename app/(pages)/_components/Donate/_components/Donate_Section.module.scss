@@ -1,4 +1,4 @@
-@import "../../../_globals/mixins.scss";
+@use "../../../_globals/mixins.scss";
 
 .donate_container {
   display: flex;
@@ -18,19 +18,19 @@
   text-transform: uppercase;
   align-self: stretch;
 
-  @include sm-desktop {
+  @include mixins.sm-desktop {
     font-size: 4.5rem;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 4rem;
   }
 
-  @include phone {
+  @include mixins.phone {
     font-size: 3rem;
   }
 
-  @include phone {
+  @include mixins.phone {
     font-size: 2.5rem;
   }
 }
@@ -42,7 +42,7 @@
   align-self: stretch;
 
   .progress_bar {
-    @include phone {
+    @include mixins.phone {
       width: 100%;
       padding: 3% 20% 0% 20%;
       align-items: center;
@@ -50,7 +50,7 @@
 
   }
 
-  @include phone {
+  @include mixins.phone {
     flex-direction: column;
     gap: 32px;
     align-items: flex-start;
@@ -73,15 +73,15 @@
   font-weight: 700;
   line-height: 1.5;
 
-  @include sm-desktop {
+  @include mixins.sm-desktop {
     font-size: 1.2rem;
   }
 
-  @include phone {
+  @include mixins.phone {
     font-size: 1rem;
   }
 
-  @include phone {
+  @include mixins.phone {
     font-size: 0.9rem;
   }
 }
@@ -98,15 +98,15 @@
   font-weight: 300;
   line-height: 1.5;
 
-  @include sm-desktop {
+  @include mixins.sm-desktop {
     font-size: 1.2rem;
   }
 
-  @include phone {
+  @include mixins.phone {
     font-size: 1rem;
   }
 
-  @include phone {
+  @include mixins.phone {
     font-size: 0.9rem;
   }
 }
@@ -118,19 +118,19 @@
   font-weight: 600;
   line-height: normal;
 
-  @include sm-desktop {
+  @include mixins.sm-desktop {
     font-size: 2.3rem;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 2.2rem;
   }
 
-  @include phone {
+  @include mixins.phone {
     font-size: 2rem;
   }
 
-  @include phone {
+  @include mixins.phone {
     font-size: 1.8rem;
   }
 }
@@ -140,17 +140,17 @@
   align-items: center;
   gap: 24px;
 
-  @include tablet {
+  @include mixins.tablet {
     gap: 20px;
   }
 
-  @include phone {
+  @include mixins.phone {
     gap: 16px;
     flex-direction: column;
     width: 100%;
   }
 
-  @include phone {
+  @include mixins.phone {
     gap: 12px;
   }
 }
@@ -166,17 +166,17 @@
   border-radius: 4px;
   cursor: pointer;
 
-  @include tablet {
+  @include mixins.tablet {
     min-width: 140px;
     padding: 18px 48px;
   }
 
-  @include phone {
+  @include mixins.phone {
     width: 100%;
     padding: 16px 42px;
   }
 
-  @include phone {
+  @include mixins.phone {
     padding: 14px 36px;
   }
 }
@@ -212,15 +212,15 @@
   font-weight: 300;
   line-height: 1.5;
 
-  @include sm-desktop {
+  @include mixins.sm-desktop {
     font-size: 1.2rem;
   }
 
-  @include phone {
+  @include mixins.phone {
     font-size: 1rem;
   }
 
-  @include phone {
+  @include mixins.phone {
     font-size: 0.9rem;
   }
 }
@@ -253,7 +253,7 @@
   text-align: center;
   // width: 100%;
 
-  @include sm-desktop {
+  @include mixins.sm-desktop {
     width: 90%;
     height: auto;
     padding: 48px;
@@ -293,7 +293,7 @@
   width: 100%;
   justify-content: space-evenly;
 
-  @include sm-desktop {
+  @include mixins.sm-desktop {
     flex-direction: column;
     align-items: center;
     gap: 8px;
@@ -307,7 +307,7 @@
   font-size: 1.5rem;
   color: var(--green);
 
-  @include sm-desktop {
+  @include mixins.sm-desktop {
     width: auto;
     margin-right: 0;
   }

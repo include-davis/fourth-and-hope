@@ -17,7 +17,7 @@ async function getPrograms() {
       throw new Error();
     }
 
-    const parsedData = data.body.map((programItem) => ({ image: programItem.main_image[0].src, image_alt: programItem.image_alt, title: programItem.title, subtitle: programItem.subtitle, text: programItem.description }));
+    const parsedData = data.body.map((programItem) => ({ image: programItem.image[0].src, image_alt: programItem.image_alt, title: programItem.title, subtitle: programItem.subtitle, description: programItem.description }));
 
     return parsedData;
   } catch {

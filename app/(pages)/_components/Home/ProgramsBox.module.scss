@@ -1,4 +1,4 @@
-@import '../../_globals/mixins.scss';
+@use '../../_globals/mixins.scss';
 
 .mainBox {
     background-color: var(--light-grey);
@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @include phone {
+    @include mixins.phone {
         width: 100%;
         margin-bottom: 4.4%;
     }
@@ -22,7 +22,7 @@
     height: 100%;
     margin-bottom: 9%;
 
-    @include phone {
+    @include mixins.phone {
         padding: 3.21%;
     }
 
@@ -31,7 +31,7 @@
         font-weight: 548;
         height: 18.2%;
 
-        @include phone {
+        @include mixins.phone {
             font-size: 1.5rem;
         }
     }
@@ -42,7 +42,7 @@
         font-weight: 300;
         font-size: 1rem; //might have to change units for responsiveness\
 
-        @include phone {
+        @include mixins.phone {
             margin-top: 3%;
         }
     }
