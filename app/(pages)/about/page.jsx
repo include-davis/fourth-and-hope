@@ -66,14 +66,21 @@ async function getMeetings() {
     if (!data.ok || data.body.length === 0) {
       throw new Error();
     }
-
-    const parsedData = data.body.map((meetingYear) => {
-      const { year, ...months } = meetingYear;
-
-      const validMonths = Object.entries(months).filter(([month, link]) => link);
-
-      return validMonths.map(([month, link]) => ({ year, month, link }));
-    });
+    const parsedData = data.body.map((meetingItem) => ({
+      year: meetingItem.year,
+      january: meetingItem.january || [],
+      february: meetingItem.february || [],
+      march: meetingItem.march || [],
+      april: meetingItem.april || [],
+      may: meetingItem.may || [],
+      june: meetingItem.june || [],
+      july: meetingItem.july || [],
+      august: meetingItem.august || [],
+      september: meetingItem.september || [],
+      october: meetingItem.october || [],
+      november: meetingItem.november || [],
+      december: meetingItem.december || [],
+    }));
 
     return parsedData;
   } catch {
