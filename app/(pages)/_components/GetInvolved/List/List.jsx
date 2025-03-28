@@ -18,7 +18,7 @@ export default function List({ needsListNew, needsListUsed }) {
                     {needsListNew.map((list, index) => (
                         <ListItemComponent
                             key={index}
-                            items={list.item}
+                            item={list.item}
                         />
                     ))}
                 </div>
@@ -27,7 +27,7 @@ export default function List({ needsListNew, needsListUsed }) {
                     {needsListUsed.map((list, index) => (
                         <ListItemComponent
                             key={index}
-                            items={list.item}
+                            item={list.item}
                         />
                     ))}
                 </div>
