@@ -20,15 +20,15 @@ async function getRecapEvents() {
     }
 
     //TODO: add parse of multiple images
-    const parsedData = data.body.map((eventItem) => ({ 
+    const parsedData = data.body.map((eventItem) => ({
       images: eventItem.images.map(img => img.src), // now an array of URLs
-      image_alt: eventItem.image_alt, 
-      type: eventItem.type, 
-      title: eventItem.title, 
-      date: eventItem.date, 
-      description: eventItem.description 
+      image_alt: eventItem.image_alt,
+      type: eventItem.type,
+      title: eventItem.title,
+      date: eventItem.date,
+      description: eventItem.description
     }));
-    
+
     return parsedData;
   } catch {
     console.log('Failed to fetch recap events');
@@ -51,15 +51,15 @@ async function getUpcomingEvents() {
       throw new Error();
     }
 
-    const parsedData = data.body.map((eventItem) => ({ 
+    const parsedData = data.body.map((eventItem) => ({
       images: eventItem.images.map(img => img.src), // now an array of URLs
-      image_alt: eventItem.image_alt, 
-      type: eventItem.type, 
-      title: eventItem.title, 
-      date: eventItem.date, 
-      description: eventItem.description 
+      image_alt: eventItem.image_alt,
+      type: eventItem.type,
+      title: eventItem.title,
+      date: eventItem.date,
+      description: eventItem.description
     }));
-    
+
 
     return parsedData;
   } catch {
@@ -83,14 +83,12 @@ async function getSponsers() {
       throw new Error();
     }
 
-    const images = [];
-    data.body.forEach(contentItem => {
-      contentItem.images.forEach(imageItem => {
-        images.push(imageItem.src);
-      });
-    });
-
-    return images;
+    if (sponsersData && sponsersData.body && sponsersData.body.length > 0) {
+      const image = sponsersData.body[0].images;
+      if (image && image.length > 0) {
+        return image.map(image => image.src);
+      }
+    }
   } catch {
     console.log('Failed to fetch sponsers');
     return sponsersFallbackData;
