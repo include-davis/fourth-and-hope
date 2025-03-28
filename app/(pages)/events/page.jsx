@@ -20,8 +20,15 @@ async function getRecapEvents() {
     }
 
     //TODO: add parse of multiple images
-    const parsedData = data.body.map((eventItem) => ({ images: eventItem.images[0].src, image_alt: eventItem.image_alt, type: eventItem.type, title: eventItem.title, date: eventItem.date, description: eventItem.description }));
-
+    const parsedData = data.body.map((eventItem) => ({ 
+      images: eventItem.images.map(img => img.src), // now an array of URLs
+      image_alt: eventItem.image_alt, 
+      type: eventItem.type, 
+      title: eventItem.title, 
+      date: eventItem.date, 
+      description: eventItem.description 
+    }));
+    
     return parsedData;
   } catch {
     console.log('Failed to fetch recap events');
@@ -44,7 +51,15 @@ async function getUpcomingEvents() {
       throw new Error();
     }
 
-    const parsedData = data.body.map((eventItem) => ({ images: eventItem.images[0].src, image_alt: eventItem.image_alt, type: eventItem.type, title: eventItem.title, date: eventItem.date, description: eventItem.description }));
+    const parsedData = data.body.map((eventItem) => ({ 
+      images: eventItem.images.map(img => img.src), // now an array of URLs
+      image_alt: eventItem.image_alt, 
+      type: eventItem.type, 
+      title: eventItem.title, 
+      date: eventItem.date, 
+      description: eventItem.description 
+    }));
+    
 
     return parsedData;
   } catch {
@@ -52,34 +67,6 @@ async function getUpcomingEvents() {
     return upcomingEventsFallbackData;
   }
 }
-
-// async function getSponsers() {
-//   try {
-//     const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true`,
-//       {
-//         next:
-//         {
-//           tags: "cms"
-//         }
-//       }
-//     );
-//     const data = await res.json();
-//     if (!data.ok || data.body.length === 0) {
-//       throw new Error();
-//     }
-    
-//     // Adjust the parsing so each sponsor object has the same shape as your fallback
-//     const parsedData = data.body.map((sponsorItem) => ({
-//       images: sponsorItem.images.map((imgObj) => imgObj.src),
-//       // Use sponsorItem.alt if your CMS returns that, or sponsorItem.image_alt if that's what it is.
-//       alt: sponsorItem.alt || sponsorItem.image_alt,
-//     }));
-//     return parsedData;
-//   } catch (error) {
-//     console.error('Failed to fetch sponsers:', error);
-//     return sponsersFallbackData;
-//   }
-// }
 
 async function getSponsers() {
   try {
