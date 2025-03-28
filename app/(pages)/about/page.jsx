@@ -41,7 +41,7 @@ async function getExecs() {
 
     // Remove the duplicate declaration – one is enough.
     const parsedData = data.body.map((peopleItem) => ({
-      image: peopleItem.image.length > 0 ? peopleItem.image[0]?.src : null,
+      image: peopleItem.image.length > 0 ? peopleItem.image[0]?.src : "",
       image_alt: peopleItem.image_alt || "",
       name: peopleItem.name,
       position: peopleItem.position || "",
