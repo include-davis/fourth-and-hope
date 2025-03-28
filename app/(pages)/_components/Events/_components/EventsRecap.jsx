@@ -3,6 +3,7 @@ import "./EventsRecap.scss";
 import Image from "next/image";
 
 const EventsRecap = ({ date, title, description, images, image_alt }) => {
+    console.log(description);
 
     return (
         <section className="recapgroup">
@@ -13,7 +14,7 @@ const EventsRecap = ({ date, title, description, images, image_alt }) => {
 
                 <div className="recap">
                     <div className="paragraphs">
-                        {description.split("\n").map((para, index) => (
+                        {description.split("\\n").map((para, index) => (
                             <p key={index}>{para}</p>
                         ))}
                     </div>

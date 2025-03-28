@@ -1,4 +1,4 @@
-@import "../../_globals/mixins.scss";
+@use "../../_globals/mixins.scss";
 
 /* General styles for the contact cards container */
 .contactcards {
@@ -62,7 +62,7 @@
 }
 
 /* Responsive Design */
-@include phone {
+@include mixins.phone {
     .contactcards {
         grid-template-columns: 1fr; // Single column for mobile
     }

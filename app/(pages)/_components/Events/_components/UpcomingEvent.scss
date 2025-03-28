@@ -1,4 +1,4 @@
-@import "../../../_globals/mixins.scss";
+@use "../../../_globals/mixins.scss";
 
 .summary {
     padding: var(--page-padding);
@@ -40,7 +40,7 @@
     }
 }
 
-@include phone {
+@include mixins.phone {
     .summary {
         .summaryhead {
             h4 {
@@ -67,7 +67,7 @@
     }
 }
 
-@include tablet {
+@include mixins.tablet {
     .summary {
         .summarycontent {
             flex-direction: column;

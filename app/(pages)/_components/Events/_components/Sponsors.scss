@@ -1,4 +1,4 @@
-@import "../../../_globals/mixins.scss";
+@use "../../../_globals/mixins.scss";
 
 .sponsorlist {
     display: flex;
@@ -13,7 +13,7 @@
 
 }
 
-@include phone {
+@include mixins.phone {
     .sponsorlist {
         img {
             box-shadow: 0 0 15px var(--dark-grey);

@@ -1,4 +1,4 @@
-@import "../../_globals/mixins.scss";
+@use "../../_globals/mixins.scss";
 
 .popupContainer {
   position: fixed;
@@ -25,7 +25,7 @@
   font-family: Arial, sans-serif;
   overflow: scroll;
 
-  @include phone {
+  @include mixins.phone {
     max-height: 90%;
     max-width: 90%;
   }
@@ -37,12 +37,12 @@
     margin-top: 5%;
     font-weight: 600;
 
-    @include phone {
+    @include mixins.phone {
       padding-top: 13%;
       font-size: 1.8rem;
     }
 
-    @include phone {
+    @include mixins.phone {
       font-size: 1.3rem;
     }
   }
@@ -67,7 +67,7 @@
     line-height: 1.3;
     font-weight: 300;
 
-    @include phone {
+    @include mixins.phone {
       padding: 7% 0%;
     }
   }
@@ -110,7 +110,7 @@
   justify-content: space-between;
   margin-bottom: 3%;
 
-  @include phone {
+  @include mixins.phone {
     flex-direction: column;
   }
 }
@@ -127,7 +127,7 @@
   align-items: center;
   z-index: 1000;
 
-  @include phone {
+  @include mixins.phone {
     padding-top: 20%;
   }
 }
@@ -146,7 +146,7 @@
   overflow: scroll;
   padding-bottom: 15%;
 
-  @include phone {
+  @include mixins.phone {
     flex-direction: column;
 
     h2 {
@@ -222,7 +222,7 @@
     gap: 10%;
     margin-top: 3%;
 
-    @include phone {
+    @include mixins.phone {
       flex-direction: column;
     }
   }
@@ -231,7 +231,7 @@
     width: 100%;
     text-align: center;
 
-    @include phone {
+    @include mixins.phone {
       padding: 5% 0% 30% 0%;
     }
   }
