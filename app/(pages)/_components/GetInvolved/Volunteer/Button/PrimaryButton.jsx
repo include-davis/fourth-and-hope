@@ -1,9 +1,10 @@
 import styles from "./PrimaryButton.module.scss";
+import Link from "next/link";
 
-export default function PrimaryButton({ name = "Donate", link = "#" }) {
+export default function PrimaryButton({ name, link }) {
     return (
-        <a href={link} className={styles.button} target="_blank">
+        <Link href={link} className={styles.button} target="_blank">
             {name}
-        </a>
+        </Link>
     );
 }

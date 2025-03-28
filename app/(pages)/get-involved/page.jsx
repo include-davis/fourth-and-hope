@@ -60,14 +60,14 @@ async function getNeedsListNew() {
 
 async function getNeedsListUsed() {
   try {
-    const url = `${process.env.CMS_BASE_URL}/api/content/needs-list?_published=true&type=used`;
-
-    const res = await fetch(url, {
-      next: {
-        tags: "cms"
+    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/needs-list?_published=true&type=used`,
+      {
+        next:
+        {
+          tags: "cms"
+        }
       }
-    });
-
+    );
     const data = await res.json();
 
     if (!data.ok || !data.body || data.body.length === 0) {
@@ -78,7 +78,6 @@ async function getNeedsListUsed() {
     const parsedData = data.body.map((needsListItem) => ({
       item: needsListItem.item,
     }));
-    console.log('Parsed data:', parsedData);
 
     return parsedData;
   } catch (error) {
