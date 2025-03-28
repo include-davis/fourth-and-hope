@@ -6,11 +6,15 @@ import './_globals/globals.scss';
 export const metadata = {
   title: "Fourth & Hope",
   description: "Fourth & Hope Website",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+
       <body>
         <Header/>
         {children}
