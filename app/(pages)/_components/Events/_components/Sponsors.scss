@@ -9,15 +9,17 @@
     img {
         box-shadow: 0 0 30px var(--dark-grey);
         border-radius: 15.5px;
-        max-height: 200px;
+        max-width: 200px;
     }
 
 }
 
 @include mixins.phone {
     .sponsorlist {
+        margin: 4%;
         img {
             box-shadow: 0 0 15px var(--dark-grey);
+            max-width: 100px;
         }
     }
 }
