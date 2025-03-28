@@ -15,11 +15,11 @@ async function getTrustees() {
     }
 
     const parsedData = data.body.map((peopleItem) => ({
-      image: peopleItem.image[0].src,
-      image_alt: peopleItem.image_alt,
+      image: peopleItem.image.length > 0 ? peopleItem.image[0]?.src : null,
+      image_alt: peopleItem.image_alt || "",
       name: peopleItem.name,
-      position: peopleItem.position,
-      email: peopleItem.email,
+      position: peopleItem.position || "",
+      email: peopleItem.email || ""
     }));
 
     return parsedData;
