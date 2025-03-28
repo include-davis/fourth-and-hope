@@ -80,13 +80,12 @@ async function getPrograms() {
     }
 
     const parsedData = data.body.map((programItem) => ({
-      image: programItem.main_image?.length > 0 ? programItem.main_image[0]?.src : null,
+      image: programItem.image?.length > 0 ? programItem.image[0]?.src : null,
       image_alt: programItem.image_alt || "",
       title: programItem.title,
-      subtitle: programItem.subtitle || "",
-      text: programItem.description || ""
+      blurb: programItem.blurb || ""
     }));
-    
+
 
     console.log("Parsed data:", parsedData);
 
