@@ -83,13 +83,13 @@ async function getSponsers() {
       throw new Error();
     }
 
-    if (sponsersData && sponsersData.body && sponsersData.body.length > 0) {
-      const parsedData = sponsersData.body[0].images;
 
-      if (parsedData && parsedData.length > 0) {
-        return parsedData.map(image => image.src);
-      }
+    const parsedData = sponsersData.body.images;
+
+    if (parsedData && parsedData.length > 0) {
+      return parsedData.map(image => image.src);
     }
+
   } catch {
     console.log('Failed to fetch sponsers');
     return sponsersFallbackData;
