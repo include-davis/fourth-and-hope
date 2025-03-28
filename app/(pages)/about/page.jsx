@@ -67,7 +67,7 @@ async function getMeetings() {
       throw new Error();
     }
 
-    const parsedData = data.body.map((meetingYear) => {
+    const parsedData = data.body.flatMap((meetingYear) => {
       const { year, ...months } = meetingYear;
       return Object.entries(months).map(([month, link]) => {
         if (link) {
