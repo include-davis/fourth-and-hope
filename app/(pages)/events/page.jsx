@@ -52,10 +52,9 @@ async function getUpcomingEvents() {
     return upcomingEventsFallbackData;
   }
 }
-
 async function getSponsers() {
   try {
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsors?_published=true`,
+    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true`,
       {
         next:
         {
@@ -67,20 +66,46 @@ async function getSponsers() {
     if (!data.ok || data.body.length === 0) {
       throw new Error();
     }
-
-    const images = [];
-    data.body.forEach(contentItem => {
-      contentItem.images.forEach(imageItem => {
-        images.push(imageItem.src);
-      });
-    });
-
-    return images;
+    // new
+    const parsedData = data.body.map((sponserItem) => ({
+      image: sponserItem.image[0].src,
+      image_alt: sponserItem.image_alt,
+    }));
+    return parsedData;
   } catch {
     console.log('Failed to fetch sponsers');
+    console.log(sponsersFallbackData);
     return sponsersFallbackData;
   }
 }
+// async function getSponsers() {
+//   try {
+//     const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true`,
+//       {
+//         next:
+//         {
+//           tags: "cms"
+//         }
+//       }
+//     );
+//     const data = await res.json();
+//     if (!data.ok || data.body.length === 0) {
+//       throw new Error();
+//     }
+
+//     const images = [];
+//     data.body.forEach(contentItem => {
+//       contentItem.images.forEach(imageItem => {
+//         images.push(imageItem.src);
+//       });
+//     });
+
+//     return images;
+//   } catch {
+//     console.log('Failed to fetch sponsers');
+//     return sponsersFallbackData;
+//   }
+// }
 
 async function getImpact() {
   try {
