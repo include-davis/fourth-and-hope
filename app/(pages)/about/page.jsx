@@ -69,12 +69,10 @@ async function getMeetings() {
 
     const parsedData = data.body.map((meetingYear) => {
       const { year, ...months } = meetingYear;
-      return Object.entries(months).flatMap(([month, link]) => {
-        if (link) {
-          return [{ year, month, link }];
-        }
-        return [];
-      });
+
+      const validMonths = Object.entries(months).filter(([month, link]) => link);
+
+      return validMonths.map(([month, link]) => ({ year, month, link }));
     });
 
     return parsedData;
