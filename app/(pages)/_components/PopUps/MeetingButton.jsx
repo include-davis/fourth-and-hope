@@ -5,7 +5,6 @@ import styles from "./PopUps.module.scss";
 import Link from "next/link";
 
 export default function MeetingButton({ children, meetingData }) {
-  const boardMeetings = meetingData;
   const [isBoardOpen, setBoardOpen] = useState(false);
   const toggleBoardPopup = () => setBoardOpen(!isBoardOpen);
 
@@ -26,7 +25,7 @@ export default function MeetingButton({ children, meetingData }) {
             <p>Meetings take place on the fourth Tuesday of the month at 6 p.m.</p>
 
             <div className={styles.meetingsContainer}>
-              {boardMeetings.map((yearObj) => {
+              {meetingData.map((yearObj) => {
                 // Extract the 'year' property; everything else is "months"
                 const { year, ...months } = yearObj;
 
@@ -39,8 +38,12 @@ export default function MeetingButton({ children, meetingData }) {
                         const validLink = link || "#";
                         const isLinkValid = validLink !== "#";
                         return (
-                          <Link key={month} href={link} target={isLinkValid ? "_blank" : "_self"}>
-                            <button className={styles.meetingBox} disabled={!isLinkValid}>
+                          <Link key={month} href={validLink} passHref>
+                            <button
+                              className={styles.meetingBox}
+                              disabled={!isLinkValid}
+                              target={isLinkValid ? "_blank" : "_self"}
+                            >
                               {month}
                             </button>
                           </Link>
