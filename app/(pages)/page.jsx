@@ -60,27 +60,43 @@ async function getStories() {
 
 async function getPrograms() {
   try {
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/program-cards?_published=true`,
-      {
-        next:
-        {
-          tags: "cms"
-        }
+    const url = `${process.env.CMS_BASE_URL}/api/content/program-cards?_published=true`;
+    console.log("Fetching from CMS URL:", url);
+
+    const res = await fetch(url, {
+      next: {
+        tags: "cms"
       }
-    );
+    });
+
+    console.log("Fetch response status:", res.status);
+
     const data = await res.json();
-    if (!data.ok || data.body.length === 0) {
+    console.log("Fetched data:", data);
+
+    if (!data.ok || !data.body || data.body.length === 0) {
+      console.warn("Data check failed - data.ok:", data.ok, "data.body:", data.body);
       throw new Error();
     }
 
-    const parsedData = data.body.map((programItem) => ({ image: programItem.main_image[0].src, image_alt: programItem.image_alt, title: programItem.title, subtitle: programItem.subtitle, text: programItem.description }));
+    const parsedData = data.body.map((programItem) => ({
+      image: programItem.main_image?.length > 0 ? programItem.main_image[0]?.src : null,
+      image_alt: programItem.image_alt || "",
+      title: programItem.title,
+      subtitle: programItem.subtitle || "",
+      text: programItem.description || ""
+    }));
+    
+
+    console.log("Parsed data:", parsedData);
 
     return parsedData;
-  } catch {
-    console.log('Failed to fetch story cards');
+  } catch (error) {
+    console.error("Failed to fetch program cards:", error);
     return programCardsFallbackData;
   }
 }
+
 
 export default async function Homepage() {
   const images = await getImages();
