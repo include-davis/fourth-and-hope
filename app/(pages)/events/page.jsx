@@ -84,9 +84,10 @@ async function getSponsers() {
     }
 
     if (sponsersData && sponsersData.body && sponsersData.body.length > 0) {
-      const image = sponsersData.body[0].images;
-      if (image && image.length > 0) {
-        return image.map(image => image.src);
+      const parsedData = sponsersData.body[0].images;
+
+      if (parsedData && parsedData.length > 0) {
+        return parsedData.map(image => image.src);
       }
     }
   } catch {
