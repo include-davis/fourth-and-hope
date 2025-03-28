@@ -70,7 +70,7 @@ async function getUpcomingEvents() {
 
 async function getSponsers() {
   try {
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true`,
+    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsors?_published=true`,
       {
         next:
         {
