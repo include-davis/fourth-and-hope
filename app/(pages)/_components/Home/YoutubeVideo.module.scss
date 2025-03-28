@@ -1,4 +1,4 @@
-@import '../../_globals/mixins.scss';
+@use '../../_globals/mixins.scss';
 
 .videoBox {
   display: flex;
@@ -11,7 +11,7 @@
   overflow: hidden;
   width: 100%; //fill container
 
-  @include phone {
+  @include mixins.phone {
     padding-bottom: 75%;
   }
 }

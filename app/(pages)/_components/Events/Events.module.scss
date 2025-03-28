@@ -1,4 +1,4 @@
-@import "../../_globals/mixins.scss";
+@use "../../_globals/mixins.scss";
 
 .events {
 
@@ -14,7 +14,7 @@
             color: var(--green);
             font-weight: 500;
 
-            @include phone {
+            @include mixins.phone {
                 font-size: 3rem;
             }
         }
@@ -75,7 +75,7 @@
 
 }
 
-@include phone {
+@include mixins.phone {
     .events {
         // padding: 0 5% 0 5%;
 

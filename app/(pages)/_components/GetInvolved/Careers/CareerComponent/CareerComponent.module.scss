@@ -1,4 +1,4 @@
-@import '../../../../_globals/mixins.scss';
+@use '../../../../_globals/mixins.scss';
 
 
 .container {
@@ -8,7 +8,7 @@
   line-height: 24px;
   height: 100%;
 
-  @include phone {
+  @include mixins.phone {
     line-height: 30px;
   }
 }

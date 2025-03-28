@@ -1,4 +1,4 @@
-@import "../../_globals/mixins.scss";
+@use "../../_globals/mixins.scss";
 
 .pageContainer {
   width: 100%;
@@ -15,7 +15,7 @@
   grid-template-columns: 55% 45%;
   align-items: flex-start;
 
-  @include phone {
+  @include mixins.phone {
     grid-template-columns: 1fr;
     gap: 2%;
     text-align: left;
@@ -36,14 +36,14 @@
       // letter-spacing: 0.05em;
       text-align: left;
 
-      @include tablet {
+      @include mixins.tablet {
         font-size: 2.8rem;
         line-height: 3rem;
         letter-spacing: 0;
         left: 5%;
       }
 
-      @include phone {
+      @include mixins.phone {
         font-size: 2rem;
         line-height: 3rem;
         left: 0;
@@ -52,7 +52,7 @@
       }
     }
 
-    @include phone {
+    @include mixins.phone {
       left: 0;
       max-width: 100%;
       margin-left: 0 !important;
@@ -70,7 +70,7 @@
     // padding-left: 10%; 
     margin-right: 0;
 
-    @include phone {
+    @include mixins.phone {
       padding-left: 0;
       margin-left: 0;
       align-items: flex-start;
@@ -82,11 +82,11 @@
       font-weight: bold;
       color: var(--black);
 
-      @include tablet {
+      @include mixins.tablet {
         font-size: 2rem;
       }
 
-      @include phone {
+      @include mixins.phone {
         font-size: 1.5rem;
         text-align: left;
         padding-top: 5%;
@@ -100,11 +100,11 @@
       line-height: 1.5rem;
       color: var(--black);
 
-      @include tablet {
+      @include mixins.tablet {
         font-size: 1rem;
       }
 
-      @include phone {
+      @include mixins.phone {
         text-align: left;
         font-size: 1rem;
         line-height: 1.4rem;
@@ -137,7 +137,7 @@
         text-align: center !important;
       }
 
-      @include phone {
+      @include mixins.phone {
         flex-direction: row;
         gap: 3%;
         justify-content: flex-start;
@@ -186,7 +186,7 @@
 .whoWeAreSection {
   padding: 3% 8% 4% 8%;
 
-  @include phone {
+  @include mixins.phone {
     padding: 3% 0 4% 0;
   }
 
@@ -195,7 +195,7 @@
     font-weight: bold;
     color: var(--black);
 
-    @include phone {
+    @include mixins.phone {
       font-size: 1.5rem;
       padding-left: 0 !important;
     }
@@ -206,7 +206,7 @@
     line-height: 1.5rem;
     color: var(--black);
 
-    @include phone {
+    @include mixins.phone {
       font-size: 0.95rem;
       line-height: 1.4rem;
       padding-left: 0 !important;
@@ -218,7 +218,7 @@
     gap: 5%;
     margin-top: 2%;
 
-    @include phone {
+    @include mixins.phone {
       padding-left: 0 !important;
     }
   }
@@ -230,7 +230,7 @@
   max-width: 100%;
   padding: var(--page-padding);
 
-  @include phone {
+  @include mixins.phone {
     padding: 0;
     margin: 0;
   }
@@ -241,13 +241,13 @@
     gap: 8%;
     align-items: center;
 
-    @include tablet {
+    @include mixins.tablet {
       grid-template-columns: 1fr;
       gap: 5%;
       text-align: center;
     }
 
-    @include phone {
+    @include mixins.phone {
       gap: 2%;
       margin-left: 0;
     }
@@ -259,12 +259,12 @@
       overflow: hidden;
       margin-top: 3rem;
 
-      @include tablet {
+      @include mixins.tablet {
         max-width: 300px;
         margin: 0 auto;
       }
 
-      @include phone {
+      @include mixins.phone {
         max-width: 220px;
         margin: 0 auto 6% auto;
       }
@@ -286,11 +286,11 @@
         color: var(--black);
         text-align: left;
 
-        @include tablet {
+        @include mixins.tablet {
           font-size: 2rem;
         }
 
-        @include phone {
+        @include mixins.phone {
           font-size: 1.5rem;
           text-align: left;
           padding-bottom: 5%;
@@ -305,11 +305,11 @@
         // padding-bottom: 4%;
         text-align: left;
 
-        @include tablet {
+        @include mixins.tablet {
           font-size: 1rem;
         }
 
-        @include phone {
+        @include mixins.phone {
           font-size: 0.95rem;
           line-height: 1.4rem;
           text-align: left;
@@ -326,13 +326,13 @@
 
 // Story Section for Mobile
 .storySection {
-  @include phone {
+  @include mixins.phone {
     padding: 0;
     margin: 0;
   }
 
   .storyContent {
-    @include phone {
+    @include mixins.phone {
       grid-template-columns: 1fr;
       gap: 0;
       margin: 0;
@@ -340,7 +340,7 @@
     }
 
     .imageContainer {
-      @include phone {
+      @include mixins.phone {
         max-width: 100%;
         aspect-ratio: unset;
         margin: 0;
@@ -357,7 +357,7 @@
     }
 
     .textContent {
-      @include phone {
+      @include mixins.phone {
         padding: var(--page-padding);
         background-color: var(--white);
 
@@ -386,7 +386,7 @@
   background-color: var(--light-grey);
   padding: var(--page-padding);
 
-  @include phone {
+  @include mixins.phone {
     // padding: 8% 0;
     background-color: transparent !important;
   }
@@ -399,11 +399,11 @@
     color: var(--black);
     text-align: left;
 
-    @include tablet {
+    @include mixins.tablet {
       font-size: 2rem;
     }
 
-    @include phone {
+    @include mixins.phone {
       font-size: 1.5rem;
       text-align: left;
     }
@@ -413,7 +413,7 @@
     max-width: 100%;
     // padding: 0 8%;
 
-    @include phone {
+    @include mixins.phone {
       padding: 0;
     }
 
@@ -423,11 +423,11 @@
       color: var(--black);
       padding-bottom: 1.5%;
 
-      @include tablet {
+      @include mixins.tablet {
         font-size: 1rem;
       }
 
-      @include phone {
+      @include mixins.phone {
         font-size: 0.95rem;
         line-height: 1.4rem;
         padding-bottom: 4%;
@@ -449,7 +449,7 @@
   position: relative;
   background-color: var(--white);
 
-  @include phone {
+  @include mixins.phone {
     padding-bottom: 15%;
   }
 
@@ -460,11 +460,11 @@
     padding-bottom: 2%;
     padding-left: 0;
 
-    @include tablet {
+    @include mixins.tablet {
       font-size: 2rem;
     }
 
-    @include phone {
+    @include mixins.phone {
       font-size: 1.5rem;
       text-align: left;
 
@@ -476,11 +476,11 @@
     line-height: 1.5rem;
     color: var(--black);
 
-    @include tablet {
+    @include mixins.tablet {
       font-size: 1rem;
     }
 
-    @include phone {
+    @include mixins.phone {
       font-size: 0.95rem;
       line-height: 1.4rem;
       text-align: left;
@@ -496,12 +496,12 @@
     row-gap: 10%;
     padding: 5% 0%;
 
-    @include tablet {
+    @include mixins.tablet {
       grid-template-columns: repeat(2, 1fr);
       gap: 4%;
     }
 
-    @include phone {
+    @include mixins.phone {
       grid-template-columns: repeat(2, 1fr);
       gap: 3%;
     }
@@ -520,7 +520,7 @@
     position: relative;
     right: 0;
 
-    @include phone {
+    @include mixins.phone {
       display: none !important;
     }
   }
@@ -534,7 +534,7 @@
   text-align: left;
   padding-bottom: 1%;
 
-  @include phone {
+  @include mixins.phone {
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
@@ -553,12 +553,12 @@
     margin-bottom: 6%;
     overflow: hidden;
 
-    @include tablet {
+    @include mixins.tablet {
       width: 8rem;
       height: 8rem;
     }
 
-    @include phone {
+    @include mixins.phone {
       width: 4.5rem;
       height: 4.5rem;
       margin-bottom: 8px;
@@ -568,7 +568,7 @@
 
   .memberInfo {
 
-    @include phone {
+    @include mixins.phone {
       text-align: left;
       padding-bottom: 5px;
       width: 100%;
@@ -582,11 +582,11 @@
     color: var(--black);
     text-align: left;
 
-    @include tablet {
+    @include mixins.tablet {
       font-size: 1.25rem;
     }
 
-    @include phone {
+    @include mixins.phone {
       font-size: 0.95rem;
       padding-bottom: 1%;
       padding-top: 0;
@@ -600,11 +600,11 @@
     padding-top: 0;
     text-align: left;
 
-    @include tablet {
+    @include mixins.tablet {
       font-size: 1rem;
     }
 
-    @include phone {
+    @include mixins.phone {
       font-size: 0.85rem;
       line-height: 1.2rem;
       padding-left: 0 !important;
@@ -617,7 +617,7 @@
     font-size: 1rem;
     text-align: left;
 
-    @include phone {
+    @include mixins.phone {
       font-size: 0.85rem;
     }
 
@@ -630,7 +630,7 @@
 .boardMeetingInfoButton {
   display: none;
 
-  @include phone {
+  @include mixins.phone {
     display: block !important;
     width: 90% !important;
     background-color: var(--green);
@@ -703,11 +703,11 @@
     text-align: left;
     padding-left: 0;
 
-    @include tablet {
+    @include mixins.tablet {
       font-size: 2rem;
     }
 
-    @include phone {
+    @include mixins.phone {
       font-size: 1.5rem;
       text-align: left;
       padding-bottom: 6%;
@@ -725,13 +725,13 @@
     padding-bottom: 0;
     padding-top: 3%;
 
-    @include tablet {
+    @include mixins.tablet {
       grid-template-columns: 1fr;
       gap: 4%;
       max-width: 100%;
     }
 
-    @include phone {
+    @include mixins.phone {
       grid-template-columns: 1fr;
       gap: 6%;
       max-width: 100%;
@@ -776,7 +776,7 @@
     color: var(--black);
     line-height: 1.5rem;
 
-    @include phone {
+    @include mixins.phone {
       font-size: 0.9rem;
       line-height: 1.3rem;
     }

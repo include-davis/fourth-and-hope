@@ -1,5 +1,5 @@
-@import '../../_globals/mixins.scss';
-//using @include was giving an error
+@use '../../_globals/mixins.scss';
+//using @include mixins.was giving an error
 
 // "Header" section
 .imageSlides {
@@ -19,11 +19,11 @@
             font-size: 5rem;
             font-weight: 600;
 
-            @include tablet {
+            @include mixins.tablet {
                 font-size: 3.5rem;
             }
 
-            @include phone {
+            @include mixins.phone {
                 font-size: 2rem;
             }
         }
@@ -32,11 +32,11 @@
             font-size: 2.5rem;
             font-weight: 300;
 
-            @include tablet {
+            @include mixins.tablet {
                 font-size: 2rem;
             }
 
-            @include phone {
+            @include mixins.phone {
                 font-size: 1rem;
             }
         }
@@ -112,7 +112,7 @@
     height: 9%;
     width: auto;
 
-    @include phone {
+    @include mixins.phone {
         width: 100%;
     }
 
@@ -125,7 +125,7 @@
         margin-top: 35%;
         margin: auto; //centers div
 
-        @include phone {
+        @include mixins.phone {
             flex-direction: column;
             align-items: center;
         }
@@ -152,7 +152,7 @@
         // font-size: 5rem; //make globals
         // font-weight: 500;
 
-        @include phone {
+        @include mixins.phone {
             font-size: 2rem;
         }
     }
@@ -169,7 +169,7 @@
     margin-bottom: 6%;
     gap: 2%;
 
-    @include phone {
+    @include mixins.phone {
         flex-direction: column;
         justify-content: center;
     }
@@ -182,7 +182,7 @@
     color: var(--black);
     margin-right: 4.68%;
 
-    @include phone {
+    @include mixins.phone {
         width: 100%;
         margin-right: 0;
     }
@@ -191,7 +191,7 @@
         font-weight: 548;
         margin-bottom: 3%;
 
-        @include phone {
+        @include mixins.phone {
             font-size: 1.5rem;
             margin-bottom: 1%;
         }
@@ -202,7 +202,7 @@
         font-weight: 300;
         line-height: 1.8;
 
-        @include phone {
+        @include mixins.phone {
             font-size: 1rem;
             line-height: 1.7;
         }
@@ -219,7 +219,7 @@
     display: flex;
     justify-content: center;
 
-    @include phone {
+    @include mixins.phone {
         width: 100%;
         height: auto;
     }
@@ -246,7 +246,7 @@
         font-weight: 500;
         width: 87%;
 
-        @include phone {
+        @include mixins.phone {
             font-size: 2rem;
         }
     }
@@ -261,7 +261,7 @@
     justify-content: space-between;
     max-height: 50%;
 
-    @include phone {
+    @include mixins.phone {
         flex-direction: column;
     }
 }
@@ -285,7 +285,7 @@
         margin-bottom: 2.2%;
         // margin-top: 3%;
 
-        @include phone {
+        @include mixins.phone {
             font-size: 2rem;
         }
     }

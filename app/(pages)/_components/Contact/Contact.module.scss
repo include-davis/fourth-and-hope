@@ -1,4 +1,4 @@
-@import "../../_globals/mixins.scss";
+@use "../../_globals/mixins.scss";
 
 /* Container for all contact cards (3 columns layout) */
 .contactcards {
@@ -15,7 +15,7 @@
     box-sizing: border-box;
 }
 
-@include phone {
+@include mixins.phone {
     .contactcards {
         flex-direction: column;
         gap: 5%;
@@ -130,7 +130,7 @@
     }
 }
 
-@include phone {
+@include mixins.phone {
     .Title h1 {
         font-size: 2.25rem;
     }
@@ -181,7 +181,7 @@
         margin-top: 10%;
         margin-bottom: 10%;
 
-        @include phone {
+        @include mixins.phone {
             margin: 0;
         }
     }

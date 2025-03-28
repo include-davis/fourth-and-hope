@@ -1,4 +1,4 @@
-@import "../../../_globals/mixins.scss";
+@use "../../../_globals/mixins.scss";
 
 .benefiet_hero {
   display: flex;
@@ -16,7 +16,7 @@
   font-size: 2.5rem;
   font-weight: 600;
 
-  @include phone {
+  @include mixins.phone {
     font-size: 2rem;
   }
 }
@@ -28,7 +28,7 @@
   align-items: center;
   align-self: stretch;
 
-  @include tablet {
+  @include mixins.tablet {
     justify-content: center;
     gap: 20px;
   }
@@ -42,11 +42,11 @@
   align-items: center;
   gap: 50px;
 
-  @include tablet {
+  @include mixins.tablet {
     max-width: 45%;
   }
 
-  @include phone {
+  @include mixins.phone {
     max-width: 100%;
   }
 }
@@ -57,7 +57,7 @@
   font-size: 2.25rem;
   font-weight: 500;
 
-  @include phone {
+  @include mixins.phone {
     font-size: 2rem;
   }
 }
@@ -73,19 +73,19 @@
   transition: box-shadow 0.3s ease;
 
   // Scale down image size at various breakpoints:
-  @include sm-desktop {
+  @include mixins.sm-desktop {
     max-width: 320px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     max-width: 280px;
   }
 
-  @include phone {
+  @include mixins.phone {
     max-width: 240px;
   }
 
-  @include phone {
+  @include mixins.phone {
     max-width: 200px;
   }
 }
