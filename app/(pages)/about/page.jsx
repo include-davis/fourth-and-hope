@@ -69,9 +69,12 @@ async function getMeetings() {
 
     const parsedData = data.body.flatMap((meetingYear) => {
       const { year, ...months } = meetingYear;
-      return Object.entries(months).flatMap(([month, links]) =>
-        links.map((link) => ({ year, month, link }))
-      );
+      return Object.entries(months).flatMap(([month, link]) => {
+        if (link) {
+          return [{ year, month, link }];
+        }
+        return [];
+      });
     });
 
     return parsedData;

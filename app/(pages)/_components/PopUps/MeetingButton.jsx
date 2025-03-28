@@ -34,12 +34,13 @@ export default function MeetingButton({ children, meetingData }) {
                   <div key={year} className={styles.meetingYear}>
                     <h3>{year}</h3>
                     <div className={styles.meetingGrid}>
-                      {Object.entries(months).map(([month, links]) => {
+                      {Object.entries(months).map(([month, link]) => {
                         // If no links, default to '#'
-                        const link = links?.[0] || "/about";
+                        const validLink = link || "#";
+                        const isLinkValid = validLink !== "#";
                         return (
-                          <Link key={month} href={link} target={link !== "#" ? "_blank" : "_self"}>
-                            <button className={styles.meetingBox} disabled={!links || links.length === 0}>
+                          <Link key={month} href={link} target={isLinkValid ? "_blank" : "_self"}>
+                            <button className={styles.meetingBox} disabled={!isLinkValid}>
                               {month}
                             </button>
                           </Link>
