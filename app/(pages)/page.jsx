@@ -61,7 +61,6 @@ async function getStories() {
 async function getPrograms() {
   try {
     const url = `${process.env.CMS_BASE_URL}/api/content/program-cards?_published=true`;
-    console.log("Fetching from CMS URL:", url);
 
     const res = await fetch(url, {
       next: {
@@ -69,10 +68,7 @@ async function getPrograms() {
       }
     });
 
-    console.log("Fetch response status:", res.status);
-
     const data = await res.json();
-    console.log("Fetched data:", data);
 
     if (!data.ok || !data.body || data.body.length === 0) {
       console.warn("Data check failed - data.ok:", data.ok, "data.body:", data.body);
@@ -85,9 +81,6 @@ async function getPrograms() {
       title: programItem.title,
       blurb: programItem.blurb || ""
     }));
-
-
-    console.log("Parsed data:", parsedData);
 
     return parsedData;
   } catch (error) {
