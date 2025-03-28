@@ -52,32 +52,7 @@ async function getUpcomingEvents() {
     return upcomingEventsFallbackData;
   }
 }
-async function getSponsers() {
-  try {
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true`,
-      {
-        next:
-        {
-          tags: "cms"
-        }
-      }
-    );
-    const data = await res.json();
-    if (!data.ok || data.body.length === 0) {
-      throw new Error();
-    }
-    // new
-    const parsedData = data.body.map((sponserItem) => ({
-      image: sponserItem.image[0].src,
-      image_alt: sponserItem.image_alt,
-    }));
-    return parsedData;
-  } catch {
-    console.log('Failed to fetch sponsers');
-    console.log(sponsersFallbackData);
-    return sponsersFallbackData;
-  }
-}
+
 // async function getSponsers() {
 //   try {
 //     const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true`,
@@ -92,20 +67,48 @@ async function getSponsers() {
 //     if (!data.ok || data.body.length === 0) {
 //       throw new Error();
 //     }
-
-//     const images = [];
-//     data.body.forEach(contentItem => {
-//       contentItem.images.forEach(imageItem => {
-//         images.push(imageItem.src);
-//       });
-//     });
-
-//     return images;
-//   } catch {
-//     console.log('Failed to fetch sponsers');
+    
+//     // Adjust the parsing so each sponsor object has the same shape as your fallback
+//     const parsedData = data.body.map((sponsorItem) => ({
+//       images: sponsorItem.images.map((imgObj) => imgObj.src),
+//       // Use sponsorItem.alt if your CMS returns that, or sponsorItem.image_alt if that's what it is.
+//       alt: sponsorItem.alt || sponsorItem.image_alt,
+//     }));
+//     return parsedData;
+//   } catch (error) {
+//     console.error('Failed to fetch sponsers:', error);
 //     return sponsersFallbackData;
 //   }
 // }
+
+async function getSponsers() {
+  try {
+    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/sponsers?_published=true`,
+      {
+        next:
+        {
+          tags: "cms"
+        }
+      }
+    );
+    const data = await res.json();
+    if (!data.ok || data.body.length === 0) {
+      throw new Error();
+    }
+
+    const images = [];
+    data.body.forEach(contentItem => {
+      contentItem.images.forEach(imageItem => {
+        images.push(imageItem.src);
+      });
+    });
+
+    return images;
+  } catch {
+    console.log('Failed to fetch sponsers');
+    return sponsersFallbackData;
+  }
+}
 
 async function getImpact() {
   try {
