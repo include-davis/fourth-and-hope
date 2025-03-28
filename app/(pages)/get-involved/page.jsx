@@ -51,8 +51,6 @@ async function getNeedsListNew() {
       item: needsListItem.item,
     }));
 
-    console.log('Parsed new data:', parsedData);
-
     return parsedData;
   } catch {
     console.log('Failed to fetch new needs list');
@@ -62,7 +60,7 @@ async function getNeedsListNew() {
 
 async function getNeedsListUsed() {
   try {
-    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/needs-list?_published=true&type=new`,
+    const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/needs-list?_published=true&type=used`,
       {
         next:
         {
@@ -70,11 +68,7 @@ async function getNeedsListUsed() {
         }
       }
     );
-    console.log('Response:', res);
-    console.log('Response status:', res.status);
-
     const data = await res.json();
-    console.log('Received data:', data);
 
     if (!data.ok || !data.body || data.body.length === 0) {
       console.error('Invalid data format or empty body:', data);
@@ -84,7 +78,6 @@ async function getNeedsListUsed() {
     const parsedData = data.body.map((needsListItem) => ({
       item: needsListItem.item,
     }));
-    console.log('Parsed used data:', parsedData);
 
     return parsedData;
   } catch (error) {
