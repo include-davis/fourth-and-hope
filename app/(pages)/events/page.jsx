@@ -19,7 +19,6 @@ async function getRecapEvents() {
       throw new Error();
     }
 
-    //TODO: add parse of multiple images
     const parsedData = data.body.map((eventItem) => ({
       images: eventItem.images.map(img => img.src), // now an array of URLs
       image_alt: eventItem.image_alt,
@@ -28,6 +27,7 @@ async function getRecapEvents() {
       date: eventItem.date,
       description: eventItem.description
     }));
+    revalidateTag('cms');
 
     return parsedData;
   } catch {
@@ -59,7 +59,7 @@ async function getUpcomingEvents() {
       date: eventItem.date,
       description: eventItem.description
     }));
-
+    revalidateTag('cms');
 
     return parsedData;
   } catch {
@@ -92,7 +92,7 @@ async function getSponsers() {
 
       if (parsedData && parsedData.length > 0) {
         const images = parsedData.map((image) => image.src);
-
+        revalidateTag('cms');
         return [
           {
             images,
@@ -127,9 +127,8 @@ async function getImpact() {
       throw new Error();
     }
 
-    //TODO: add alt text to cms schema and add parse of multiple images
     const parsedData = data.body.map((impactItem) => ({ icon: impactItem.icon[0].src, image_alt: impactItem.image_alt, number: impactItem.number, description: impactItem.description }));
-
+    revalidateTag('cms');
     return parsedData;
   } catch {
     console.log('Failed to fetch impact');

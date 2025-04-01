@@ -26,7 +26,7 @@ async function getImages() {
         images.push(imageItem.src);
       });
     });
-
+    revalidateTag('cms');
     return images;
   } catch {
     console.log('Failed to fetch hero gallery images');
@@ -50,7 +50,7 @@ async function getStories() {
     }
 
     const parsedData = data.body.map((storyItem) => ({ imageSrc: storyItem.main_image[0].src, image_alt: storyItem.image_alt, heading: storyItem.title, bodyText: storyItem.description }));
-
+    revalidateTag('cms');
     return parsedData;
   } catch {
     console.log('Failed to fetch story cards');
@@ -81,6 +81,8 @@ async function getPrograms() {
       title: programItem.title,
       blurb: programItem.blurb || ""
     }));
+
+    revalidateTag('cms');
 
     return parsedData;
   } catch (error) {

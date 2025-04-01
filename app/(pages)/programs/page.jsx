@@ -18,6 +18,7 @@ async function getPrograms() {
     }
 
     const parsedData = data.body.map((programItem) => ({ image: programItem.image[0].src, image_alt: programItem.image_alt, title: programItem.title, subtitle: programItem.subtitle, description: programItem.description }));
+    revalidateTag('cms');
 
     return parsedData;
   } catch {
@@ -42,7 +43,7 @@ async function getNumbers() {
     }
 
     const parsedData = data.body.map((impactItem) => ({ icon: impactItem.icon[0].src, image_alt: impactItem.image_alt, number: impactItem.number, description: impactItem.description }));
-
+    revalidateTag('cms');
     return parsedData;
   } catch {
     console.log('Failed to fetch impact numbers');
