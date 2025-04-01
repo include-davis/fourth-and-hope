@@ -11,7 +11,7 @@ async function getImages() {
       {
         next:
         {
-          tags: "cms"
+          tags: ["cms"]
         }
       }
     );
@@ -40,7 +40,7 @@ async function getStories() {
       {
         next:
         {
-          tags: "cms"
+          tags: ["cms"]
         }
       }
     );
@@ -64,7 +64,7 @@ async function getPrograms() {
 
     const res = await fetch(url, {
       next: {
-        tags: "cms"
+        tags: ["cms"]
       }
     });
 

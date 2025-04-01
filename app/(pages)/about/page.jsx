@@ -7,7 +7,7 @@ async function getTrustees() {
   try {
     const res = await fetch(
       `${process.env.CMS_BASE_URL}/api/content/people?_published=true&type=trustee`,
-      { next: { tags: "cms" } }
+      { next: { tags: ["cms"] } }
     );
     const data = await res.json();
     if (!data.ok || data.body.length === 0) {
@@ -32,7 +32,7 @@ async function getExecs() {
   try {
     const res = await fetch(
       `${process.env.CMS_BASE_URL}/api/content/people?_published=true&type=exec`,
-      { next: { tags: "cms" } }
+      { next: { tags: ["cms"] } }
     );
     const data = await res.json();
     if (!data.ok || data.body.length === 0) {
@@ -59,7 +59,7 @@ async function getMeetings() {
   try {
     const res = await fetch(
       `${process.env.CMS_BASE_URL}/api/content/meetings?_published=true`,
-      { next: { tags: "cms" } }
+      { next: { tags: ["cms"] } }
     );
     const data = await res.json();
     if (!data.ok || data.body.length === 0) {

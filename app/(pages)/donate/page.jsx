@@ -8,7 +8,7 @@ async function getImpact() {
       {
         next:
         {
-          tags: "cms"
+          tags: ["cms"]
         }
       }
     );
@@ -33,7 +33,7 @@ async function getDonation() {
       {
         next:
         {
-          tags: "cms"
+          tags: ["cms"]
         }
       }
     );

@@ -10,7 +10,7 @@ async function getCareers() {
       {
         next:
         {
-          tags: "cms"
+          tags: ["cms"]
         }
       }
     );
@@ -38,7 +38,7 @@ async function getNeedsListNew() {
       {
         next:
         {
-          tags: "cms"
+          tags: ["cms"]
         }
       }
     );
@@ -64,7 +64,7 @@ async function getNeedsListUsed() {
       {
         next:
         {
-          tags: "cms"
+          tags: ["cms"]
         }
       }
     );
@@ -93,7 +93,7 @@ async function getLinks() {
       {
         next:
         {
-          tags: "cms"
+          tags: ["cms"]
         }
       }
     );

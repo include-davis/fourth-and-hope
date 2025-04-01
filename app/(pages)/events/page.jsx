@@ -10,7 +10,7 @@ async function getRecapEvents() {
       {
         next:
         {
-          tags: "cms"
+          tags: ["cms"]
         }
       }
     );
@@ -41,7 +41,7 @@ async function getUpcomingEvents() {
       {
         next:
         {
-          tags: "cms"
+          tags: ["cms"]
         }
       }
     );
@@ -72,7 +72,7 @@ async function getSponsers() {
 
     const res = await fetch(url, {
       next: {
-        tags: "cms"
+        tags: ["cms"]
       }
     });
 
@@ -116,7 +116,7 @@ async function getImpact() {
       {
         next:
         {
-          tags: "cms"
+          tags: ["cms"]
         }
       }
     );

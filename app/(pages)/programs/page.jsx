@@ -8,7 +8,7 @@ async function getPrograms() {
       {
         next:
         {
-          tags: "cms"
+          tags: ["cms"]
         }
       }
     );
@@ -32,7 +32,7 @@ async function getNumbers() {
       {
         next:
         {
-          tags: "cms"
+          tags: ["cms"]
         }
       }
     );
