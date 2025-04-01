@@ -1,5 +1,5 @@
 import { revalidateTag } from "next/cache";
 
-export async function GET() {
+export async function POST() {
   revalidateTag("cms");
 }
