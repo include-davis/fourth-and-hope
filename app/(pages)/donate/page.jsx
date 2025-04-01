@@ -18,7 +18,7 @@ async function getImpact() {
     }
 
     const parsedData = data.body.map((impactItem) => ({ icon: impactItem.icon[0].src, number: impactItem.number, description: impactItem.description }));
-    revalidateTag('cms');
+
     return parsedData;
   } catch {
     console.log('Failed to fetch impact');
@@ -43,7 +43,7 @@ async function getDonation() {
     }
 
     const parsedData = data.body.map((donationItem) => ({ donation_goal: donationItem.donation_goal, donation_current: donationItem.donation_current, recommended_donation: donationItem.recommended_donation }));
-    revalidateTag('cms');
+
     return parsedData;
   } catch {
     console.log('Failed to fetch impact numbers');

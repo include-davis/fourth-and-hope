@@ -27,7 +27,6 @@ async function getRecapEvents() {
       date: eventItem.date,
       description: eventItem.description
     }));
-    revalidateTag('cms');
 
     return parsedData;
   } catch {
@@ -59,7 +58,6 @@ async function getUpcomingEvents() {
       date: eventItem.date,
       description: eventItem.description
     }));
-    revalidateTag('cms');
 
     return parsedData;
   } catch {
@@ -92,7 +90,7 @@ async function getSponsers() {
 
       if (parsedData && parsedData.length > 0) {
         const images = parsedData.map((image) => image.src);
-        revalidateTag('cms');
+
         return [
           {
             images,
@@ -128,7 +126,7 @@ async function getImpact() {
     }
 
     const parsedData = data.body.map((impactItem) => ({ icon: impactItem.icon[0].src, image_alt: impactItem.image_alt, number: impactItem.number, description: impactItem.description }));
-    revalidateTag('cms');
+
     return parsedData;
   } catch {
     console.log('Failed to fetch impact');

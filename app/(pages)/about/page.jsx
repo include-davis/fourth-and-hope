@@ -20,7 +20,7 @@ async function getTrustees() {
       name: peopleItem.name,
       position: peopleItem.position || ""
     }));
-    revalidateTag('cms');
+
     return parsedData;
   } catch {
     console.log('Failed to fetch people');
@@ -47,7 +47,7 @@ async function getExecs() {
       position: peopleItem.position || "",
       email: peopleItem.email || ""
     }));
-    revalidateTag('cms');
+
     return parsedData;
   } catch {
     console.log('Failed to fetch people');
@@ -80,7 +80,7 @@ async function getMeetings() {
       november: meetingItem.november || [],
       december: meetingItem.december || [],
     }));
-    revalidateTag('cms');
+
     return parsedData;
   } catch {
     console.log('Failed to fetch meeting data');
