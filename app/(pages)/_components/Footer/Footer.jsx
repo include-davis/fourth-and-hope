@@ -19,6 +19,27 @@ export default function Footer() {
     console.log("Email submitted:", email);
   };
 
+  const [formVisible, setFormVisible] = useState(false);
+
+  // Function to load the script when the button is clicked
+  const handleButtonClick = () => {
+    if (!formVisible) {
+      setFormVisible(true);
+
+      // Dynamically load the Constant Contact script
+      const script = document.createElement('script');
+      script.src = '//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js';
+      script.async = true;
+      script.defer = true;
+
+      // Append the script to the body
+      document.body.appendChild(script);
+
+      // Optional: You can do more stuff here like tracking, form-specific logic, etc.
+      // For example, you could initialize form behavior here
+    }
+  };
+
   return (
     <div className={styles.footerContainer}>
       <div className={styles.contentContainer}>
@@ -96,17 +117,21 @@ export default function Footer() {
                 required
                 className={styles.emailInput}
               />
-              <button type="submit" className={styles.button}>
+              <button type="submit" className={styles.button} onClick={handleButtonClick}>
                 <p>Sign Up</p>
               </button>
             </div>
           </form>
-          {/* Constant Contact Stuff */}
-          {/* are we supposed to have a universal key of some sort */}
-          {/* <script> var _ctct_m = ""; </script> */}
-          {/* <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script> */}
-          <script> var _ctct_m = "922645a26d1182f4e3737071ffe500d9"; </script>
-          <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+
+          {/* Conditionally render the form after button click */}
+          {formVisible && (
+            <div id="signupFormContainer">
+              {/* Constant Contact Stuff */}
+              <script> var _ctct_m = "922645a26d1182f4e3737071ffe500d9"; </script>
+              <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+              {/* The signup form will appear here once the script is loaded */}
+            </div>
+          )}
         </div>
         <div className={styles.bottomContainer}>
           <p className={styles.bottomText}>Fourth &amp; Hope © 2025</p>

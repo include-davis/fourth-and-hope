@@ -28,7 +28,6 @@ async function getPrograms() {
 
 async function getNumbers() {
   try {
-    //TODO: fix query
     const res = await fetch(`${process.env.CMS_BASE_URL}/api/content/stats?_published=true&type=numbers`,
       {
         next:
